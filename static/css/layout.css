@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&display=swap');
+
+
 :root {
     --nav-height: 58px;
     --padding-horizontal: 15px;
@@ -5,4 +8,14 @@
 
 html[data-theme] main {
     margin-top: var(--nav-height);
+}
+
+* {
+    margin:0;
+    padding:0;
+    
+}
+
+[data-theme] nav {
+    font-family: 'Cinzel', serif;
 }

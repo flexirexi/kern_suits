@@ -11,6 +11,8 @@
     {% block core_css %}
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <!-- FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     {% endblock %}
     {% block extra_css%} {% endblock %}
     <title>KERN SUITS</title>
@@ -22,7 +24,27 @@
     <div class="message-container">
     </div>
     {% endif %}
+
+    <!-- Desktop Navbar -->
+    <div class="d-none d-md-block">
+        {% include "includes/navbar_desktop.html" %}
+    </div>
     
+    <!-- Mobile Navbar -->
+    <div class="d-md-none">
+        {% include "includes/navbar_mobile.html" %}
+    </div>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer class="text-center mt-5 py-4 text-muted">
+        &copy; 2025 Kern Suits. All rights reserved.
+    </footer>
+    
+
     <!-- Optional JavaScript -->
     {% block extra_scripts %} {% endblock %}
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

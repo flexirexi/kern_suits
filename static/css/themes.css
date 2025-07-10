@@ -29,3 +29,26 @@
     --color5: #f2f2f2;
     --color11: #e5b567;
 }
+
+[data-theme] * {
+    color: var(--text1);
+}
+
+[data-theme] nav {
+    background-color: var(--bgcontrast);
+}
+
+[data-theme] nav a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: var(--link);
+    font-size: 1.1rem;
+}
+	
+[data-theme] nav a:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
+    text-underline-offset: 4px; /* optional: etwas Abstand unter dem Text */
+    text-decoration-thickness: 1px; /* optional: dünner Unterstrich */
+}
+
