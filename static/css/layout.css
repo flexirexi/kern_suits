@@ -6,13 +6,15 @@
     --padding-horizontal: 15px;
 }
 
+
 html[data-theme] main {
     margin-top: var(--nav-height);
-}
+} 
+
 
 * {
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
     
 }
 

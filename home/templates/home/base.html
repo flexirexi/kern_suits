@@ -20,22 +20,23 @@
     <title>KERN SUITS</title>
 </head>
 <body>
-    <header class="container-fluid fixed-top">
+    <header class="fixed-top">
+        
+        <!-- Desktop Navbar -->
+        <div class="d-none d-md-block">
+            {% include "includes/navbar_desktop.html" %}
+        </div>
+        
+        <!-- Mobile Navbar -->
+        <div class="d-md-none">
+            {% include "includes/navbar_mobile.html" %}
+        </div>
     </header>
+
     {% if messages %}
     <div class="message-container">
     </div>
     {% endif %}
-
-    <!-- Desktop Navbar -->
-    <div class="d-none d-md-block">
-        {% include "includes/navbar_desktop.html" %}
-    </div>
-    
-    <!-- Mobile Navbar -->
-    <div class="d-md-none">
-        {% include "includes/navbar_mobile.html" %}
-    </div>
 
     <main>
         {% block content %}

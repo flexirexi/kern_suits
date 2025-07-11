@@ -1,4 +1,42 @@
 :root {
+    --text1: #000000;
+    --text2: #0d1b2a;
+    --text3: #102841;
+
+    --title1: #0d1b2a;
+    --title2: #102841;
+
+    --link: #ffcd28;
+    --link-hover: #ffffff;
+
+    --bgDefault: #ffffff;
+    --bgDefault2: #;
+    --bgcontrast: #102841;
+
+    --act1-bg: #ffbe3b;
+    --act1-text: #0d1b2a;
+    --act1-border: #c89e2d;
+    --act1-bg-hover: #0d1b2a;
+    --act1-text-hover: #f3c83c;
+
+    --act2-bg: #0d1b2a;
+    --act2-text: #ffcd28;
+    --act2-bg-hover: #d4af37;
+    --act2-text-hover: #0d1b2a;
+
+    --color1: #102841;
+    --color3: #d4af37;
+    --color4: #c89e2d;
+    --color5: #f2f2f2;
+    --color11: #e5b567;
+
+    --nav-bg: #102841;
+    --nav-title: #ffffff;
+    --nav-link: #ffcd28;
+    --nav-link-hover: #ffffff;
+}
+
+html[data-theme="dark"] {
     --text1: #f0f7ff;
     --text2: #cecece;
     --text3: #d4af37;
@@ -34,19 +72,20 @@
     color: var(--text1);
 }
 
-[data-theme] nav {
-    background-color: var(--bgcontrast);
+[data-theme] nav,
+[data-theme] header {
+    background-color: var(--nav-bg);
 }
 
-[data-theme] nav a {
+[data-theme] header a {
     margin: 0 1rem;
     text-decoration: none;
-    color: var(--link);
+    color: var(--nav-link);
     font-size: 1.1rem;
 }
 	
-[data-theme] nav a:hover {
-    color: var(--link-hover);
+[data-theme] header a:hover {
+    color: var(--nav-link-hover);
     text-decoration: underline;
     text-underline-offset: 4px; /* optional: etwas Abstand unter dem Text */
     text-decoration-thickness: 1px; /* optional: dünner Unterstrich */
