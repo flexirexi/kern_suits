@@ -16,13 +16,34 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">
-                    <i class="fas fa-bag-shopping"></i>
+                    <i class="fas fa-bag-shopping" style="color: var(--nav-icon);"></i>
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <i class="fas fa-user"></i>
+            <li class="nav-item dropdown">
+                <a class="nav-link" 
+                    href="#" data-bs-toggle="dropdown" aria-haspopup="true" id="user-options" role="button">
+                    {% if request.user.is_authenticated %}
+                        {% if request.user.is_superuser %}
+                            <i class="fas fa-user-cog" style="color: var(--text-admin);"></i>
+                        {% else %}
+                            <i class="fas fa-user-circle" style="color: var(--nav-icon);"></i>
+                        {% endif %}
+                    {% else %}
+                        <i class="fas fa-user" style="color: var(--nav-icon);"></i>
+                    {% endif %}
                 </a>
+                <div class="dropdown-menu border-0 dropdown-menu-end" aria-labelledby="user-options">
+                    {% if request.user.is_authenticated %}
+                    {% if request.user.is_superuser %}
+                    <a href="#" class="dropdown-item nav-link">Product Management</a>
+                    {% endif %}
+                    <a href="#" class="dropdown-item nav-link">My Profile</a>
+                    <a href="{% url 'account_logout' %}" class="dropdown-item nav-link">Logout</a>
+                    {% else %}
+                    <a href="{% url 'account_signup' %}" class="dropdown-item nav-link">Register</a>
+                    <a href="{% url 'account_login' %}" class="dropdown-item nav-link">Login</a>
+                    {% endif %}
+                </div>
             </li>
         </ul>
     </div>

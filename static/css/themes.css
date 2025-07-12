@@ -4,6 +4,7 @@
     --text1: #000000;
     --text2: #0d1b2a;
     --text3: #102841;
+    --text-admin: #e18616;
 
     --title1: #0a2540;
     --title2: #103760;
@@ -30,18 +31,19 @@
     --color3: #d4af37;
     --color4: #c89e2d;
     --color5: #f2f2f2;
-    --color11: #e5b567;
 
     --nav-bg: #102841;
     --nav-title: #ffffff;
     --nav-link: #ffcd28;
     --nav-link-hover: #ffffff;
+    --nav-icon: rgb(136, 136, 136);
 }
 
 html[data-theme="dark"] {
     --text1: #f0f7ff;
     --text2: #cecece;
     --text3: #d4af37;
+    --text-admin: #e18616;
 
     --title1: #f0f7ff;
     --title2: #597ca1;
@@ -67,7 +69,7 @@ html[data-theme="dark"] {
     --color3: #d4af37;
     --color4: #c89e2d;
     --color5: #f2f2f2;
-    --color11: #e5b567;
+
 }
 
 * {
@@ -96,25 +98,30 @@ a:hover {
 }
 
 [data-theme] nav,
-[data-theme] header {
+[data-theme] header,
+[data-theme] .dropdown-menu {
     background-color: var(--nav-bg);
     box-sizing: border-box;
     box-shadow: 0px 3px 4px #00000040;
 }
 
-header .nav-link {
+[data-theme] header .nav-link,
+[data-theme] .dropdown-menu a {
     margin: 0 1rem;
     text-decoration: none;
     color: var(--nav-link);
     font-size: 1.1rem;
 }
 	
-header .nav-link:hover {
+[data-theme] .nav-link:hover,
+[data-theme] .dropdown-menu a:hover {
     color: var(--nav-link-hover);
     text-decoration: underline;
     text-underline-offset: 4px; 
     text-decoration-thickness: 1px; 
+    background-color: unset;
 }
+
 
 [data-theme] footer {
     background-color: var(--nav-bg);

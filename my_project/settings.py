@@ -73,7 +73,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    # 'allauth.account.middleware.AccountMiddleware',  # caused a crash..
+    'allauth.account.middleware.AccountMiddleware',  # caused a crash..
 ]
 
 ROOT_URLCONF = "my_project.urls"
@@ -82,8 +82,7 @@ TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         "DIRS": [
-            os.path.join(BASE_DIR, 'templates'),
-            os.path.join(BASE_DIR, 'templates', 'allauth'),
+            BASE_DIR / 'templates',
         ],
         "APP_DIRS": True,
         "OPTIONS": {
