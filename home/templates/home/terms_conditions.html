@@ -2,67 +2,106 @@
 {% load static %}
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'home/css/impressum.css' %}">
+    <link rel="stylesheet" href="{% static 'home/css/terms_conditions.css' %}">
 {% endblock %}
 
 {% block content %}
 
 <!-------------- IMPRESSUM SECTION ------------------->
-<section class="row g-3 p-3 impressum-section">
-    <h1>Legal Notice</h1>
+<section class="row g-3 p-3 terms_conditions-section">
+    <h1>Terms & Conditions</h1>
     <div class="col-md-6">
         <div class="p-4 bg-light2 text-container-fluid">
-            <strong>Information in accordance with Section XX German Telemedia Act (TMG):</strong><br>
+            <h5>1. Scope</h5>
             <p>
-                <strong>Kern Anzüge</strong><br>
-                <strong>Owners: </strong>Mark Anton & Marcus Cicero <br>
-                Antonius street 3 <br>
-                753 Some City <br>
-                Some Country <br>
-                Phone: +0123 4567 90 <br>
-                E-mail: requests@kern.de <br>
+                These Terms and Conditions apply to all purchases made via our online shop at <strong>Kern Anzüge</strong> 
+                as well as to appointments for individual tailoring services ("Design Consultation").
             </p>
 
-            <strong>VAT ID:</strong>
+            <h5>2. Orders and Conclusion of Contract</h5>
             <p>
-                VAT identification number in accordance with Section XX German VAT Act: <br>
-                DE1234567890    
+                Your order constitutes a binding offer. The contract is concluded when we confirm the order by email. 
+                We reserve the right to reject orders without stating reasons.
             </p>
 
-            <strong>Supervisiory Authority:</strong>
+            <h5>3. Payments</h5>
             <p>
-                Chamber of Crafts Stuttgart <br>
-                Heilbronner Straße XX <br>
-                XXXXX Stuttgart <br>
-                Germany <br>
+                All purchases are payable in advance by credit card via Stripe. Other payment methods are not currently offered.
             </p>
 
-            <strong>Professional Title and Professional Regulations:</strong><br>
+            <h5>4. Delivery</h5>
             <p>
-                <strong>Professional title: </strong>Master Tailor (Germany) <br>
-                <strong>Responsible Chamber: </strong>Chamber of Crafts Stuttgart <br>
-                The provisions of the German Crafts Code (Handwerksordnung) apply.
+                Standard delivery times for ready-to-wear items are 5-7 business days within Germany. Delivery times may 
+                vary depending on the destination country. <br>
+                For individually tailored suits, production typically requires 6-8 weeks, depending on the level of customization and material 
+                availability. You will be notified if additional time is necessary.
+            </p>
+
+            <h5>5. Right of Withdrawal and Returns</h5>
+            <strong>Ready-to-wear products</strong>
+            <p>
+                Consumers have the right to withdraw from the contract within 14 days without stating any reason. The withdrawal period 
+                starts from the day you receive the goods. <br>
+                Returned items <strong>must be unworn, unwashed, and in their original condition.</strong> In particular, garments that 
+                show signs of use (e.g., wearing at events such as weddings) or have been altered cannot be accepted. We 
+                reserve the right to inspect returned items and <strong>refuse refunds if the goods are deemed used or damaged.</strong> <br>
+                To exercise your right of withdrawal, you must inform us clearly in writing(e.g., by email). You must return the 
+                goods within 14 days after informing us of your withdrawal. <br>
+                The cost of return shipping is borne by us. <br>
+            </p>
+            
+            <strong>Individually tailored products</strong>
+            <p>
+                <strong>Custom-made suits are excluded from the right of withdrawal.</strong> Each piece is made to your specifications 
+                and measurements. <br>
+                Before production begins, we will conduct a detailed consultation and record all requirements in a binding 
+                specification protocol. <br>
+                If the delivered suit shows material or manufacturing  defects, we will remedy the issue at our expense by 
+                producing a replacement. Further claims are excluded.
             </p>
         </div>
     </div>
     <div class="col-md-6">
         <div class="p-4 bg-light2 text-container-fluid">
-            <strong>Responsible for content pursuant to Section XX German Interstate Broadcasting Treaty (RStV):</strong> <br>
+            <h5>6. Appointments (Design Consultation)</h5>
             <p>
-                Mark Anton <br>
-                Example street 1 <br>
-                00000 Example City <br>
-                Example Country <br>
+                Appointments for individual tailoring consultations (Design Consultation) van be cancelled free of charge up 
+                to <strong>7 days before the scheduled date.</strong> <br>
+                If you cancel later or fail to attend without prior notice, a <strong>cancellation fee of EUR 50</strong> will be 
+                charged. This fee also applies if you decide not to proceed with a custom order after the appointment. <br>
+                During your appointment, we will:
             </p>
-
-            <strong>Disclaimer: </strong> <br>
+            <ul>
+                <li>take your measurements,</li>
+                <li>develop a detailed concept tailored to your needs (style, material, occasion),</li>
+                <li>provide advice on accessories, colors, and fit.</li>
+            </ul>
             <p>
-                The European Commission provides a platform for online dispute resolution (ODR): <br>
-                <a href="http://ec.europa.eu/conssumers/odr" target="_blank" rel="noopener noreferrer">LINK</a><br>
-                You can find our email address above. <br>
-                We are neither obliged nor willing to participate in dispute resolution proceedings before a consumer arbitration board.
+                You are welcome to bring a guest and enjoy complimentary refreshments during your visit.
             </p>
             
+            <h5>7. Retention of Title</h5>
+            <p>
+                Goods remain our property until payment has been received in full.
+            </p>
+
+            <h5>8. Liability</h5>
+            <p>
+                We are liable for intent and gross negligance. For slight negligence, we are liable only  in case of breach of 
+                essential contractual obligations (cardinal obligations). Liability for indirect damage is excluded to the extent 
+                permitted by law.
+            </p>
+
+            <h5>9. Governing Law</h5>
+            <p>
+                Contracts concluded under these Terms and Conditions are subject to the laws of the Federal Republic of 
+                Germany, excluding the UN Convention on Contracts for the International Sale of Goods.
+            </p>
+
+            <h5>10. Final Provisions</h5>
+            <p>
+                Should any provision be invalid, this shall not affect the validity of the remaining provisions.
+            </p>
         </div>
     </div>
 </section>

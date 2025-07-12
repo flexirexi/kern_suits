@@ -23,4 +23,4 @@ def impressum(request):
 
 def terms_conditions(request):
     """A view to return the page of Terms & Conditions"""
-    return render(request)
+    return render(request, 'home/terms_conditions.html')
