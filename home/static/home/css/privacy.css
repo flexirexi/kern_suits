@@ -3,8 +3,9 @@
 
 
 /* specific elements --------------------------------------------------- */
-.privacy-section {
-    height: 800px;
+.privacy-section p,
+.privacy-section li {
+    font-size: 0.8rem;
 }
 
 
