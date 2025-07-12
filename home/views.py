@@ -14,3 +14,13 @@ def privacy(request):
 def about(request):
     """A view to return the about page"""
     return render(request, 'home/about.html')
+
+
+def impressum(request):
+    """A view to return the impressum page"""
+    return render(request, 'home/impressum.html')
+
+
+def terms_conditions(request):
+    """A view to return the page of Terms & Conditions"""
+    return render(request)

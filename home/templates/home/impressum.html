@@ -1,0 +1,72 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'home/css/impressum.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<!-------------- IMPRESSUM SECTION ------------------->
+<section class="row g-3 p-3 impressum-section">
+    <h1>Legal Notice</h1>
+    <div class="col-md-6">
+        <div class="p-4 bg-light2 text-container-fluid">
+            <strong>Information in accordance with Section XX German Telemedia Act (TMG):</strong><br>
+            <p>
+                <strong>Kern Anzüge</strong><br>
+                <strong>Owners: </strong>Mark Anton & Marcus Cicero <br>
+                Antonius street 3 <br>
+                753 Some City <br>
+                Some Country <br>
+                Phone: +0123 4567 90 <br>
+                E-mail: requests@kern.de <br>
+            </p>
+
+            <strong>VAT ID:</strong>
+            <p>
+                VAT identification number in accordance with Section XX German VAT Act: <br>
+                DE1234567890    
+            </p>
+
+            <strong>Supervisiory Authority:</strong>
+            <p>
+                Chamber of Crafts Stuttgart <br>
+                Heilbronner Straße XX <br>
+                XXXXX Stuttgart <br>
+                Germany <br>
+            </p>
+
+            <strong>Professional Title and Professional Regulations:</strong><br>
+            <p>
+                <strong>Professional title: </strong>Master Tailor (Germany) <br>
+                <strong>Responsible Chamber: </strong>Chamber of Crafts Stuttgart <br>
+                The provisions of the German Crafts Code (Handwerksordnung) apply.
+            </p>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="p-4 bg-light2 text-container-fluid">
+            <strong>Responsible for content pursuant to Section XX German Interstate Broadcasting Treaty (RStV):</strong> <br>
+            <p>
+                Mark Anton <br>
+                Example street 1 <br>
+                00000 Example City <br>
+                Example Country <br>
+            </p>
+
+            <strong>Disclaimer: </strong> <br>
+            <p>
+                The European Commission provides a platform for online dispute resolution (ODR): <br>
+                <a href="http://ec.europa.eu/conssumers/odr" target="_blank" rel="noopener noreferrer">LINK</a><br>
+                You can find our email address above. <br>
+                We are neither obliged nor willing to participate in dispute resolution proceedings before a consumer arbitration board.
+            </p>
+            
+        </div>
+    </div>
+</section>
+
+
+
+{% endblock %}

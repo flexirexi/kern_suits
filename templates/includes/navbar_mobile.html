@@ -2,7 +2,7 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand fw-bold nav-link" href="#">Kern</a>
+    <a class="navbar-brand fw-bold nav-link" href="{% url 'home' %}">Kern</a>
     <div class="d-flex align-items-center">
         <a class="nav-link" href="#">
             <i class="fas fa-bag-shopping"></i>
@@ -16,7 +16,7 @@
 <div class="collapse" id="mobileMenu">
     <ul class="nav flex-column px-3 py-2">
         <li class="nav-item">
-            <a class="nav-link" href="#">Home</a>
+            <a class="nav-link" href="{% url 'home' %}">Home</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="#">Shop</a>
@@ -25,7 +25,7 @@
             <a class="nav-link" href="#">Consultations</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="{% url 'about' %}">About</a>
         </li>
     </ul>
 </div>
