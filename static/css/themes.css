@@ -3,11 +3,11 @@
     --text2: #0d1b2a;
     --text3: #102841;
 
-    --title1: #0d1b2a;
-    --title2: #102841;
+    --title1: #0a2540;
+    --title2: #103760;
 
-    --link: #ffcd28;
-    --link-hover: #ffffff;
+    --link: #1573d7;
+    --link-hover: #298bf3;
 
     --bgDefault: #ffffff;
     --bgDefault2: #;
@@ -68,26 +68,75 @@ html[data-theme="dark"] {
     --color11: #e5b567;
 }
 
-[data-theme] * {
+* {
     color: var(--text1);
+}
+
+a {
+    color: var(--link);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
+    text-decoration-thickness: 1px; 
+
 }
 
 [data-theme] nav,
 [data-theme] header {
     background-color: var(--nav-bg);
+    box-sizing: border-box;
 }
 
-[data-theme] header a {
+header .nav-link {
     margin: 0 1rem;
     text-decoration: none;
     color: var(--nav-link);
     font-size: 1.1rem;
 }
 	
-[data-theme] header a:hover {
+header .nav-link:hover {
     color: var(--nav-link-hover);
     text-decoration: underline;
-    text-underline-offset: 4px; /* optional: etwas Abstand unter dem Text */
-    text-decoration-thickness: 1px; /* optional: dünner Unterstrich */
+    text-underline-offset: 4px; 
+    text-decoration-thickness: 1px; 
 }
 
+.btn-light {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: var(--act1-bg);
+    color: var(--act1-text);
+    text-decoration: none;
+    border-radius: 4px;
+    border: 1px solid var(--act1-border);
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-light:hover {
+    background-color: var(--act1-bg-hover);
+    color: var(--act1-text-hover);
+    text-decoration: none;
+}
+
+.btn-dark {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: var(--act2-bg);
+    color: var(--act2-text);
+    border: none;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-dark:hover {
+    background: var(--act2-bg-hover);
+    color: var(--act2-text-hover);
+    text-decoration: none;
+}

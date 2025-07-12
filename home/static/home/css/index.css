@@ -11,6 +11,9 @@ Bootstrap is used here -> in order to overwrite, use:
 
 
 /* specific elements --------------------------------------------------- */
+section {
+    min-height: 350px;
+}
 
 
 

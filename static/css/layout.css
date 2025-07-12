@@ -6,18 +6,63 @@
     --padding-horizontal: 15px;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+}
 
-html[data-theme] main {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--title2);
+    font-family: 'Cincel', serif;
+}
+
+main {
     margin-top: var(--nav-height);
 } 
 
 
-* {
-    margin: 0;
-    padding: 0;
-    
+[data-theme] nav,
+[data-theme] header {
+    font-family: 'Cinzel', serif;
 }
 
-[data-theme] nav {
-    font-family: 'Cinzel', serif;
+[data-theme] section {
+    margin: 0;
+    padding: 0;
+}
+
+.image-container-fluid {
+    width: 100%;
+    height: 100%;
+}
+
+.text-container-fluid {
+    width: 100%;
+    height: 100%;
+}
+
+.row {
+    height: 100%;
+}
+
+@media (min-width:768px) {
+}
+
+@media (min-width:992px) {
+    .row * {
+        margin-top: 0;
+    }
+}
+
+@media (min-width:1200px) {
+
+}
+
+@media (min-width:1400px) {
+
 }

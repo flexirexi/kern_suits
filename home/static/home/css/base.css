@@ -5,19 +5,32 @@
     background-color: var(--bgDefault);
 }
 
-.hero-section {
+[data-theme] .hero-section {
     width: 100%;
     height: 80vh; 
-    background: url('/static/img/hero-bg.jpg') center center / cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     text-align: center;
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    overflow: hidden;
 }
 
-.hero-overlay {
-    background-color: rgba(0,0,0,0.35); /* halbtransparenter dunkler Layer */
+[data-theme] .hero-section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -100;
+}
+
+[data-theme] .hero-overlay {
+    background-color: rgba(0,0,0,0.5); /* halbtransparenter dunkler Layer */
     padding: 2rem;
     border-radius: 0;
     width: 100%;
@@ -40,9 +53,12 @@
 
 /* MEDIA QUERIES ---------------------------------------------------------- */
 @media (min-width: 768px) {
-    .hero-section {
+}
+
+@media (min-width: 992px) {
+    [data-theme] .hero-section {
         width: 100%;
-        height: 50vh; /* oder 100vh für volle Höhe */
+        height: 70vh; /* oder 100vh für volle Höhe */
         background: url('/static/img/hero-bg.jpg') center center / cover no-repeat;
         display: flex;
         align-items: center;
@@ -50,12 +66,16 @@
         position: relative;
         color: white;
         text-align: center;
+        box-sizing: border-box;
+        margin:0;
+        padding:0;
     }
-
+    
     .hero-overlay {
         background-color: rgba(0,0,0,0.3); /* halbtransparenter dunkler Layer */
         padding: 2rem;
         border-radius: 0;
         width: 100%;
+        box-sizing: border-box;
     }
 }
