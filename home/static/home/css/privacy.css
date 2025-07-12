@@ -1,0 +1,14 @@
+@import url("/static/css/themes.css");
+@import url("/static/css/layout.css");
+
+
+/* specific elements --------------------------------------------------- */
+.privacy-section {
+    height: 800px;
+}
+
+
+
+/* MEDIA QUERIES ---------------------------------------------------------- */
+@media (min-width: 768px) {
+}

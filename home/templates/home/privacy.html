@@ -1,0 +1,36 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'home/css/index.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<!-------------- TAILORING SECTION ------------------->
+<section class="row g-3 p-3 privacy-section">
+    <div class="col-6">
+        <div class="row g-3">
+            <div class="p-4 bg-light2 text-container-fluid">
+                <h4></h4>
+                <p></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="p-4 bg-light2 text-container-fluid">
+            <h4>Individual Solutions</h4>
+            <p>
+                Every occasion deserves a suit as unique as you are. While our online collection
+                offers a wide range of styles, certain moments call for something truly personal.
+                Whether it's a wedding, a milestone celebration, or an important business event, 
+                we are here to create a suit that fits not only your your measurements, but your vision. <br>
+                Schedule a consultation and discover how effortless made-to-measure can be. 
+            </p>
+        </div>
+    </div>
+</section>
+
+
+
+{% endblock %}
