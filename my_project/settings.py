@@ -46,13 +46,19 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'django_summernote',
     
-    'home',  # home-app
+    # crispy_forms",
+    'crispy_forms',
+    'crispy_bootstrap5',
     
+    'home',  # home-app    
 ]
 
 SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
@@ -73,7 +79,8 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    'allauth.account.middleware.AccountMiddleware',  # caused a crash..
+    # "allauth.account.middleware.AccountMiddleware",
+    # 'allauth.account.middleware.AccountMiddleware',  # caused a crash..
 ]
 
 ROOT_URLCONF = "my_project.urls"
@@ -87,10 +94,9 @@ TEMPLATES = [
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
-                "django.template.context_processors.request",
+                "django.template.context_processors.request",  # allauth
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
-                "django.template.context_processors.request",  # allauth
             ],
         },
     },
