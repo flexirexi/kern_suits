@@ -8,12 +8,12 @@ from .models import Product
 def products(request):
     """A view to return products page which filters/sorts the products from the products list"""
     
-    products = Product.objects.all()
+    products = Product.objects.filter(is_active=True).prefetch_related('variants')
     query = request.GET.get("q")
     
-    products = Product.objects.filter(
-        is_active=True
-    )
+    for p in products:
+        variants = p.variants.all()
+        p.min_price = min([v.price for v in variants], default=None)
     
     context = {
         'products': products,

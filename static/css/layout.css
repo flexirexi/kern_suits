@@ -66,6 +66,13 @@ main,
 }
 
 @media (min-width:768px) {
+    [data-theme] .card {
+        transition: transform 0.3s ease;
+    }
+
+    [data-theme] .card:hover {
+        transform: translate(0, -3px);
+    }
 }
 
 @media (min-width:992px) {
