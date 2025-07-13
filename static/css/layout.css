@@ -20,7 +20,8 @@ h6 {
 
 }
 
-main {
+main,
+[data-theme] .main {
     margin-top: var(--nav-height);
 } 
 
