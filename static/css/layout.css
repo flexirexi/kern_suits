@@ -30,6 +30,12 @@ main {
     font-family: 'Cinzel', serif;
 }
 
+[data-theme] header form {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
 [data-theme] section {
     margin: 0;
     padding: 0;

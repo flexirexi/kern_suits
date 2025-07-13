@@ -140,7 +140,6 @@ a:hover {
     text-decoration-thickness: 1px;
 }
 
-
 footer .nav-link {
     margin: 0 1rem;
     text-decoration: none;
@@ -154,7 +153,6 @@ footer .nav-link:hover {
     text-underline-offset: 4px; 
     text-decoration-thickness: 1px; 
 }
-
 
 .btn-light {
     display: inline-block;
@@ -196,4 +194,8 @@ footer .nav-link:hover {
 
 .btn-large {
     padding: 0.75rem 1.5rem;
+}
+
+[data-theme] form input {
+    font-family: "Calibry", sans-serif;
 }
