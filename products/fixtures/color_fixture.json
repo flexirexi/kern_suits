@@ -1,0 +1,326 @@
+[
+  {
+    "model": "products.color",
+    "pk": 1,
+    "fields": {
+      "name": "Black",
+      "slug": "black",
+      "hex_code": "#000000"
+    }
+  },
+  {
+    "model": "products.color",
+    "pk": 2,
+    "fields": {
+      "name": "Charcoal Grey",
+      "slug": "charcoal-grey",
+      "hex_code": "#36454F"
+    }
+  },
+  {
+    "model": "products.color",
+    "pk": 3,
+    "fields": {
+      "name": "Light Grey",
+      "slug": "light-grey",
+      "hex_code": "#D3D3D3"
+    }
+  },
+  {
+    "model": "products.color",
+    "pk": 4,
+    "fields": {
+      "name": "Navy Blue",
+      "slug": "navy-blue",
+      "hex_code": "#1A237E"
+    }
+  },
+  {
+    "model": "products.color",
+    "pk": 5,
+    "fields": {
+      "name": "Midnight Blue",
+      "slug": "midnight-blue",
+      "hex_code": "#191970"
+    }
+  },
+  {
+    "model": "products.color",
+    "pk": 6,
+    "fields": {
+      "name": "Royal Blue",
+      "slug": "royal-blue",
+      "hex_code": "#4169E1"
+    }
+  },
+  {
+    "model": "products.color",
+    "pk": 7,
+    "fields": {
+      "name": "Dark Brown",
+      "slug": "dark-brown",
+      "hex_code": "#4B3621"
+    }
+  },
+  {
+    "model": "products.color",
+    "pk": 8,
+    "fields": {
+      "name": "Medium Brown",
+      "slug": "medium-brown",
+      "hex_code": "#7B5E57"
+    }
+  },
+  {
+    "model": "products.color",
+    "pk": 9,
+    "fields": {
+      "name": "Light Brown",
+      "slug": "light-brown",
+      "hex_code": "#A1866F"
+    }
+  },
+  {
+    "model": "products.color",
+    "pk": 10,
+    "fields": {
+      "name": "Beige",
+      "slug": "beige",
+      "hex_code": "#F5F5DC"
+    }
+  },
+  {
+    "model": "products.color",
+    "pk": 11,
+    "fields": {
+      "name": "Off White",
+      "slug": "off-white",
+      "hex_code": "#F8F8F0"
+    }
+  },
+  {
+    "model": "products.color",
+    "pk": 12,
+    "fields": {
+      "name": "Pure White",
+      "slug": "pure-white",
+      "hex_code": "#FFFFFF"
+    }
+  },
+  {
+    "model": "products.color",
+    "pk": 13,
+    "fields": {
+      "name": "Ivory",
+      "slug": "ivory",
+      "hex_code": "#FFFFF0"
+    }
+  },
+  {
+    "model": "products.color",
+    "pk": 14,
+    "fields": {
+      "name": "Burgundy",
+      "slug": "burgundy",
+      "hex_code": "#800020"
+    }
+  },
+  {
+    "model": "products.color",
+    "pk": 15,
+    "fields": {
+      "name": "Deep Red",
+      "slug": "deep-red",
+      "hex_code": "#8B0000"
+    }
+  },
+  {
+    "model": "products.color",
+    "pk": 16,
+    "fields": {
+      "name": "Bordeaux Red",
+      "slug": "bordeaux-red",
+      "hex_code": "#7C0A02"
+    }
+  },
+  {
+    "model": "products.color",
+    "pk": 17,
+    "fields": {
+      "name": "Olive Green",
+      "slug": "olive-green",
+      "hex_code": "#556B2F"
+    }
+  },
+  {
+    "model": "products.color",
+    "pk": 18,
+    "fields": {
+      "name": "Forest Green",
+      "slug": "forest-green",
+      "hex_code": "#228B22"
+    }
+  },
+  {
+    "model": "products.color",
+    "pk": 19,
+    "fields": {
+      "name": "Dark Green",
+      "slug": "dark-green",
+      "hex_code": "#006400"
+    }
+  },
+  {
+    "model": "products.color",
+    "pk": 20,
+    "fields": {
+      "name": "Sand",
+      "slug": "sand",
+      "hex_code": "#C2B280"
+    }
+  },
+  {
+    "model": "products.color",
+    "pk": 21,
+    "fields": {
+      "name": "Light Blue",
+      "slug": "light-blue",
+      "hex_code": "#ADD8E6"
+    }
+  },
+  {
+    "model": "products.color",
+    "pk": 22,
+    "fields": {
+      "name": "Sky Blue",
+      "slug": "sky-blue",
+      "hex_code": "#87CEEB"
+    }
+  },
+  {
+    "model": "products.color",
+    "pk": 23,
+    "fields": {
+      "name": "Slate Blue",
+      "slug": "slate-blue",
+      "hex_code": "#6A5ACD"
+    }
+  },
+  {
+    "model": "products.color",
+    "pk": 24,
+    "fields": {
+      "name": "Anthracite",
+      "slug": "anthracite",
+      "hex_code": "#2B2B2B"
+    }
+  },
+  {
+    "model": "products.color",
+    "pk": 25,
+    "fields": {
+      "name": "Taupe",
+      "slug": "taupe",
+      "hex_code": "#483C32"
+    }
+  },
+  {
+    "model": "products.color",
+    "pk": 26,
+    "fields": {
+      "name": "Camel",
+      "slug": "camel",
+      "hex_code": "#C19A6B"
+    }
+  },
+  {
+    "model": "products.color",
+    "pk": 27,
+    "fields": {
+      "name": "Silver Grey",
+      "slug": "silver-grey",
+      "hex_code": "#C0C0C0"
+    }
+  },
+  {
+    "model": "products.color",
+    "pk": 28,
+    "fields": {
+      "name": "Graphite",
+      "slug": "graphite",
+      "hex_code": "#3A3A3A"
+    }
+  },
+  {
+    "model": "products.color",
+    "pk": 29,
+    "fields": {
+      "name": "Dark Purple",
+      "slug": "dark-purple",
+      "hex_code": "#301934"
+    }
+  },
+  {
+    "model": "products.color",
+    "pk": 30,
+    "fields": {
+      "name": "Soft Pink",
+      "slug": "soft-pink",
+      "hex_code": "#FFC0CB"
+    }
+  },
+  {
+    "model": "products.color",
+    "pk": 31,
+    "fields": {
+      "name": "Copper",
+      "slug": "copper",
+      "hex_code": "#B87333"
+    }
+  },
+  {
+    "model": "products.color",
+    "pk": 32,
+    "fields": {
+      "name": "Gold",
+      "slug": "gold",
+      "hex_code": "#FFD700"
+    }
+  },
+  {
+    "model": "products.color",
+    "pk": 33,
+    "fields": {
+      "name": "Bronze",
+      "slug": "bronze",
+      "hex_code": "#CD7F32"
+    }
+  },
+  {
+    "model": "products.color",
+    "pk": 34,
+    "fields": {
+      "name": "Deep Teal",
+      "slug": "deep-teal",
+      "hex_code": "#014D4D"
+    }
+  },
+  {
+    "model": "products.color",
+    "pk": 35,
+    "fields": {
+      "name": "Emerald",
+      "slug": "emerald",
+      "hex_code": "#50C878"
+    }
+  },
+  {
+    "model": "products.color",
+    "pk": 36,
+    "fields": {
+      "name": "Petrol Blue",
+      "slug": "petrol-blue",
+      "hex_code": "#004953"
+    }
+  }
+]

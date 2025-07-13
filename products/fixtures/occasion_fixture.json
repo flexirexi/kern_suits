@@ -1,0 +1,42 @@
+[
+  {
+    "model": "products.occasion",
+    "pk": 0,
+    "fields": {
+      "name": "Weddings",
+      "slug": "weddings"
+    }
+  },
+  {
+    "model": "products.occasion",
+    "pk": 1,
+    "fields": {
+      "name": "Business",
+      "slug": "business"
+    }
+  },
+  {
+    "model": "products.occasion",
+    "pk": 2,
+    "fields": {
+      "name": "Ceremonies",
+      "slug": "ceremonies"
+    }
+  },
+  {
+    "model": "products.occasion",
+    "pk": 3,
+    "fields": {
+      "name": "Casual",
+      "slug": "casual"
+    }
+  },
+  {
+    "model": "products.occasion",
+    "pk": 4,
+    "fields": {
+      "name": "Evening",
+      "slug": "evening"
+    }
+  }
+]

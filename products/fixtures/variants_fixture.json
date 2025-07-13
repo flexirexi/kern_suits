@@ -1,0 +1,7954 @@
+[
+  {
+    "model": "products.productvariant",
+    "pk": 0,
+    "fields": {
+      "product": 0,
+      "size": 4,
+      "fit": 1,
+      "color": 2,
+      "sku": "HERITAGE-JKT-48-REG-CHARCOAL",
+      "stock": 5,
+      "price": 499.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 1,
+    "fields": {
+      "product": 0,
+      "size": 5,
+      "fit": 2,
+      "color": 4,
+      "sku": "HERITAGE-JKT-50-SLIM-NAVY",
+      "stock": 3,
+      "price": 499.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 2,
+    "fields": {
+      "product": 0,
+      "size": 6,
+      "fit": 1,
+      "color": 2,
+      "sku": "HERITAGE-JKT-52-REG-CHARCOAL",
+      "stock": 4,
+      "price": 499.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 3,
+    "fields": {
+      "product": 0,
+      "size": 7,
+      "fit": 2,
+      "color": 4,
+      "sku": "HERITAGE-JKT-54-SLIM-NAVY",
+      "stock": 2,
+      "price": 499.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 4,
+    "fields": {
+      "product": 1,
+      "size": 14,
+      "fit": 1,
+      "color": 2,
+      "sku": "HERITAGE-TRS-46-REG-CHARCOAL",
+      "stock": 6,
+      "price": 249.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 5,
+    "fields": {
+      "product": 1,
+      "size": 16,
+      "fit": 2,
+      "color": 4,
+      "sku": "HERITAGE-TRS-48-SLIM-NAVY",
+      "stock": 4,
+      "price": 249.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 6,
+    "fields": {
+      "product": 1,
+      "size": 18,
+      "fit": 1,
+      "color": 2,
+      "sku": "HERITAGE-TRS-50-REG-CHARCOAL",
+      "stock": 3,
+      "price": 249.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 7,
+    "fields": {
+      "product": 2,
+      "size": 34,
+      "fit": 1,
+      "color": 2,
+      "sku": "HERITAGE-WST-46-REG-CHARCOAL",
+      "stock": 5,
+      "price": 179.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 8,
+    "fields": {
+      "product": 2,
+      "size": 36,
+      "fit": 2,
+      "color": 4,
+      "sku": "HERITAGE-WST-48-SLIM-NAVY",
+      "stock": 4,
+      "price": 179.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 9,
+    "fields": {
+      "product": 3,
+      "size": 4,
+      "fit": 2,
+      "color": 4,
+      "sku": "SIGNATURE-JKT-48-SLIM-NAVY",
+      "stock": 5,
+      "price": 539.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 10,
+    "fields": {
+      "product": 3,
+      "size": 5,
+      "fit": 3,
+      "color": 4,
+      "sku": "SIGNATURE-JKT-50-EXSLIM-NAVY",
+      "stock": 2,
+      "price": 539.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 11,
+    "fields": {
+      "product": 3,
+      "size": 6,
+      "fit": 2,
+      "color": 6,
+      "sku": "SIGNATURE-JKT-52-SLIM-ROYAL",
+      "stock": 3,
+      "price": 539.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 12,
+    "fields": {
+      "product": 4,
+      "size": 14,
+      "fit": 2,
+      "color": 4,
+      "sku": "SIGNATURE-TRS-46-SLIM-NAVY",
+      "stock": 6,
+      "price": 269.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 13,
+    "fields": {
+      "product": 4,
+      "size": 16,
+      "fit": 3,
+      "color": 4,
+      "sku": "SIGNATURE-TRS-48-EXSLIM-NAVY",
+      "stock": 4,
+      "price": 269.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 14,
+    "fields": {
+      "product": 4,
+      "size": 18,
+      "fit": 2,
+      "color": 6,
+      "sku": "SIGNATURE-TRS-50-SLIM-ROYAL",
+      "stock": 3,
+      "price": 269.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 15,
+    "fields": {
+      "product": 5,
+      "size": 27,
+      "fit": 1,
+      "color": 12,
+      "sku": "SIGNATURE-SHIRT-S-REG-WHITE",
+      "stock": 8,
+      "price": 119.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 16,
+    "fields": {
+      "product": 5,
+      "size": 28,
+      "fit": 2,
+      "color": 21,
+      "sku": "SIGNATURE-SHIRT-M-SLIM-LIGHTBLUE",
+      "stock": 6,
+      "price": 119.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 17,
+    "fields": {
+      "product": 5,
+      "size": 29,
+      "fit": 2,
+      "color": 21,
+      "sku": "SIGNATURE-SHIRT-L-SLIM-LIGHTBLUE",
+      "stock": 5,
+      "price": 119.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 18,
+    "fields": {
+      "product": 5,
+      "size": 30,
+      "fit": 1,
+      "color": 12,
+      "sku": "SIGNATURE-SHIRT-XL-REG-WHITE",
+      "stock": 4,
+      "price": 119.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 19,
+    "fields": {
+      "product": 6,
+      "size": 4,
+      "fit": 1,
+      "color": 2,
+      "sku": "TIMELESS-JKT-48-REG-CHARCOAL",
+      "stock": 5,
+      "price": 459.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 20,
+    "fields": {
+      "product": 6,
+      "size": 5,
+      "fit": 2,
+      "color": 2,
+      "sku": "TIMELESS-JKT-50-SLIM-CHARCOAL",
+      "stock": 4,
+      "price": 459.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 21,
+    "fields": {
+      "product": 6,
+      "size": 6,
+      "fit": 1,
+      "color": 2,
+      "sku": "TIMELESS-JKT-52-REG-CHARCOAL",
+      "stock": 4,
+      "price": 459.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 22,
+    "fields": {
+      "product": 6,
+      "size": 3,
+      "fit": 1,
+      "color": 2,
+      "sku": "TIMELESS-JKT-46-REG-CHARCOAL",
+      "stock": 2,
+      "price": 459.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 23,
+    "fields": {
+      "product": 7,
+      "size": 14,
+      "fit": 1,
+      "color": 2,
+      "sku": "TIMELESS-TRS-46-REG-CHARCOAL",
+      "stock": 6,
+      "price": 239.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 24,
+    "fields": {
+      "product": 7,
+      "size": 16,
+      "fit": 2,
+      "color": 2,
+      "sku": "TIMELESS-TRS-48-SLIM-CHARCOAL",
+      "stock": 5,
+      "price": 239.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 25,
+    "fields": {
+      "product": 7,
+      "size": 12,
+      "fit": 1,
+      "color": 2,
+      "sku": "TIMELESS-TRS-44-REG-CHARCOAL",
+      "stock": 3,
+      "price": 239.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 26,
+    "fields": {
+      "product": 7,
+      "size": 18,
+      "fit": 1,
+      "color": 2,
+      "sku": "TIMELESS-TRS-50-REG-CHARCOAL",
+      "stock": 2,
+      "price": 239.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 27,
+    "fields": {
+      "product": 8,
+      "size": 27,
+      "fit": 1,
+      "color": 12,
+      "sku": "TIMELESS-SHIRT-S-REG-WHITE",
+      "stock": 8,
+      "price": 109.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 28,
+    "fields": {
+      "product": 8,
+      "size": 28,
+      "fit": 2,
+      "color": 12,
+      "sku": "TIMELESS-SHIRT-M-SLIM-WHITE",
+      "stock": 7,
+      "price": 109.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 29,
+    "fields": {
+      "product": 8,
+      "size": 29,
+      "fit": 2,
+      "color": 21,
+      "sku": "TIMELESS-SHIRT-L-SLIM-LIGHTBLUE",
+      "stock": 6,
+      "price": 109.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 30,
+    "fields": {
+      "product": 9,
+      "size": 41,
+      "fit": 0,
+      "color": 12,
+      "sku": "TIMELESS-TIE-STANDARD-WHITE",
+      "stock": 10,
+      "price": 69.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 31,
+    "fields": {
+      "product": 9,
+      "size": 41,
+      "fit": 0,
+      "color": 4,
+      "sku": "TIMELESS-TIE-STANDARD-NAVY",
+      "stock": 8,
+      "price": 69.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 32,
+    "fields": {
+      "product": 9,
+      "size": 41,
+      "fit": 0,
+      "color": 14,
+      "sku": "TIMELESS-TIE-STANDARD-BURGUNDY",
+      "stock": 5,
+      "price": 69.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 33,
+    "fields": {
+      "product": 10,
+      "size": 4,
+      "fit": 2,
+      "color": 4,
+      "sku": "MODERN-JKT-48-SLIM-NAVY",
+      "stock": 6,
+      "price": 469.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 34,
+    "fields": {
+      "product": 10,
+      "size": 5,
+      "fit": 3,
+      "color": 4,
+      "sku": "MODERN-JKT-50-EXSLIM-NAVY",
+      "stock": 4,
+      "price": 469.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 35,
+    "fields": {
+      "product": 10,
+      "size": 6,
+      "fit": 2,
+      "color": 6,
+      "sku": "MODERN-JKT-52-SLIM-ROYAL",
+      "stock": 3,
+      "price": 469.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 36,
+    "fields": {
+      "product": 10,
+      "size": 3,
+      "fit": 2,
+      "color": 4,
+      "sku": "MODERN-JKT-46-SLIM-NAVY",
+      "stock": 2,
+      "price": 469.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 37,
+    "fields": {
+      "product": 11,
+      "size": 14,
+      "fit": 2,
+      "color": 4,
+      "sku": "MODERN-TRS-46-SLIM-NAVY",
+      "stock": 6,
+      "price": 229.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 38,
+    "fields": {
+      "product": 11,
+      "size": 16,
+      "fit": 3,
+      "color": 4,
+      "sku": "MODERN-TRS-48-EXSLIM-NAVY",
+      "stock": 5,
+      "price": 229.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 39,
+    "fields": {
+      "product": 11,
+      "size": 12,
+      "fit": 2,
+      "color": 4,
+      "sku": "MODERN-TRS-44-SLIM-NAVY",
+      "stock": 4,
+      "price": 229.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 40,
+    "fields": {
+      "product": 12,
+      "size": 27,
+      "fit": 2,
+      "color": 12,
+      "sku": "MODERN-SHIRT-S-SLIM-WHITE",
+      "stock": 8,
+      "price": 109.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 41,
+    "fields": {
+      "product": 12,
+      "size": 28,
+      "fit": 3,
+      "color": 12,
+      "sku": "MODERN-SHIRT-M-EXSLIM-WHITE",
+      "stock": 6,
+      "price": 109.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 42,
+    "fields": {
+      "product": 12,
+      "size": 29,
+      "fit": 2,
+      "color": 21,
+      "sku": "MODERN-SHIRT-L-SLIM-LIGHTBLUE",
+      "stock": 5,
+      "price": 109.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 43,
+    "fields": {
+      "product": 13,
+      "size": 4,
+      "fit": 2,
+      "color": 2,
+      "sku": "SARTORIAL-JKT-48-SLIM-CHARCOAL",
+      "stock": 5,
+      "price": 529.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 44,
+    "fields": {
+      "product": 13,
+      "size": 5,
+      "fit": 1,
+      "color": 2,
+      "sku": "SARTORIAL-JKT-50-REG-CHARCOAL",
+      "stock": 4,
+      "price": 529.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 45,
+    "fields": {
+      "product": 13,
+      "size": 6,
+      "fit": 2,
+      "color": 4,
+      "sku": "SARTORIAL-JKT-52-SLIM-NAVY",
+      "stock": 3,
+      "price": 529.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 46,
+    "fields": {
+      "product": 14,
+      "size": 14,
+      "fit": 1,
+      "color": 2,
+      "sku": "SARTORIAL-TRS-46-REG-CHARCOAL",
+      "stock": 6,
+      "price": 259.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 47,
+    "fields": {
+      "product": 14,
+      "size": 16,
+      "fit": 2,
+      "color": 2,
+      "sku": "SARTORIAL-TRS-48-SLIM-CHARCOAL",
+      "stock": 5,
+      "price": 259.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 48,
+    "fields": {
+      "product": 14,
+      "size": 18,
+      "fit": 2,
+      "color": 4,
+      "sku": "SARTORIAL-TRS-50-SLIM-NAVY",
+      "stock": 3,
+      "price": 259.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 49,
+    "fields": {
+      "product": 15,
+      "size": 34,
+      "fit": 1,
+      "color": 2,
+      "sku": "SARTORIAL-WST-46-REG-CHARCOAL",
+      "stock": 6,
+      "price": 189.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 50,
+    "fields": {
+      "product": 15,
+      "size": 36,
+      "fit": 2,
+      "color": 4,
+      "sku": "SARTORIAL-WST-48-SLIM-NAVY",
+      "stock": 5,
+      "price": 189.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 51,
+    "fields": {
+      "product": 16,
+      "size": 4,
+      "fit": 1,
+      "color": 1,
+      "sku": "BT-JKT-48-REG-BLACK",
+      "stock": 5,
+      "price": 699.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 52,
+    "fields": {
+      "product": 16,
+      "size": 5,
+      "fit": 2,
+      "color": 1,
+      "sku": "BT-JKT-50-SLIM-BLACK",
+      "stock": 4,
+      "price": 699.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 53,
+    "fields": {
+      "product": 16,
+      "size": 6,
+      "fit": 2,
+      "color": 1,
+      "sku": "BT-JKT-52-SLIM-BLACK",
+      "stock": 3,
+      "price": 699.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 54,
+    "fields": {
+      "product": 16,
+      "size": 7,
+      "fit": 3,
+      "color": 1,
+      "sku": "BT-JKT-54-EXSLIM-BLACK",
+      "stock": 2,
+      "price": 699.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 55,
+    "fields": {
+      "product": 17,
+      "size": 14,
+      "fit": 1,
+      "color": 1,
+      "sku": "BT-TRS-46-REG-BLACK",
+      "stock": 6,
+      "price": 299.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 56,
+    "fields": {
+      "product": 17,
+      "size": 16,
+      "fit": 2,
+      "color": 1,
+      "sku": "BT-TRS-48-SLIM-BLACK",
+      "stock": 5,
+      "price": 299.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 57,
+    "fields": {
+      "product": 17,
+      "size": 18,
+      "fit": 2,
+      "color": 1,
+      "sku": "BT-TRS-50-SLIM-BLACK",
+      "stock": 4,
+      "price": 299.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 58,
+    "fields": {
+      "product": 17,
+      "size": 20,
+      "fit": 3,
+      "color": 1,
+      "sku": "BT-TRS-52-EXSLIM-BLACK",
+      "stock": 2,
+      "price": 299.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 59,
+    "fields": {
+      "product": 18,
+      "size": 42,
+      "fit": 0,
+      "color": 5,
+      "sku": "BT-BOW-STD-REG-BLACK",
+      "stock": 12,
+      "price": 79.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 60,
+    "fields": {
+      "product": 18,
+      "size": 42,
+      "fit": 0,
+      "color": 5,
+      "sku": "BT-BOW-WIDE-REG-BLACK",
+      "stock": 8,
+      "price": 79.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 61,
+    "fields": {
+      "product": 18,
+      "size": 42,
+      "fit": 0,
+      "color": 5,
+      "sku": "BT-BOW-STD-SLIM-BLACK",
+      "stock": 6,
+      "price": 79.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 62,
+    "fields": {
+      "product": 19,
+      "size": 26,
+      "fit": 1,
+      "color": 12,
+      "sku": "BT-FS-XS-REG-WHITE",
+      "stock": 15,
+      "price": 129.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 63,
+    "fields": {
+      "product": 19,
+      "size": 27,
+      "fit": 1,
+      "color": 12,
+      "sku": "BT-FS-S-REG-WHITE",
+      "stock": 25,
+      "price": 129.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 64,
+    "fields": {
+      "product": 19,
+      "size": 28,
+      "fit": 1,
+      "color": 12,
+      "sku": "BT-FS-M-REG-WHITE",
+      "stock": 30,
+      "price": 129.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 65,
+    "fields": {
+      "product": 19,
+      "size": 29,
+      "fit": 1,
+      "color": 12,
+      "sku": "BT-FS-L-REG-WHITE",
+      "stock": 25,
+      "price": 129.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 66,
+    "fields": {
+      "product": 19,
+      "size": 30,
+      "fit": 1,
+      "color": 12,
+      "sku": "BT-FS-XL-REG-WHITE",
+      "stock": 20,
+      "price": 129.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 67,
+    "fields": {
+      "product": 19,
+      "size": 28,
+      "fit": 2,
+      "color": 12,
+      "sku": "BT-FS-M-SLIM-WHITE",
+      "stock": 20,
+      "price": 129.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 68,
+    "fields": {
+      "product": 19,
+      "size": 29,
+      "fit": 2,
+      "color": 12,
+      "sku": "BT-FS-L-SLIM-WHITE",
+      "stock": 15,
+      "price": 129.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 69,
+    "fields": {
+      "product": 20,
+      "size": 2,
+      "fit": 1,
+      "color": 2,
+      "sku": "EC-J-44-REG-CHARCOAL",
+      "stock": 5,
+      "price": 399.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 70,
+    "fields": {
+      "product": 20,
+      "size": 3,
+      "fit": 1,
+      "color": 2,
+      "sku": "EC-J-46-REG-CHARCOAL",
+      "stock": 8,
+      "price": 399.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 71,
+    "fields": {
+      "product": 20,
+      "size": 4,
+      "fit": 1,
+      "color": 2,
+      "sku": "EC-J-48-REG-CHARCOAL",
+      "stock": 7,
+      "price": 399.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 72,
+    "fields": {
+      "product": 20,
+      "size": 3,
+      "fit": 2,
+      "color": 2,
+      "sku": "EC-J-46-SLIM-CHARCOAL",
+      "stock": 6,
+      "price": 399.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 73,
+    "fields": {
+      "product": 20,
+      "size": 4,
+      "fit": 2,
+      "color": 2,
+      "sku": "EC-J-48-SLIM-CHARCOAL",
+      "stock": 6,
+      "price": 399.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 74,
+    "fields": {
+      "product": 20,
+      "size": 3,
+      "fit": 1,
+      "color": 24,
+      "sku": "EC-J-46-REG-ANTHRACITE",
+      "stock": 4,
+      "price": 399.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 75,
+    "fields": {
+      "product": 20,
+      "size": 4,
+      "fit": 2,
+      "color": 24,
+      "sku": "EC-J-48-SLIM-ANTHRACITE",
+      "stock": 4,
+      "price": 399.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 76,
+    "fields": {
+      "product": 20,
+      "size": 5,
+      "fit": 1,
+      "color": 24,
+      "sku": "EC-J-50-REG-ANTHRACITE",
+      "stock": 4,
+      "price": 399.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 77,
+    "fields": {
+      "product": 20,
+      "size": 6,
+      "fit": 1,
+      "color": 24,
+      "sku": "EC-J-52-REG-ANTHRACITE",
+      "stock": 3,
+      "price": 399.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 78,
+    "fields": {
+      "product": 21,
+      "size": 15,
+      "fit": 2,
+      "color": 2,
+      "sku": "EC-T-36-SLIM-CHARCOAL",
+      "stock": 12,
+      "price": 199.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 79,
+    "fields": {
+      "product": 21,
+      "size": 16,
+      "fit": 2,
+      "color": 2,
+      "sku": "EC-T-38-SLIM-CHARCOAL",
+      "stock": 12,
+      "price": 199.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 80,
+    "fields": {
+      "product": 21,
+      "size": 17,
+      "fit": 2,
+      "color": 2,
+      "sku": "EC-T-40-SLIM-CHARCOAL",
+      "stock": 12,
+      "price": 199.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 81,
+    "fields": {
+      "product": 21,
+      "size": 18,
+      "fit": 2,
+      "color": 2,
+      "sku": "EC-T-42-SLIM-CHARCOAL",
+      "stock": 10,
+      "price": 199.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 82,
+    "fields": {
+      "product": 21,
+      "size": 19,
+      "fit": 2,
+      "color": 2,
+      "sku": "EC-T-44-SLIM-CHARCOAL",
+      "stock": 8,
+      "price": 199.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 83,
+    "fields": {
+      "product": 21,
+      "size": 17,
+      "fit": 1,
+      "color": 24,
+      "sku": "EC-T-40-REG-ANTHRACITE",
+      "stock": 8,
+      "price": 199.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 84,
+    "fields": {
+      "product": 21,
+      "size": 18,
+      "fit": 1,
+      "color": 24,
+      "sku": "EC-T-42-REG-ANTHRACITE",
+      "stock": 8,
+      "price": 199.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 85,
+    "fields": {
+      "product": 21,
+      "size": 19,
+      "fit": 1,
+      "color": 24,
+      "sku": "EC-T-44-REG-ANTHRACITE",
+      "stock": 8,
+      "price": 199.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 86,
+    "fields": {
+      "product": 22,
+      "size": 26,
+      "fit": 1,
+      "color": 12,
+      "sku": "EC-S-XS-REG-WHITE",
+      "stock": 20,
+      "price": 119.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 87,
+    "fields": {
+      "product": 22,
+      "size": 27,
+      "fit": 1,
+      "color": 12,
+      "sku": "EC-S-S-REG-WHITE",
+      "stock": 30,
+      "price": 119.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 88,
+    "fields": {
+      "product": 22,
+      "size": 28,
+      "fit": 1,
+      "color": 12,
+      "sku": "EC-S-M-REG-WHITE",
+      "stock": 35,
+      "price": 119.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 89,
+    "fields": {
+      "product": 22,
+      "size": 29,
+      "fit": 1,
+      "color": 12,
+      "sku": "EC-S-L-REG-WHITE",
+      "stock": 25,
+      "price": 119.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 90,
+    "fields": {
+      "product": 22,
+      "size": 30,
+      "fit": 1,
+      "color": 12,
+      "sku": "EC-S-XL-REG-WHITE",
+      "stock": 15,
+      "price": 119.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 91,
+    "fields": {
+      "product": 22,
+      "size": 28,
+      "fit": 2,
+      "color": 12,
+      "sku": "EC-S-M-SLIM-WHITE",
+      "stock": 20,
+      "price": 119.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 92,
+    "fields": {
+      "product": 22,
+      "size": 29,
+      "fit": 2,
+      "color": 12,
+      "sku": "EC-S-L-SLIM-WHITE",
+      "stock": 15,
+      "price": 119.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 93,
+    "fields": {
+      "product": 23,
+      "size": 3,
+      "fit": 1,
+      "color": 5,
+      "sku": "FAC-J-46-REG-MIDNIGHT",
+      "stock": 6,
+      "price": 499.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 94,
+    "fields": {
+      "product": 23,
+      "size": 4,
+      "fit": 1,
+      "color": 5,
+      "sku": "FAC-J-48-REG-MIDNIGHT",
+      "stock": 6,
+      "price": 499.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 95,
+    "fields": {
+      "product": 23,
+      "size": 5,
+      "fit": 1,
+      "color": 5,
+      "sku": "FAC-J-50-REG-MIDNIGHT",
+      "stock": 4,
+      "price": 499.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 96,
+    "fields": {
+      "product": 23,
+      "size": 4,
+      "fit": 2,
+      "color": 5,
+      "sku": "FAC-J-48-SLIM-MIDNIGHT",
+      "stock": 4,
+      "price": 499.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 97,
+    "fields": {
+      "product": 23,
+      "size": 5,
+      "fit": 2,
+      "color": 5,
+      "sku": "FAC-J-50-SLIM-MIDNIGHT",
+      "stock": 4,
+      "price": 499.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 98,
+    "fields": {
+      "product": 23,
+      "size": 3,
+      "fit": 1,
+      "color": 1,
+      "sku": "FAC-J-46-REG-BLACK",
+      "stock": 5,
+      "price": 499.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 99,
+    "fields": {
+      "product": 23,
+      "size": 4,
+      "fit": 1,
+      "color": 1,
+      "sku": "FAC-J-48-REG-BLACK",
+      "stock": 5,
+      "price": 499.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 100,
+    "fields": {
+      "product": 23,
+      "size": 5,
+      "fit": 1,
+      "color": 1,
+      "sku": "FAC-J-50-REG-BLACK",
+      "stock": 4,
+      "price": 499.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 101,
+    "fields": {
+      "product": 24,
+      "size": 16,
+      "fit": 2,
+      "color": 5,
+      "sku": "FAC-T-38-SLIM-MIDNIGHT",
+      "stock": 10,
+      "price": 249.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 102,
+    "fields": {
+      "product": 24,
+      "size": 17,
+      "fit": 2,
+      "color": 5,
+      "sku": "FAC-T-40-SLIM-MIDNIGHT",
+      "stock": 10,
+      "price": 249.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 103,
+    "fields": {
+      "product": 24,
+      "size": 18,
+      "fit": 2,
+      "color": 5,
+      "sku": "FAC-T-42-SLIM-MIDNIGHT",
+      "stock": 8,
+      "price": 249.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 104,
+    "fields": {
+      "product": 24,
+      "size": 19,
+      "fit": 2,
+      "color": 5,
+      "sku": "FAC-T-44-SLIM-MIDNIGHT",
+      "stock": 6,
+      "price": 249.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 105,
+    "fields": {
+      "product": 24,
+      "size": 17,
+      "fit": 1,
+      "color": 1,
+      "sku": "FAC-T-40-REG-BLACK",
+      "stock": 6,
+      "price": 249.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 106,
+    "fields": {
+      "product": 24,
+      "size": 18,
+      "fit": 1,
+      "color": 1,
+      "sku": "FAC-T-42-REG-BLACK",
+      "stock": 6,
+      "price": 249.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 107,
+    "fields": {
+      "product": 24,
+      "size": 19,
+      "fit": 1,
+      "color": 1,
+      "sku": "FAC-T-44-REG-BLACK",
+      "stock": 6,
+      "price": 249.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 108,
+    "fields": {
+      "product": 24,
+      "size": 20,
+      "fit": 1,
+      "color": 1,
+      "sku": "FAC-T-46-REG-BLACK",
+      "stock": 5,
+      "price": 249.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 109,
+    "fields": {
+      "product": 25,
+      "size": 26,
+      "fit": 1,
+      "color": 12,
+      "sku": "FA-S-XS-REG-WHITE",
+      "stock": 15,
+      "price": 129.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 110,
+    "fields": {
+      "product": 25,
+      "size": 27,
+      "fit": 1,
+      "color": 12,
+      "sku": "FA-S-S-REG-WHITE",
+      "stock": 20,
+      "price": 129.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 111,
+    "fields": {
+      "product": 25,
+      "size": 28,
+      "fit": 1,
+      "color": 12,
+      "sku": "FA-S-M-REG-WHITE",
+      "stock": 25,
+      "price": 129.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 112,
+    "fields": {
+      "product": 25,
+      "size": 29,
+      "fit": 1,
+      "color": 12,
+      "sku": "FA-S-L-REG-WHITE",
+      "stock": 20,
+      "price": 129.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 113,
+    "fields": {
+      "product": 25,
+      "size": 30,
+      "fit": 1,
+      "color": 12,
+      "sku": "FA-S-XL-REG-WHITE",
+      "stock": 15,
+      "price": 129.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 114,
+    "fields": {
+      "product": 25,
+      "size": 28,
+      "fit": 2,
+      "color": 12,
+      "sku": "FA-S-M-SLIM-WHITE",
+      "stock": 15,
+      "price": 129.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 115,
+    "fields": {
+      "product": 25,
+      "size": 29,
+      "fit": 2,
+      "color": 12,
+      "sku": "FA-S-L-SLIM-WHITE",
+      "stock": 12,
+      "price": 129.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 116,
+    "fields": {
+      "product": 26,
+      "size": 3,
+      "fit": 1,
+      "color": 2,
+      "sku": "UG-J-46-REG-CHARCOAL",
+      "stock": 6,
+      "price": 349.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 117,
+    "fields": {
+      "product": 26,
+      "size": 4,
+      "fit": 1,
+      "color": 2,
+      "sku": "UG-J-48-REG-CHARCOAL",
+      "stock": 6,
+      "price": 349.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 118,
+    "fields": {
+      "product": 26,
+      "size": 5,
+      "fit": 1,
+      "color": 2,
+      "sku": "UG-J-50-REG-CHARCOAL",
+      "stock": 5,
+      "price": 349.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 119,
+    "fields": {
+      "product": 26,
+      "size": 4,
+      "fit": 2,
+      "color": 2,
+      "sku": "UG-J-48-SLIM-CHARCOAL",
+      "stock": 4,
+      "price": 349.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 120,
+    "fields": {
+      "product": 26,
+      "size": 5,
+      "fit": 2,
+      "color": 2,
+      "sku": "UG-J-50-SLIM-CHARCOAL",
+      "stock": 4,
+      "price": 349.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 121,
+    "fields": {
+      "product": 26,
+      "size": 3,
+      "fit": 1,
+      "color": 24,
+      "sku": "UG-J-46-REG-ANTHRACITE",
+      "stock": 4,
+      "price": 349.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 122,
+    "fields": {
+      "product": 26,
+      "size": 4,
+      "fit": 1,
+      "color": 24,
+      "sku": "UG-J-48-REG-ANTHRACITE",
+      "stock": 4,
+      "price": 349.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 123,
+    "fields": {
+      "product": 26,
+      "size": 5,
+      "fit": 1,
+      "color": 24,
+      "sku": "UG-J-50-REG-ANTHRACITE",
+      "stock": 4,
+      "price": 349.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 124,
+    "fields": {
+      "product": 27,
+      "size": 17,
+      "fit": 2,
+      "color": 2,
+      "sku": "UG-T-40-SLIM-CHARCOAL",
+      "stock": 10,
+      "price": 189.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 125,
+    "fields": {
+      "product": 27,
+      "size": 18,
+      "fit": 2,
+      "color": 2,
+      "sku": "UG-T-42-SLIM-CHARCOAL",
+      "stock": 10,
+      "price": 189.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 126,
+    "fields": {
+      "product": 27,
+      "size": 19,
+      "fit": 2,
+      "color": 2,
+      "sku": "UG-T-44-SLIM-CHARCOAL",
+      "stock": 8,
+      "price": 189.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 127,
+    "fields": {
+      "product": 27,
+      "size": 20,
+      "fit": 2,
+      "color": 2,
+      "sku": "UG-T-46-SLIM-CHARCOAL",
+      "stock": 6,
+      "price": 189.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 128,
+    "fields": {
+      "product": 27,
+      "size": 18,
+      "fit": 1,
+      "color": 24,
+      "sku": "UG-T-42-REG-ANTHRACITE",
+      "stock": 6,
+      "price": 189.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 129,
+    "fields": {
+      "product": 27,
+      "size": 19,
+      "fit": 1,
+      "color": 24,
+      "sku": "UG-T-44-REG-ANTHRACITE",
+      "stock": 6,
+      "price": 189.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 130,
+    "fields": {
+      "product": 27,
+      "size": 20,
+      "fit": 1,
+      "color": 24,
+      "sku": "UG-T-46-REG-ANTHRACITE",
+      "stock": 6,
+      "price": 189.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 131,
+    "fields": {
+      "product": 27,
+      "size": 21,
+      "fit": 1,
+      "color": 24,
+      "sku": "UG-T-48-REG-ANTHRACITE",
+      "stock": 5,
+      "price": 189.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 132,
+    "fields": {
+      "product": 28,
+      "size": 26,
+      "fit": 1,
+      "color": 12,
+      "sku": "UG-S-XS-REG-WHITE",
+      "stock": 20,
+      "price": 109.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 133,
+    "fields": {
+      "product": 28,
+      "size": 27,
+      "fit": 1,
+      "color": 12,
+      "sku": "UG-S-S-REG-WHITE",
+      "stock": 25,
+      "price": 109.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 134,
+    "fields": {
+      "product": 28,
+      "size": 28,
+      "fit": 1,
+      "color": 12,
+      "sku": "UG-S-M-REG-WHITE",
+      "stock": 30,
+      "price": 109.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 135,
+    "fields": {
+      "product": 28,
+      "size": 29,
+      "fit": 1,
+      "color": 12,
+      "sku": "UG-S-L-REG-WHITE",
+      "stock": 25,
+      "price": 109.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 136,
+    "fields": {
+      "product": 28,
+      "size": 30,
+      "fit": 1,
+      "color": 12,
+      "sku": "UG-S-XL-REG-WHITE",
+      "stock": 15,
+      "price": 109.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 137,
+    "fields": {
+      "product": 28,
+      "size": 28,
+      "fit": 2,
+      "color": 12,
+      "sku": "UG-S-M-SLIM-WHITE",
+      "stock": 15,
+      "price": 109.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 138,
+    "fields": {
+      "product": 28,
+      "size": 29,
+      "fit": 2,
+      "color": 12,
+      "sku": "UG-S-L-SLIM-WHITE",
+      "stock": 12,
+      "price": 109.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 139,
+    "fields": {
+      "product": 29,
+      "size": 43,
+      "fit": 0,
+      "color": 12,
+      "sku": "UG-PS-STD-REG-WHITE",
+      "stock": 40,
+      "price": 29.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 140,
+    "fields": {
+      "product": 30,
+      "size": 3,
+      "fit": 1,
+      "color": 2,
+      "sku": "TP-J-46-REG-CHARCOAL",
+      "stock": 5,
+      "price": 499.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 141,
+    "fields": {
+      "product": 30,
+      "size": 4,
+      "fit": 1,
+      "color": 2,
+      "sku": "TP-J-48-REG-CHARCOAL",
+      "stock": 5,
+      "price": 499.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 142,
+    "fields": {
+      "product": 30,
+      "size": 5,
+      "fit": 1,
+      "color": 2,
+      "sku": "TP-J-50-REG-CHARCOAL",
+      "stock": 5,
+      "price": 499.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 143,
+    "fields": {
+      "product": 30,
+      "size": 4,
+      "fit": 2,
+      "color": 2,
+      "sku": "TP-J-48-SLIM-CHARCOAL",
+      "stock": 4,
+      "price": 499.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 144,
+    "fields": {
+      "product": 30,
+      "size": 5,
+      "fit": 2,
+      "color": 2,
+      "sku": "TP-J-50-SLIM-CHARCOAL",
+      "stock": 4,
+      "price": 499.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 145,
+    "fields": {
+      "product": 30,
+      "size": 3,
+      "fit": 1,
+      "color": 24,
+      "sku": "TP-J-46-REG-ANTHRACITE",
+      "stock": 4,
+      "price": 499.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 146,
+    "fields": {
+      "product": 30,
+      "size": 4,
+      "fit": 1,
+      "color": 24,
+      "sku": "TP-J-48-REG-ANTHRACITE",
+      "stock": 4,
+      "price": 499.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 147,
+    "fields": {
+      "product": 30,
+      "size": 5,
+      "fit": 1,
+      "color": 24,
+      "sku": "TP-J-50-REG-ANTHRACITE",
+      "stock": 4,
+      "price": 499.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 148,
+    "fields": {
+      "product": 31,
+      "size": 17,
+      "fit": 2,
+      "color": 2,
+      "sku": "TP-T-40-SLIM-CHARCOAL",
+      "stock": 10,
+      "price": 219.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 149,
+    "fields": {
+      "product": 31,
+      "size": 18,
+      "fit": 2,
+      "color": 2,
+      "sku": "TP-T-42-SLIM-CHARCOAL",
+      "stock": 10,
+      "price": 219.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 150,
+    "fields": {
+      "product": 31,
+      "size": 19,
+      "fit": 2,
+      "color": 2,
+      "sku": "TP-T-44-SLIM-CHARCOAL",
+      "stock": 8,
+      "price": 219.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 151,
+    "fields": {
+      "product": 31,
+      "size": 20,
+      "fit": 2,
+      "color": 2,
+      "sku": "TP-T-46-SLIM-CHARCOAL",
+      "stock": 6,
+      "price": 219.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 152,
+    "fields": {
+      "product": 31,
+      "size": 18,
+      "fit": 1,
+      "color": 24,
+      "sku": "TP-T-42-REG-ANTHRACITE",
+      "stock": 6,
+      "price": 219.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 153,
+    "fields": {
+      "product": 31,
+      "size": 19,
+      "fit": 1,
+      "color": 24,
+      "sku": "TP-T-44-REG-ANTHRACITE",
+      "stock": 6,
+      "price": 219.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 154,
+    "fields": {
+      "product": 31,
+      "size": 20,
+      "fit": 1,
+      "color": 24,
+      "sku": "TP-T-46-REG-ANTHRACITE",
+      "stock": 6,
+      "price": 219.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 155,
+    "fields": {
+      "product": 31,
+      "size": 21,
+      "fit": 1,
+      "color": 24,
+      "sku": "TP-T-48-REG-ANTHRACITE",
+      "stock": 5,
+      "price": 219.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 156,
+    "fields": {
+      "product": 32,
+      "size": 26,
+      "fit": 1,
+      "color": 12,
+      "sku": "TP-S-XS-REG-WHITE",
+      "stock": 15,
+      "price": 139.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 157,
+    "fields": {
+      "product": 32,
+      "size": 27,
+      "fit": 1,
+      "color": 12,
+      "sku": "TP-S-S-REG-WHITE",
+      "stock": 20,
+      "price": 139.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 158,
+    "fields": {
+      "product": 32,
+      "size": 28,
+      "fit": 1,
+      "color": 12,
+      "sku": "TP-S-M-REG-WHITE",
+      "stock": 25,
+      "price": 139.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 159,
+    "fields": {
+      "product": 32,
+      "size": 29,
+      "fit": 1,
+      "color": 12,
+      "sku": "TP-S-L-REG-WHITE",
+      "stock": 20,
+      "price": 139.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 160,
+    "fields": {
+      "product": 32,
+      "size": 30,
+      "fit": 1,
+      "color": 12,
+      "sku": "TP-S-XL-REG-WHITE",
+      "stock": 15,
+      "price": 139.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 161,
+    "fields": {
+      "product": 32,
+      "size": 28,
+      "fit": 2,
+      "color": 12,
+      "sku": "TP-S-M-SLIM-WHITE",
+      "stock": 15,
+      "price": 139.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 162,
+    "fields": {
+      "product": 32,
+      "size": 29,
+      "fit": 2,
+      "color": 12,
+      "sku": "TP-S-L-SLIM-WHITE",
+      "stock": 12,
+      "price": 139.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 163,
+    "fields": {
+      "product": 33,
+      "size": 3,
+      "fit": 1,
+      "color": 5,
+      "sku": "CC-J-46-REG-MIDNIGHT",
+      "stock": 5,
+      "price": 549.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 164,
+    "fields": {
+      "product": 33,
+      "size": 4,
+      "fit": 1,
+      "color": 5,
+      "sku": "CC-J-48-REG-MIDNIGHT",
+      "stock": 5,
+      "price": 549.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 165,
+    "fields": {
+      "product": 33,
+      "size": 5,
+      "fit": 1,
+      "color": 5,
+      "sku": "CC-J-50-REG-MIDNIGHT",
+      "stock": 4,
+      "price": 549.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 166,
+    "fields": {
+      "product": 33,
+      "size": 4,
+      "fit": 2,
+      "color": 5,
+      "sku": "CC-J-48-SLIM-MIDNIGHT",
+      "stock": 4,
+      "price": 549.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 167,
+    "fields": {
+      "product": 33,
+      "size": 5,
+      "fit": 2,
+      "color": 5,
+      "sku": "CC-J-50-SLIM-MIDNIGHT",
+      "stock": 4,
+      "price": 549.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 168,
+    "fields": {
+      "product": 33,
+      "size": 3,
+      "fit": 1,
+      "color": 1,
+      "sku": "CC-J-46-REG-BLACK",
+      "stock": 5,
+      "price": 549.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 169,
+    "fields": {
+      "product": 33,
+      "size": 4,
+      "fit": 1,
+      "color": 1,
+      "sku": "CC-J-48-REG-BLACK",
+      "stock": 5,
+      "price": 549.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 170,
+    "fields": {
+      "product": 33,
+      "size": 5,
+      "fit": 1,
+      "color": 1,
+      "sku": "CC-J-50-REG-BLACK",
+      "stock": 4,
+      "price": 549.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 171,
+    "fields": {
+      "product": 34,
+      "size": 17,
+      "fit": 2,
+      "color": 1,
+      "sku": "CC-T-40-SLIM-BLACK",
+      "stock": 8,
+      "price": 249.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 172,
+    "fields": {
+      "product": 34,
+      "size": 18,
+      "fit": 2,
+      "color": 1,
+      "sku": "CC-T-42-SLIM-BLACK",
+      "stock": 8,
+      "price": 249.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 173,
+    "fields": {
+      "product": 34,
+      "size": 19,
+      "fit": 2,
+      "color": 1,
+      "sku": "CC-T-44-SLIM-BLACK",
+      "stock": 6,
+      "price": 249.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 174,
+    "fields": {
+      "product": 34,
+      "size": 20,
+      "fit": 2,
+      "color": 1,
+      "sku": "CC-T-46-SLIM-BLACK",
+      "stock": 5,
+      "price": 249.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 175,
+    "fields": {
+      "product": 34,
+      "size": 18,
+      "fit": 1,
+      "color": 5,
+      "sku": "CC-T-42-REG-MIDNIGHT",
+      "stock": 5,
+      "price": 249.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 176,
+    "fields": {
+      "product": 34,
+      "size": 19,
+      "fit": 1,
+      "color": 5,
+      "sku": "CC-T-44-REG-MIDNIGHT",
+      "stock": 5,
+      "price": 249.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 177,
+    "fields": {
+      "product": 34,
+      "size": 20,
+      "fit": 1,
+      "color": 5,
+      "sku": "CC-T-46-REG-MIDNIGHT",
+      "stock": 4,
+      "price": 249.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 178,
+    "fields": {
+      "product": 35,
+      "size": 33,
+      "fit": 1,
+      "color": 1,
+      "sku": "CC-W-42-REG-BLACK",
+      "stock": 6,
+      "price": 199.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 179,
+    "fields": {
+      "product": 35,
+      "size": 34,
+      "fit": 1,
+      "color": 1,
+      "sku": "CC-W-44-REG-BLACK",
+      "stock": 6,
+      "price": 199.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 180,
+    "fields": {
+      "product": 35,
+      "size": 35,
+      "fit": 1,
+      "color": 1,
+      "sku": "CC-W-46-REG-BLACK",
+      "stock": 5,
+      "price": 199.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 181,
+    "fields": {
+      "product": 35,
+      "size": 34,
+      "fit": 2,
+      "color": 1,
+      "sku": "CC-W-44-SLIM-BLACK",
+      "stock": 4,
+      "price": 199.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 182,
+    "fields": {
+      "product": 35,
+      "size": 35,
+      "fit": 2,
+      "color": 1,
+      "sku": "CC-W-46-SLIM-BLACK",
+      "stock": 4,
+      "price": 199.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 183,
+    "fields": {
+      "product": 36,
+      "size": 41,
+      "fit": 0,
+      "color": 1,
+      "sku": "CC-TIE-STD-REG-BLACK",
+      "stock": 20,
+      "price": 89.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 184,
+    "fields": {
+      "product": 36,
+      "size": 41,
+      "fit": 0,
+      "color": 5,
+      "sku": "CC-TIE-STD-REG-MIDNIGHT",
+      "stock": 20,
+      "price": 89.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 185,
+    "fields": {
+      "product": 37,
+      "size": 3,
+      "fit": 1,
+      "color": 2,
+      "sku": "BP-J-46-REG-CHARCOAL",
+      "stock": 6,
+      "price": 449.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 186,
+    "fields": {
+      "product": 37,
+      "size": 4,
+      "fit": 1,
+      "color": 2,
+      "sku": "BP-J-48-REG-CHARCOAL",
+      "stock": 6,
+      "price": 449.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 187,
+    "fields": {
+      "product": 37,
+      "size": 5,
+      "fit": 1,
+      "color": 2,
+      "sku": "BP-J-50-REG-CHARCOAL",
+      "stock": 5,
+      "price": 449.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 188,
+    "fields": {
+      "product": 37,
+      "size": 4,
+      "fit": 2,
+      "color": 2,
+      "sku": "BP-J-48-SLIM-CHARCOAL",
+      "stock": 4,
+      "price": 449.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 189,
+    "fields": {
+      "product": 37,
+      "size": 5,
+      "fit": 2,
+      "color": 2,
+      "sku": "BP-J-50-SLIM-CHARCOAL",
+      "stock": 4,
+      "price": 449.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 190,
+    "fields": {
+      "product": 37,
+      "size": 3,
+      "fit": 1,
+      "color": 24,
+      "sku": "BP-J-46-REG-ANTHRACITE",
+      "stock": 4,
+      "price": 449.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 191,
+    "fields": {
+      "product": 37,
+      "size": 4,
+      "fit": 1,
+      "color": 24,
+      "sku": "BP-J-48-REG-ANTHRACITE",
+      "stock": 4,
+      "price": 449.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 192,
+    "fields": {
+      "product": 37,
+      "size": 5,
+      "fit": 1,
+      "color": 24,
+      "sku": "BP-J-50-REG-ANTHRACITE",
+      "stock": 4,
+      "price": 449.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 193,
+    "fields": {
+      "product": 38,
+      "size": 17,
+      "fit": 2,
+      "color": 2,
+      "sku": "BP-T-40-SLIM-CHARCOAL",
+      "stock": 10,
+      "price": 229.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 194,
+    "fields": {
+      "product": 38,
+      "size": 18,
+      "fit": 2,
+      "color": 2,
+      "sku": "BP-T-42-SLIM-CHARCOAL",
+      "stock": 10,
+      "price": 229.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 195,
+    "fields": {
+      "product": 38,
+      "size": 19,
+      "fit": 2,
+      "color": 2,
+      "sku": "BP-T-44-SLIM-CHARCOAL",
+      "stock": 8,
+      "price": 229.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 196,
+    "fields": {
+      "product": 38,
+      "size": 20,
+      "fit": 2,
+      "color": 2,
+      "sku": "BP-T-46-SLIM-CHARCOAL",
+      "stock": 6,
+      "price": 229.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 197,
+    "fields": {
+      "product": 38,
+      "size": 18,
+      "fit": 1,
+      "color": 24,
+      "sku": "BP-T-42-REG-ANTHRACITE",
+      "stock": 6,
+      "price": 229.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 198,
+    "fields": {
+      "product": 38,
+      "size": 19,
+      "fit": 1,
+      "color": 24,
+      "sku": "BP-T-44-REG-ANTHRACITE",
+      "stock": 6,
+      "price": 229.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 199,
+    "fields": {
+      "product": 38,
+      "size": 20,
+      "fit": 1,
+      "color": 24,
+      "sku": "BP-T-46-REG-ANTHRACITE",
+      "stock": 6,
+      "price": 229.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 200,
+    "fields": {
+      "product": 38,
+      "size": 21,
+      "fit": 1,
+      "color": 24,
+      "sku": "BP-T-48-REG-ANTHRACITE",
+      "stock": 5,
+      "price": 229.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 201,
+    "fields": {
+      "product": 39,
+      "size": 26,
+      "fit": 1,
+      "color": 12,
+      "sku": "BP-S-XS-REG-WHITE",
+      "stock": 15,
+      "price": 139.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 202,
+    "fields": {
+      "product": 39,
+      "size": 27,
+      "fit": 1,
+      "color": 12,
+      "sku": "BP-S-S-REG-WHITE",
+      "stock": 20,
+      "price": 139.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 203,
+    "fields": {
+      "product": 39,
+      "size": 28,
+      "fit": 1,
+      "color": 12,
+      "sku": "BP-S-M-REG-WHITE",
+      "stock": 25,
+      "price": 139.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 204,
+    "fields": {
+      "product": 39,
+      "size": 29,
+      "fit": 1,
+      "color": 12,
+      "sku": "BP-S-L-REG-WHITE",
+      "stock": 20,
+      "price": 139.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 205,
+    "fields": {
+      "product": 39,
+      "size": 30,
+      "fit": 1,
+      "color": 12,
+      "sku": "BP-S-XL-REG-WHITE",
+      "stock": 15,
+      "price": 139.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 206,
+    "fields": {
+      "product": 39,
+      "size": 28,
+      "fit": 2,
+      "color": 12,
+      "sku": "BP-S-M-SLIM-WHITE",
+      "stock": 15,
+      "price": 139.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 207,
+    "fields": {
+      "product": 39,
+      "size": 29,
+      "fit": 2,
+      "color": 12,
+      "sku": "BP-S-L-SLIM-WHITE",
+      "stock": 12,
+      "price": 139.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 208,
+    "fields": {
+      "product": 40,
+      "size": 3,
+      "fit": 1,
+      "color": 10,
+      "sku": "RS-J-46-REG-BEIGE",
+      "stock": 6,
+      "price": 279.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 209,
+    "fields": {
+      "product": 40,
+      "size": 4,
+      "fit": 1,
+      "color": 10,
+      "sku": "RS-J-48-REG-BEIGE",
+      "stock": 6,
+      "price": 279.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 210,
+    "fields": {
+      "product": 40,
+      "size": 5,
+      "fit": 1,
+      "color": 10,
+      "sku": "RS-J-50-REG-BEIGE",
+      "stock": 5,
+      "price": 279.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 211,
+    "fields": {
+      "product": 40,
+      "size": 4,
+      "fit": 2,
+      "color": 10,
+      "sku": "RS-J-48-SLIM-BEIGE",
+      "stock": 4,
+      "price": 279.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 212,
+    "fields": {
+      "product": 40,
+      "size": 5,
+      "fit": 2,
+      "color": 10,
+      "sku": "RS-J-50-SLIM-BEIGE",
+      "stock": 4,
+      "price": 279.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 213,
+    "fields": {
+      "product": 40,
+      "size": 3,
+      "fit": 1,
+      "color": 20,
+      "sku": "RS-J-46-REG-SAND",
+      "stock": 4,
+      "price": 279.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 214,
+    "fields": {
+      "product": 40,
+      "size": 4,
+      "fit": 1,
+      "color": 20,
+      "sku": "RS-J-48-REG-SAND",
+      "stock": 4,
+      "price": 279.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 215,
+    "fields": {
+      "product": 40,
+      "size": 5,
+      "fit": 1,
+      "color": 20,
+      "sku": "RS-J-50-REG-SAND",
+      "stock": 4,
+      "price": 279.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 216,
+    "fields": {
+      "product": 41,
+      "size": 17,
+      "fit": 2,
+      "color": 10,
+      "sku": "RS-T-40-SLIM-BEIGE",
+      "stock": 10,
+      "price": 159.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 217,
+    "fields": {
+      "product": 41,
+      "size": 18,
+      "fit": 2,
+      "color": 10,
+      "sku": "RS-T-42-SLIM-BEIGE",
+      "stock": 10,
+      "price": 159.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 218,
+    "fields": {
+      "product": 41,
+      "size": 19,
+      "fit": 2,
+      "color": 10,
+      "sku": "RS-T-44-SLIM-BEIGE",
+      "stock": 8,
+      "price": 159.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 219,
+    "fields": {
+      "product": 41,
+      "size": 20,
+      "fit": 2,
+      "color": 10,
+      "sku": "RS-T-46-SLIM-BEIGE",
+      "stock": 6,
+      "price": 159.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 220,
+    "fields": {
+      "product": 41,
+      "size": 18,
+      "fit": 1,
+      "color": 20,
+      "sku": "RS-T-42-REG-SAND",
+      "stock": 6,
+      "price": 159.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 221,
+    "fields": {
+      "product": 41,
+      "size": 19,
+      "fit": 1,
+      "color": 20,
+      "sku": "RS-T-44-REG-SAND",
+      "stock": 6,
+      "price": 159.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 222,
+    "fields": {
+      "product": 41,
+      "size": 20,
+      "fit": 1,
+      "color": 20,
+      "sku": "RS-T-46-REG-SAND",
+      "stock": 6,
+      "price": 159.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 223,
+    "fields": {
+      "product": 41,
+      "size": 21,
+      "fit": 1,
+      "color": 20,
+      "sku": "RS-T-48-REG-SAND",
+      "stock": 5,
+      "price": 159.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 224,
+    "fields": {
+      "product": 42,
+      "size": 26,
+      "fit": 1,
+      "color": 12,
+      "sku": "RS-S-XS-REG-WHITE",
+      "stock": 15,
+      "price": 89.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 225,
+    "fields": {
+      "product": 42,
+      "size": 27,
+      "fit": 1,
+      "color": 12,
+      "sku": "RS-S-S-REG-WHITE",
+      "stock": 20,
+      "price": 89.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 226,
+    "fields": {
+      "product": 42,
+      "size": 28,
+      "fit": 1,
+      "color": 12,
+      "sku": "RS-S-M-REG-WHITE",
+      "stock": 25,
+      "price": 89.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 227,
+    "fields": {
+      "product": 42,
+      "size": 29,
+      "fit": 1,
+      "color": 12,
+      "sku": "RS-S-L-REG-WHITE",
+      "stock": 20,
+      "price": 89.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 228,
+    "fields": {
+      "product": 42,
+      "size": 30,
+      "fit": 1,
+      "color": 12,
+      "sku": "RS-S-XL-REG-WHITE",
+      "stock": 15,
+      "price": 89.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 229,
+    "fields": {
+      "product": 42,
+      "size": 28,
+      "fit": 2,
+      "color": 12,
+      "sku": "RS-S-M-SLIM-WHITE",
+      "stock": 15,
+      "price": 89.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 230,
+    "fields": {
+      "product": 42,
+      "size": 29,
+      "fit": 2,
+      "color": 12,
+      "sku": "RS-S-L-SLIM-WHITE",
+      "stock": 12,
+      "price": 89.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 231,
+    "fields": {
+      "product": 43,
+      "size": 3,
+      "fit": 1,
+      "color": 3,
+      "sku": "WH-J-46-REG-LIGHTGREY",
+      "stock": 5,
+      "price": 479.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 232,
+    "fields": {
+      "product": 43,
+      "size": 4,
+      "fit": 1,
+      "color": 3,
+      "sku": "WH-J-48-REG-LIGHTGREY",
+      "stock": 5,
+      "price": 479.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 233,
+    "fields": {
+      "product": 43,
+      "size": 5,
+      "fit": 1,
+      "color": 3,
+      "sku": "WH-J-50-REG-LIGHTGREY",
+      "stock": 4,
+      "price": 479.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 234,
+    "fields": {
+      "product": 43,
+      "size": 4,
+      "fit": 2,
+      "color": 3,
+      "sku": "WH-J-48-SLIM-LIGHTGREY",
+      "stock": 4,
+      "price": 479.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 235,
+    "fields": {
+      "product": 43,
+      "size": 5,
+      "fit": 2,
+      "color": 3,
+      "sku": "WH-J-50-SLIM-LIGHTGREY",
+      "stock": 4,
+      "price": 479.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 236,
+    "fields": {
+      "product": 43,
+      "size": 3,
+      "fit": 1,
+      "color": 24,
+      "sku": "WH-J-46-REG-ANTHRACITE",
+      "stock": 4,
+      "price": 479.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 237,
+    "fields": {
+      "product": 43,
+      "size": 4,
+      "fit": 1,
+      "color": 24,
+      "sku": "WH-J-48-REG-ANTHRACITE",
+      "stock": 4,
+      "price": 479.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 238,
+    "fields": {
+      "product": 43,
+      "size": 5,
+      "fit": 1,
+      "color": 24,
+      "sku": "WH-J-50-REG-ANTHRACITE",
+      "stock": 4,
+      "price": 479.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 239,
+    "fields": {
+      "product": 44,
+      "size": 17,
+      "fit": 2,
+      "color": 3,
+      "sku": "WH-T-40-SLIM-LIGHTGREY",
+      "stock": 10,
+      "price": 239.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 240,
+    "fields": {
+      "product": 44,
+      "size": 18,
+      "fit": 2,
+      "color": 3,
+      "sku": "WH-T-42-SLIM-LIGHTGREY",
+      "stock": 10,
+      "price": 239.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 241,
+    "fields": {
+      "product": 44,
+      "size": 19,
+      "fit": 2,
+      "color": 3,
+      "sku": "WH-T-44-SLIM-LIGHTGREY",
+      "stock": 8,
+      "price": 239.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 242,
+    "fields": {
+      "product": 44,
+      "size": 20,
+      "fit": 2,
+      "color": 3,
+      "sku": "WH-T-46-SLIM-LIGHTGREY",
+      "stock": 6,
+      "price": 239.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 243,
+    "fields": {
+      "product": 44,
+      "size": 18,
+      "fit": 1,
+      "color": 24,
+      "sku": "WH-T-42-REG-ANTHRACITE",
+      "stock": 6,
+      "price": 239.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 244,
+    "fields": {
+      "product": 44,
+      "size": 19,
+      "fit": 1,
+      "color": 24,
+      "sku": "WH-T-44-REG-ANTHRACITE",
+      "stock": 6,
+      "price": 239.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 245,
+    "fields": {
+      "product": 44,
+      "size": 20,
+      "fit": 1,
+      "color": 24,
+      "sku": "WH-T-46-REG-ANTHRACITE",
+      "stock": 6,
+      "price": 239.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 246,
+    "fields": {
+      "product": 44,
+      "size": 21,
+      "fit": 1,
+      "color": 24,
+      "sku": "WH-T-48-REG-ANTHRACITE",
+      "stock": 5,
+      "price": 239.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 247,
+    "fields": {
+      "product": 45,
+      "size": 33,
+      "fit": 1,
+      "color": 3,
+      "sku": "WH-W-42-REG-LIGHTGREY",
+      "stock": 6,
+      "price": 209.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 248,
+    "fields": {
+      "product": 45,
+      "size": 34,
+      "fit": 1,
+      "color": 3,
+      "sku": "WH-W-44-REG-LIGHTGREY",
+      "stock": 6,
+      "price": 209.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 249,
+    "fields": {
+      "product": 45,
+      "size": 35,
+      "fit": 1,
+      "color": 3,
+      "sku": "WH-W-46-REG-LIGHTGREY",
+      "stock": 5,
+      "price": 209.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 250,
+    "fields": {
+      "product": 45,
+      "size": 34,
+      "fit": 2,
+      "color": 3,
+      "sku": "WH-W-44-SLIM-LIGHTGREY",
+      "stock": 4,
+      "price": 209.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 251,
+    "fields": {
+      "product": 45,
+      "size": 35,
+      "fit": 2,
+      "color": 3,
+      "sku": "WH-W-46-SLIM-LIGHTGREY",
+      "stock": 4,
+      "price": 209.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 252,
+    "fields": {
+      "product": 46,
+      "size": 3,
+      "fit": 1,
+      "color": 21,
+      "sku": "SM-J-46-REG-LIGHTBLUE",
+      "stock": 6,
+      "price": 379.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 253,
+    "fields": {
+      "product": 46,
+      "size": 4,
+      "fit": 1,
+      "color": 21,
+      "sku": "SM-J-48-REG-LIGHTBLUE",
+      "stock": 6,
+      "price": 379.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 254,
+    "fields": {
+      "product": 46,
+      "size": 5,
+      "fit": 1,
+      "color": 21,
+      "sku": "SM-J-50-REG-LIGHTBLUE",
+      "stock": 5,
+      "price": 379.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 255,
+    "fields": {
+      "product": 46,
+      "size": 4,
+      "fit": 2,
+      "color": 21,
+      "sku": "SM-J-48-SLIM-LIGHTBLUE",
+      "stock": 4,
+      "price": 379.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 256,
+    "fields": {
+      "product": 46,
+      "size": 5,
+      "fit": 2,
+      "color": 21,
+      "sku": "SM-J-50-SLIM-LIGHTBLUE",
+      "stock": 4,
+      "price": 379.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 257,
+    "fields": {
+      "product": 46,
+      "size": 3,
+      "fit": 1,
+      "color": 4,
+      "sku": "SM-J-46-REG-NAVY",
+      "stock": 4,
+      "price": 379.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 258,
+    "fields": {
+      "product": 46,
+      "size": 4,
+      "fit": 1,
+      "color": 4,
+      "sku": "SM-J-48-REG-NAVY",
+      "stock": 4,
+      "price": 379.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 259,
+    "fields": {
+      "product": 46,
+      "size": 5,
+      "fit": 1,
+      "color": 4,
+      "sku": "SM-J-50-REG-NAVY",
+      "stock": 4,
+      "price": 379.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 260,
+    "fields": {
+      "product": 47,
+      "size": 17,
+      "fit": 2,
+      "color": 21,
+      "sku": "SM-T-40-SLIM-LIGHTBLUE",
+      "stock": 10,
+      "price": 199.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 261,
+    "fields": {
+      "product": 47,
+      "size": 18,
+      "fit": 2,
+      "color": 21,
+      "sku": "SM-T-42-SLIM-LIGHTBLUE",
+      "stock": 10,
+      "price": 199.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 262,
+    "fields": {
+      "product": 47,
+      "size": 19,
+      "fit": 2,
+      "color": 21,
+      "sku": "SM-T-44-SLIM-LIGHTBLUE",
+      "stock": 8,
+      "price": 199.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 263,
+    "fields": {
+      "product": 47,
+      "size": 20,
+      "fit": 2,
+      "color": 21,
+      "sku": "SM-T-46-SLIM-LIGHTBLUE",
+      "stock": 6,
+      "price": 199.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 264,
+    "fields": {
+      "product": 47,
+      "size": 18,
+      "fit": 1,
+      "color": 4,
+      "sku": "SM-T-42-REG-NAVY",
+      "stock": 6,
+      "price": 199.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 265,
+    "fields": {
+      "product": 47,
+      "size": 19,
+      "fit": 1,
+      "color": 4,
+      "sku": "SM-T-44-REG-NAVY",
+      "stock": 6,
+      "price": 199.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 266,
+    "fields": {
+      "product": 47,
+      "size": 20,
+      "fit": 1,
+      "color": 4,
+      "sku": "SM-T-46-REG-NAVY",
+      "stock": 6,
+      "price": 199.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 267,
+    "fields": {
+      "product": 47,
+      "size": 21,
+      "fit": 1,
+      "color": 4,
+      "sku": "SM-T-48-REG-NAVY",
+      "stock": 5,
+      "price": 199.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 268,
+    "fields": {
+      "product": 48,
+      "size": 26,
+      "fit": 1,
+      "color": 12,
+      "sku": "SM-S-XS-REG-WHITE",
+      "stock": 15,
+      "price": 109.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 269,
+    "fields": {
+      "product": 48,
+      "size": 27,
+      "fit": 1,
+      "color": 12,
+      "sku": "SM-S-S-REG-WHITE",
+      "stock": 20,
+      "price": 109.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 270,
+    "fields": {
+      "product": 48,
+      "size": 28,
+      "fit": 1,
+      "color": 12,
+      "sku": "SM-S-M-REG-WHITE",
+      "stock": 25,
+      "price": 109.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 271,
+    "fields": {
+      "product": 48,
+      "size": 29,
+      "fit": 1,
+      "color": 12,
+      "sku": "SM-S-L-REG-WHITE",
+      "stock": 20,
+      "price": 109.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 272,
+    "fields": {
+      "product": 48,
+      "size": 30,
+      "fit": 1,
+      "color": 12,
+      "sku": "SM-S-XL-REG-WHITE",
+      "stock": 15,
+      "price": 109.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 273,
+    "fields": {
+      "product": 48,
+      "size": 28,
+      "fit": 2,
+      "color": 12,
+      "sku": "SM-S-M-SLIM-WHITE",
+      "stock": 15,
+      "price": 109.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 274,
+    "fields": {
+      "product": 48,
+      "size": 29,
+      "fit": 2,
+      "color": 12,
+      "sku": "SM-S-L-SLIM-WHITE",
+      "stock": 12,
+      "price": 109.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 275,
+    "fields": {
+      "product": 49,
+      "size": 43,
+      "fit": 0,
+      "color": 21,
+      "sku": "SM-PS-STD-REG-LIGHTBLUE",
+      "stock": 30,
+      "price": 29.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 276,
+    "fields": {
+      "product": 49,
+      "size": 43,
+      "fit": 0,
+      "color": 4,
+      "sku": "SM-PS-STD-REG-NAVY",
+      "stock": 30,
+      "price": 29.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 277,
+    "fields": {
+      "product": 50,
+      "size": 3,
+      "fit": 1,
+      "color": 10,
+      "sku": "SE-J-46-REG-BEIGE",
+      "stock": 5,
+      "price": 289.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 278,
+    "fields": {
+      "product": 50,
+      "size": 4,
+      "fit": 1,
+      "color": 10,
+      "sku": "SE-J-48-REG-BEIGE",
+      "stock": 5,
+      "price": 289.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 279,
+    "fields": {
+      "product": 50,
+      "size": 5,
+      "fit": 1,
+      "color": 10,
+      "sku": "SE-J-50-REG-BEIGE",
+      "stock": 4,
+      "price": 289.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 280,
+    "fields": {
+      "product": 50,
+      "size": 4,
+      "fit": 2,
+      "color": 10,
+      "sku": "SE-J-48-SLIM-BEIGE",
+      "stock": 4,
+      "price": 289.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 281,
+    "fields": {
+      "product": 50,
+      "size": 5,
+      "fit": 2,
+      "color": 10,
+      "sku": "SE-J-50-SLIM-BEIGE",
+      "stock": 4,
+      "price": 289.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 282,
+    "fields": {
+      "product": 50,
+      "size": 3,
+      "fit": 1,
+      "color": 20,
+      "sku": "SE-J-46-REG-SAND",
+      "stock": 4,
+      "price": 289.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 283,
+    "fields": {
+      "product": 50,
+      "size": 4,
+      "fit": 1,
+      "color": 20,
+      "sku": "SE-J-48-REG-SAND",
+      "stock": 4,
+      "price": 289.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 284,
+    "fields": {
+      "product": 50,
+      "size": 5,
+      "fit": 1,
+      "color": 20,
+      "sku": "SE-J-50-REG-SAND",
+      "stock": 4,
+      "price": 289.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 285,
+    "fields": {
+      "product": 51,
+      "size": 17,
+      "fit": 2,
+      "color": 10,
+      "sku": "SE-T-40-SLIM-BEIGE",
+      "stock": 8,
+      "price": 159.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 286,
+    "fields": {
+      "product": 51,
+      "size": 18,
+      "fit": 2,
+      "color": 10,
+      "sku": "SE-T-42-SLIM-BEIGE",
+      "stock": 8,
+      "price": 159.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 287,
+    "fields": {
+      "product": 51,
+      "size": 19,
+      "fit": 2,
+      "color": 10,
+      "sku": "SE-T-44-SLIM-BEIGE",
+      "stock": 6,
+      "price": 159.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 288,
+    "fields": {
+      "product": 51,
+      "size": 20,
+      "fit": 2,
+      "color": 10,
+      "sku": "SE-T-46-SLIM-BEIGE",
+      "stock": 5,
+      "price": 159.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 289,
+    "fields": {
+      "product": 51,
+      "size": 18,
+      "fit": 1,
+      "color": 20,
+      "sku": "SE-T-42-REG-SAND",
+      "stock": 5,
+      "price": 159.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 290,
+    "fields": {
+      "product": 51,
+      "size": 19,
+      "fit": 1,
+      "color": 20,
+      "sku": "SE-T-44-REG-SAND",
+      "stock": 5,
+      "price": 159.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 291,
+    "fields": {
+      "product": 51,
+      "size": 20,
+      "fit": 1,
+      "color": 20,
+      "sku": "SE-T-46-REG-SAND",
+      "stock": 5,
+      "price": 159.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 292,
+    "fields": {
+      "product": 51,
+      "size": 21,
+      "fit": 1,
+      "color": 20,
+      "sku": "SE-T-48-REG-SAND",
+      "stock": 4,
+      "price": 159.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 293,
+    "fields": {
+      "product": 52,
+      "size": 26,
+      "fit": 1,
+      "color": 12,
+      "sku": "SE-S-XS-REG-WHITE",
+      "stock": 15,
+      "price": 99.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 294,
+    "fields": {
+      "product": 52,
+      "size": 27,
+      "fit": 1,
+      "color": 12,
+      "sku": "SE-S-S-REG-WHITE",
+      "stock": 20,
+      "price": 99.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 295,
+    "fields": {
+      "product": 52,
+      "size": 28,
+      "fit": 1,
+      "color": 12,
+      "sku": "SE-S-M-REG-WHITE",
+      "stock": 25,
+      "price": 99.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 296,
+    "fields": {
+      "product": 52,
+      "size": 29,
+      "fit": 1,
+      "color": 12,
+      "sku": "SE-S-L-REG-WHITE",
+      "stock": 20,
+      "price": 99.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 297,
+    "fields": {
+      "product": 52,
+      "size": 30,
+      "fit": 1,
+      "color": 12,
+      "sku": "SE-S-XL-REG-WHITE",
+      "stock": 15,
+      "price": 99.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 298,
+    "fields": {
+      "product": 52,
+      "size": 28,
+      "fit": 2,
+      "color": 12,
+      "sku": "SE-S-M-SLIM-WHITE",
+      "stock": 15,
+      "price": 99.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 299,
+    "fields": {
+      "product": 52,
+      "size": 29,
+      "fit": 2,
+      "color": 12,
+      "sku": "SE-S-L-SLIM-WHITE",
+      "stock": 12,
+      "price": 99.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 300,
+    "fields": {
+      "product": 53,
+      "size": 3,
+      "fit": 1,
+      "color": 9,
+      "sku": "AS-J-46-REG-LIGHTBROWN",
+      "stock": 5,
+      "price": 389.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 301,
+    "fields": {
+      "product": 53,
+      "size": 4,
+      "fit": 1,
+      "color": 9,
+      "sku": "AS-J-48-REG-LIGHTBROWN",
+      "stock": 5,
+      "price": 389.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 302,
+    "fields": {
+      "product": 53,
+      "size": 5,
+      "fit": 1,
+      "color": 9,
+      "sku": "AS-J-50-REG-LIGHTBROWN",
+      "stock": 4,
+      "price": 389.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 303,
+    "fields": {
+      "product": 53,
+      "size": 4,
+      "fit": 2,
+      "color": 9,
+      "sku": "AS-J-48-SLIM-LIGHTBROWN",
+      "stock": 4,
+      "price": 389.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 304,
+    "fields": {
+      "product": 53,
+      "size": 5,
+      "fit": 2,
+      "color": 9,
+      "sku": "AS-J-50-SLIM-LIGHTBROWN",
+      "stock": 4,
+      "price": 389.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 305,
+    "fields": {
+      "product": 53,
+      "size": 3,
+      "fit": 1,
+      "color": 7,
+      "sku": "AS-J-46-REG-DARKBROWN",
+      "stock": 4,
+      "price": 389.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 306,
+    "fields": {
+      "product": 53,
+      "size": 4,
+      "fit": 1,
+      "color": 7,
+      "sku": "AS-J-48-REG-DARKBROWN",
+      "stock": 4,
+      "price": 389.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 307,
+    "fields": {
+      "product": 53,
+      "size": 5,
+      "fit": 1,
+      "color": 7,
+      "sku": "AS-J-50-REG-DARKBROWN",
+      "stock": 4,
+      "price": 389.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 308,
+    "fields": {
+      "product": 54,
+      "size": 17,
+      "fit": 2,
+      "color": 9,
+      "sku": "AS-T-40-SLIM-LIGHTBROWN",
+      "stock": 8,
+      "price": 199.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 309,
+    "fields": {
+      "product": 54,
+      "size": 18,
+      "fit": 2,
+      "color": 9,
+      "sku": "AS-T-42-SLIM-LIGHTBROWN",
+      "stock": 8,
+      "price": 199.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 310,
+    "fields": {
+      "product": 54,
+      "size": 19,
+      "fit": 2,
+      "color": 9,
+      "sku": "AS-T-44-SLIM-LIGHTBROWN",
+      "stock": 6,
+      "price": 199.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 311,
+    "fields": {
+      "product": 54,
+      "size": 20,
+      "fit": 2,
+      "color": 9,
+      "sku": "AS-T-46-SLIM-LIGHTBROWN",
+      "stock": 5,
+      "price": 199.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 312,
+    "fields": {
+      "product": 54,
+      "size": 18,
+      "fit": 1,
+      "color": 7,
+      "sku": "AS-T-42-REG-DARKBROWN",
+      "stock": 5,
+      "price": 199.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 313,
+    "fields": {
+      "product": 54,
+      "size": 19,
+      "fit": 1,
+      "color": 7,
+      "sku": "AS-T-44-REG-DARKBROWN",
+      "stock": 5,
+      "price": 199.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 314,
+    "fields": {
+      "product": 54,
+      "size": 20,
+      "fit": 1,
+      "color": 7,
+      "sku": "AS-T-46-REG-DARKBROWN",
+      "stock": 5,
+      "price": 199.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 315,
+    "fields": {
+      "product": 54,
+      "size": 21,
+      "fit": 1,
+      "color": 7,
+      "sku": "AS-T-48-REG-DARKBROWN",
+      "stock": 4,
+      "price": 199.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 316,
+    "fields": {
+      "product": 55,
+      "size": 33,
+      "fit": 1,
+      "color": 9,
+      "sku": "AS-W-42-REG-LIGHTBROWN",
+      "stock": 5,
+      "price": 249.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 317,
+    "fields": {
+      "product": 55,
+      "size": 34,
+      "fit": 1,
+      "color": 9,
+      "sku": "AS-W-44-REG-LIGHTBROWN",
+      "stock": 5,
+      "price": 249.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 318,
+    "fields": {
+      "product": 55,
+      "size": 35,
+      "fit": 1,
+      "color": 9,
+      "sku": "AS-W-46-REG-LIGHTBROWN",
+      "stock": 4,
+      "price": 249.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 319,
+    "fields": {
+      "product": 55,
+      "size": 34,
+      "fit": 2,
+      "color": 9,
+      "sku": "AS-W-44-SLIM-LIGHTBROWN",
+      "stock": 4,
+      "price": 249.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 320,
+    "fields": {
+      "product": 55,
+      "size": 35,
+      "fit": 2,
+      "color": 9,
+      "sku": "AS-W-46-SLIM-LIGHTBROWN",
+      "stock": 4,
+      "price": 249.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 321,
+    "fields": {
+      "product": 55,
+      "size": 33,
+      "fit": 1,
+      "color": 7,
+      "sku": "AS-W-42-REG-DARKBROWN",
+      "stock": 4,
+      "price": 249.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 322,
+    "fields": {
+      "product": 55,
+      "size": 34,
+      "fit": 1,
+      "color": 7,
+      "sku": "AS-W-44-REG-DARKBROWN",
+      "stock": 4,
+      "price": 249.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 323,
+    "fields": {
+      "product": 55,
+      "size": 35,
+      "fit": 1,
+      "color": 7,
+      "sku": "AS-W-46-REG-DARKBROWN",
+      "stock": 4,
+      "price": 249.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 324,
+    "fields": {
+      "product": 56,
+      "size": 3,
+      "fit": 1,
+      "color": 2,
+      "sku": "PS-J-46-REG-CHARCOAL",
+      "stock": 4,
+      "price": 599.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 325,
+    "fields": {
+      "product": 56,
+      "size": 4,
+      "fit": 1,
+      "color": 2,
+      "sku": "PS-J-48-REG-CHARCOAL",
+      "stock": 4,
+      "price": 599.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 326,
+    "fields": {
+      "product": 56,
+      "size": 5,
+      "fit": 1,
+      "color": 2,
+      "sku": "PS-J-50-REG-CHARCOAL",
+      "stock": 4,
+      "price": 599.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 327,
+    "fields": {
+      "product": 56,
+      "size": 4,
+      "fit": 2,
+      "color": 2,
+      "sku": "PS-J-48-SLIM-CHARCOAL",
+      "stock": 3,
+      "price": 599.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 328,
+    "fields": {
+      "product": 56,
+      "size": 5,
+      "fit": 2,
+      "color": 2,
+      "sku": "PS-J-50-SLIM-CHARCOAL",
+      "stock": 3,
+      "price": 599.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 329,
+    "fields": {
+      "product": 56,
+      "size": 3,
+      "fit": 1,
+      "color": 24,
+      "sku": "PS-J-46-REG-ANTHRACITE",
+      "stock": 3,
+      "price": 599.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 330,
+    "fields": {
+      "product": 56,
+      "size": 4,
+      "fit": 1,
+      "color": 24,
+      "sku": "PS-J-48-REG-ANTHRACITE",
+      "stock": 3,
+      "price": 599.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 331,
+    "fields": {
+      "product": 56,
+      "size": 5,
+      "fit": 1,
+      "color": 24,
+      "sku": "PS-J-50-REG-ANTHRACITE",
+      "stock": 3,
+      "price": 599.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 332,
+    "fields": {
+      "product": 57,
+      "size": 17,
+      "fit": 2,
+      "color": 2,
+      "sku": "PS-T-40-SLIM-CHARCOAL",
+      "stock": 8,
+      "price": 299.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 333,
+    "fields": {
+      "product": 57,
+      "size": 18,
+      "fit": 2,
+      "color": 2,
+      "sku": "PS-T-42-SLIM-CHARCOAL",
+      "stock": 8,
+      "price": 299.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 334,
+    "fields": {
+      "product": 57,
+      "size": 19,
+      "fit": 2,
+      "color": 2,
+      "sku": "PS-T-44-SLIM-CHARCOAL",
+      "stock": 6,
+      "price": 299.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 335,
+    "fields": {
+      "product": 57,
+      "size": 20,
+      "fit": 2,
+      "color": 2,
+      "sku": "PS-T-46-SLIM-CHARCOAL",
+      "stock": 5,
+      "price": 299.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 336,
+    "fields": {
+      "product": 57,
+      "size": 18,
+      "fit": 1,
+      "color": 24,
+      "sku": "PS-T-42-REG-ANTHRACITE",
+      "stock": 5,
+      "price": 299.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 337,
+    "fields": {
+      "product": 57,
+      "size": 19,
+      "fit": 1,
+      "color": 24,
+      "sku": "PS-T-44-REG-ANTHRACITE",
+      "stock": 5,
+      "price": 299.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 338,
+    "fields": {
+      "product": 57,
+      "size": 20,
+      "fit": 1,
+      "color": 24,
+      "sku": "PS-T-46-REG-ANTHRACITE",
+      "stock": 5,
+      "price": 299.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 339,
+    "fields": {
+      "product": 57,
+      "size": 21,
+      "fit": 1,
+      "color": 24,
+      "sku": "PS-T-48-REG-ANTHRACITE",
+      "stock": 4,
+      "price": 299.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 340,
+    "fields": {
+      "product": 58,
+      "size": 26,
+      "fit": 1,
+      "color": 12,
+      "sku": "PS-S-XS-REG-WHITE",
+      "stock": 10,
+      "price": 139.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 341,
+    "fields": {
+      "product": 58,
+      "size": 27,
+      "fit": 1,
+      "color": 12,
+      "sku": "PS-S-S-REG-WHITE",
+      "stock": 12,
+      "price": 139.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 342,
+    "fields": {
+      "product": 58,
+      "size": 28,
+      "fit": 1,
+      "color": 12,
+      "sku": "PS-S-M-REG-WHITE",
+      "stock": 14,
+      "price": 139.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 343,
+    "fields": {
+      "product": 58,
+      "size": 29,
+      "fit": 1,
+      "color": 12,
+      "sku": "PS-S-L-REG-WHITE",
+      "stock": 12,
+      "price": 139.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 344,
+    "fields": {
+      "product": 58,
+      "size": 30,
+      "fit": 1,
+      "color": 12,
+      "sku": "PS-S-XL-REG-WHITE",
+      "stock": 10,
+      "price": 139.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 345,
+    "fields": {
+      "product": 58,
+      "size": 28,
+      "fit": 2,
+      "color": 12,
+      "sku": "PS-S-M-SLIM-WHITE",
+      "stock": 8,
+      "price": 139.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 346,
+    "fields": {
+      "product": 58,
+      "size": 29,
+      "fit": 2,
+      "color": 12,
+      "sku": "PS-S-L-SLIM-WHITE",
+      "stock": 8,
+      "price": 139.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 347,
+    "fields": {
+      "product": 59,
+      "size": 41,
+      "fit": 0,
+      "color": 12,
+      "sku": "PS-TIE-STD-WHITE",
+      "stock": 25,
+      "price": 79.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 348,
+    "fields": {
+      "product": 59,
+      "size": 41,
+      "fit": 0,
+      "color": 14,
+      "sku": "PS-TIE-STD-BURGUNDY",
+      "stock": 20,
+      "price": 79.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 349,
+    "fields": {
+      "product": 59,
+      "size": 41,
+      "fit": 0,
+      "color": 4,
+      "sku": "PS-TIE-STD-NAVY",
+      "stock": 20,
+      "price": 79.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 350,
+    "fields": {
+      "product": 60,
+      "size": 3,
+      "fit": 1,
+      "color": 10,
+      "sku": "ME-J-46-REG-BEIGE",
+      "stock": 5,
+      "price": 349.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 351,
+    "fields": {
+      "product": 60,
+      "size": 4,
+      "fit": 1,
+      "color": 10,
+      "sku": "ME-J-48-REG-BEIGE",
+      "stock": 5,
+      "price": 349.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 352,
+    "fields": {
+      "product": 60,
+      "size": 5,
+      "fit": 1,
+      "color": 10,
+      "sku": "ME-J-50-REG-BEIGE",
+      "stock": 4,
+      "price": 349.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 353,
+    "fields": {
+      "product": 60,
+      "size": 4,
+      "fit": 2,
+      "color": 10,
+      "sku": "ME-J-48-SLIM-BEIGE",
+      "stock": 4,
+      "price": 349.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 354,
+    "fields": {
+      "product": 60,
+      "size": 5,
+      "fit": 2,
+      "color": 10,
+      "sku": "ME-J-50-SLIM-BEIGE",
+      "stock": 4,
+      "price": 349.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 355,
+    "fields": {
+      "product": 60,
+      "size": 3,
+      "fit": 1,
+      "color": 20,
+      "sku": "ME-J-46-REG-SAND",
+      "stock": 4,
+      "price": 349.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 356,
+    "fields": {
+      "product": 60,
+      "size": 4,
+      "fit": 1,
+      "color": 20,
+      "sku": "ME-J-48-REG-SAND",
+      "stock": 4,
+      "price": 349.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 357,
+    "fields": {
+      "product": 60,
+      "size": 5,
+      "fit": 1,
+      "color": 20,
+      "sku": "ME-J-50-REG-SAND",
+      "stock": 4,
+      "price": 349.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 358,
+    "fields": {
+      "product": 61,
+      "size": 17,
+      "fit": 2,
+      "color": 10,
+      "sku": "ME-T-40-SLIM-BEIGE",
+      "stock": 8,
+      "price": 179.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 359,
+    "fields": {
+      "product": 61,
+      "size": 18,
+      "fit": 2,
+      "color": 10,
+      "sku": "ME-T-42-SLIM-BEIGE",
+      "stock": 8,
+      "price": 179.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 360,
+    "fields": {
+      "product": 61,
+      "size": 19,
+      "fit": 2,
+      "color": 10,
+      "sku": "ME-T-44-SLIM-BEIGE",
+      "stock": 6,
+      "price": 179.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 361,
+    "fields": {
+      "product": 61,
+      "size": 20,
+      "fit": 2,
+      "color": 10,
+      "sku": "ME-T-46-SLIM-BEIGE",
+      "stock": 5,
+      "price": 179.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 362,
+    "fields": {
+      "product": 61,
+      "size": 18,
+      "fit": 1,
+      "color": 20,
+      "sku": "ME-T-42-REG-SAND",
+      "stock": 5,
+      "price": 179.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 363,
+    "fields": {
+      "product": 61,
+      "size": 19,
+      "fit": 1,
+      "color": 20,
+      "sku": "ME-T-44-REG-SAND",
+      "stock": 5,
+      "price": 179.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 364,
+    "fields": {
+      "product": 61,
+      "size": 20,
+      "fit": 1,
+      "color": 20,
+      "sku": "ME-T-46-REG-SAND",
+      "stock": 5,
+      "price": 179.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 365,
+    "fields": {
+      "product": 61,
+      "size": 21,
+      "fit": 1,
+      "color": 20,
+      "sku": "ME-T-48-REG-SAND",
+      "stock": 4,
+      "price": 179.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 366,
+    "fields": {
+      "product": 62,
+      "size": 26,
+      "fit": 1,
+      "color": 12,
+      "sku": "ME-S-XS-REG-WHITE",
+      "stock": 10,
+      "price": 129.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 367,
+    "fields": {
+      "product": 62,
+      "size": 27,
+      "fit": 1,
+      "color": 12,
+      "sku": "ME-S-S-REG-WHITE",
+      "stock": 12,
+      "price": 129.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 368,
+    "fields": {
+      "product": 62,
+      "size": 28,
+      "fit": 1,
+      "color": 12,
+      "sku": "ME-S-M-REG-WHITE",
+      "stock": 14,
+      "price": 129.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 369,
+    "fields": {
+      "product": 62,
+      "size": 29,
+      "fit": 1,
+      "color": 12,
+      "sku": "ME-S-L-REG-WHITE",
+      "stock": 12,
+      "price": 129.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 370,
+    "fields": {
+      "product": 62,
+      "size": 30,
+      "fit": 1,
+      "color": 12,
+      "sku": "ME-S-XL-REG-WHITE",
+      "stock": 10,
+      "price": 129.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 371,
+    "fields": {
+      "product": 62,
+      "size": 28,
+      "fit": 2,
+      "color": 12,
+      "sku": "ME-S-M-SLIM-WHITE",
+      "stock": 8,
+      "price": 129.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 372,
+    "fields": {
+      "product": 62,
+      "size": 29,
+      "fit": 2,
+      "color": 12,
+      "sku": "ME-S-L-SLIM-WHITE",
+      "stock": 8,
+      "price": 129.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 373,
+    "fields": {
+      "product": 63,
+      "size": 3,
+      "fit": 1,
+      "color": 9,
+      "sku": "IC-J-46-REG-LIGHTBROWN",
+      "stock": 4,
+      "price": 499.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 374,
+    "fields": {
+      "product": 63,
+      "size": 4,
+      "fit": 1,
+      "color": 9,
+      "sku": "IC-J-48-REG-LIGHTBROWN",
+      "stock": 4,
+      "price": 499.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 375,
+    "fields": {
+      "product": 63,
+      "size": 5,
+      "fit": 1,
+      "color": 9,
+      "sku": "IC-J-50-REG-LIGHTBROWN",
+      "stock": 4,
+      "price": 499.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 376,
+    "fields": {
+      "product": 63,
+      "size": 4,
+      "fit": 2,
+      "color": 9,
+      "sku": "IC-J-48-SLIM-LIGHTBROWN",
+      "stock": 3,
+      "price": 499.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 377,
+    "fields": {
+      "product": 63,
+      "size": 5,
+      "fit": 2,
+      "color": 9,
+      "sku": "IC-J-50-SLIM-LIGHTBROWN",
+      "stock": 3,
+      "price": 499.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 378,
+    "fields": {
+      "product": 63,
+      "size": 3,
+      "fit": 1,
+      "color": 7,
+      "sku": "IC-J-46-REG-DARKBROWN",
+      "stock": 3,
+      "price": 499.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 379,
+    "fields": {
+      "product": 63,
+      "size": 4,
+      "fit": 1,
+      "color": 7,
+      "sku": "IC-J-48-REG-DARKBROWN",
+      "stock": 3,
+      "price": 499.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 380,
+    "fields": {
+      "product": 63,
+      "size": 5,
+      "fit": 1,
+      "color": 7,
+      "sku": "IC-J-50-REG-DARKBROWN",
+      "stock": 3,
+      "price": 499.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 381,
+    "fields": {
+      "product": 64,
+      "size": 17,
+      "fit": 2,
+      "color": 9,
+      "sku": "IC-T-40-SLIM-LIGHTBROWN",
+      "stock": 8,
+      "price": 259.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 382,
+    "fields": {
+      "product": 64,
+      "size": 18,
+      "fit": 2,
+      "color": 9,
+      "sku": "IC-T-42-SLIM-LIGHTBROWN",
+      "stock": 8,
+      "price": 259.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 383,
+    "fields": {
+      "product": 64,
+      "size": 19,
+      "fit": 2,
+      "color": 9,
+      "sku": "IC-T-44-SLIM-LIGHTBROWN",
+      "stock": 6,
+      "price": 259.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 384,
+    "fields": {
+      "product": 64,
+      "size": 20,
+      "fit": 2,
+      "color": 9,
+      "sku": "IC-T-46-SLIM-LIGHTBROWN",
+      "stock": 5,
+      "price": 259.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 385,
+    "fields": {
+      "product": 64,
+      "size": 18,
+      "fit": 1,
+      "color": 7,
+      "sku": "IC-T-42-REG-DARKBROWN",
+      "stock": 5,
+      "price": 259.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 386,
+    "fields": {
+      "product": 64,
+      "size": 19,
+      "fit": 1,
+      "color": 7,
+      "sku": "IC-T-44-REG-DARKBROWN",
+      "stock": 5,
+      "price": 259.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 387,
+    "fields": {
+      "product": 64,
+      "size": 20,
+      "fit": 1,
+      "color": 7,
+      "sku": "IC-T-46-REG-DARKBROWN",
+      "stock": 5,
+      "price": 259.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 388,
+    "fields": {
+      "product": 64,
+      "size": 21,
+      "fit": 1,
+      "color": 7,
+      "sku": "IC-T-48-REG-DARKBROWN",
+      "stock": 4,
+      "price": 259.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 389,
+    "fields": {
+      "product": 65,
+      "size": 33,
+      "fit": 1,
+      "color": 9,
+      "sku": "IC-W-42-REG-LIGHTBROWN",
+      "stock": 5,
+      "price": 289.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 390,
+    "fields": {
+      "product": 65,
+      "size": 34,
+      "fit": 1,
+      "color": 9,
+      "sku": "IC-W-44-REG-LIGHTBROWN",
+      "stock": 5,
+      "price": 289.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 391,
+    "fields": {
+      "product": 65,
+      "size": 35,
+      "fit": 1,
+      "color": 9,
+      "sku": "IC-W-46-REG-LIGHTBROWN",
+      "stock": 4,
+      "price": 289.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 392,
+    "fields": {
+      "product": 65,
+      "size": 34,
+      "fit": 2,
+      "color": 9,
+      "sku": "IC-W-44-SLIM-LIGHTBROWN",
+      "stock": 4,
+      "price": 289.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 393,
+    "fields": {
+      "product": 65,
+      "size": 35,
+      "fit": 2,
+      "color": 9,
+      "sku": "IC-W-46-SLIM-LIGHTBROWN",
+      "stock": 4,
+      "price": 289.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 394,
+    "fields": {
+      "product": 65,
+      "size": 33,
+      "fit": 1,
+      "color": 7,
+      "sku": "IC-W-42-REG-DARKBROWN",
+      "stock": 4,
+      "price": 289.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 395,
+    "fields": {
+      "product": 65,
+      "size": 34,
+      "fit": 1,
+      "color": 7,
+      "sku": "IC-W-44-REG-DARKBROWN",
+      "stock": 4,
+      "price": 289.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 396,
+    "fields": {
+      "product": 65,
+      "size": 35,
+      "fit": 1,
+      "color": 7,
+      "sku": "IC-W-46-REG-DARKBROWN",
+      "stock": 4,
+      "price": 289.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 397,
+    "fields": {
+      "product": 66,
+      "size": 3,
+      "fit": 1,
+      "color": 2,
+      "sku": "LC-J-46-REG-CHARCOAL",
+      "stock": 5,
+      "price": 369.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 398,
+    "fields": {
+      "product": 66,
+      "size": 4,
+      "fit": 1,
+      "color": 2,
+      "sku": "LC-J-48-REG-CHARCOAL",
+      "stock": 5,
+      "price": 369.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 399,
+    "fields": {
+      "product": 66,
+      "size": 5,
+      "fit": 1,
+      "color": 2,
+      "sku": "LC-J-50-REG-CHARCOAL",
+      "stock": 4,
+      "price": 369.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 400,
+    "fields": {
+      "product": 66,
+      "size": 4,
+      "fit": 2,
+      "color": 2,
+      "sku": "LC-J-48-SLIM-CHARCOAL",
+      "stock": 4,
+      "price": 369.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 401,
+    "fields": {
+      "product": 66,
+      "size": 5,
+      "fit": 2,
+      "color": 2,
+      "sku": "LC-J-50-SLIM-CHARCOAL",
+      "stock": 4,
+      "price": 369.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 402,
+    "fields": {
+      "product": 66,
+      "size": 3,
+      "fit": 1,
+      "color": 24,
+      "sku": "LC-J-46-REG-ANTHRACITE",
+      "stock": 4,
+      "price": 369.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 403,
+    "fields": {
+      "product": 66,
+      "size": 4,
+      "fit": 1,
+      "color": 24,
+      "sku": "LC-J-48-REG-ANTHRACITE",
+      "stock": 4,
+      "price": 369.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 404,
+    "fields": {
+      "product": 66,
+      "size": 5,
+      "fit": 1,
+      "color": 24,
+      "sku": "LC-J-50-REG-ANTHRACITE",
+      "stock": 4,
+      "price": 369.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 405,
+    "fields": {
+      "product": 67,
+      "size": 17,
+      "fit": 2,
+      "color": 2,
+      "sku": "LC-T-40-SLIM-CHARCOAL",
+      "stock": 8,
+      "price": 249.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 406,
+    "fields": {
+      "product": 67,
+      "size": 18,
+      "fit": 2,
+      "color": 2,
+      "sku": "LC-T-42-SLIM-CHARCOAL",
+      "stock": 8,
+      "price": 249.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 407,
+    "fields": {
+      "product": 67,
+      "size": 19,
+      "fit": 2,
+      "color": 2,
+      "sku": "LC-T-44-SLIM-CHARCOAL",
+      "stock": 6,
+      "price": 249.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 408,
+    "fields": {
+      "product": 67,
+      "size": 20,
+      "fit": 2,
+      "color": 2,
+      "sku": "LC-T-46-SLIM-CHARCOAL",
+      "stock": 5,
+      "price": 249.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 409,
+    "fields": {
+      "product": 67,
+      "size": 18,
+      "fit": 1,
+      "color": 24,
+      "sku": "LC-T-42-REG-ANTHRACITE",
+      "stock": 5,
+      "price": 249.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 410,
+    "fields": {
+      "product": 67,
+      "size": 19,
+      "fit": 1,
+      "color": 24,
+      "sku": "LC-T-44-REG-ANTHRACITE",
+      "stock": 5,
+      "price": 249.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 411,
+    "fields": {
+      "product": 67,
+      "size": 20,
+      "fit": 1,
+      "color": 24,
+      "sku": "LC-T-46-REG-ANTHRACITE",
+      "stock": 5,
+      "price": 249.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 412,
+    "fields": {
+      "product": 67,
+      "size": 21,
+      "fit": 1,
+      "color": 24,
+      "sku": "LC-T-48-REG-ANTHRACITE",
+      "stock": 4,
+      "price": 249.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 413,
+    "fields": {
+      "product": 68,
+      "size": 26,
+      "fit": 1,
+      "color": 12,
+      "sku": "LC-S-XS-REG-WHITE",
+      "stock": 12,
+      "price": 119.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 414,
+    "fields": {
+      "product": 68,
+      "size": 27,
+      "fit": 1,
+      "color": 12,
+      "sku": "LC-S-S-REG-WHITE",
+      "stock": 12,
+      "price": 119.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 415,
+    "fields": {
+      "product": 68,
+      "size": 28,
+      "fit": 1,
+      "color": 12,
+      "sku": "LC-S-M-REG-WHITE",
+      "stock": 14,
+      "price": 119.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 416,
+    "fields": {
+      "product": 68,
+      "size": 29,
+      "fit": 1,
+      "color": 12,
+      "sku": "LC-S-L-REG-WHITE",
+      "stock": 12,
+      "price": 119.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 417,
+    "fields": {
+      "product": 68,
+      "size": 30,
+      "fit": 1,
+      "color": 12,
+      "sku": "LC-S-XL-REG-WHITE",
+      "stock": 10,
+      "price": 119.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 418,
+    "fields": {
+      "product": 68,
+      "size": 28,
+      "fit": 2,
+      "color": 12,
+      "sku": "LC-S-M-SLIM-WHITE",
+      "stock": 8,
+      "price": 119.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 419,
+    "fields": {
+      "product": 68,
+      "size": 29,
+      "fit": 2,
+      "color": 12,
+      "sku": "LC-S-L-SLIM-WHITE",
+      "stock": 8,
+      "price": 119.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 420,
+    "fields": {
+      "product": 69,
+      "size": 41,
+      "fit": 0,
+      "color": 12,
+      "sku": "LC-TIE-STD-WHITE",
+      "stock": 20,
+      "price": 69.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 421,
+    "fields": {
+      "product": 69,
+      "size": 41,
+      "fit": 0,
+      "color": 4,
+      "sku": "LC-TIE-STD-NAVY",
+      "stock": 20,
+      "price": 69.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 422,
+    "fields": {
+      "product": 69,
+      "size": 41,
+      "fit": 0,
+      "color": 14,
+      "sku": "LC-TIE-STD-BURGUNDY",
+      "stock": 20,
+      "price": 69.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 423,
+    "fields": {
+      "product": 70,
+      "size": 3,
+      "fit": 1,
+      "color": 1,
+      "sku": "BL-J-46-REG-BLACK",
+      "stock": 5,
+      "price": 549.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 424,
+    "fields": {
+      "product": 70,
+      "size": 4,
+      "fit": 1,
+      "color": 1,
+      "sku": "BL-J-48-REG-BLACK",
+      "stock": 5,
+      "price": 549.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 425,
+    "fields": {
+      "product": 70,
+      "size": 5,
+      "fit": 1,
+      "color": 1,
+      "sku": "BL-J-50-REG-BLACK",
+      "stock": 4,
+      "price": 549.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 426,
+    "fields": {
+      "product": 70,
+      "size": 4,
+      "fit": 2,
+      "color": 1,
+      "sku": "BL-J-48-SLIM-BLACK",
+      "stock": 4,
+      "price": 549.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 427,
+    "fields": {
+      "product": 70,
+      "size": 5,
+      "fit": 2,
+      "color": 1,
+      "sku": "BL-J-50-SLIM-BLACK",
+      "stock": 4,
+      "price": 549.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 428,
+    "fields": {
+      "product": 71,
+      "size": 17,
+      "fit": 2,
+      "color": 1,
+      "sku": "BL-T-40-SLIM-BLACK",
+      "stock": 8,
+      "price": 349.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 429,
+    "fields": {
+      "product": 71,
+      "size": 18,
+      "fit": 2,
+      "color": 1,
+      "sku": "BL-T-42-SLIM-BLACK",
+      "stock": 8,
+      "price": 349.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 430,
+    "fields": {
+      "product": 71,
+      "size": 19,
+      "fit": 2,
+      "color": 1,
+      "sku": "BL-T-44-SLIM-BLACK",
+      "stock": 6,
+      "price": 349.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 431,
+    "fields": {
+      "product": 71,
+      "size": 20,
+      "fit": 2,
+      "color": 1,
+      "sku": "BL-T-46-SLIM-BLACK",
+      "stock": 5,
+      "price": 349.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 432,
+    "fields": {
+      "product": 71,
+      "size": 18,
+      "fit": 1,
+      "color": 1,
+      "sku": "BL-T-42-REG-BLACK",
+      "stock": 5,
+      "price": 349.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 433,
+    "fields": {
+      "product": 71,
+      "size": 19,
+      "fit": 1,
+      "color": 1,
+      "sku": "BL-T-44-REG-BLACK",
+      "stock": 5,
+      "price": 349.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 434,
+    "fields": {
+      "product": 71,
+      "size": 20,
+      "fit": 1,
+      "color": 1,
+      "sku": "BL-T-46-REG-BLACK",
+      "stock": 5,
+      "price": 349.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 435,
+    "fields": {
+      "product": 71,
+      "size": 21,
+      "fit": 1,
+      "color": 1,
+      "sku": "BL-T-48-REG-BLACK",
+      "stock": 4,
+      "price": 349.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 436,
+    "fields": {
+      "product": 72,
+      "size": 26,
+      "fit": 1,
+      "color": 12,
+      "sku": "BL-S-XS-REG-WHITE",
+      "stock": 10,
+      "price": 179.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 437,
+    "fields": {
+      "product": 72,
+      "size": 27,
+      "fit": 1,
+      "color": 12,
+      "sku": "BL-S-S-REG-WHITE",
+      "stock": 12,
+      "price": 179.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 438,
+    "fields": {
+      "product": 72,
+      "size": 28,
+      "fit": 1,
+      "color": 12,
+      "sku": "BL-S-M-REG-WHITE",
+      "stock": 14,
+      "price": 179.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 439,
+    "fields": {
+      "product": 72,
+      "size": 29,
+      "fit": 1,
+      "color": 12,
+      "sku": "BL-S-L-REG-WHITE",
+      "stock": 12,
+      "price": 179.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 440,
+    "fields": {
+      "product": 72,
+      "size": 30,
+      "fit": 1,
+      "color": 12,
+      "sku": "BL-S-XL-REG-WHITE",
+      "stock": 10,
+      "price": 179.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 441,
+    "fields": {
+      "product": 72,
+      "size": 28,
+      "fit": 2,
+      "color": 12,
+      "sku": "BL-S-M-SLIM-WHITE",
+      "stock": 8,
+      "price": 179.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 442,
+    "fields": {
+      "product": 72,
+      "size": 29,
+      "fit": 2,
+      "color": 12,
+      "sku": "BL-S-L-SLIM-WHITE",
+      "stock": 8,
+      "price": 179.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 443,
+    "fields": {
+      "product": 73,
+      "size": 42,
+      "fit": 0,
+      "color": 1,
+      "sku": "BL-BOW-STD-BLACK",
+      "stock": 15,
+      "price": 89.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 444,
+    "fields": {
+      "product": 73,
+      "size": 42,
+      "fit": 0,
+      "color": 14,
+      "sku": "BL-BOW-STD-BURGUNDY",
+      "stock": 10,
+      "price": 89.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 445,
+    "fields": {
+      "product": 73,
+      "size": 42,
+      "fit": 0,
+      "color": 4,
+      "sku": "BL-BOW-STD-NAVY",
+      "stock": 10,
+      "price": 89.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 446,
+    "fields": {
+      "product": 74,
+      "size": 3,
+      "fit": 1,
+      "color": 2,
+      "sku": "WL-J-46-REG-CHARCOAL",
+      "stock": 6,
+      "price": 299.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 447,
+    "fields": {
+      "product": 74,
+      "size": 4,
+      "fit": 1,
+      "color": 2,
+      "sku": "WL-J-48-REG-CHARCOAL",
+      "stock": 6,
+      "price": 299.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 448,
+    "fields": {
+      "product": 74,
+      "size": 5,
+      "fit": 1,
+      "color": 2,
+      "sku": "WL-J-50-REG-CHARCOAL",
+      "stock": 5,
+      "price": 299.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 449,
+    "fields": {
+      "product": 74,
+      "size": 4,
+      "fit": 2,
+      "color": 2,
+      "sku": "WL-J-48-SLIM-CHARCOAL",
+      "stock": 5,
+      "price": 299.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 450,
+    "fields": {
+      "product": 74,
+      "size": 5,
+      "fit": 2,
+      "color": 2,
+      "sku": "WL-J-50-SLIM-CHARCOAL",
+      "stock": 5,
+      "price": 299.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 451,
+    "fields": {
+      "product": 75,
+      "size": 17,
+      "fit": 2,
+      "color": 2,
+      "sku": "WL-T-40-SLIM-CHARCOAL",
+      "stock": 8,
+      "price": 189.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 452,
+    "fields": {
+      "product": 75,
+      "size": 18,
+      "fit": 2,
+      "color": 2,
+      "sku": "WL-T-42-SLIM-CHARCOAL",
+      "stock": 8,
+      "price": 189.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 453,
+    "fields": {
+      "product": 75,
+      "size": 19,
+      "fit": 2,
+      "color": 2,
+      "sku": "WL-T-44-SLIM-CHARCOAL",
+      "stock": 6,
+      "price": 189.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 454,
+    "fields": {
+      "product": 75,
+      "size": 20,
+      "fit": 2,
+      "color": 2,
+      "sku": "WL-T-46-SLIM-CHARCOAL",
+      "stock": 5,
+      "price": 189.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 455,
+    "fields": {
+      "product": 75,
+      "size": 18,
+      "fit": 1,
+      "color": 2,
+      "sku": "WL-T-42-REG-CHARCOAL",
+      "stock": 5,
+      "price": 189.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 456,
+    "fields": {
+      "product": 75,
+      "size": 19,
+      "fit": 1,
+      "color": 2,
+      "sku": "WL-T-44-REG-CHARCOAL",
+      "stock": 5,
+      "price": 189.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 457,
+    "fields": {
+      "product": 75,
+      "size": 20,
+      "fit": 1,
+      "color": 2,
+      "sku": "WL-T-46-REG-CHARCOAL",
+      "stock": 5,
+      "price": 189.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 458,
+    "fields": {
+      "product": 75,
+      "size": 21,
+      "fit": 1,
+      "color": 2,
+      "sku": "WL-T-48-REG-CHARCOAL",
+      "stock": 4,
+      "price": 189.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 459,
+    "fields": {
+      "product": 76,
+      "size": 26,
+      "fit": 1,
+      "color": 12,
+      "sku": "WL-S-XS-REG-WHITE",
+      "stock": 10,
+      "price": 129.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 460,
+    "fields": {
+      "product": 76,
+      "size": 27,
+      "fit": 1,
+      "color": 12,
+      "sku": "WL-S-S-REG-WHITE",
+      "stock": 12,
+      "price": 129.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 461,
+    "fields": {
+      "product": 76,
+      "size": 28,
+      "fit": 1,
+      "color": 12,
+      "sku": "WL-S-M-REG-WHITE",
+      "stock": 14,
+      "price": 129.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 462,
+    "fields": {
+      "product": 76,
+      "size": 29,
+      "fit": 1,
+      "color": 12,
+      "sku": "WL-S-L-REG-WHITE",
+      "stock": 12,
+      "price": 129.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 463,
+    "fields": {
+      "product": 76,
+      "size": 30,
+      "fit": 1,
+      "color": 12,
+      "sku": "WL-S-XL-REG-WHITE",
+      "stock": 10,
+      "price": 129.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 464,
+    "fields": {
+      "product": 76,
+      "size": 28,
+      "fit": 2,
+      "color": 12,
+      "sku": "WL-S-M-SLIM-WHITE",
+      "stock": 8,
+      "price": 129.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 465,
+    "fields": {
+      "product": 76,
+      "size": 29,
+      "fit": 2,
+      "color": 12,
+      "sku": "WL-S-L-SLIM-WHITE",
+      "stock": 8,
+      "price": 129.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 466,
+    "fields": {
+      "product": 77,
+      "size": 4,
+      "fit": 1,
+      "color": 1,
+      "sku": "LE-J-48-REG-BLACK",
+      "stock": 3,
+      "price": 799.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 467,
+    "fields": {
+      "product": 77,
+      "size": 5,
+      "fit": 1,
+      "color": 1,
+      "sku": "LE-J-50-REG-BLACK",
+      "stock": 3,
+      "price": 799.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 468,
+    "fields": {
+      "product": 77,
+      "size": 4,
+      "fit": 2,
+      "color": 1,
+      "sku": "LE-J-48-SLIM-BLACK",
+      "stock": 2,
+      "price": 799.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 469,
+    "fields": {
+      "product": 77,
+      "size": 5,
+      "fit": 2,
+      "color": 1,
+      "sku": "LE-J-50-SLIM-BLACK",
+      "stock": 2,
+      "price": 799.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 470,
+    "fields": {
+      "product": 78,
+      "size": 18,
+      "fit": 2,
+      "color": 1,
+      "sku": "LE-T-42-SLIM-BLACK",
+      "stock": 4,
+      "price": 499.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 471,
+    "fields": {
+      "product": 78,
+      "size": 19,
+      "fit": 2,
+      "color": 1,
+      "sku": "LE-T-44-SLIM-BLACK",
+      "stock": 4,
+      "price": 499.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 472,
+    "fields": {
+      "product": 78,
+      "size": 20,
+      "fit": 2,
+      "color": 1,
+      "sku": "LE-T-46-SLIM-BLACK",
+      "stock": 3,
+      "price": 499.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 473,
+    "fields": {
+      "product": 78,
+      "size": 19,
+      "fit": 1,
+      "color": 1,
+      "sku": "LE-T-44-REG-BLACK",
+      "stock": 3,
+      "price": 499.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 474,
+    "fields": {
+      "product": 78,
+      "size": 20,
+      "fit": 1,
+      "color": 1,
+      "sku": "LE-T-46-REG-BLACK",
+      "stock": 3,
+      "price": 499.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 475,
+    "fields": {
+      "product": 78,
+      "size": 21,
+      "fit": 1,
+      "color": 1,
+      "sku": "LE-T-48-REG-BLACK",
+      "stock": 2,
+      "price": 499.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 476,
+    "fields": {
+      "product": 79,
+      "size": 26,
+      "fit": 1,
+      "color": 12,
+      "sku": "LE-S-XS-REG-WHITE",
+      "stock": 5,
+      "price": 219.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 477,
+    "fields": {
+      "product": 79,
+      "size": 27,
+      "fit": 1,
+      "color": 12,
+      "sku": "LE-S-S-REG-WHITE",
+      "stock": 6,
+      "price": 219.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 478,
+    "fields": {
+      "product": 79,
+      "size": 28,
+      "fit": 1,
+      "color": 12,
+      "sku": "LE-S-M-REG-WHITE",
+      "stock": 6,
+      "price": 219.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 479,
+    "fields": {
+      "product": 79,
+      "size": 29,
+      "fit": 1,
+      "color": 12,
+      "sku": "LE-S-L-REG-WHITE",
+      "stock": 6,
+      "price": 219.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 480,
+    "fields": {
+      "product": 79,
+      "size": 30,
+      "fit": 1,
+      "color": 12,
+      "sku": "LE-S-XL-REG-WHITE",
+      "stock": 5,
+      "price": 219.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 481,
+    "fields": {
+      "product": 79,
+      "size": 29,
+      "fit": 2,
+      "color": 12,
+      "sku": "LE-S-L-SLIM-WHITE",
+      "stock": 4,
+      "price": 219.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 482,
+    "fields": {
+      "product": 79,
+      "size": 30,
+      "fit": 2,
+      "color": 12,
+      "sku": "LE-S-XL-SLIM-WHITE",
+      "stock": 4,
+      "price": 219.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 483,
+    "fields": {
+      "product": 80,
+      "size": 4,
+      "fit": 1,
+      "color": 1,
+      "sku": "GA-J-48-REG-BLACK",
+      "stock": 2,
+      "price": 999.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 484,
+    "fields": {
+      "product": 80,
+      "size": 5,
+      "fit": 1,
+      "color": 1,
+      "sku": "GA-J-50-REG-BLACK",
+      "stock": 2,
+      "price": 999.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 485,
+    "fields": {
+      "product": 80,
+      "size": 4,
+      "fit": 2,
+      "color": 1,
+      "sku": "GA-J-48-SLIM-BLACK",
+      "stock": 1,
+      "price": 999.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 486,
+    "fields": {
+      "product": 80,
+      "size": 5,
+      "fit": 2,
+      "color": 1,
+      "sku": "GA-J-50-SLIM-BLACK",
+      "stock": 1,
+      "price": 999.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 487,
+    "fields": {
+      "product": 81,
+      "size": 19,
+      "fit": 2,
+      "color": 1,
+      "sku": "GA-T-44-SLIM-BLACK",
+      "stock": 3,
+      "price": 649.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 488,
+    "fields": {
+      "product": 81,
+      "size": 20,
+      "fit": 2,
+      "color": 1,
+      "sku": "GA-T-46-SLIM-BLACK",
+      "stock": 3,
+      "price": 649.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 489,
+    "fields": {
+      "product": 81,
+      "size": 19,
+      "fit": 1,
+      "color": 1,
+      "sku": "GA-T-44-REG-BLACK",
+      "stock": 2,
+      "price": 649.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 490,
+    "fields": {
+      "product": 81,
+      "size": 20,
+      "fit": 1,
+      "color": 1,
+      "sku": "GA-T-46-REG-BLACK",
+      "stock": 2,
+      "price": 649.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 491,
+    "fields": {
+      "product": 81,
+      "size": 21,
+      "fit": 1,
+      "color": 1,
+      "sku": "GA-T-48-REG-BLACK",
+      "stock": 1,
+      "price": 649.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 492,
+    "fields": {
+      "product": 82,
+      "size": 26,
+      "fit": 1,
+      "color": 12,
+      "sku": "GA-CS-XS-REG-WHITE",
+      "stock": 5,
+      "price": 229.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 493,
+    "fields": {
+      "product": 82,
+      "size": 27,
+      "fit": 1,
+      "color": 12,
+      "sku": "GA-CS-S-REG-WHITE",
+      "stock": 6,
+      "price": 229.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 494,
+    "fields": {
+      "product": 82,
+      "size": 28,
+      "fit": 1,
+      "color": 12,
+      "sku": "GA-CS-M-REG-WHITE",
+      "stock": 6,
+      "price": 229.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 495,
+    "fields": {
+      "product": 82,
+      "size": 29,
+      "fit": 1,
+      "color": 12,
+      "sku": "GA-CS-L-REG-WHITE",
+      "stock": 6,
+      "price": 229.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 496,
+    "fields": {
+      "product": 82,
+      "size": 30,
+      "fit": 1,
+      "color": 12,
+      "sku": "GA-CS-XL-REG-WHITE",
+      "stock": 5,
+      "price": 229.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 497,
+    "fields": {
+      "product": 82,
+      "size": 29,
+      "fit": 2,
+      "color": 12,
+      "sku": "GA-CS-L-SLIM-WHITE",
+      "stock": 4,
+      "price": 229.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 498,
+    "fields": {
+      "product": 82,
+      "size": 30,
+      "fit": 2,
+      "color": 12,
+      "sku": "GA-CS-XL-SLIM-WHITE",
+      "stock": 4,
+      "price": 229.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 499,
+    "fields": {
+      "product": 83,
+      "size": 4,
+      "fit": 1,
+      "color": 14,
+      "sku": "RO-J-48-REG-BURGUNDY",
+      "stock": 2,
+      "price": 1199.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 500,
+    "fields": {
+      "product": 83,
+      "size": 5,
+      "fit": 1,
+      "color": 14,
+      "sku": "RO-J-50-REG-BURGUNDY",
+      "stock": 2,
+      "price": 1199.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 501,
+    "fields": {
+      "product": 83,
+      "size": 4,
+      "fit": 2,
+      "color": 14,
+      "sku": "RO-J-48-SLIM-BURGUNDY",
+      "stock": 1,
+      "price": 1199.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 502,
+    "fields": {
+      "product": 83,
+      "size": 5,
+      "fit": 2,
+      "color": 14,
+      "sku": "RO-J-50-SLIM-BURGUNDY",
+      "stock": 1,
+      "price": 1199.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 503,
+    "fields": {
+      "product": 84,
+      "size": 19,
+      "fit": 2,
+      "color": 14,
+      "sku": "RO-T-44-SLIM-BURGUNDY",
+      "stock": 3,
+      "price": 749.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 504,
+    "fields": {
+      "product": 84,
+      "size": 20,
+      "fit": 2,
+      "color": 14,
+      "sku": "RO-T-46-SLIM-BURGUNDY",
+      "stock": 3,
+      "price": 749.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 505,
+    "fields": {
+      "product": 84,
+      "size": 19,
+      "fit": 1,
+      "color": 14,
+      "sku": "RO-T-44-REG-BURGUNDY",
+      "stock": 2,
+      "price": 749.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 506,
+    "fields": {
+      "product": 84,
+      "size": 20,
+      "fit": 1,
+      "color": 14,
+      "sku": "RO-T-46-REG-BURGUNDY",
+      "stock": 2,
+      "price": 749.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 507,
+    "fields": {
+      "product": 84,
+      "size": 21,
+      "fit": 1,
+      "color": 14,
+      "sku": "RO-T-48-REG-BURGUNDY",
+      "stock": 1,
+      "price": 749.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 508,
+    "fields": {
+      "product": 85,
+      "size": 35,
+      "fit": 1,
+      "color": 14,
+      "sku": "RO-W-48-REG-BURGUNDY",
+      "stock": 2,
+      "price": 599.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 509,
+    "fields": {
+      "product": 85,
+      "size": 33,
+      "fit": 1,
+      "color": 14,
+      "sku": "RO-W-50-REG-BURGUNDY",
+      "stock": 2,
+      "price": 599.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 510,
+    "fields": {
+      "product": 85,
+      "size": 34,
+      "fit": 2,
+      "color": 14,
+      "sku": "RO-W-48-SLIM-BURGUNDY",
+      "stock": 1,
+      "price": 599.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 511,
+    "fields": {
+      "product": 85,
+      "size": 35,
+      "fit": 2,
+      "color": 14,
+      "sku": "RO-W-50-SLIM-BURGUNDY",
+      "stock": 1,
+      "price": 599.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 512,
+    "fields": {
+      "product": 86,
+      "size": 42,
+      "fit": 0,
+      "color": 14,
+      "sku": "RO-BT-ONE-BURGUNDY",
+      "stock": 5,
+      "price": 189.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 513,
+    "fields": {
+      "product": 87,
+      "size": 4,
+      "fit": 1,
+      "color": 1,
+      "sku": "CL-J-48-REG-NAVY",
+      "stock": 10,
+      "price": 199.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 514,
+    "fields": {
+      "product": 87,
+      "size": 5,
+      "fit": 1,
+      "color": 1,
+      "sku": "CL-J-50-REG-NAVY",
+      "stock": 8,
+      "price": 199.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 515,
+    "fields": {
+      "product": 87,
+      "size": 4,
+      "fit": 2,
+      "color": 1,
+      "sku": "CL-J-48-SLIM-NAVY",
+      "stock": 6,
+      "price": 199.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 516,
+    "fields": {
+      "product": 87,
+      "size": 5,
+      "fit": 2,
+      "color": 1,
+      "sku": "CL-J-50-SLIM-NAVY",
+      "stock": 6,
+      "price": 199.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 517,
+    "fields": {
+      "product": 88,
+      "size": 21,
+      "fit": 1,
+      "color": 1,
+      "sku": "CL-T-48-REG-NAVY",
+      "stock": 12,
+      "price": 129.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 518,
+    "fields": {
+      "product": 88,
+      "size": 22,
+      "fit": 1,
+      "color": 1,
+      "sku": "CL-T-50-REG-NAVY",
+      "stock": 10,
+      "price": 129.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 519,
+    "fields": {
+      "product": 88,
+      "size": 21,
+      "fit": 2,
+      "color": 1,
+      "sku": "CL-T-48-SLIM-NAVY",
+      "stock": 8,
+      "price": 129.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 520,
+    "fields": {
+      "product": 88,
+      "size": 22,
+      "fit": 2,
+      "color": 1,
+      "sku": "CL-T-50-SLIM-NAVY",
+      "stock": 8,
+      "price": 129.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 521,
+    "fields": {
+      "product": 89,
+      "size": 28,
+      "fit": 0,
+      "color": 1,
+      "sku": "CL-S-48-REG-NAVY",
+      "stock": 20,
+      "price": 69.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 522,
+    "fields": {
+      "product": 89,
+      "size": 29,
+      "fit": 0,
+      "color": 1,
+      "sku": "CL-S-50-REG-NAVY",
+      "stock": 20,
+      "price": 69.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 523,
+    "fields": {
+      "product": 90,
+      "size": 4,
+      "fit": 1,
+      "color": 1,
+      "sku": "LC-J-48-REG-NAVY",
+      "stock": 6,
+      "price": 329.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 524,
+    "fields": {
+      "product": 90,
+      "size": 5,
+      "fit": 1,
+      "color": 1,
+      "sku": "LC-J-50-REG-NAVY",
+      "stock": 6,
+      "price": 329.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 525,
+    "fields": {
+      "product": 90,
+      "size": 4,
+      "fit": 2,
+      "color": 1,
+      "sku": "LC-J-48-SLIM-NAVY",
+      "stock": 4,
+      "price": 329.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 526,
+    "fields": {
+      "product": 90,
+      "size": 5,
+      "fit": 2,
+      "color": 1,
+      "sku": "LC-J-50-SLIM-NAVY",
+      "stock": 4,
+      "price": 329.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 527,
+    "fields": {
+      "product": 91,
+      "size": 21,
+      "fit": 1,
+      "color": 1,
+      "sku": "LC-T-48-REG-NAVY",
+      "stock": 8,
+      "price": 219.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 528,
+    "fields": {
+      "product": 91,
+      "size": 22,
+      "fit": 1,
+      "color": 1,
+      "sku": "LC-T-50-REG-NAVY",
+      "stock": 8,
+      "price": 219.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 529,
+    "fields": {
+      "product": 91,
+      "size": 21,
+      "fit": 2,
+      "color": 1,
+      "sku": "LC-T-48-SLIM-NAVY",
+      "stock": 6,
+      "price": 219.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 530,
+    "fields": {
+      "product": 91,
+      "size": 22,
+      "fit": 2,
+      "color": 1,
+      "sku": "LC-T-50-SLIM-NAVY",
+      "stock": 6,
+      "price": 219.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 531,
+    "fields": {
+      "product": 92,
+      "size": 28,
+      "fit": 0,
+      "color": 1,
+      "sku": "LC-S-48-REG-NAVY",
+      "stock": 10,
+      "price": 109.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 532,
+    "fields": {
+      "product": 92,
+      "size": 29,
+      "fit": 0,
+      "color": 1,
+      "sku": "LC-S-50-REG-NAVY",
+      "stock": 10,
+      "price": 109.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 533,
+    "fields": {
+      "product": 93,
+      "size": 4,
+      "fit": 1,
+      "color": 1,
+      "sku": "CS-J-48-REG-BLACK",
+      "stock": 3,
+      "price": 749.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 534,
+    "fields": {
+      "product": 93,
+      "size": 5,
+      "fit": 1,
+      "color": 1,
+      "sku": "CS-J-50-REG-BLACK",
+      "stock": 3,
+      "price": 749.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 535,
+    "fields": {
+      "product": 93,
+      "size": 4,
+      "fit": 2,
+      "color": 1,
+      "sku": "CS-J-48-SLIM-BLACK",
+      "stock": 2,
+      "price": 749.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 536,
+    "fields": {
+      "product": 93,
+      "size": 5,
+      "fit": 2,
+      "color": 1,
+      "sku": "CS-J-50-SLIM-BLACK",
+      "stock": 2,
+      "price": 749.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 537,
+    "fields": {
+      "product": 94,
+      "size": 21,
+      "fit": 1,
+      "color": 1,
+      "sku": "CS-T-48-REG-BLACK",
+      "stock": 4,
+      "price": 499.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 538,
+    "fields": {
+      "product": 94,
+      "size": 22,
+      "fit": 1,
+      "color": 1,
+      "sku": "CS-T-50-REG-BLACK",
+      "stock": 4,
+      "price": 499.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 539,
+    "fields": {
+      "product": 94,
+      "size": 21,
+      "fit": 2,
+      "color": 1,
+      "sku": "CS-T-48-SLIM-BLACK",
+      "stock": 3,
+      "price": 499.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 540,
+    "fields": {
+      "product": 94,
+      "size": 22,
+      "fit": 2,
+      "color": 1,
+      "sku": "CS-T-50-SLIM-BLACK",
+      "stock": 3,
+      "price": 499.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 541,
+    "fields": {
+      "product": 95,
+      "size": 34,
+      "fit": 1,
+      "color": 1,
+      "sku": "CS-W-48-REG-BLACK",
+      "stock": 5,
+      "price": 359.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 542,
+    "fields": {
+      "product": 95,
+      "size": 35,
+      "fit": 1,
+      "color": 1,
+      "sku": "CS-W-50-REG-BLACK",
+      "stock": 5,
+      "price": 359.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 543,
+    "fields": {
+      "product": 96,
+      "size": 3,
+      "fit": 1,
+      "color": 1,
+      "sku": "BL-J-46-REG-BLUE",
+      "stock": 3,
+      "price": 529.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 544,
+    "fields": {
+      "product": 96,
+      "size": 4,
+      "fit": 1,
+      "color": 1,
+      "sku": "BL-J-48-REG-BLUE",
+      "stock": 3,
+      "price": 529.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 545,
+    "fields": {
+      "product": 96,
+      "size": 5,
+      "fit": 1,
+      "color": 1,
+      "sku": "BL-J-50-REG-BLUE",
+      "stock": 3,
+      "price": 529.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 546,
+    "fields": {
+      "product": 96,
+      "size": 6,
+      "fit": 1,
+      "color": 1,
+      "sku": "BL-J-52-REG-BLUE",
+      "stock": 2,
+      "price": 529.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 547,
+    "fields": {
+      "product": 96,
+      "size": 3,
+      "fit": 2,
+      "color": 1,
+      "sku": "BL-J-46-SLIM-BLUE",
+      "stock": 2,
+      "price": 529.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 548,
+    "fields": {
+      "product": 96,
+      "size": 4,
+      "fit": 2,
+      "color": 1,
+      "sku": "BL-J-48-SLIM-BLUE",
+      "stock": 2,
+      "price": 529.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 549,
+    "fields": {
+      "product": 96,
+      "size": 5,
+      "fit": 2,
+      "color": 1,
+      "sku": "BL-J-50-SLIM-BLUE",
+      "stock": 2,
+      "price": 529.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 550,
+    "fields": {
+      "product": 96,
+      "size": 6,
+      "fit": 2,
+      "color": 1,
+      "sku": "BL-J-52-SLIM-BLUE",
+      "stock": 1,
+      "price": 529.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 551,
+    "fields": {
+      "product": 97,
+      "size": 20,
+      "fit": 1,
+      "color": 1,
+      "sku": "BL-T-46-REG-BLUE",
+      "stock": 4,
+      "price": 349.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 552,
+    "fields": {
+      "product": 97,
+      "size": 21,
+      "fit": 1,
+      "color": 1,
+      "sku": "BL-T-48-REG-BLUE",
+      "stock": 4,
+      "price": 349.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 553,
+    "fields": {
+      "product": 97,
+      "size": 22,
+      "fit": 1,
+      "color": 1,
+      "sku": "BL-T-50-REG-BLUE",
+      "stock": 4,
+      "price": 349.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 554,
+    "fields": {
+      "product": 97,
+      "size": 23,
+      "fit": 1,
+      "color": 1,
+      "sku": "BL-T-52-REG-BLUE",
+      "stock": 3,
+      "price": 349.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 555,
+    "fields": {
+      "product": 97,
+      "size": 20,
+      "fit": 2,
+      "color": 1,
+      "sku": "BL-T-46-SLIM-BLUE",
+      "stock": 3,
+      "price": 349.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 556,
+    "fields": {
+      "product": 97,
+      "size": 21,
+      "fit": 2,
+      "color": 1,
+      "sku": "BL-T-48-SLIM-BLUE",
+      "stock": 3,
+      "price": 349.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 557,
+    "fields": {
+      "product": 97,
+      "size": 22,
+      "fit": 2,
+      "color": 1,
+      "sku": "BL-T-50-SLIM-BLUE",
+      "stock": 3,
+      "price": 349.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 558,
+    "fields": {
+      "product": 97,
+      "size": 23,
+      "fit": 2,
+      "color": 1,
+      "sku": "BL-T-52-SLIM-BLUE",
+      "stock": 2,
+      "price": 349.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 559,
+    "fields": {
+      "product": 98,
+      "size": 27,
+      "fit": 1,
+      "color": 1,
+      "sku": "BL-S-46-REG-BLUE",
+      "stock": 5,
+      "price": 149.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 560,
+    "fields": {
+      "product": 98,
+      "size": 28,
+      "fit": 1,
+      "color": 1,
+      "sku": "BL-S-48-REG-BLUE",
+      "stock": 5,
+      "price": 149.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 561,
+    "fields": {
+      "product": 98,
+      "size": 29,
+      "fit": 1,
+      "color": 1,
+      "sku": "BL-S-50-REG-BLUE",
+      "stock": 5,
+      "price": 149.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 562,
+    "fields": {
+      "product": 98,
+      "size": 30,
+      "fit": 1,
+      "color": 1,
+      "sku": "BL-S-52-REG-BLUE",
+      "stock": 4,
+      "price": 149.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 563,
+    "fields": {
+      "product": 98,
+      "size": 27,
+      "fit": 2,
+      "color": 1,
+      "sku": "BL-S-46-SLIM-BLUE",
+      "stock": 4,
+      "price": 149.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 564,
+    "fields": {
+      "product": 98,
+      "size": 28,
+      "fit": 2,
+      "color": 1,
+      "sku": "BL-S-48-SLIM-BLUE",
+      "stock": 4,
+      "price": 149.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 565,
+    "fields": {
+      "product": 98,
+      "size": 29,
+      "fit": 2,
+      "color": 1,
+      "sku": "BL-S-50-SLIM-BLUE",
+      "stock": 4,
+      "price": 149.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 566,
+    "fields": {
+      "product": 98,
+      "size": 30,
+      "fit": 2,
+      "color": 1,
+      "sku": "BL-S-52-SLIM-BLUE",
+      "stock": 3,
+      "price": 149.0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 567,
+    "fields": {
+      "product": 99,
+      "size": 41,
+      "fit": 0,
+      "color": 1,
+      "sku": "BL-TIE-BLUE",
+      "stock": 10,
+      "price": 89.0,
+      "is_active": true
+    }
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "model": "products.category",
+    "pk": 0,
+    "fields": {
+      "name": "Jackets",
+      "slug": "jackets"
+    }
+  },
+  {
+    "model": "products.category",
+    "pk": 1,
+    "fields": {
+      "name": "Trousers",
+      "slug": "trousers"
+    }
+  },
+  {
+    "model": "products.category",
+    "pk": 2,
+    "fields": {
+      "name": "Shirts",
+      "slug": "shirts"
+    }
+  },
+  {
+    "model": "products.category",
+    "pk": 3,
+    "fields": {
+      "name": "Waistcoats",
+      "slug": "waistcoats"
+    }
+  },
+  {
+    "model": "products.category",
+    "pk": 4,
+    "fields": {
+      "name": "Ties",
+      "slug": "ties"
+    }
+  },
+  {
+    "model": "products.category",
+    "pk": 5,
+    "fields": {
+      "name": "Bow Ties",
+      "slug": "bow-ties"
+    }
+  },
+  {
+    "model": "products.category",
+    "pk": 6,
+    "fields": {
+      "name": "Pocket squares",
+      "slug": "pocket-squares"
+    }
+  },
+  {
+    "model": "products.category",
+    "pk": 7,
+    "fields": {
+      "name": "Belts",
+      "slug": "belts"
+    }
+  },
+  {
+    "model": "products.category",
+    "pk": 8,
+    "fields": {
+      "name": "Accessories",
+      "slug": "accessories"
+    }
+  }
+]

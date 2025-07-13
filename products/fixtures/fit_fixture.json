@@ -1,0 +1,50 @@
+[
+  {
+    "model": "products.fit",
+    "pk": 0,
+    "fields": {
+      "name": "none",
+      "slug": "none"
+    }
+  },
+  {
+    "model": "products.fit",
+    "pk": 1,
+    "fields": {
+      "name": "Regular Fit",
+      "slug": "regular-fit"
+    }
+  },
+  {
+    "model": "products.fit",
+    "pk": 2,
+    "fields": {
+      "name": "Slim Fit",
+      "slug": "slim-fit"
+    }
+  },
+  {
+    "model": "products.fit",
+    "pk": 3,
+    "fields": {
+      "name": "Extra Slim Fit",
+      "slug": "extra-slim-fit"
+    }
+  },
+  {
+    "model": "products.fit",
+    "pk": 4,
+    "fields": {
+      "name": "Relaxed Fit",
+      "slug": "relaxed-fit"
+    }
+  },
+  {
+    "model": "products.fit",
+    "pk": 5,
+    "fields": {
+      "name": "Classic Fit",
+      "slug": "classic-fit"
+    }
+  }
+]

@@ -1,0 +1,2298 @@
+[
+  {
+    "model": "products.product",
+    "pk": 0,
+    "fields": {
+      "category": 0,
+      "occasion": 2,
+      "series": 1,
+      "name": "Heritage Wool Jacket",
+      "slug": "heritage-wool-jacket",
+      "description": "A classic single-breasted jacket crafted from premium wool. Inspired by decades of tailoring tradition and refined to meet modern expectations.",
+      "fabric": "100% Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 1,
+    "fields": {
+      "category": 1,
+      "occasion": 2,
+      "series": 1,
+      "name": "Heritage Wool Trousers",
+      "slug": "heritage-wool-trousers",
+      "description": "Matching trousers designed to complete the Heritage ensemble. Clean lines and subtle patterns reflect understated elegance.",
+      "fabric": "Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 2,
+    "fields": {
+      "category": 3,
+      "occasion": 2,
+      "series": 1,
+      "name": "Heritage Waistcoat",
+      "slug": "heritage-waistcoat",
+      "description": "A tailored waistcoat with fine detailing. Combines seamlessly with the jacket and trousers.",
+      "fabric": "wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 3,
+    "fields": {
+      "category": 0,
+      "occasion": 1,
+      "series": 2,
+      "name": "Signature Modern Jacket",
+      "slug": "signature-modern-jacket",
+      "description": "Slim fit and clean silhouette make this jacket ideal for modern professionals.",
+      "fabric": "Superfine Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 4,
+    "fields": {
+      "category": 1,
+      "occasion": 1,
+      "series": 2,
+      "name": "Signature Modern Trousers",
+      "slug": "signature-modern-trousers",
+      "description": "Slim-cut trousers crafted from lightweight wool. Pairs perfectly with the Signature Modern Jacket.",
+      "fabric": "Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 5,
+    "fields": {
+      "category": 2,
+      "occasion": 1,
+      "series": 2,
+      "name": "Signature Cotton Shirt",
+      "slug": "signature-cotton-shirt",
+      "description": "A crisp cotton shirt with refined details. Designed for everyday elegance and confident business attire.",
+      "fabric": "Cotton",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 6,
+    "fields": {
+      "category": 0,
+      "occasion": 1,
+      "series": 3,
+      "name": "Timeless Classic Jacket",
+      "slug": "timeless-classic-jacket",
+      "description": "A versatile jacket crafted in a neutral tone. Designed to serve as a cornerstone of a sophisticated wardrobe.",
+      "fabric": "Wool Blend",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 7,
+    "fields": {
+      "category": 1,
+      "occasion": 1,
+      "series": 3,
+      "name": "Timeless Classic Trousers",
+      "slug": "timeless-classic-trousers",
+      "description": "Neutral, understated trousers that pair effortlessly with the Timeless Classic Jacket.",
+      "fabric": "Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 8,
+    "fields": {
+      "category": 2,
+      "occasion": 1,
+      "series": 3,
+      "name": "Timeless Classic Shirt",
+      "slug": "timeless-classic-shirt",
+      "description": "A white cotton shirt designed for maximum versatility. Ideal for business or formal settings.",
+      "fabric": "Cotton",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 9,
+    "fields": {
+      "category": 4,
+      "occasion": 1,
+      "series": 3,
+      "name": "Timeless Classic Silk Tie",
+      "slug": "timeless-classic-silk-tie",
+      "description": "A refined silk tie to complete the classic look. Neutral colors ensure compatibility with a variety of suits and shirts.",
+      "fabric": "Silk",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 10,
+    "fields": {
+      "category": 0,
+      "occasion": 1,
+      "series": 4,
+      "name": "Modern Essentials Jacket",
+      "slug": "modern-essentials-jacket",
+      "description": "A lightweight jacket designed for everyday elegance. Clean lines and versatile style make it perfect for the contemporary professional.",
+      "fabric": "Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 11,
+    "fields": {
+      "category": 1,
+      "occasion": 1,
+      "series": 4,
+      "name": "Modern Essentials Trousers",
+      "slug": "modern-essentials-trousers",
+      "description": "Slim-cut trousers crafted from soft wool. Effortless to combine and always appropriate.",
+      "fabric": "Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 12,
+    "fields": {
+      "category": 2,
+      "occasion": 1,
+      "series": 4,
+      "name": "Modern Essentials Shirt",
+      "slug": "modern-essentials-shirt",
+      "description": "A crisp cotton shirt that balances comfort and sophistication. Essential for a refined daily look.",
+      "fabric": "Cotton",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 13,
+    "fields": {
+      "category": 0,
+      "occasion": 2,
+      "series": 5,
+      "name": "Sartorial Elegance Jacket",
+      "slug": "sartorial-elegance-jacket",
+      "description": "This jacket showcases meticulous tailoring and fine detail. Crafted for connoisseurs of style who appreciate tradition and innovation.",
+      "fabric": "Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 14,
+    "fields": {
+      "category": 1,
+      "occasion": 2,
+      "series": 5,
+      "name": "Sartorial Elegance Trousers",
+      "slug": "sartorial-elegance-trousers",
+      "description": "Tailored trousers with hand-finished seams and a refined silhouette.",
+      "fabric": "Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 15,
+    "fields": {
+      "category": 3,
+      "occasion": 2,
+      "series": 5,
+      "name": "Sartorial Elegance Waistcoat",
+      "slug": "sartorial-elegance-waistcoat",
+      "description": "A waistcoat that completes the three-piece look. Subtle design and precise fit highlight impeccable craftsmanship.",
+      "fabric": "Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 16,
+    "fields": {
+      "category": 0,
+      "occasion": 4,
+      "series": 6,
+      "name": "Black Tie Dinner Jacket",
+      "slug": "black-tie-dinner-jacket",
+      "description": "Crafted in deep tones with subtle satin lapels, this jacket defines formal evening elegance.",
+      "fabric": "Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 17,
+    "fields": {
+      "category": 1,
+      "occasion": 4,
+      "series": 6,
+      "name": "Black Tie Trousers",
+      "slug": "black-tie-trousers",
+      "description": "Formal trousers designed to pair with the Black Tie Dinner Jacket. Perfect drape ensures an unforgettable presence.",
+      "fabric": "Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 18,
+    "fields": {
+      "category": 5,
+      "occasion": 4,
+      "series": 6,
+      "name": "Black Tie Silk Bow Tie",
+      "slug": "black-tie-silk-bow-tie",
+      "description": "A classic silk bow tie to complete your evening ensemble. Simple, refined, and essential for black tie occasions.",
+      "fabric": "Silk",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 19,
+    "fields": {
+      "category": 2,
+      "occasion": 4,
+      "series": 6,
+      "name": "Black Tie Formal Shirt",
+      "slug": "black-tie-formal-shirt",
+      "description": "A white cotton shirt tailored for a perfect fit under a dinner jacket. Discreet details add a note of quiet sophistication.",
+      "fabric": "Cotton",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 20,
+    "fields": {
+      "category": 0,
+      "occasion": 1,
+      "series": 7,
+      "name": "Executive Choice Jacket",
+      "slug": "executive-choice-jacket",
+      "description": "A structured wool jacket designed for leaders and professionals. Tailored lines communicate confidence without ostentation.",
+      "fabric": "Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 21,
+    "fields": {
+      "category": 1,
+      "occasion": 1,
+      "series": 7,
+      "name": "Executive Choice Trousers",
+      "slug": "executive-choice-trousers",
+      "description": "Slim-cut trousers crafted from premium wool. Designed to complement the Executive Jacket perfectly.",
+      "fabric": "Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 22,
+    "fields": {
+      "category": 2,
+      "occasion": 1,
+      "series": 7,
+      "name": "Executive Cotton Shirt",
+      "slug": "executive-cotton-shirt",
+      "description": "A crisp cotton shirt ideal for boardroom settings. Subtle details ensure a polished appearance.",
+      "fabric": "Cotton",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 23,
+    "fields": {
+      "category": 0,
+      "occasion": 2,
+      "series": 8,
+      "name": "Formal Attire Ceremony Jacket",
+      "slug": "formal-attire-ceremony-jacket",
+      "description": "This jacket features luxurious lining and a polished finish. Designed for distinguished ceremonial occasions where elegance is essential.",
+      "fabric": "Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 24,
+    "fields": {
+      "category": 1,
+      "occasion": 2,
+      "series": 8,
+      "name": "Formal Attire Ceremony Trousers",
+      "slug": "formal-attire-ceremony-trousers",
+      "description": "Tailored trousers with clean lines and premium construction. Part of a refined ensemble for special gatherings.",
+      "fabric": "Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 25,
+    "fields": {
+      "category": 2,
+      "occasion": 2,
+      "series": 8,
+      "name": "Formal Attire White Shirt",
+      "slug": "formal-attire-white-shirt",
+      "description": "A pure cotton shirt with a classic cut. The ideal companion to the Formal Attire Ceremony Jacket.",
+      "fabric": "Cotton",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 26,
+    "fields": {
+      "category": 0,
+      "occasion": 1,
+      "series": 9,
+      "name": "Urban Gentleman Jacket",
+      "slug": "urban-gentleman-jacket",
+      "description": "Inspired by city life, this jacket blends classic tailoring with flexible cuts. Breathable wool ensures comfort throughout your day.",
+      "fabric": "Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 27,
+    "fields": {
+      "category": 1,
+      "occasion": 1,
+      "series": 9,
+      "name": "Urban Gentleman Trousers",
+      "slug": "urban-gentleman-trousers",
+      "description": "Lightweight wool trousers that move easily from office to evening events. Versatile and refined.",
+      "fabric": "Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 28,
+    "fields": {
+      "category": 2,
+      "occasion": 1,
+      "series": 9,
+      "name": "Urban Gentleman Shirt",
+      "slug": "urban-gentleman-shirt",
+      "description": "A soft cotton shirt for modern professionals. Designed to adapt seamlessly to any schedule.",
+      "fabric": "Cotton",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 29,
+    "fields": {
+      "category": 8,
+      "occasion": 1,
+      "series": 9,
+      "name": "Urban Gentleman Pocket Square",
+      "slug": "urban-gentleman-pocket-square",
+      "description": "A simple cotton pocket square to add a discreet touch of style.",
+      "fabric": "Cotton",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 30,
+    "fields": {
+      "category": 0,
+      "occasion": 1,
+      "series": 10,
+      "name": "Tailored Perfection Jacket",
+      "slug": "tailored-perfection-jacket",
+      "description": "A jacket that embodies flawless fit and discreet detailing. Crafted for professionals who demand the highest standards.",
+      "fabric": "Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 31,
+    "fields": {
+      "category": 1,
+      "occasion": 1,
+      "series": 10,
+      "name": "Tailored Perfection Trousers",
+      "slug": "tailored-perfection-trousers",
+      "description": "Slim, precisely measured trousers that complement the Tailored Perfection Jacket.",
+      "fabric": "Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 32,
+    "fields": {
+      "category": 2,
+      "occasion": 1,
+      "series": 10,
+      "name": "Tailored Perfection Shirt",
+      "slug": "tailored-perfection-shirt",
+      "description": "A crisp cotton shirt designed to enhance the flawless silhouette of the suit.",
+      "fabric": "Cotton",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 33,
+    "fields": {
+      "category": 0,
+      "occasion": 2,
+      "series": 11,
+      "name": "Ceremony Collection Jacket",
+      "slug": "ceremony-collection-jacket",
+      "description": "An elegant jacket with refined silhouettes and thoughtful details. Designed to honor your most memorable occasions.",
+      "fabric": "Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 34,
+    "fields": {
+      "category": 1,
+      "occasion": 2,
+      "series": 11,
+      "name": "Ceremony Collection Trousers",
+      "slug": "ceremony-collection-trousers",
+      "description": "Matching trousers that bring balance and sophistication to the ensemble.",
+      "fabric": "Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 35,
+    "fields": {
+      "category": 3,
+      "occasion": 2,
+      "series": 11,
+      "name": "Ceremony Collection Waistcoat",
+      "slug": "ceremony-collection-waistcoat",
+      "description": "A waistcoat that completes the ceremonial look. Subtle textures and classic lines convey a sense of tradition.",
+      "fabric": "Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 36,
+    "fields": {
+      "category": 4,
+      "occasion": 2,
+      "series": 11,
+      "name": "Ceremony Collection Silk Tie",
+      "slug": "ceremony-collection-silk-tie",
+      "description": "A silk tie to add a refined accent to the Ceremony Collection ensemble.",
+      "fabric": "Silk",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 37,
+    "fields": {
+      "category": 0,
+      "occasion": 1,
+      "series": 12,
+      "name": "Business Premium Jacket",
+      "slug": "business-premium-jacket",
+      "description": "A jacket crafted from fine wool fabrics. Subtle textures and clean lines exude authority and ease in any professional setting.",
+      "fabric": "Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 38,
+    "fields": {
+      "category": 1,
+      "occasion": 1,
+      "series": 12,
+      "name": "Business Premium Trousers",
+      "slug": "business-premium-trousers",
+      "description": "Slim-cut trousers designed to match the Business Premium Jacket. Effortless refinement from morning to evening.",
+      "fabric": "Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 39,
+    "fields": {
+      "category": 2,
+      "occasion": 1,
+      "series": 12,
+      "name": "Business Premium Shirt",
+      "slug": "business-premium-shirt",
+      "description": "A pure cotton shirt that pairs seamlessly with the Business Premium suit. Clean and versatile.",
+      "fabric": "Cotton",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 40,
+    "fields": {
+      "category": 0,
+      "occasion": 3,
+      "series": 13,
+      "name": "Riviera Summer Linen Jacket",
+      "slug": "riviera-summer-linen-jacket",
+      "description": "A lightweight linen jacket inspired by Mediterranean summers. Relaxed cuts and soft colors create effortless sophistication.",
+      "fabric": "Linen",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 41,
+    "fields": {
+      "category": 1,
+      "occasion": 3,
+      "series": 13,
+      "name": "Riviera Summer Linen Trousers",
+      "slug": "riviera-summer-linen-trousers",
+      "description": "Breathable linen trousers ideal for warm days and long evenings.",
+      "fabric": "Linen",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 42,
+    "fields": {
+      "category": 2,
+      "occasion": 3,
+      "series": 13,
+      "name": "Riviera Summer Cotton Shirt",
+      "slug": "riviera-summer-cotton-shirt",
+      "description": "A soft cotton shirt with discreet patterns. Perfect for relaxed summer gatherings.",
+      "fabric": "Cotton",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 43,
+    "fields": {
+      "category": 0,
+      "occasion": 2,
+      "series": 14,
+      "name": "Winter Heritage Wool Jacket",
+      "slug": "winter-heritage-wool-jacket",
+      "description": "A heavier wool jacket designed to bring warmth and distinction to the colder season. Rich tones and classic lines create an unmistakable presence.",
+      "fabric": "Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 44,
+    "fields": {
+      "category": 1,
+      "occasion": 2,
+      "series": 14,
+      "name": "Winter Heritage Wool Trousers",
+      "slug": "winter-heritage-wool-trousers",
+      "description": "Tailored wool trousers with functional details. An essential part of the Winter Heritage ensemble.",
+      "fabric": "Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 45,
+    "fields": {
+      "category": 3,
+      "occasion": 2,
+      "series": 14,
+      "name": "Winter Heritage Waistcoat",
+      "slug": "winter-heritage-waistcoat",
+      "description": "A waistcoat crafted to complete the formal winter look. Classic and refined.",
+      "fabric": "Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 46,
+    "fields": {
+      "category": 0,
+      "occasion": 1,
+      "series": 15,
+      "name": "Spring Modern Jacket",
+      "slug": "spring-modern-jacket",
+      "description": "A fresh, lighter jacket that brings a contemporary touch to classic tailoring. Ideal for welcoming the new season in style.",
+      "fabric": "Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 47,
+    "fields": {
+      "category": 1,
+      "occasion": 1,
+      "series": 15,
+      "name": "Spring Modern Trousers",
+      "slug": "spring-modern-trousers",
+      "description": "Versatile wool trousers in lighter shades. Designed to move easily between business meetings and casual settings.",
+      "fabric": "Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 48,
+    "fields": {
+      "category": 2,
+      "occasion": 1,
+      "series": 15,
+      "name": "Spring Modern Cotton Shirt",
+      "slug": "spring-modern-cotton-shirt",
+      "description": "A breathable cotton shirt that pairs beautifully with the Spring Modern Jacket.",
+      "fabric": "Cotton",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 49,
+    "fields": {
+      "category": 8,
+      "occasion": 1,
+      "series": 15,
+      "name": "Spring Modern Pocket Square",
+      "slug": "spring-modern-pocket-square",
+      "description": "A discreet cotton pocket square to add a touch of seasonal color to your look.",
+      "fabric": "Cotton",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 50,
+    "fields": {
+      "category": 0,
+      "occasion": 0,
+      "series": 16,
+      "name": "Summer Elegance Linen Jacket",
+      "slug": "summer-elegance-linen-jacket",
+      "description": "A lightweight linen jacket designed for warm months. Airy cuts and subtle patterns ensure comfort and refined style for summer weddings and celebrations.",
+      "fabric": "Linen",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 51,
+    "fields": {
+      "category": 1,
+      "occasion": 0,
+      "series": 16,
+      "name": "Summer Elegance Linen Trousers",
+      "slug": "summer-elegance-linen-trousers",
+      "description": "Breathable linen trousers that complete the Summer Elegance look.",
+      "fabric": "Linen",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 52,
+    "fields": {
+      "category": 2,
+      "occasion": 0,
+      "series": 16,
+      "name": "Summer Elegance Cotton Shirt",
+      "slug": "summer-elegance-cotton-shirt",
+      "description": "A crisp white cotton shirt perfect for warm weather occasions.",
+      "fabric": "Cotton",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 53,
+    "fields": {
+      "category": 0,
+      "occasion": 2,
+      "series": 17,
+      "name": "Autumn Sophisticate Jacket",
+      "slug": "autumn-sophisticate-jacket",
+      "description": "A wool jacket in warm, rich tones with subtle check patterns. Designed to transition seamlessly from crisp days to cooler evenings.",
+      "fabric": "Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 54,
+    "fields": {
+      "category": 1,
+      "occasion": 2,
+      "series": 17,
+      "name": "Autumn Sophisticate Trousers",
+      "slug": "autumn-sophisticate-trousers",
+      "description": "Tailored wool trousers that embody the sophistication of the season.",
+      "fabric": "Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 55,
+    "fields": {
+      "category": 3,
+      "occasion": 2,
+      "series": 17,
+      "name": "Autumn Sophisticate Waistcoat",
+      "slug": "autumn-sophisticate-waistcoat",
+      "description": "A refined waistcoat with warm undertones and structured lines.",
+      "fabric": "Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 56,
+    "fields": {
+      "category": 0,
+      "occasion": 1,
+      "series": 18,
+      "name": "Prestige Series Jacket",
+      "slug": "prestige-series-jacket",
+      "description": "An exceptional wool jacket crafted for the most discerning gentlemen. A statement of refined taste and confident presence.",
+      "fabric": "Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 57,
+    "fields": {
+      "category": 1,
+      "occasion": 1,
+      "series": 18,
+      "name": "Prestige Series Trousers",
+      "slug": "prestige-series-trousers",
+      "description": "Slim wool trousers designed to pair with the Prestige Jacket.",
+      "fabric": "Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 58,
+    "fields": {
+      "category": 2,
+      "occasion": 1,
+      "series": 18,
+      "name": "Prestige Series Shirt",
+      "slug": "prestige-series-shirt",
+      "description": "A premium cotton shirt with discreet detailing. For those who demand excellence in every aspect.",
+      "fabric": "Cotton",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 59,
+    "fields": {
+      "category": 4,
+      "occasion": 1,
+      "series": 18,
+      "name": "Prestige Series Silk Tie",
+      "slug": "prestige-series-silk-tie",
+      "description": "A refined silk tie that completes the Prestige ensemble with understated elegance.",
+      "fabric": "Silk",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 60,
+    "fields": {
+      "category": 0,
+      "occasion": 4,
+      "series": 19,
+      "name": "Monaco Edition Linen Jacket",
+      "slug": "monaco-edition-linen-jacket",
+      "description": "A lightweight linen jacket inspired by Riviera evenings. Modern fit and understated accents create an effortless sense of luxury.",
+      "fabric": "Linen",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 61,
+    "fields": {
+      "category": 1,
+      "occasion": 4,
+      "series": 19,
+      "name": "Monaco Edition Linen Trousers",
+      "slug": "monaco-edition-linen-trousers",
+      "description": "Breathable linen trousers that pair perfectly with the Monaco Edition Jacket.",
+      "fabric": "Linen",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 62,
+    "fields": {
+      "category": 2,
+      "occasion": 4,
+      "series": 19,
+      "name": "Monaco Edition Cotton Shirt",
+      "slug": "monaco-edition-cotton-shirt",
+      "description": "A soft cotton shirt ideal for warm evenings and exceptional gatherings.",
+      "fabric": "Cotton",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 63,
+    "fields": {
+      "category": 0,
+      "occasion": 2,
+      "series": 20,
+      "name": "Italian Craft Wool Jacket",
+      "slug": "italian-craft-wool-jacket",
+      "description": "A meticulously crafted wool jacket showcasing Italian artistry. Subtle flourishes and superior fabrics define its elegance.",
+      "fabric": "Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 64,
+    "fields": {
+      "category": 1,
+      "occasion": 2,
+      "series": 20,
+      "name": "Italian Craft Wool Trousers",
+      "slug": "italian-craft-wool-trousers",
+      "description": "Tailored wool trousers that complete the refined Italian Craft look.",
+      "fabric": "Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 65,
+    "fields": {
+      "category": 3,
+      "occasion": 2,
+      "series": 20,
+      "name": "Italian Craft Waistcoat",
+      "slug": "italian-craft-waistcoat",
+      "description": "A waistcoat with precise cuts and subtle detailing. For those who value heritage and innovation in equal measure.",
+      "fabric": "Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 66,
+    "fields": {
+      "category": 0,
+      "occasion": 1,
+      "series": 21,
+      "name": "London Classics Jacket",
+      "slug": "london-classics-jacket",
+      "description": "A structured wool jacket inspired by British sartorial tradition. Rich textures and timeless colors create a quietly confident silhouette.",
+      "fabric": "Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 67,
+    "fields": {
+      "category": 1,
+      "occasion": 1,
+      "series": 21,
+      "name": "London Classics Trousers",
+      "slug": "london-classics-trousers",
+      "description": "Wool trousers that complete the London Classics ensemble. A refined essential for modern professionals.",
+      "fabric": "Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 68,
+    "fields": {
+      "category": 2,
+      "occasion": 1,
+      "series": 21,
+      "name": "London Classics Cotton Shirt",
+      "slug": "london-classics-cotton-shirt",
+      "description": "A crisp cotton shirt with classic proportions. Ideal for business occasions or formal gatherings.",
+      "fabric": "Cotton",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 69,
+    "fields": {
+      "category": 4,
+      "occasion": 1,
+      "series": 21,
+      "name": "London Classics Silk Tie",
+      "slug": "london-classics-silk-tie",
+      "description": "A silk tie with understated patterns, inspired by traditional British elegance.",
+      "fabric": "Silk",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 70,
+    "fields": {
+      "category": 0,
+      "occasion": 4,
+      "series": 22,
+      "name": "Black Label Dinner Jacket",
+      "slug": "black-label-dinner-jacket",
+      "description": "An exclusive wool jacket with distinctive details and refined tailoring. Designed for those who expect the extraordinary.",
+      "fabric": "Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 71,
+    "fields": {
+      "category": 1,
+      "occasion": 4,
+      "series": 22,
+      "name": "Black Label Trousers",
+      "slug": "black-label-trousers",
+      "description": "Slim wool trousers that complete the Black Label ensemble. Subtle luxury in every stitch.",
+      "fabric": "Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 72,
+    "fields": {
+      "category": 2,
+      "occasion": 4,
+      "series": 22,
+      "name": "Black Label Formal Shirt",
+      "slug": "black-label-formal-shirt",
+      "description": "A premium cotton shirt with discreet details. The perfect companion to the Black Label Jacket.",
+      "fabric": "Cotton",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 73,
+    "fields": {
+      "category": 5,
+      "occasion": 4,
+      "series": 22,
+      "name": "Black Label Silk Bow Tie",
+      "slug": "black-label-silk-bow-tie",
+      "description": "A refined silk bow tie to complete your evening look. Understated and elegant.",
+      "fabric": "Silk",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 74,
+    "fields": {
+      "category": 0,
+      "occasion": 1,
+      "series": 23,
+      "name": "White Label Business Jacket",
+      "slug": "white-label-business-jacket",
+      "description": "A versatile wool jacket with clean lines and balanced proportions. Ideal for modern professionals seeking understated style.",
+      "fabric": "Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 75,
+    "fields": {
+      "category": 1,
+      "occasion": 1,
+      "series": 23,
+      "name": "White Label Trousers",
+      "slug": "white-label-trousers",
+      "description": "Wool trousers that combine comfort and elegance. Effortless to pair with the White Label Jacket.",
+      "fabric": "Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 76,
+    "fields": {
+      "category": 2,
+      "occasion": 1,
+      "series": 23,
+      "name": "White Label Cotton Shirt",
+      "slug": "white-label-cotton-shirt",
+      "description": "A crisp cotton shirt designed for daily business wear. A refined foundation for any wardrobe.",
+      "fabric": "Cotton",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 77,
+    "fields": {
+      "category": 0,
+      "occasion": 2,
+      "series": 24,
+      "name": "Limited Edition Jacket",
+      "slug": "limited-edition-jacket",
+      "description": "A unique wool jacket crafted in strictly limited quantities. Special fabrics and exclusive details make it remarkable.",
+      "fabric": "Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 78,
+    "fields": {
+      "category": 1,
+      "occasion": 2,
+      "series": 24,
+      "name": "Limited Edition Trousers",
+      "slug": "limited-edition-trousers",
+      "description": "Limited edition trousers designed to pair seamlessly with the jacket. Once they are gone, they will not return.",
+      "fabric": "Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 79,
+    "fields": {
+      "category": 2,
+      "occasion": 2,
+      "series": 24,
+      "name": "Limited Edition Shirt",
+      "slug": "limited-edition-shirt",
+      "description": "A premium cotton shirt that completes the exclusive look. For those who value rarity and character.",
+      "fabric": "Cotton",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 80,
+    "fields": {
+      "category": 0,
+      "occasion": 2,
+      "series": 25,
+      "name": "Grand Affair Ceremony Jacket",
+      "slug": "grand-affair-ceremony-jacket",
+      "description": "A luxurious wool jacket crafted for exceptional occasions. Elegant silhouette and subtle details highlight outstanding craftsmanship.",
+      "fabric": "Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 81,
+    "fields": {
+      "category": 1,
+      "occasion": 2,
+      "series": 25,
+      "name": "Grand Affair Ceremony Trousers",
+      "slug": "grand-affair-ceremony-trousers",
+      "description": "Tailored wool trousers designed to complement the Grand Affair Jacket.",
+      "fabric": "Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 82,
+    "fields": {
+      "category": 2,
+      "occasion": 2,
+      "series": 25,
+      "name": "Grand Affair Ceremony Shirt",
+      "slug": "grand-affair-ceremony-shirt",
+      "description": "A crisp cotton shirt that completes the ceremonial ensemble.",
+      "fabric": "Cotton",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 83,
+    "fields": {
+      "category": 0,
+      "occasion": 0,
+      "series": 26,
+      "name": "Royal Occasion Jacket",
+      "slug": "royal-occasion-jacket",
+      "description": "A wool jacket with refined cuts and satin accents. Rich colors bring a regal touch to distinguished events.",
+      "fabric": "Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 84,
+    "fields": {
+      "category": 1,
+      "occasion": 0,
+      "series": 26,
+      "name": "Royal Occasion Trousers",
+      "slug": "royal-occasion-trousers",
+      "description": "Tailored wool trousers to complete the Royal Occasion ensemble.",
+      "fabric": "Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 85,
+    "fields": {
+      "category": 3,
+      "occasion": 0,
+      "series": 26,
+      "name": "Royal Occasion Waistcoat",
+      "slug": "royal-occasion-waistcoat",
+      "description": "A waistcoat with subtle detailing and a refined silhouette. Designed for unforgettable celebrations.",
+      "fabric": "Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 86,
+    "fields": {
+      "category": 5,
+      "occasion": 0,
+      "series": 26,
+      "name": "Royal Occasion Silk Bow Tie",
+      "slug": "royal-occasion-silk-bow-tie",
+      "description": "A silk bow tie adding a final touch of elegance to the Royal Occasion look.",
+      "fabric": "Silk",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 87,
+    "fields": {
+      "category": 0,
+      "occasion": 1,
+      "series": 27,
+      "name": "Contemporary Line Jacket",
+      "slug": "contemporary-line-jacket",
+      "description": "A modern wool jacket with soft shoulders and slim fit. Designed for daily versatility and understated sophistication.",
+      "fabric": "Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 88,
+    "fields": {
+      "category": 1,
+      "occasion": 1,
+      "series": 27,
+      "name": "Contemporary Line Trousers",
+      "slug": "contemporary-line-trousers",
+      "description": "Slim wool trousers perfect for an adaptable, modern wardrobe.",
+      "fabric": "Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 89,
+    "fields": {
+      "category": 2,
+      "occasion": 1,
+      "series": 27,
+      "name": "Contemporary Line Cotton Shirt",
+      "slug": "contemporary-line-cotton-shirt",
+      "description": "A cotton shirt that pairs effortlessly with the Contemporary Line jacket. For professionals who value comfort and style.",
+      "fabric": "Cotton",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 90,
+    "fields": {
+      "category": 0,
+      "occasion": 1,
+      "series": 28,
+      "name": "Luxury Comfort Jacket",
+      "slug": "luxury-comfort-jacket",
+      "description": "A relaxed wool jacket that unites softness and elegance. Perfect for work or leisure, it delivers effortless refinement and true comfort.",
+      "fabric": "Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 91,
+    "fields": {
+      "category": 1,
+      "occasion": 1,
+      "series": 28,
+      "name": "Luxury Comfort Trousers",
+      "slug": "luxury-comfort-trousers",
+      "description": "Wool trousers with a relaxed fit and premium feel. Designed for those who appreciate comfort without compromise.",
+      "fabric": "Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 92,
+    "fields": {
+      "category": 2,
+      "occasion": 1,
+      "series": 28,
+      "name": "Luxury Comfort Cotton Shirt",
+      "slug": "luxury-comfort-cotton-shirt",
+      "description": "A cotton shirt with a soft texture and subtle detailing. Ideal for a polished yet relaxed look.",
+      "fabric": "Cotton",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 93,
+    "fields": {
+      "category": 0,
+      "occasion": 2,
+      "series": 29,
+      "name": "Couture Selection Jacket",
+      "slug": "couture-selection-jacket",
+      "description": "A wool jacket shaped with exceptional attention to proportion and movement. Hand-finished details create a look that feels as special as it looks.",
+      "fabric": "Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 94,
+    "fields": {
+      "category": 1,
+      "occasion": 2,
+      "series": 29,
+      "name": "Couture Selection Trousers",
+      "slug": "couture-selection-trousers",
+      "description": "Tailored wool trousers crafted from unique fabrics. A testament to craftsmanship without compromise.",
+      "fabric": "Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 95,
+    "fields": {
+      "category": 3,
+      "occasion": 2,
+      "series": 29,
+      "name": "Couture Selection Waistcoat",
+      "slug": "couture-selection-waistcoat",
+      "description": "A refined waistcoat that completes the Couture ensemble. Impeccably finished and unforgettable in every detail.",
+      "fabric": "Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 96,
+    "fields": {
+      "category": 0,
+      "occasion": 1,
+      "series": 30,
+      "name": "Blue Label Collection Jacket",
+      "slug": "blue-label-collection-jacket",
+      "description": "A lightweight wool jacket with precise cuts and subtle color accents. Designed to make a confident statement without stiffness.",
+      "fabric": "Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 97,
+    "fields": {
+      "category": 1,
+      "occasion": 1,
+      "series": 30,
+      "name": "Blue Label Collection Trousers",
+      "slug": "blue-label-collection-trousers",
+      "description": "Slim wool trousers that blend contemporary sensibility with classic inspiration.",
+      "fabric": "Wool",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 98,
+    "fields": {
+      "category": 2,
+      "occasion": 1,
+      "series": 30,
+      "name": "Blue Label Collection Shirt",
+      "slug": "blue-label-collection-shirt",
+      "description": "A crisp cotton shirt designed to complete the Blue Label look. Understated and versatile.",
+      "fabric": "Cotton",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 99,
+    "fields": {
+      "category": 4,
+      "occasion": 1,
+      "series": 30,
+      "name": "Blue Label Silk Tie",
+      "slug": "blue-label-silk-tie",
+      "description": "A silk tie with subtle color accents. Adds a touch of distinction to any professional ensemble.",
+      "fabric": "Silk",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 100,
+    "fields": {
+      "category": 0,
+      "occasion": 1,
+      "series": 31,
+      "name": "Essential Wardrobe Jacket",
+      "slug": "essential-wardrobe-jacket",
+      "description": "A versatile wool jacket with neutral tones and timeless cuts. The foundation of a sophisticated wardrobe that adapts to any occasion.",
+      "fabric": "Wool",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 101,
+    "fields": {
+      "category": 1,
+      "occasion": 1,
+      "series": 31,
+      "name": "Essential Wardrobe Trousers",
+      "slug": "essential-wardrobe-trousers",
+      "description": "Wool trousers designed for maximum versatility. A reliable choice for modern professionals.",
+      "fabric": "Wool",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 102,
+    "fields": {
+      "category": 2,
+      "occasion": 1,
+      "series": 31,
+      "name": "Essential Wardrobe Shirt",
+      "slug": "essential-wardrobe-shirt",
+      "description": "A crisp cotton shirt that blends effortlessly into your daily rotation.",
+      "fabric": "Cotton",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 103,
+    "fields": {
+      "category": 0,
+      "occasion": 2,
+      "series": 32,
+      "name": "Ceremony Signature Jacket",
+      "slug": "ceremony-signature-jacket",
+      "description": "A wool jacket crafted from rich fabrics and elegant patterns. Designed to honor life’s most significant milestones with grace and distinction.",
+      "fabric": "Wool",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 104,
+    "fields": {
+      "category": 1,
+      "occasion": 2,
+      "series": 32,
+      "name": "Ceremony Signature Trousers",
+      "slug": "ceremony-signature-trousers",
+      "description": "Tailored wool trousers that complete the Ceremony Signature ensemble.",
+      "fabric": "Wool",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 105,
+    "fields": {
+      "category": 3,
+      "occasion": 2,
+      "series": 32,
+      "name": "Ceremony Signature Waistcoat",
+      "slug": "ceremony-signature-waistcoat",
+      "description": "A refined waistcoat designed to highlight personal style and honor tradition.",
+      "fabric": "Wool",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 106,
+    "fields": {
+      "category": 4,
+      "occasion": 2,
+      "series": 32,
+      "name": "Ceremony Signature Silk Tie",
+      "slug": "ceremony-signature-silk-tie",
+      "description": "A silk tie that adds an elegant finishing touch to the Ceremony Signature look.",
+      "fabric": "Silk",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 107,
+    "fields": {
+      "category": 0,
+      "occasion": 1,
+      "series": 33,
+      "name": "Urban Classics Jacket",
+      "slug": "urban-classics-jacket",
+      "description": "A modern wool jacket with clean lines and functional details. Perfect for professionals who value clarity and precision.",
+      "fabric": "Wool",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 108,
+    "fields": {
+      "category": 1,
+      "occasion": 1,
+      "series": 33,
+      "name": "Urban Classics Trousers",
+      "slug": "urban-classics-trousers",
+      "description": "Wool trousers crafted for dynamic schedules and modern aesthetics.",
+      "fabric": "Wool",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 109,
+    "fields": {
+      "category": 2,
+      "occasion": 1,
+      "series": 33,
+      "name": "Urban Classics Cotton Shirt",
+      "slug": "urban-classics-cotton-shirt",
+      "description": "A soft cotton shirt designed for effortless transitions between meetings and after-work engagements.",
+      "fabric": "Cotton",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 110,
+    "fields": {
+      "category": 0,
+      "occasion": 1,
+      "series": 34,
+      "name": "Iconic Line Jacket",
+      "slug": "iconic-line-jacket",
+      "description": "A wool jacket that reimagines classic tailoring with fresh energy. Subtle updates to cuts and textures create a look that feels both timeless and current.",
+      "fabric": "Wool",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 111,
+    "fields": {
+      "category": 1,
+      "occasion": 1,
+      "series": 34,
+      "name": "Iconic Line Trousers",
+      "slug": "iconic-line-trousers",
+      "description": "Slim wool trousers designed to complement the Iconic Jacket. Perfect for those who appreciate heritage and innovation side by side.",
+      "fabric": "Wool",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 112,
+    "fields": {
+      "category": 2,
+      "occasion": 1,
+      "series": 34,
+      "name": "Iconic Line Cotton Shirt",
+      "slug": "iconic-line-cotton-shirt",
+      "description": "A crisp cotton shirt that balances traditional style with modern versatility.",
+      "fabric": "Cotton",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 113,
+    "fields": {
+      "category": 0,
+      "occasion": 2,
+      "series": 35,
+      "name": "Sartorial Line Jacket",
+      "slug": "sartorial-line-jacket",
+      "description": "A refined wool jacket with meticulous hand-finished stitching. Designed for gentlemen who believe elegance is defined by quality.",
+      "fabric": "Wool",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 114,
+    "fields": {
+      "category": 1,
+      "occasion": 2,
+      "series": 35,
+      "name": "Sartorial Line Trousers",
+      "slug": "sartorial-line-trousers",
+      "description": "Tailored wool trousers crafted with exceptional attention to detail.",
+      "fabric": "Wool",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 115,
+    "fields": {
+      "category": 3,
+      "occasion": 2,
+      "series": 35,
+      "name": "Sartorial Line Waistcoat",
+      "slug": "sartorial-line-waistcoat",
+      "description": "A wool waistcoat with carefully selected linings and timeless appeal.",
+      "fabric": "Wool",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 116,
+    "fields": {
+      "category": 0,
+      "occasion": 1,
+      "series": 36,
+      "name": "Milano Collection Jacket",
+      "slug": "milano-collection-jacket",
+      "description": "A lightweight wool jacket inspired by Italian fashion capitals. Streamlined cuts and subtle flourishes bring contemporary flair to classic tailoring.",
+      "fabric": "Wool",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 117,
+    "fields": {
+      "category": 1,
+      "occasion": 1,
+      "series": 36,
+      "name": "Milano Collection Trousers",
+      "slug": "milano-collection-trousers",
+      "description": "Slim wool trousers designed for ease of movement and modern elegance.",
+      "fabric": "Wool",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 118,
+    "fields": {
+      "category": 2,
+      "occasion": 1,
+      "series": 36,
+      "name": "Milano Collection Cotton Shirt",
+      "slug": "milano-collection-cotton-shirt",
+      "description": "A soft cotton shirt that completes the Milano look with relaxed confidence.",
+      "fabric": "Cotton",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 119,
+    "fields": {
+      "category": 0,
+      "occasion": 1,
+      "series": 37,
+      "name": "Paris Edition Jacket",
+      "slug": "paris-edition-jacket",
+      "description": "A wool jacket inspired by the effortless sophistication of the French aesthetic. Clean lines and understated textures create a refined, versatile silhouette.",
+      "fabric": "Wool",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 120,
+    "fields": {
+      "category": 1,
+      "occasion": 1,
+      "series": 37,
+      "name": "Paris Edition Trousers",
+      "slug": "paris-edition-trousers",
+      "description": "Slim wool trousers designed to move seamlessly from meetings to evenings out.",
+      "fabric": "Wool",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 121,
+    "fields": {
+      "category": 2,
+      "occasion": 1,
+      "series": 37,
+      "name": "Paris Edition Cotton Shirt",
+      "slug": "paris-edition-cotton-shirt",
+      "description": "A crisp cotton shirt that completes the discreet elegance of the Paris Edition look.",
+      "fabric": "Cotton",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 122,
+    "fields": {
+      "category": 0,
+      "occasion": 2,
+      "series": 38,
+      "name": "Heritage Tailoring Jacket",
+      "slug": "heritage-tailoring-jacket",
+      "description": "A rich wool jacket crafted with time-honored techniques. Subtle accents remind you that true luxury lies in the details.",
+      "fabric": "Wool",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 123,
+    "fields": {
+      "category": 1,
+      "occasion": 2,
+      "series": 38,
+      "name": "Heritage Tailoring Trousers",
+      "slug": "heritage-tailoring-trousers",
+      "description": "Tailored wool trousers designed to honor authentic craftsmanship above fleeting trends.",
+      "fabric": "Wool",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 124,
+    "fields": {
+      "category": 3,
+      "occasion": 2,
+      "series": 38,
+      "name": "Heritage Tailoring Waistcoat",
+      "slug": "heritage-tailoring-waistcoat",
+      "description": "A refined wool waistcoat that completes the Heritage Tailoring ensemble.",
+      "fabric": "Wool",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 125,
+    "fields": {
+      "category": 0,
+      "occasion": 1,
+      "series": 39,
+      "name": "Timeless Appeal Jacket",
+      "slug": "timeless-appeal-jacket",
+      "description": "A balanced wool jacket that embodies the idea that style is a reflection of character. Crafted to remain relevant year after year.",
+      "fabric": "Wool",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 126,
+    "fields": {
+      "category": 1,
+      "occasion": 1,
+      "series": 39,
+      "name": "Timeless Appeal Trousers",
+      "slug": "timeless-appeal-trousers",
+      "description": "Wool trousers in neutral colors that become dependable favorites over time.",
+      "fabric": "Wool",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 127,
+    "fields": {
+      "category": 2,
+      "occasion": 1,
+      "series": 39,
+      "name": "Timeless Appeal Cotton Shirt",
+      "slug": "timeless-appeal-cotton-shirt",
+      "description": "A cotton shirt designed for those who invest in quality over fashion cycles.",
+      "fabric": "Cotton",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 128,
+    "fields": {
+      "category": 0,
+      "occasion": 1,
+      "series": 40,
+      "name": "Signature Cuts Jacket",
+      "slug": "signature-cuts-jacket",
+      "description": "A wool jacket defined by precise silhouettes and slim profiles. Premium fabrics ensure a polished look from every angle.",
+      "fabric": "Wool",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 129,
+    "fields": {
+      "category": 1,
+      "occasion": 1,
+      "series": 40,
+      "name": "Signature Cuts Trousers",
+      "slug": "signature-cuts-trousers",
+      "description": "Slim wool trousers with subtly tapered lines. A series dedicated to impeccable tailoring.",
+      "fabric": "Wool",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 130,
+    "fields": {
+      "category": 2,
+      "occasion": 1,
+      "series": 40,
+      "name": "Signature Cuts Cotton Shirt",
+      "slug": "signature-cuts-cotton-shirt",
+      "description": "A crisp cotton shirt that completes the confident silhouette of the Signature Cuts collection.",
+      "fabric": "Cotton",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 131,
+    "fields": {
+      "category": 0,
+      "occasion": 2,
+      "series": 41,
+      "name": "Black & White Series Jacket",
+      "slug": "black-and-white-series-jacket",
+      "description": "A wool jacket with crisp contrasts and clean lines. Designed for those who understand that simplicity can be striking.",
+      "fabric": "Wool",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 132,
+    "fields": {
+      "category": 1,
+      "occasion": 2,
+      "series": 41,
+      "name": "Black & White Series Trousers",
+      "slug": "black-and-white-series-trousers",
+      "description": "Tailored wool trousers with timeless black-and-white styling.",
+      "fabric": "Wool",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 133,
+    "fields": {
+      "category": 2,
+      "occasion": 2,
+      "series": 41,
+      "name": "Black & White Series Shirt",
+      "slug": "black-and-white-series-shirt",
+      "description": "A cotton shirt that elevates the clean aesthetic of the Black & White Series.",
+      "fabric": "Cotton",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 134,
+    "fields": {
+      "category": 5,
+      "occasion": 2,
+      "series": 41,
+      "name": "Black & White Silk Bow Tie",
+      "slug": "black-and-white-silk-bow-tie",
+      "description": "A silk bow tie in a classic black-and-white palette. For events where subtle contrast makes all the difference.",
+      "fabric": "Silk",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 135,
+    "fields": {
+      "category": 0,
+      "occasion": 4,
+      "series": 42,
+      "name": "Elite Collection Jacket",
+      "slug": "elite-collection-jacket",
+      "description": "A limited-edition wool jacket showcasing exceptional fabrics and rare design details. Crafted for gentlemen who expect nothing less than excellence.",
+      "fabric": "Wool",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 136,
+    "fields": {
+      "category": 1,
+      "occasion": 4,
+      "series": 42,
+      "name": "Elite Collection Trousers",
+      "slug": "elite-collection-trousers",
+      "description": "Wool trousers designed to complete the exclusive Elite look.",
+      "fabric": "Wool",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 137,
+    "fields": {
+      "category": 2,
+      "occasion": 4,
+      "series": 42,
+      "name": "Elite Collection Shirt",
+      "slug": "elite-collection-shirt",
+      "description": "A cotton shirt with discreet refinements. Limited in number and unforgettable in presence.",
+      "fabric": "Cotton",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 138,
+    "fields": {
+      "category": 0,
+      "occasion": 1,
+      "series": 43,
+      "name": "Noble Line Jacket",
+      "slug": "noble-line-jacket",
+      "description": "A wool jacket inspired by quiet authority and refined presence. Subtle textures and balanced proportions create a confident silhouette.",
+      "fabric": "Wool",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 139,
+    "fields": {
+      "category": 1,
+      "occasion": 1,
+      "series": 43,
+      "name": "Noble Line Trousers",
+      "slug": "noble-line-trousers",
+      "description": "Wool trousers designed for understated luxury. Crafted for those who lead with integrity.",
+      "fabric": "Wool",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 140,
+    "fields": {
+      "category": 2,
+      "occasion": 1,
+      "series": 43,
+      "name": "Noble Line Cotton Shirt",
+      "slug": "noble-line-cotton-shirt",
+      "description": "A crisp cotton shirt that complements the Noble Line's refined aesthetic.",
+      "fabric": "Cotton",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 141,
+    "fields": {
+      "category": 0,
+      "occasion": 1,
+      "series": 44,
+      "name": "Prestige Essentials Jacket",
+      "slug": "prestige-essentials-jacket",
+      "description": "A versatile wool jacket with neutral colors and tailored lines. The backbone of any elegant wardrobe.",
+      "fabric": "Wool",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 142,
+    "fields": {
+      "category": 1,
+      "occasion": 1,
+      "series": 44,
+      "name": "Prestige Essentials Trousers",
+      "slug": "prestige-essentials-trousers",
+      "description": "Wool trousers that deliver exceptional versatility and timeless appeal.",
+      "fabric": "Wool",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 143,
+    "fields": {
+      "category": 2,
+      "occasion": 1,
+      "series": 44,
+      "name": "Prestige Essentials Shirt",
+      "slug": "prestige-essentials-shirt",
+      "description": "A cotton shirt crafted for men who appreciate timeless investments.",
+      "fabric": "Cotton",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 144,
+    "fields": {
+      "category": 0,
+      "occasion": 2,
+      "series": 45,
+      "name": "Royal Signature Jacket",
+      "slug": "royal-signature-jacket",
+      "description": "A wool jacket with rich jewel tones and fine detailing. Designed to be a statement piece for distinguished occasions.",
+      "fabric": "Wool",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 145,
+    "fields": {
+      "category": 1,
+      "occasion": 2,
+      "series": 45,
+      "name": "Royal Signature Trousers",
+      "slug": "royal-signature-trousers",
+      "description": "Tailored wool trousers that elevate your presence with refined elegance.",
+      "fabric": "Wool",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 146,
+    "fields": {
+      "category": 3,
+      "occasion": 2,
+      "series": 45,
+      "name": "Royal Signature Waistcoat",
+      "slug": "royal-signature-waistcoat",
+      "description": "A wool waistcoat designed to complete the regal look. For moments that leave a lasting impression.",
+      "fabric": "Wool",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 147,
+    "fields": {
+      "category": 4,
+      "occasion": 2,
+      "series": 45,
+      "name": "Royal Signature Silk Tie",
+      "slug": "royal-signature-silk-tie",
+      "description": "A silk tie in a jewel-toned palette. The finishing touch to a truly distinguished ensemble.",
+      "fabric": "Silk",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 148,
+    "fields": {
+      "category": 0,
+      "occasion": 2,
+      "series": 46,
+      "name": "Ceremony Deluxe Jacket",
+      "slug": "ceremony-deluxe-jacket",
+      "description": "A luxurious wool jacket crafted for life’s most extraordinary moments. Intricate accents and refined construction define this unforgettable piece.",
+      "fabric": "Wool",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 149,
+    "fields": {
+      "category": 1,
+      "occasion": 2,
+      "series": 46,
+      "name": "Ceremony Deluxe Trousers",
+      "slug": "ceremony-deluxe-trousers",
+      "description": "Tailored wool trousers designed to complete the Ceremony Deluxe ensemble with distinction.",
+      "fabric": "Wool",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 150,
+    "fields": {
+      "category": 3,
+      "occasion": 2,
+      "series": 46,
+      "name": "Ceremony Deluxe Waistcoat",
+      "slug": "ceremony-deluxe-waistcoat",
+      "description": "A refined wool waistcoat that adds a final touch of ceremony and elegance.",
+      "fabric": "Wool",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 151,
+    "fields": {
+      "category": 4,
+      "occasion": 2,
+      "series": 46,
+      "name": "Ceremony Deluxe Silk Tie",
+      "slug": "ceremony-deluxe-silk-tie",
+      "description": "A silk tie with rich color and discreet sheen. For occasions where every detail counts.",
+      "fabric": "Silk",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 152,
+    "fields": {
+      "category": 0,
+      "occasion": 4,
+      "series": 47,
+      "name": "Evening Elegance Jacket",
+      "slug": "evening-elegance-jacket",
+      "description": "A wool jacket with deep, sophisticated colors and satin finishes. Redefining formalwear with a modern sensibility.",
+      "fabric": "Wool",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 153,
+    "fields": {
+      "category": 1,
+      "occasion": 4,
+      "series": 47,
+      "name": "Evening Elegance Trousers",
+      "slug": "evening-elegance-trousers",
+      "description": "Slim wool trousers with thoughtful cuts and unmistakable allure.",
+      "fabric": "Wool",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 154,
+    "fields": {
+      "category": 2,
+      "occasion": 4,
+      "series": 47,
+      "name": "Evening Elegance Shirt",
+      "slug": "evening-elegance-shirt",
+      "description": "A cotton shirt designed for perfect fit and effortless evening sophistication.",
+      "fabric": "Cotton",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 155,
+    "fields": {
+      "category": 0,
+      "occasion": 1,
+      "series": 48,
+      "name": "Urban Black Jacket",
+      "slug": "urban-black-jacket",
+      "description": "A monochrome wool jacket with streamlined cuts and premium materials. Transitions seamlessly from business to after-hours.",
+      "fabric": "Wool",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 156,
+    "fields": {
+      "category": 1,
+      "occasion": 1,
+      "series": 48,
+      "name": "Urban Black Trousers",
+      "slug": "urban-black-trousers",
+      "description": "Slim wool trousers for an effortlessly sophisticated look with an edge.",
+      "fabric": "Wool",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 157,
+    "fields": {
+      "category": 2,
+      "occasion": 1,
+      "series": 48,
+      "name": "Urban Black Cotton Shirt",
+      "slug": "urban-black-cotton-shirt",
+      "description": "A crisp cotton shirt to complete the powerful monochrome aesthetic.",
+      "fabric": "Cotton",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 158,
+    "fields": {
+      "category": 0,
+      "occasion": 2,
+      "series": 49,
+      "name": "Sartorial Heritage Jacket",
+      "slug": "sartorial-heritage-jacket",
+      "description": "A wool jacket blending time-tested silhouettes with modern refinement. For those who believe style is a matter of legacy.",
+      "fabric": "Wool",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 159,
+    "fields": {
+      "category": 1,
+      "occasion": 2,
+      "series": 49,
+      "name": "Sartorial Heritage Trousers",
+      "slug": "sartorial-heritage-trousers",
+      "description": "Tailored wool trousers crafted with respect for classic tailoring.",
+      "fabric": "Wool",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 160,
+    "fields": {
+      "category": 3,
+      "occasion": 2,
+      "series": 49,
+      "name": "Sartorial Heritage Waistcoat",
+      "slug": "sartorial-heritage-waistcoat",
+      "description": "A wool waistcoat with subtle nods to tradition and modern elegance.",
+      "fabric": "Wool",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 161,
+    "fields": {
+      "category": 0,
+      "occasion": 1,
+      "series": 50,
+      "name": "Pure Wool Collection Jacket",
+      "slug": "pure-wool-collection-jacket",
+      "description": "A premium wool jacket showcasing the beauty and comfort of natural fibers. Clean lines meet rich textures for authentic style.",
+      "fabric": "Wool",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 162,
+    "fields": {
+      "category": 1,
+      "occasion": 1,
+      "series": 50,
+      "name": "Pure Wool Collection Trousers",
+      "slug": "pure-wool-collection-trousers",
+      "description": "Wool trousers designed for warmth, breathability, and lasting quality.",
+      "fabric": "Wool",
+      "is_active": false
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 163,
+    "fields": {
+      "category": 2,
+      "occasion": 1,
+      "series": 50,
+      "name": "Pure Wool Collection Shirt",
+      "slug": "pure-wool-collection-shirt",
+      "description": "A cotton shirt to complement the collection’s focus on natural materials and enduring style.",
+      "fabric": "Cotton",
+      "is_active": false
+    }
+  }
+]

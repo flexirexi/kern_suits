@@ -1,0 +1,410 @@
+[
+  {
+    "model": "products.size",
+    "pk": 1,
+    "fields": {
+      "kind": "Jackets",
+      "name": "42"
+    }
+  },
+  {
+    "model": "products.size",
+    "pk": 2,
+    "fields": {
+      "kind": "Jackets",
+      "name": "44"
+    }
+  },
+  {
+    "model": "products.size",
+    "pk": 3,
+    "fields": {
+      "kind": "Jackets",
+      "name": "46"
+    }
+  },
+  {
+    "model": "products.size",
+    "pk": 4,
+    "fields": {
+      "kind": "Jackets",
+      "name": "48"
+    }
+  },
+  {
+    "model": "products.size",
+    "pk": 5,
+    "fields": {
+      "kind": "Jackets",
+      "name": "50"
+    }
+  },
+  {
+    "model": "products.size",
+    "pk": 6,
+    "fields": {
+      "kind": "Jackets",
+      "name": "52"
+    }
+  },
+  {
+    "model": "products.size",
+    "pk": 7,
+    "fields": {
+      "kind": "Jackets",
+      "name": "54"
+    }
+  },
+  {
+    "model": "products.size",
+    "pk": 8,
+    "fields": {
+      "kind": "Jackets",
+      "name": "56"
+    }
+  },
+  {
+    "model": "products.size",
+    "pk": 9,
+    "fields": {
+      "kind": "Jackets",
+      "name": "58"
+    }
+  },
+  {
+    "model": "products.size",
+    "pk": 10,
+    "fields": {
+      "kind": "Jackets",
+      "name": "60"
+    }
+  },
+  {
+    "model": "products.size",
+    "pk": 11,
+    "fields": {
+      "kind": "Trousers",
+      "name": "27"
+    }
+  },
+  {
+    "model": "products.size",
+    "pk": 12,
+    "fields": {
+      "kind": "Trousers",
+      "name": "29"
+    }
+  },
+  {
+    "model": "products.size",
+    "pk": 13,
+    "fields": {
+      "kind": "Trousers",
+      "name": "31"
+    }
+  },
+  {
+    "model": "products.size",
+    "pk": 14,
+    "fields": {
+      "kind": "Trousers",
+      "name": "33"
+    }
+  },
+  {
+    "model": "products.size",
+    "pk": 15,
+    "fields": {
+      "kind": "Trousers",
+      "name": "36"
+    }
+  },
+  {
+    "model": "products.size",
+    "pk": 16,
+    "fields": {
+      "kind": "Trousers",
+      "name": "38"
+    }
+  },
+  {
+    "model": "products.size",
+    "pk": 17,
+    "fields": {
+      "kind": "Trousers",
+      "name": "40"
+    }
+  },
+  {
+    "model": "products.size",
+    "pk": 18,
+    "fields": {
+      "kind": "Trousers",
+      "name": "42"
+    }
+  },
+  {
+    "model": "products.size",
+    "pk": 19,
+    "fields": {
+      "kind": "Trousers",
+      "name": "44"
+    }
+  },
+  {
+    "model": "products.size",
+    "pk": 20,
+    "fields": {
+      "kind": "Trousers",
+      "name": "46"
+    }
+  },
+  {
+    "model": "products.size",
+    "pk": 21,
+    "fields": {
+      "kind": "Trousers",
+      "name": "48"
+    }
+  },
+  {
+    "model": "products.size",
+    "pk": 22,
+    "fields": {
+      "kind": "Trousers",
+      "name": "50"
+    }
+  },
+  {
+    "model": "products.size",
+    "pk": 23,
+    "fields": {
+      "kind": "Trousers",
+      "name": "52"
+    }
+  },
+  {
+    "model": "products.size",
+    "pk": 24,
+    "fields": {
+      "kind": "Trousers",
+      "name": "54"
+    }
+  },
+  {
+    "model": "products.size",
+    "pk": 25,
+    "fields": {
+      "kind": "Trousers",
+      "name": "56"
+    }
+  },
+  {
+    "model": "products.size",
+    "pk": 26,
+    "fields": {
+      "kind": "Shirts",
+      "name": "XS"
+    }
+  },
+  {
+    "model": "products.size",
+    "pk": 27,
+    "fields": {
+      "kind": "Shirts",
+      "name": "S"
+    }
+  },
+  {
+    "model": "products.size",
+    "pk": 28,
+    "fields": {
+      "kind": "Shirts",
+      "name": "M"
+    }
+  },
+  {
+    "model": "products.size",
+    "pk": 29,
+    "fields": {
+      "kind": "Shirts",
+      "name": "L"
+    }
+  },
+  {
+    "model": "products.size",
+    "pk": 30,
+    "fields": {
+      "kind": "Shirts",
+      "name": "XL"
+    }
+  },
+  {
+    "model": "products.size",
+    "pk": 31,
+    "fields": {
+      "kind": "Shirts",
+      "name": "XXL"
+    }
+  },
+  {
+    "model": "products.size",
+    "pk": 32,
+    "fields": {
+      "kind": "Shirts",
+      "name": "3XL"
+    }
+  },
+  {
+    "model": "products.size",
+    "pk": 33,
+    "fields": {
+      "kind": "Waistcoats",
+      "name": "42"
+    }
+  },
+  {
+    "model": "products.size",
+    "pk": 34,
+    "fields": {
+      "kind": "Waistcoats",
+      "name": "44"
+    }
+  },
+  {
+    "model": "products.size",
+    "pk": 35,
+    "fields": {
+      "kind": "Waistcoats",
+      "name": "46"
+    }
+  },
+  {
+    "model": "products.size",
+    "pk": 36,
+    "fields": {
+      "kind": "Waistcoats",
+      "name": "48"
+    }
+  },
+  {
+    "model": "products.size",
+    "pk": 37,
+    "fields": {
+      "kind": "Waistcoats",
+      "name": "50"
+    }
+  },
+  {
+    "model": "products.size",
+    "pk": 38,
+    "fields": {
+      "kind": "Waistcoats",
+      "name": "52"
+    }
+  },
+  {
+    "model": "products.size",
+    "pk": 39,
+    "fields": {
+      "kind": "Waistcoats",
+      "name": "54"
+    }
+  },
+  {
+    "model": "products.size",
+    "pk": 40,
+    "fields": {
+      "kind": "Waistcoats",
+      "name": "56"
+    }
+  },
+  {
+    "model": "products.size",
+    "pk": 41,
+    "fields": {
+      "kind": "Ties",
+      "name": "Standard"
+    }
+  },
+  {
+    "model": "products.size",
+    "pk": 42,
+    "fields": {
+      "kind": "Bow Ties",
+      "name": "Standard"
+    }
+  },
+  {
+    "model": "products.size",
+    "pk": 43,
+    "fields": {
+      "kind": "Pocket squares",
+      "name": "Standard"
+    }
+  },
+  {
+    "model": "products.size",
+    "pk": 44,
+    "fields": {
+      "kind": "Belts",
+      "name": "85"
+    }
+  },
+  {
+    "model": "products.size",
+    "pk": 45,
+    "fields": {
+      "kind": "Belts",
+      "name": "90"
+    }
+  },
+  {
+    "model": "products.size",
+    "pk": 46,
+    "fields": {
+      "kind": "Belts",
+      "name": "95"
+    }
+  },
+  {
+    "model": "products.size",
+    "pk": 47,
+    "fields": {
+      "kind": "Belts",
+      "name": "100"
+    }
+  },
+  {
+    "model": "products.size",
+    "pk": 48,
+    "fields": {
+      "kind": "Belts",
+      "name": "105"
+    }
+  },
+  {
+    "model": "products.size",
+    "pk": 49,
+    "fields": {
+      "kind": "Belts",
+      "name": "110"
+    }
+  },
+  {
+    "model": "products.size",
+    "pk": 50,
+    "fields": {
+      "kind": "Belts",
+      "name": "115"
+    }
+  },
+  {
+    "model": "products.size",
+    "pk": 51,
+    "fields": {
+      "kind": "Belts",
+      "name": "120"
+    }
+  }
+]

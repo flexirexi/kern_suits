@@ -1,0 +1,502 @@
+[
+  {
+    "model": "products.series",
+    "pk": 1,
+    "fields": {
+      "name": "Heritage Collection",
+      "slug": "heritage-collection",
+      "description": "This collection pays tribute to decades of sartorial tradition. Each piece is crafted to reflect timeless tailoring techniques and a respect for heritage details. Subtle patterns and rich fabrics blend to create a look that feels both familiar and distinguished. Designed for those who value continuity and elegance in every stitch.",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.series",
+    "pk": 2,
+    "fields": {
+      "name": "Signature Line",
+      "slug": "signature-line",
+      "description": "The Signature Line captures the essence of contemporary refinement. Clean silhouettes and precise cuts define these designs, which are made for modern professionals. Fine fabrics and thoughtful finishing touches ensure comfort and distinction in every moment. A statement of quiet confidence and impeccable taste.",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.series",
+    "pk": 3,
+    "fields": {
+      "name": "Timeless Classics",
+      "slug": "timeless-classics",
+      "description": "This series embodies the idea that true style never fades. Each garment is designed to serve as a cornerstone of a sophisticated wardrobe. Neutral palettes and balanced proportions make these pieces endlessly versatile. Whether for business or formal occasions, you can trust in their enduring appeal.",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.series",
+    "pk": 4,
+    "fields": {
+      "name": "Modern Essentials",
+      "slug": "modern-essentials",
+      "description": "Discover a collection built around the needs of the contemporary gentleman. Modern Essentials combines practical design with understated elegance. Lightweight fabrics and clean lines make these suits ideal for everyday wear. They are effortless to combine and always appropriate.",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.series",
+    "pk": 5,
+    "fields": {
+      "name": "Sartorial Elegance",
+      "slug": "sartorial-elegance",
+      "description": "Sartorial Elegance brings together impeccable craftsmanship and a love of fine tailoring. Every piece showcases thoughtful details, from hand-finished seams to precisely measured fits. The collection celebrates the quiet luxury that defines a true connoisseur of style. A tribute to tradition and innovation alike.",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.series",
+    "pk": 6,
+    "fields": {
+      "name": "Black Tie Edition",
+      "slug": "black-tie-edition",
+      "description": "The Black Tie Edition is reserved for your most formal occasions. Crafted in deep, elegant tones and the finest materials, these designs exude sophistication. Subtle satin lapels and perfect drape ensure an unforgettable presence. When the moment demands excellence, this collection is your answer.",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.series",
+    "pk": 7,
+    "fields": {
+      "name": "Executive Choice",
+      "slug": "executive-choice",
+      "description": "Created for leaders and decision-makers, Executive Choice balances authority with refinement. Tailored lines and premium wool blends set the tone for success. These suits communicate confidence without ostentation. Ideal for the boardroom and beyond, they embody modern professionalism.",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.series",
+    "pk": 8,
+    "fields": {
+      "name": "Formal Attire Series",
+      "slug": "formal-attire-series",
+      "description": "Formal Attire Series offers a curated selection for ceremonial events and special gatherings. Each design is distinguished by crisp cuts and polished finishes. Luxurious linings and subtle accents elevate your presence. This is formalwear for those who appreciate distinction in every detail.",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.series",
+    "pk": 9,
+    "fields": {
+      "name": "Urban Gentleman",
+      "slug": "urban-gentleman",
+      "description": "Inspired by the pace and sophistication of city life, the Urban Gentleman series blends classic tailoring with modern ease. Flexible cuts and breathable fabrics make these suits ideal for a dynamic schedule. Whether at the office or an evening event, they adapt seamlessly to your day. Style that moves with you.",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.series",
+    "pk": 10,
+    "fields": {
+      "name": "Tailored Perfection",
+      "slug": "tailored-perfection",
+      "description": "Tailored Perfection is dedicated to the pursuit of flawless fit. Each piece undergoes meticulous adjustments to deliver unparalleled comfort and precision. Fine materials and discreet details create a look that is both confident and timeless. For those who settle only for the best.",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.series",
+    "pk": 11,
+    "fields": {
+      "name": "Ceremony Collection",
+      "slug": "ceremony-collection",
+      "description": "The Ceremony Collection is crafted to honor your most memorable occasions. Elegant materials, thoughtful detailing, and refined silhouettes define these garments. Each piece is designed to leave a lasting impression without overpowering your style. A celebration of tradition and personal expression.",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.series",
+    "pk": 12,
+    "fields": {
+      "name": "Business Premium",
+      "slug": "business-premium",
+      "description": "Business Premium stands for confidence in every professional setting. Fine wool fabrics and precision tailoring come together in pieces that exude authority and ease. Subtle textures and clean lines ensure you look composed from morning meetings to evening engagements. Where business and refinement meet seamlessly.",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.series",
+    "pk": 13,
+    "fields": {
+      "name": "Riviera Summer",
+      "slug": "riviera-summer",
+      "description": "Riviera Summer evokes the carefree elegance of Mediterranean coastlines. Light, breathable materials and relaxed cuts define the collection. Soft colors and discreet patterns bring a sense of effortless sophistication. Ideal for warm days and long evenings under the sun.",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.series",
+    "pk": 14,
+    "fields": {
+      "name": "Winter Heritage",
+      "slug": "winter-heritage",
+      "description": "This series is inspired by the warmth and depth of winter tradition. Heavier fabrics and rich, dark tones create an unmistakable presence. Functional details and classic lines ensure comfort without compromising style. Perfect for embracing the colder season with distinction.",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.series",
+    "pk": 15,
+    "fields": {
+      "name": "Spring Modern",
+      "slug": "spring-modern",
+      "description": "Spring Modern captures the optimism and freshness of the season. Tailored jackets and versatile trousers come in lighter shades and softer textures. The designs bring a contemporary touch to classic forms. A collection for those who welcome change with style.",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.series",
+    "pk": 16,
+    "fields": {
+      "name": "Summer Elegance",
+      "slug": "summer-elegance",
+      "description": "Summer Elegance combines breathable fabrics with refined design. Subtle patterns and airy cuts keep you comfortable during warm months. Every piece balances relaxed sophistication with precise tailoring. Perfect for summer weddings and evening celebrations alike.",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.series",
+    "pk": 17,
+    "fields": {
+      "name": "Autumn Sophisticate",
+      "slug": "autumn-sophisticate",
+      "description": "Autumn Sophisticate blends rich hues with soft, structured materials. The collection is designed to transition seamlessly from crisp days to cooler evenings. Subtle check patterns and warm undertones give each piece a distinguished look. A testament to the beauty of seasonal change.",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.series",
+    "pk": 18,
+    "fields": {
+      "name": "Prestige Series",
+      "slug": "prestige-series",
+      "description": "Prestige Series is reserved for the most discerning gentlemen. Exceptional craftsmanship and selected materials set these pieces apart. Each suit is a statement of refined taste and confident presence. For those who demand excellence in every detail.",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.series",
+    "pk": 19,
+    "fields": {
+      "name": "Monaco Edition",
+      "slug": "monaco-edition",
+      "description": "Monaco Edition celebrates effortless luxury and cosmopolitan charm. The collection features lightweight fabrics, modern fits, and understated accents. Inspired by the elegance of the Riviera, these pieces are designed for warm evenings and exceptional gatherings. Where style feels natural.",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.series",
+    "pk": 20,
+    "fields": {
+      "name": "Italian Craft",
+      "slug": "italian-craft",
+      "description": "Italian Craft pays homage to the artistry of Italian tailoring. Meticulous cuts, superior fabrics, and subtle flourishes define the collection. Every garment embodies a passion for precision and elegance. For connoisseurs who appreciate heritage and innovation in equal measure.",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.series",
+    "pk": 21,
+    "fields": {
+      "name": "London Classics",
+      "slug": "london-classics",
+      "description": "London Classics is inspired by British sartorial heritage. These designs bring together structured cuts, rich textures, and timeless colors. Every piece is made to exude quiet confidence and sophistication. Perfect for those who appreciate tradition with a modern spirit.",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.series",
+    "pk": 22,
+    "fields": {
+      "name": "Black Label",
+      "slug": "black-label",
+      "description": "Black Label is our most exclusive line, crafted for those who expect the extraordinary. Superior fabrics, distinctive details, and masterful tailoring define this collection. Each suit is a testament to refined taste and subtle luxury. When only the best will do.",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.series",
+    "pk": 23,
+    "fields": {
+      "name": "White Label",
+      "slug": "white-label",
+      "description": "The White Label collection is designed for versatility and ease. Clean silhouettes and balanced proportions make these pieces ideal for modern professionals. Understated colors allow effortless combinations. A refined foundation for any wardrobe.",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.series",
+    "pk": 24,
+    "fields": {
+      "name": "Limited Edition",
+      "slug": "limited-edition",
+      "description": "Limited Edition offers unique pieces in strictly limited quantities. Special fabrics and exclusive designs make each garment remarkable. Once these creations are gone, they will not return. A collection for those who value rarity and character.",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.series",
+    "pk": 25,
+    "fields": {
+      "name": "Grand Affair",
+      "slug": "grand-affair",
+      "description": "Grand Affair captures the spirit of exceptional occasions. Luxurious materials and elegant silhouettes create a striking presence. Subtle details highlight the craftsmanship behind every design. These are pieces made to be remembered.",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.series",
+    "pk": 26,
+    "fields": {
+      "name": "Royal Occasion",
+      "slug": "royal-occasion",
+      "description": "Royal Occasion blends regal inspiration with modern tailoring. Rich colors, satin accents, and refined cuts define this series. Designed to elevate your presence at life’s most distinguished events. A collection that celebrates ceremony and grandeur.",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.series",
+    "pk": 27,
+    "fields": {
+      "name": "Contemporary Line",
+      "slug": "contemporary-line",
+      "description": "Contemporary Line offers modern silhouettes with a focus on versatility. Soft shoulders, slim fits, and lightweight fabrics make these garments easy to wear every day. Subtle textures and thoughtful details add a touch of sophistication. Style that adapts to your pace.",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.series",
+    "pk": 28,
+    "fields": {
+      "name": "Luxury Comfort",
+      "slug": "luxury-comfort",
+      "description": "Luxury Comfort unites softness and elegance in perfect balance. Relaxed fits, premium materials, and discreet finishing touches make each piece a pleasure to wear. Whether in the office or at leisure, you can count on effortless refinement. Because true comfort is always in style.",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.series",
+    "pk": 29,
+    "fields": {
+      "name": "Couture Selection",
+      "slug": "couture-selection",
+      "description": "Couture Selection celebrates the artistry of fine tailoring. Each design is shaped with exceptional attention to proportion and movement. Unique fabrics and hand-finished details create garments that feel as special as they look. For those who appreciate craftsmanship without compromise.",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.series",
+    "pk": 30,
+    "fields": {
+      "name": "Blue Label Collection",
+      "slug": "blue-label-collection",
+      "description": "Blue Label Collection combines contemporary sensibility with classic inspiration. Light wool blends and precise cuts deliver a polished look without stiffness. Subtle color accents distinguish these pieces from the ordinary. Designed to make a confident statement.",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.series",
+    "pk": 31,
+    "fields": {
+      "name": "Essential Wardrobe",
+      "slug": "essential-wardrobe",
+      "description": "Essential Wardrobe is the foundation of a sophisticated lifestyle. Every piece is thoughtfully designed to blend seamlessly with your existing collection. Neutral tones and timeless cuts ensure maximum versatility. The simplest way to look effortlessly put together.",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.series",
+    "pk": 32,
+    "fields": {
+      "name": "Ceremony Signature",
+      "slug": "ceremony-signature",
+      "description": "Ceremony Signature is dedicated to life’s most significant milestones. Rich fabrics, elegant patterns, and carefully balanced silhouettes define this series. Each garment is made to honor tradition and highlight personal style. A collection for moments that deserve lasting memories.",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.series",
+    "pk": 33,
+    "fields": {
+      "name": "Urban Classics",
+      "slug": "urban-classics",
+      "description": "Urban Classics reflects the dynamic spirit of city life. Clean lines and functional details create a modern aesthetic without sacrificing comfort. These designs are adaptable, sophisticated, and always relevant. For professionals who value clarity and precision.",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.series",
+    "pk": 34,
+    "fields": {
+      "name": "Iconic Line",
+      "slug": "iconic-line",
+      "description": "Iconic Line reimagines classic tailoring with fresh energy. Subtle updates to cuts and textures breathe new life into familiar silhouettes. The result is a collection that feels at once timeless and current. Perfect for those who appreciate heritage and innovation side by side.",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.series",
+    "pk": 35,
+    "fields": {
+      "name": "Sartorial Line",
+      "slug": "sartorial-line",
+      "description": "Sartorial Line is an ode to traditional craftsmanship and refined taste. Each piece showcases meticulous attention to detail, from hand-finished stitching to carefully selected linings. Designed for gentlemen who believe elegance is defined by quality. A collection that speaks without words.",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.series",
+    "pk": 36,
+    "fields": {
+      "name": "Milano Collection",
+      "slug": "milano-collection",
+      "description": "Inspired by the energy of Italian fashion capitals, Milano Collection blends modern tailoring with relaxed confidence. Lightweight materials and streamlined cuts offer ease of movement. Subtle flourishes add a touch of distinctive style. Where tradition meets contemporary flair.",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.series",
+    "pk": 37,
+    "fields": {
+      "name": "Paris Edition",
+      "slug": "paris-edition",
+      "description": "Paris Edition channels the effortless sophistication of the French aesthetic. Clean lines, neutral palettes, and understated textures create a refined look. Designed to transition seamlessly from meetings to evenings out. A collection for those who appreciate discreet elegance.",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.series",
+    "pk": 38,
+    "fields": {
+      "name": "Heritage Tailoring",
+      "slug": "heritage-tailoring",
+      "description": "Heritage Tailoring honors time-honored techniques passed through generations. Rich wool blends and precise cuts form the backbone of each design. Subtle accents remind you that true luxury lies in the details. For connoisseurs who value authenticity above trends.",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.series",
+    "pk": 39,
+    "fields": {
+      "name": "Timeless Appeal",
+      "slug": "timeless-appeal",
+      "description": "Timeless Appeal embodies the idea that style is a reflection of character. Balanced proportions, neutral colors, and enduring fabrics make these garments dependable favorites. Each piece is crafted to remain relevant year after year. For those who invest in quality over fashion cycles.",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.series",
+    "pk": 40,
+    "fields": {
+      "name": "Signature Cuts",
+      "slug": "signature-cuts",
+      "description": "Signature Cuts is distinguished by its precise silhouettes and refined construction. Slim profiles and subtly tapered lines create a confident shape. Premium fabrics ensure a polished look from every angle. A series dedicated to the art of impeccable tailoring.",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.series",
+    "pk": 41,
+    "fields": {
+      "name": "Black & White Series",
+      "slug": "black-and-white-series",
+      "description": "Black & White Series celebrates the enduring power of simplicity. Crisp contrasts and clean lines define every piece. The result is a look that is both striking and effortless. For those who understand that less can truly be more.",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.series",
+    "pk": 42,
+    "fields": {
+      "name": "Elite Collection",
+      "slug": "elite-collection",
+      "description": "Elite Collection is reserved for the most discerning tastes. Crafted in limited numbers, these garments showcase exceptional fabrics and rare design details. Each piece feels exclusive and unforgettable. For gentlemen who expect nothing less than excellence.",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.series",
+    "pk": 43,
+    "fields": {
+      "name": "Noble Line",
+      "slug": "noble-line",
+      "description": "Noble Line is inspired by a sense of quiet authority and refined presence. Subtle textures and balanced proportions create a confident silhouette. Premium materials complete the experience of understated luxury. A collection for those who lead with integrity.",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.series",
+    "pk": 44,
+    "fields": {
+      "name": "Prestige Essentials",
+      "slug": "prestige-essentials",
+      "description": "Prestige Essentials offers a curated selection of indispensable classics. Tailored lines, neutral colors, and high-quality fabrics make these designs exceptionally versatile. Perfect as the backbone of any elegant wardrobe. For men who appreciate timeless investments.",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.series",
+    "pk": 45,
+    "fields": {
+      "name": "Royal Signature",
+      "slug": "royal-signature",
+      "description": "Royal Signature brings together regal inspiration and modern tailoring. Rich jewel tones and fine detailing elevate each garment to a statement piece. Designed for distinguished occasions where presence matters most. A collection that leaves a lasting impression.",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.series",
+    "pk": 46,
+    "fields": {
+      "name": "Ceremony Deluxe",
+      "slug": "ceremony-deluxe",
+      "description": "Ceremony Deluxe is dedicated to life’s most extraordinary moments. Luxurious fabrics, intricate accents, and refined construction define this collection. Each piece feels significant and memorable. For occasions where every detail counts.",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.series",
+    "pk": 47,
+    "fields": {
+      "name": "Evening Elegance",
+      "slug": "evening-elegance",
+      "description": "Evening Elegance redefines formalwear with a modern sensibility. Deep, sophisticated colors and satin finishes create an unmistakable allure. Thoughtful cuts ensure a perfect fit for night-time occasions. A series for those who appreciate the art of evening dressing.",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.series",
+    "pk": 48,
+    "fields": {
+      "name": "Urban Black",
+      "slug": "urban-black",
+      "description": "Urban Black is a tribute to the effortless sophistication of monochrome style. Streamlined cuts and premium materials create a powerful presence. These pieces transition seamlessly from business to after-hours events. For men who prefer their style with an edge.",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.series",
+    "pk": 49,
+    "fields": {
+      "name": "Sartorial Heritage",
+      "slug": "sartorial-heritage",
+      "description": "Sartorial Heritage celebrates the continuity of classic tailoring. Time-tested silhouettes and carefully selected fabrics form the heart of this collection. Subtle nods to tradition meet modern refinement. A series for those who believe style is a matter of legacy.",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.series",
+    "pk": 50,
+    "fields": {
+      "name": "Pure Wool Collection",
+      "slug": "pure-wool-collection",
+      "description": "Pure Wool Collection showcases the beauty and comfort of natural fibers. Each garment is crafted from premium wool for warmth and breathability. The designs balance clean lines with rich textures. For those who appreciate authenticity and lasting quality.",
+      "is_active": true
+    }
+  }
+]
