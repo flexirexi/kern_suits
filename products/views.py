@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.db.models import Q, Count
 from .models import Product, Series, Fit, Occasion, Color, Category, ProductVariant
 from django.http import Http404
+import json
 
 
 # Create your views here.
@@ -101,7 +102,7 @@ def product_details(request, product_id):
         p.max_price = max([v.price for v in p.variants.all()], default=None)
         print(f"Rating: {p.name}: {p.rating}")
     
-    # now, we have to choose a variant to load - it's better in the link than in JS
+    # now, we have to choose a variant to load - it's better in the url than in JS
     variant_id = request.GET.get("variant")
     if variant_id:
         try:
@@ -115,12 +116,27 @@ def product_details(request, product_id):
         else:
             raise Http404("No variants available for this product. Please choose another product.")
     
+    # creat a json so that the template can hand over the list to JS so that it can build new urls based on
+    # the user's selection (e.g. change color -> create new url and reload, this view will then take the new variant id)
+    variant_options = [
+        {
+            "id": v.id,
+            "size": v.size.name,
+            "color": v.color.name,
+            "fit": v.fit.name,
+            "price": float(v.price),
+        }
+        for v in variants
+    ]
+    variant_options_json = json.dumps(variant_options)
+    
     context = {
         'qty_range': range(1, 11),
         'product': product,
         'variants': variants,
         'selected_variant': selected_variant,
         'more_from_series': more_from_series,
+        'variant_options_json': variant_options_json,
         'sizes': sizes,
         'colors': colors,
         'fits': fits,

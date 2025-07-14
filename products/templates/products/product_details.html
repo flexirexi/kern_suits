@@ -146,6 +146,8 @@
 {% endblock %}
 
 {% block extra_scripts %}
-    
+    <!-- hand over variant data to the js so that the button-eventlistener can find the new variant and create new url -->
+    <script id="variant-data" type="application/json"> {{ variant_options_json|safe }}</script>
+    <script src="{% static 'products/js/product_details.js' %}" defer></script>
 {% endblock %}
 
