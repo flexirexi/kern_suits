@@ -1,10 +1,26 @@
 @import url("/static/css/themes.css");
 @import url("/static/css/layout.css");
 
-
+[data-theme] main {
+    margin-top: var(--nav-height);
+}
 
 [data-theme] .card img {
     object-fit: cover;
     height: 100%;
     aspect-ratio: 1 / 1;
+}
+
+[data-theme] .variant-section-details {
+
+}
+
+
+@media (min-width:992px) {
+    [data-theme] .variant-section-details {
+        max-width: 400px;
+        margin-left: 20px;
+    }
+
+
 }

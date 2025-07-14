@@ -6,16 +6,17 @@
 {% endblock %}
 
 {% block content %}
-<div class="container-fluid mt-4">
+<div class="container">
 
-    <main class="container my-5">
+    <main class="container pt-4">
+        <!------------------------------------- 01 VARIANT SECTION ---------------------------------->
         <div class="row mb-5">
-            <div class="col-md6 mb-3">
+            <div class="col-sm-6 mb-3">
                 <img src="{{ product.image.url }}" alt="{{ product.name }}" class="img-fluid w-100">
             </div>
-            <div class="col-md-6">
+            <div class="col-sm-6 variant-section-details">
                 <h4>{{ product.name }}</h4>
-                <!-- Rating -->
+                <!-------- 01.1 Rating ------->
                 <div class="d-flex align-items-center mb-3">
                     <div class="me-2">
                         {% for i in "12345"|slice:":"|make_list %}
@@ -29,7 +30,7 @@
                     <small>{{ product.rating|floatformat:1 }} / 5</small>
                 </div>
 
-                <!------------ SIZE VARIATION -------------->
+                <!------- 01.2 SIZE VARIATION -------->
                 <div class="mb-3">
                     <strong></strong>
                     <div class="d-flex overflow-auto mt-2 gap-2">
@@ -39,7 +40,7 @@
                     </div>
                 </div>
 
-                <!------------ COLOR VARIATION -------------->
+                <!------- 01.3 COLOR VARIATION --------->
                 <div class="mb-3">
                     <strong>Color</strong>
                     <div class="d-flex overflow-auto mt-2 gap-2">
@@ -55,7 +56,7 @@
                     </div>
                 </div>
 
-                <!-- Fit Auswahl -->
+                <!--------01.4 Fit Auswahl ------------>
                 <div class="mb-3">
                     <strong>Fit</strong>
                     <select class="form-select mt-2 fit-option">
@@ -65,23 +66,51 @@
                     </select>
                 </div>
 
-                <!-- CTA Bereich -->
+                <!---------- 01.5 CTA Bereich --------->
                 <div class="d-flex align-items-center mt-4">
-                    <div class="me-3">
-                    <label class="form-label mb-0">QTY:</label>
-                    <select class="form-select form-select-sm qty-select mt-1" style="width:80px;">
-                        {% for i in qty_range %}
-                        <option value="{{ i }}">{{ i }}</option>
-                        {% endfor %}
-                    </select>
-                    </div>
+
+                        <label class="form-label mb-0 me-1">QTY:</label>
+                        <select class="form-select form-select-sm qty-select mt-1 me-2" style="width:80px;">
+                            {% for i in qty_range %}
+                                <option value="{{ i }}">{{ i }}</option>
+                            {% endfor %}
+                        </select>
+
                     <button class="btn btn-primary ms-auto add-to-cart-btn">
-                    Add to Cart
+                        Add to Cart
                     </button>
                 </div>
-
             </div>
         </div>
+        <hr>
+        
+        <!------------------------------- 02 INFO SECTION ---------------------------------->
+        <div class="row mb-5">
+            <!-- Description -->
+            <div class="col-md-6 mb-3">
+            <h5>Description</h5>
+            <p>{{ product.description }}</p>
+            <p><strong>Series:</strong><br>{{ product.series.description }}</p>
+            </div>
+
+            <!-- Details Tabelle -->
+            <div class="col-md-6">
+            <h5>Details</h5>
+            <table class="table table-sm">
+                <tbody>
+                <tr><th>Detail</th><th>Value</th></tr>
+                <tr><td>Name</td><td>{{ product.name }}</td></tr>
+                <tr><td>Series</td><td>{{ product.series.name }}</td></tr>
+                <tr><td>Garment</td><td>{{ product.category }}</td></tr>
+                <tr><td>Occasion</td><td>{{ product.occasion }}</td></tr>
+                <tr><td>Fabric / Material</td><td>{{ product.material }}</td></tr>
+                <tr><td>Label</td><td>Kern</td></tr>
+                </tbody>
+            </table>
+            </div>
+        </div>
+
+
     </main>
 
 
