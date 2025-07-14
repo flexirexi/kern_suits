@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q, Count
-from .models import Product, Series, Fit, Occasion, Color, Category
+from .models import Product, Series, Fit, Occasion, Color, Category, ProductVariant
 
 
 # Create your views here.
@@ -75,3 +75,37 @@ def products(request):
     }
     
     return render(request, 'products/products.html', context)
+
+
+def product_details(request, product_id):
+    """A view to show all products details necessary to decide whether to buy a product or not"""
+
+    # first, load from the db..
+    product = get_object_or_404(Product, pk=product_id)
+    variants = ProductVariant.objects.filter(product=product)
+
+    # get distinct variant's options so that the user can select options
+    # important: not all combinations can be selected - later in the 
+    # template/js, this must be managed with the help of variants list
+    sizes = variants.values_list("size", flat=True).distinct()
+    colors = variants.values("color_name", "color_hex").distinct()
+    fits = variants.values_list("fit", flat=True).distinct()
+    
+    # nice feature: the customer will be offered other products of the same series
+    more_from_series = Product.objects.filter(series=product.series).exclude(id=product.id)
+    
+    # retrieve the min-price for a product (because the prices are stored in ProductVariant)
+    for p in more_from_series:
+        p.min_price = min([v.price for v in p.variants.all()], default=None)
+        p.max_price = max([v.price for v in p.variants.all()], default=None)
+    
+    context = {
+        'products': product,
+        'variants': variants,
+        'more_from_series': more_from_series,
+        'sizes': sizes,
+        'colors': colors,
+        'fits': fits,
+    }
+
+    return render(request, 'products/product_details.html', context)
