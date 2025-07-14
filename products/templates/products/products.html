@@ -20,24 +20,30 @@
                 <div class="card" id="filtersCard">
                     <div class="card-body">
                         <h5 class="card-title filter">Filter</h5>
-                        <form action="" method="get">
+                        <form id="filterForm" method="get">
                             <!------------ Occasion ------------>
                             <div class="mb-3">
                                 <h6>Occasion</h6></label>
                                 {% for o in occasion_list %}
                                     <div class="form-check d-flex align-items-center ms-1">
-                                        <input type="checkbox" name="fit" value="{{o.name}}" id="fit{{o.name}}" class="form-check-input me-2 pointer">
+                                        <input 
+                                            type="checkbox" 
+                                            name="occasion" 
+                                            value="{{o.name}}" 
+                                            id="fit{{o.name}}" 
+                                            class="form-check-input me-2 pointer"
+                                        >
                                         <label for="fit{{o.name}}" class="form-check-label pointer">{{ o.name }}</label>
                                     </div>
                                 {% endfor %}
                             </div>
 
-                            <!------------ Occasion ------------>
+                            <!------------ Category ------------>
                             <div class="mb-3">
                                 <h6>Parts</h6></label>
                                 {% for c in categories_list %}
                                     <div class="form-check d-flex align-items-center ms-1">
-                                        <input type="checkbox" name="fit" value="{{c.name}}" id="fit{{c.name}}" class="form-check-input me-2 pointer">
+                                        <input type="checkbox" name="category" value="{{c.name}}" id="fit{{c.name}}" class="form-check-input me-2 pointer">
                                         <label for="fit{{c.name}}" class="form-check-label pointer">{{ c.name }}</label>
                                     </div>
                                 {% endfor %}
@@ -142,5 +148,5 @@
 {% endblock %}
 
 {% block extra_scripts %}
-    <script type="module" src="{% static 'products/js/products.js' %}" defer></script>
+    <script src="{% static 'products/js/products.js' %}" defer></script>
 {% endblock %}
