@@ -14,24 +14,58 @@
         <h2 class="mb-2 flex-grow-1 text-center mt-3">SHOP</h2>
     </div>
     <div class="row">
+        <!--------------------  FILTERS ------------------->
         <aside class="col-md-3 mb-4">
             <div class="collapse d-md-block" id="filtersCollapse">
                 <div class="card" id="filtersCard">
                     <div class="card-body">
-                        <h5 class="card-title">Filter</h5>
+                        <h5 class="card-title filter">Filter</h5>
+                        <form action="" method="get">
+                            <!------------ Occasion ------------>
+                            <div class="mb-3">
+                                <h6>Occasion</h6></label>
+                                <div class="form-check d-flex align-items-center ms-2">
+                                    <input type="checkbox" name="occasion" value="Weddings" id="occasionWeddings" class="form-check-input me-2 pointer">
+                                    <label for="occasionWeddings" class="form-check-label pointer">Weddings</label>
+                                </div>
+                                <div class="form-check d-flex align-items-center ms-2 ">
+                                    <input type="checkbox" name="occasion" value="Business" id="occasionBusiness" class="form-check-input me-2 pointer">
+                                    <label for="occasionBusiness" class="form-check-label pointer">Business</label>
+                                </div>
+                                <div class="form-check d-flex align-items-center ms-2 ">
+                                    <input type="checkbox" name="occasion" value="Ceremonies" id="occasionCeremonies" class="form-check-input me-2 pointer">
+                                    <label for="occasionCeremonies" class="form-check-label pointer">Ceremonies</label>
+                                </div>
+                                <div class="form-check d-flex align-items-center ms-2 ">
+                                    <input type="checkbox" name="occasion" value="Casual" id="occasionCasual" class="form-check-input me-2 pointer">
+                                    <label for="occasionCasual" class="form-check-label pointer">Casual</label>
+                                </div>
+                                <div class="form-check d-flex align-items-center ms-2">
+                                    <input type="checkbox" name="occasion" value="Evening" id="occasionEvening" class="form-check-input me-2 pointer">
+                                    <label for="occasionEvening" class="form-check-label pointer">Evening</label>
+                                </div>
+                            </div>
+                            
+                            <!------------ PRICE RANGE ------------>
+                            <div class="mb3">
+                                <label for="" class="form-label">Price Range (€)</label>
+                                <input type="range" name="price" min={{product.min_price}} max={{product.max_price}} step="10" class="form-range" id="priceRange">
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </aside>
+        <!--------------------  PRODUCTS -------------------->
         <main class="col-md-9 pe-lg-5">
             <div class="row g-4">
                 {% for product in products %}
                     <div class="col-12 col-sm-6 col-md-4 mb-3">
                         <div class="card h-100">
                             {% if product.image %}
-                                <img src="{{ product.image.url }}" alt="{{ product.name }}" class="card-img-top">
+                                <a href="#"><img src="{{ product.image.url }}" alt="{{ product.name }}" class="card-img-top" height="100%"></a>
                             {% else %}
-                                <img src="https://via.placeholder.com/300x200?text=No+Image" alt="No image" class="card-img-top">
+                                <img src="https://via.placeholder.com/300x200?text=No+Image" alt="No image" class="card-img-top" height="100%">
                             {% endif %}
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title">{{ product.name }}</h5>

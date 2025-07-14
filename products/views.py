@@ -14,6 +14,7 @@ def products(request):
     for p in products:
         variants = p.variants.all()
         p.min_price = min([v.price for v in variants], default=None)
+        p.max_price = max([v.price for v in variants], default=None)
     
     context = {
         'products': products,

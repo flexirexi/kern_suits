@@ -65,6 +65,10 @@ main,
     height: 100%;
 }
 
+[data-theme] .pointer {
+    cursor: pointer;
+}
+
 @media (min-width:768px) {
     [data-theme] .card {
         transition: transform 0.3s ease;
