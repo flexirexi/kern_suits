@@ -7,7 +7,7 @@ from .models import Product, Series, Fit, Occasion, Color, Category
 # Create your views here.
 def products(request):
     """A view to return products page which filters/sorts the products from the products list"""
-    # read the models
+    # read in the models
     products = Product.objects.filter(is_active=True).prefetch_related('variants')
     series_list = Series.objects.all()
     fit_list = Fit.objects.all()
@@ -15,41 +15,35 @@ def products(request):
     colors_list = Color.objects.all()
     colors_list = Color.objects.annotate(variant_count=Count('productvariant'))
     categories_list = Category.objects.all()
+    fabrics_list = Product.objects.values_list('fabric', flat=True).distinct()
     
-    # read the GET-method params
+    # read in the GET-method params
     query = request.GET.get("q")
-    categories = request.GET.getlist('category')
-    fit = request.GET.getlist('fit')
-    occasion = request.GET.getlist('occasion')
-    fabric = request.GET.getlist('fabric')
-    color = request.GET.getlist('colors')
-    series = [int(s) for s in request.GET.getlist('series') if s.strip() != '']
-
-    print(f"CATEGORIES: {len(categories)} --------------")
-    print(f"FIT: {len(fit)} --------------")
-    print(f"OCCASION: {len(occasion)} --------------")
-    print(f"FABRIC: {len(fabric)} --------------")
-    print(f"COLOR: {len(color)} --------------")
-    print(f"SERIES: {len(series)} --------------")
+    selected_categories = request.GET.getlist('category')
+    selected_fits = request.GET.getlist('fit')
+    selected_occasions = request.GET.getlist('occasion')
+    selected_fabrics = request.GET.getlist('fabric')
+    selected_colors = request.GET.getlist('colors')
+    selected_series = [int(s) for s in request.GET.getlist('series') if s.strip() != '']
 
     # apply each filter
-    if categories:
-        products = products.filter(category__name__in=categories)
+    if selected_categories:
+        products = products.filter(category__name__in=selected_categories)
         
-    if occasion:
-        products = products.filter(occasion__name__in=occasion)
+    if selected_occasions:
+        products = products.filter(occasion__name__in=selected_occasions)
     
-    if series:
-        products = products.filter(series__id__in=series)
+    if selected_series:
+        products = products.filter(series__id__in=selected_series)
     
-    if color:
-        products = products.filter(variants__color__name__in=color)
+    if selected_colors:
+        products = products.filter(variants__color__name__in=selected_colors)
         
-    if fit:
-        products = products.filter(variants__fit__name__in=fit)
+    if selected_fits:
+        products = products.filter(variants__fit__name__in=selected_fits)
     
-    if fabric:
-        products = products.filter(fabric__in=fabric) #  no foreignkey -> Charfield only
+    if selected_fabrics:
+        products = products.filter(fabric__in=selected_fabrics)  # no foreignkey -> Charfield only
     
     products = products.distinct()
 
@@ -70,6 +64,14 @@ def products(request):
         'occasion_list': occasion_list,
         'colors_list': colors_list,
         'categories_list': categories_list,
+        'fabrics_list': fabrics_list,
+        'selected_categories': selected_categories, 
+        'selected_fits': selected_fits, 
+        'selected_occasions': selected_occasions, 
+        'selected_fabrics': selected_fabrics, 
+        'selected_colors': selected_colors, 
+        'selected_series': selected_series, 
+        
     }
     
     return render(request, 'products/products.html', context)

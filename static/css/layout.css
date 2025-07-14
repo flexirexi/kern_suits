@@ -23,6 +23,7 @@ h6 {
 main,
 [data-theme] .main {
     margin-top: var(--nav-height);
+    align-self: flex-start;
 } 
 
 

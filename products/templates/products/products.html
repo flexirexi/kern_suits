@@ -8,8 +8,15 @@
 {% block content %}
 <div class="container-fluid mt-4">
     <div class="d-flex align-items-center mb-3">
-        <button class="btn btn-outline-secondary d-md-none">
-            <i class="bi bi-funnel"></i>
+        <button
+            class="btn btn-outline-secondary d-md-none mb-2"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#filtersCollapse"
+            aria-expanded="false"
+            aria-controls="filtersCollapse"
+        >
+            <i class="bi bi-funnel"></i> Filter
         </button>
         <h2 class="mb-2 flex-grow-1 text-center mt-3">SHOP</h2>
     </div>
@@ -32,6 +39,7 @@
                                             value="{{o.name}}" 
                                             id="fit{{o.name}}" 
                                             class="form-check-input me-2 pointer"
+                                            {% if o.name in selected_occasions %}checked{% endif %}
                                         >
                                         <label for="fit{{o.name}}" class="form-check-label pointer">{{ o.name }}</label>
                                     </div>
@@ -43,7 +51,14 @@
                                 <h6>Parts</h6></label>
                                 {% for c in categories_list %}
                                     <div class="form-check d-flex align-items-center ms-1">
-                                        <input type="checkbox" name="category" value="{{c.name}}" id="fit{{c.name}}" class="form-check-input me-2 pointer">
+                                        <input 
+                                            type="checkbox" 
+                                            name="category" 
+                                            value="{{c.name}}" 
+                                            id="fit{{c.name}}" 
+                                            class="form-check-input me-2 pointer"
+                                            {% if c.name in selected_categories %}checked{% endif %}
+                                        >
                                         <label for="fit{{c.name}}" class="form-check-label pointer">{{ c.name }}</label>
                                     </div>
                                 {% endfor %}
@@ -52,22 +67,20 @@
                             <!------------ FABRICS ------------>
                             <div class="mb-3">
                                 <h6>Fabrics</h6></label>
-                                <div class="form-check d-flex align-items-center ms-1">
-                                    <input type="checkbox" name="fabric" value="Wool" id="fabricWool" class="form-check-input me-2 pointer">
-                                    <label for="fabricWool" class="form-check-label pointer">Wool</label>
-                                </div>
-                                <div class="form-check d-flex align-items-center ms-1">
-                                    <input type="checkbox" name="fabric" value="Cotton" id="fabricCotton" class="form-check-input me-2 pointer">
-                                    <label for="fabricCotton" class="form-check-label pointer">Cotton</label>
-                                </div>
-                                <div class="form-check d-flex align-items-center ms-1">
-                                    <input type="checkbox" name="fabric" value="Silk" id="fabricSilk" class="form-check-input me-2 pointer">
-                                    <label for="fabricSilk" class="form-check-label pointer">Silk</label>
-                                </div>
-                                <div class="form-check d-flex align-items-center ms-1">
-                                    <input type="checkbox" name="fabric" value="Linen" id="fabricLinen" class="form-check-input me-2 pointer">
-                                    <label for="fabricLinen" class="form-check-label pointer">Linen</label>
-                                </div>
+                                {% for f in fabrics_list %}
+                                    <div class="form-check d-flex align-items-center ms-1">
+                                        <input 
+                                            type="checkbox" 
+                                            name="fabric" 
+                                            value="{{f}}" 
+                                            id="fabric{{f}}" 
+                                            class="form-check-input me-2 pointer"
+                                            {% if f in selected_fabrics %}checked{% endif %}
+                                        >
+                                        <label for="fabric{{f}}" class="form-check-label pointer">{{f}}</label>
+                                    </div>
+                                {% endfor %}
+
                             </div>
 
                             <!------------ FIT ------------>
@@ -75,7 +88,14 @@
                                 <h6>FIT</h6></label>
                                 {% for f in fit_list %}
                                     <div class="form-check d-flex align-items-center ms-1">
-                                        <input type="checkbox" name="fit" value="{{f.name}}" id="fit{{f.name}}" class="form-check-input me-2 pointer">
+                                        <input 
+                                            type="checkbox" 
+                                            name="fit" 
+                                            value="{{f.name}}" 
+                                            id="fit{{f.name}}" 
+                                            class="form-check-input me-2 pointer"
+                                            {% if f.name in selected_fits %}checked{% endif %}
+                                        >
                                         <label for="fit{{f.name}}" class="form-check-label pointer">{{ f.name }}</label>
                                     </div>
                                 {% endfor %}
@@ -86,7 +106,14 @@
                                 <h6>Colors</h6></label>
                                 {% for c in colors_list %}
                                     <div class="form-check d-flex align-items-center ms-1">
-                                        <input type="checkbox" name="colors" value="{{c.name}}" id="fit{{c.name}}" class="form-check-input me-2 pointer">
+                                        <input 
+                                            type="checkbox" 
+                                            name="colors" 
+                                            value="{{c.name}}" 
+                                            id="fit{{c.name}}" 
+                                            class="form-check-input me-2 pointer"
+                                            {% if c.name in selected_colors %}checked{% endif %}
+                                            >
                                         <div class="d-flex me-2" style="width:13px; height:13px; background-color: {{c.hex_code}};"></div>
                                         <label for="fit{{c.name}}" class="form-check-label pointer">{{ c.name }}</label>
                                         <div class="ms-2">
@@ -102,7 +129,10 @@
                                 <select name="series" id="seriesSelect" class="form-select">
                                     <option value=""></option>
                                     {% for s in series_list %}
-                                        <option value="{{ s.id }}">{{ s.name }}</option>
+                                        <option 
+                                            value="{{ s.id }}"
+                                            {% if s.id in selected_series %}selected{% endif %}
+                                        >{{ s.name }}</option>
                                     {% endfor %}
                                     
                                 </select>
