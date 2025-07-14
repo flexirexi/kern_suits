@@ -2,181 +2,94 @@
 {% load static %}
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'products/css/products.css' %}">
+    <link rel="stylesheet" href="{% static 'products/css/product_details.css' %}">
 {% endblock %}
 
 {% block content %}
 <div class="container-fluid mt-4">
-    <div class="d-flex align-items-center mb-3">
-        <button
-            class="btn btn-outline-secondary d-md-none mb-2"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#filtersCollapse"
-            aria-expanded="false"
-            aria-controls="filtersCollapse"
-        >
-            <i class="bi bi-funnel"></i> Filter
-        </button>
-        <h2 class="mb-2 flex-grow-1 text-center mt-3">SHOP</h2>
-    </div>
-    <div class="row">
-        <!--------------------  FILTERS ------------------->
-        <aside class="col-md-3 mb-4">
-            <div class="collapse d-md-block" id="filtersCollapse">
-                <div class="card" id="filtersCard">
-                    <div class="card-body">
-                        <h5 class="card-title filter">Filter</h5>
-                        <form id="filterForm" method="get">
-                            <!------------ Occasion ------------>
-                            <div class="mb-3">
-                                <h6>Occasion</h6></label>
-                                {% for o in occasion_list %}
-                                    <div class="form-check d-flex align-items-center ms-1">
-                                        <input 
-                                            type="checkbox" 
-                                            name="occasion" 
-                                            value="{{o.name}}" 
-                                            id="fit{{o.name}}" 
-                                            class="form-check-input me-2 pointer"
-                                            {% if o.name in selected_occasions %}checked{% endif %}
-                                        >
-                                        <label for="fit{{o.name}}" class="form-check-label pointer">{{ o.name }}</label>
-                                    </div>
-                                {% endfor %}
-                            </div>
 
-                            <!------------ Category ------------>
-                            <div class="mb-3">
-                                <h6>Parts</h6></label>
-                                {% for c in categories_list %}
-                                    <div class="form-check d-flex align-items-center ms-1">
-                                        <input 
-                                            type="checkbox" 
-                                            name="category" 
-                                            value="{{c.name}}" 
-                                            id="fit{{c.name}}" 
-                                            class="form-check-input me-2 pointer"
-                                            {% if c.name in selected_categories %}checked{% endif %}
-                                        >
-                                        <label for="fit{{c.name}}" class="form-check-label pointer">{{ c.name }}</label>
-                                    </div>
-                                {% endfor %}
-                            </div>
-                            
-                            <!------------ FABRICS ------------>
-                            <div class="mb-3">
-                                <h6>Fabrics</h6></label>
-                                {% for f in fabrics_list %}
-                                    <div class="form-check d-flex align-items-center ms-1">
-                                        <input 
-                                            type="checkbox" 
-                                            name="fabric" 
-                                            value="{{f}}" 
-                                            id="fabric{{f}}" 
-                                            class="form-check-input me-2 pointer"
-                                            {% if f in selected_fabrics %}checked{% endif %}
-                                        >
-                                        <label for="fabric{{f}}" class="form-check-label pointer">{{f}}</label>
-                                    </div>
-                                {% endfor %}
+    <main class="container my-5">
+        <div class="row mb-5">
+            <div class="col-md6 mb-3">
+                <img src="{{ product.image.url }}" alt="{{ product.name }}" class="img-fluid w-100">
+            </div>
+            <div class="col-md-6">
+                <h4>{{ product.name }}</h4>
+                <!-- Rating -->
+                <div class="d-flex align-items-center mb-3">
+                    <div class="me-2">
+                        {% for i in "12345"|slice:":"|make_list %}
+                        {% if forloop.counter <= product.rating|floatformat:"0"|add:"0" %}
+                            <i class="bi bi-star-fill text-warning"></i>
+                        {% else %}
+                            <i class="bi bi-star text-muted"></i>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                    <small>{{ product.rating|floatformat:1 }} / 5</small>
+                </div>
 
-                            </div>
-
-                            <!------------ FIT ------------>
-                            <div class="mb-3">
-                                <h6>FIT</h6></label>
-                                {% for f in fit_list %}
-                                    <div class="form-check d-flex align-items-center ms-1">
-                                        <input 
-                                            type="checkbox" 
-                                            name="fit" 
-                                            value="{{f.name}}" 
-                                            id="fit{{f.name}}" 
-                                            class="form-check-input me-2 pointer"
-                                            {% if f.name in selected_fits %}checked{% endif %}
-                                        >
-                                        <label for="fit{{f.name}}" class="form-check-label pointer">{{ f.name }}</label>
-                                    </div>
-                                {% endfor %}
-                            </div>
-
-                            <!------------ Colors ------------>
-                            <div class="mb-3">
-                                <h6>Colors</h6></label>
-                                {% for c in colors_list %}
-                                    <div class="form-check d-flex align-items-center ms-1">
-                                        <input 
-                                            type="checkbox" 
-                                            name="colors" 
-                                            value="{{c.name}}" 
-                                            id="fit{{c.name}}" 
-                                            class="form-check-input me-2 pointer"
-                                            {% if c.name in selected_colors %}checked{% endif %}
-                                            >
-                                        <div class="d-flex me-2" style="width:13px; height:13px; background-color: {{c.hex_code}};"></div>
-                                        <label for="fit{{c.name}}" class="form-check-label pointer">{{ c.name }}</label>
-                                        <div class="ms-2">
-                                            <p style="align-self: center; font-size: 12px;"><small>({{ c.variant_count }})</small></p>
-                                        </div>
-                                    </div>
-                                {% endfor %}
-                            </div>
-
-                            <!------------ SERIES NAME ------------>
-                            <div class="mb-2 mt-3">
-                                <label for="" class="form-label">Series</label></label>
-                                <select name="series" id="seriesSelect" class="form-select">
-                                    <option value=""></option>
-                                    {% for s in series_list %}
-                                        <option 
-                                            value="{{ s.id }}"
-                                            {% if s.id in selected_series %}selected{% endif %}
-                                        >{{ s.name }}</option>
-                                    {% endfor %}
-                                    
-                                </select>
-                            </div>
-                        </form>
+                <!------------ SIZE VARIATION -------------->
+                <div class="mb-3">
+                    <strong></strong>
+                    <div class="d-flex overflow-auto mt-2 gap-2">
+                        {% for size in sizes %}
+                        <button type="button" class="btn btn-outline-secondary btn-sm size-option" data-size="{{ size }}">{{ size }}></button>
+                        {% endfor %}
                     </div>
                 </div>
-            </div>
-        </aside>
-        <!--------------------  PRODUCTS -------------------->
-        <main class="col-md-9 pe-lg-5">
-            <div class="row g-4">
-                {% for product in products %}
-                    <div class="col-12 col-sm-6 col-md-4 mb-3">
-                        <div class="card h-100">
-                            {% if product.image %}
-                                <a href="#"><img src="{{ product.image.url }}" alt="{{ product.name }}" class="card-img-top" height="100%"></a>
-                            {% else %}
-                                <img src="https://via.placeholder.com/300x200?text=No+Image" alt="No image" class="card-img-top" height="100%">
-                            {% endif %}
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">{{ product.name }}</h5>
-                                <p class="card-text mb-1">{{ product.series.name }}</p>
-                                <p class="card-text mb-1">{{ product.category.name }}</p>
-                                <p class="card-text mb-1">{{ product.occasion.name }}</p>
-                                <p class="text-end mt-auto"><small>from:</small></p>
-                                <h5 class="mt-auto text-end price">
-                                    {% if product.min_price %}
-                                        {{ product.min_price }} €
-                                    {% else %}
-                                        see Price options
-                                    {% endif %}
-                                </h5>
-                            </div>
-                        </div>
+
+                <!------------ COLOR VARIATION -------------->
+                <div class="mb-3">
+                    <strong>Color</strong>
+                    <div class="d-flex overflow-auto mt-2 gap-2">
+                    {% for color in colors %}
+                        <button type="button"
+                                class="btn color-option p-2 border"
+                                style="background-color: {{ color.color_hex }};"
+                                title="{{ color.color_name }}"
+                                aria-label="{{ color.color_name }}"
+                                data-color="{{ color.color_name }}">{{color.color__name}}
+                        </button>
+                    {% endfor %}
                     </div>
-                {% endfor %}
+                </div>
+
+                <!-- Fit Auswahl -->
+                <div class="mb-3">
+                    <strong>Fit</strong>
+                    <select class="form-select mt-2 fit-option">
+                    {% for fit in fits %}
+                        <option value="{{ fit }}">{{ fit }}</option>
+                    {% endfor %}
+                    </select>
+                </div>
+
+                <!-- CTA Bereich -->
+                <div class="d-flex align-items-center mt-4">
+                    <div class="me-3">
+                    <label class="form-label mb-0">QTY:</label>
+                    <select class="form-select form-select-sm qty-select mt-1" style="width:80px;">
+                        {% for i in qty_range %}
+                        <option value="{{ i }}">{{ i }}</option>
+                        {% endfor %}
+                    </select>
+                    </div>
+                    <button class="btn btn-primary ms-auto add-to-cart-btn">
+                    Add to Cart
+                    </button>
+                </div>
+
             </div>
-        </main>
-    </div>
+        </div>
+    </main>
+
+
 </div>
 
 {% endblock %}
 
 {% block extra_scripts %}
-    <script src="{% static 'products/js/products.js' %}" defer></script>
+    
 {% endblock %}
+

@@ -88,7 +88,7 @@ def product_details(request, product_id):
     # important: not all combinations can be selected - later in the 
     # template/js, this must be managed with the help of variants list
     sizes = variants.values_list("size", flat=True).distinct()
-    colors = variants.values("color_name", "color_hex").distinct()
+    colors = variants.values("color__name", "color__hex_code").distinct()  # --------------------incorrect
     fits = variants.values_list("fit", flat=True).distinct()
     
     # nice feature: the customer will be offered other products of the same series
@@ -98,9 +98,11 @@ def product_details(request, product_id):
     for p in more_from_series:
         p.min_price = min([v.price for v in p.variants.all()], default=None)
         p.max_price = max([v.price for v in p.variants.all()], default=None)
+        print(f"Rating: {p.name}: {p.rating}")
     
     context = {
-        'products': product,
+        'qty_range': range(1, 11),
+        'product': product,
         'variants': variants,
         'more_from_series': more_from_series,
         'sizes': sizes,
