@@ -11,9 +11,25 @@
     aspect-ratio: 1 / 1;
 }
 
-[data-theme] .variant-section-details {
-
+.fit-option {
+    width: fit-content;
+    min-width: 100px;
 }
+
+[data-theme] .series-section-card {
+    min-width:180px;
+    max-width: 230px;
+    height: 100%;
+    
+    
+}
+
+[data-theme] .chosen {
+    border: 5px solid var(--link);
+    font-weight: bold;
+    color: var(--text1);
+}
+
 
 
 @media (min-width:992px) {

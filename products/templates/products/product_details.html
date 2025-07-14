@@ -9,7 +9,7 @@
 <div class="container">
 
     <main class="container pt-4">
-        <!------------------------------------- 01 VARIANT SECTION ---------------------------------->
+        <!------------------------- 01 VARIANT SECTION ------------------------->
         <div class="row mb-5">
             <div class="col-sm-6 mb-3">
                 <img src="{{ product.image.url }}" alt="{{ product.name }}" class="img-fluid w-100">
@@ -35,7 +35,13 @@
                     <strong></strong>
                     <div class="d-flex overflow-auto mt-2 gap-2">
                         {% for size in sizes %}
-                        <button type="button" class="btn btn-outline-secondary btn-sm size-option" data-size="{{ size }}">{{ size }}></button>
+                            <button 
+                                type="button" 
+                                class="btn btn-outline-secondary btn-sm size-option {% if size == selected_variant.size.name %}chosen disabled{% endif %}" 
+                                data-size="{{ size }}"
+                            >
+                                {{ size }}
+                            </button>
                         {% endfor %}
                     </div>
                 </div>
@@ -46,11 +52,12 @@
                     <div class="d-flex overflow-auto mt-2 gap-2">
                     {% for color in colors %}
                         <button type="button"
-                                class="btn color-option p-2 border"
-                                style="background-color: {{ color.color_hex }};"
-                                title="{{ color.color_name }}"
-                                aria-label="{{ color.color_name }}"
-                                data-color="{{ color.color_name }}">{{color.color__name}}
+                            class="btn color-option p-2  {% if color.color__name == selected_variant.color.name %}chosen disabled{% endif %}"
+                            style="background-color: {{ color.color__hex_code }}; height: 40px; width:40px;"
+                            title="{{ color.color__name }}"
+                            aria-label="{{ color.color__name }}"
+                            data-color="{{ color.color__name }}"
+                        >
                         </button>
                     {% endfor %}
                     </div>
@@ -69,7 +76,7 @@
                 <!---------- 01.5 CTA Bereich --------->
                 <div class="d-flex align-items-center mt-4">
 
-                        <label class="form-label mb-0 me-1">QTY:</label>
+                        <label class="form-label mb-0 me-2">QTY:</label>
                         <select class="form-select form-select-sm qty-select mt-1 me-2" style="width:80px;">
                             {% for i in qty_range %}
                                 <option value="{{ i }}">{{ i }}</option>
@@ -83,8 +90,8 @@
             </div>
         </div>
         <hr>
-        
-        <!------------------------------- 02 INFO SECTION ---------------------------------->
+
+        <!------------------ 02 INFO SECTION ------------------------>
         <div class="row mb-5">
             <!-- Description -->
             <div class="col-md-6 mb-3">
@@ -110,7 +117,27 @@
             </div>
         </div>
 
+        <!------------------ 03 From this Series SECTION ---------------------->  
+        <div class="mb-5 series-section">
+            <h5>More from this Series</h5>
+            <div class="d-flex overflow-auto gap-3 mt-3 h-100 p-2">
+                {% for related in more_from_series %}
+                    <div class="card series-section-card" >
+                        <img src="{{ related.image.url }}" class="card-img-top" alt="{{ related.name }}">
+                        <div class="card-body p-2">
+                            <div class="fw-bold">{{ related.name }}</div>
+                            <div class="small fw-bold">{{ related.min_price }}€</div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
 
+        <!----------------------- 04 REVIEW SECTION ----------------------->
+        <div>
+            <h5>Reviews</h5>
+            <p>Reviews kommen hier rein.</p>
+        </div>
     </main>
 
 

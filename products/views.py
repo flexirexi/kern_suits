@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q, Count
 from .models import Product, Series, Fit, Occasion, Color, Category, ProductVariant
+from django.http import Http404
 
 
 # Create your views here.
@@ -87,9 +88,9 @@ def product_details(request, product_id):
     # get distinct variant's options so that the user can select options
     # important: not all combinations can be selected - later in the 
     # template/js, this must be managed with the help of variants list
-    sizes = variants.values_list("size", flat=True).distinct()
+    sizes = variants.values_list("size__name", flat=True).distinct()
     colors = variants.values("color__name", "color__hex_code").distinct()  # --------------------incorrect
-    fits = variants.values_list("fit", flat=True).distinct()
+    fits = variants.values_list("fit__name", flat=True).distinct()
     
     # nice feature: the customer will be offered other products of the same series
     more_from_series = Product.objects.filter(series=product.series).exclude(id=product.id)
@@ -100,10 +101,25 @@ def product_details(request, product_id):
         p.max_price = max([v.price for v in p.variants.all()], default=None)
         print(f"Rating: {p.name}: {p.rating}")
     
+    # now, we have to choose a variant to load - it's better in the link than in JS
+    variant_id = request.GET.get("variant")
+    if variant_id:
+        try:
+            selected_variant = variants.get(id=variant_id)
+        except ProductVariant.DoesNotExist:
+            selected_variant = variants.first()
+    else:
+        selected_variant = variants.first()
+        if selected_variant:
+            return redirect(f"{request.path}?variant={selected_variant.id}")
+        else:
+            raise Http404("No variants available for this product. Please choose another product.")
+    
     context = {
         'qty_range': range(1, 11),
         'product': product,
         'variants': variants,
+        'selected_variant': selected_variant,
         'more_from_series': more_from_series,
         'sizes': sizes,
         'colors': colors,
