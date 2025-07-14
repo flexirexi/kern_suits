@@ -24,32 +24,82 @@
                             <!------------ Occasion ------------>
                             <div class="mb-3">
                                 <h6>Occasion</h6></label>
-                                <div class="form-check d-flex align-items-center ms-2">
-                                    <input type="checkbox" name="occasion" value="Weddings" id="occasionWeddings" class="form-check-input me-2 pointer">
-                                    <label for="occasionWeddings" class="form-check-label pointer">Weddings</label>
-                                </div>
-                                <div class="form-check d-flex align-items-center ms-2 ">
-                                    <input type="checkbox" name="occasion" value="Business" id="occasionBusiness" class="form-check-input me-2 pointer">
-                                    <label for="occasionBusiness" class="form-check-label pointer">Business</label>
-                                </div>
-                                <div class="form-check d-flex align-items-center ms-2 ">
-                                    <input type="checkbox" name="occasion" value="Ceremonies" id="occasionCeremonies" class="form-check-input me-2 pointer">
-                                    <label for="occasionCeremonies" class="form-check-label pointer">Ceremonies</label>
-                                </div>
-                                <div class="form-check d-flex align-items-center ms-2 ">
-                                    <input type="checkbox" name="occasion" value="Casual" id="occasionCasual" class="form-check-input me-2 pointer">
-                                    <label for="occasionCasual" class="form-check-label pointer">Casual</label>
-                                </div>
-                                <div class="form-check d-flex align-items-center ms-2">
-                                    <input type="checkbox" name="occasion" value="Evening" id="occasionEvening" class="form-check-input me-2 pointer">
-                                    <label for="occasionEvening" class="form-check-label pointer">Evening</label>
-                                </div>
+                                {% for o in occasion_list %}
+                                    <div class="form-check d-flex align-items-center ms-1">
+                                        <input type="checkbox" name="fit" value="{{o.name}}" id="fit{{o.name}}" class="form-check-input me-2 pointer">
+                                        <label for="fit{{o.name}}" class="form-check-label pointer">{{ o.name }}</label>
+                                    </div>
+                                {% endfor %}
+                            </div>
+
+                            <!------------ Occasion ------------>
+                            <div class="mb-3">
+                                <h6>Parts</h6></label>
+                                {% for c in categories_list %}
+                                    <div class="form-check d-flex align-items-center ms-1">
+                                        <input type="checkbox" name="fit" value="{{c.name}}" id="fit{{c.name}}" class="form-check-input me-2 pointer">
+                                        <label for="fit{{c.name}}" class="form-check-label pointer">{{ c.name }}</label>
+                                    </div>
+                                {% endfor %}
                             </div>
                             
-                            <!------------ PRICE RANGE ------------>
-                            <div class="mb3">
-                                <label for="" class="form-label">Price Range (€)</label>
-                                <input type="range" name="price" min={{product.min_price}} max={{product.max_price}} step="10" class="form-range" id="priceRange">
+                            <!------------ FABRICS ------------>
+                            <div class="mb-3">
+                                <h6>Fabrics</h6></label>
+                                <div class="form-check d-flex align-items-center ms-1">
+                                    <input type="checkbox" name="fabric" value="Wool" id="fabricWool" class="form-check-input me-2 pointer">
+                                    <label for="fabricWool" class="form-check-label pointer">Wool</label>
+                                </div>
+                                <div class="form-check d-flex align-items-center ms-1">
+                                    <input type="checkbox" name="fabric" value="Cotton" id="fabricCotton" class="form-check-input me-2 pointer">
+                                    <label for="fabricCotton" class="form-check-label pointer">Cotton</label>
+                                </div>
+                                <div class="form-check d-flex align-items-center ms-1">
+                                    <input type="checkbox" name="fabric" value="Silk" id="fabricSilk" class="form-check-input me-2 pointer">
+                                    <label for="fabricSilk" class="form-check-label pointer">Silk</label>
+                                </div>
+                                <div class="form-check d-flex align-items-center ms-1">
+                                    <input type="checkbox" name="fabric" value="Linen" id="fabricLinen" class="form-check-input me-2 pointer">
+                                    <label for="fabricLinen" class="form-check-label pointer">Linen</label>
+                                </div>
+                            </div>
+
+                            <!------------ FIT ------------>
+                            <div class="mb-3">
+                                <h6>FIT</h6></label>
+                                {% for f in fit_list %}
+                                    <div class="form-check d-flex align-items-center ms-1">
+                                        <input type="checkbox" name="fit" value="{{f.name}}" id="fit{{f.name}}" class="form-check-input me-2 pointer">
+                                        <label for="fit{{f.name}}" class="form-check-label pointer">{{ f.name }}</label>
+                                    </div>
+                                {% endfor %}
+                            </div>
+
+                            <!------------ Colors ------------>
+                            <div class="mb-3">
+                                <h6>Colors</h6></label>
+                                {% for c in colors_list %}
+                                    <div class="form-check d-flex align-items-center ms-1">
+                                        <input type="checkbox" name="colors" value="{{c.name}}" id="fit{{c.name}}" class="form-check-input me-2 pointer">
+                                        <div class="d-flex me-2" style="width:13px; height:13px; background-color: {{c.hex_code}};"></div>
+                                        <label for="fit{{c.name}}" class="form-check-label pointer">{{ c.name }}</label>
+                                        <div class="ms-2">
+                                            <p style="align-self: center; font-size: 12px;"><small>({{ c.variant_count }})</small></p>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+
+                            <!------------ SERIES NAME ------------>
+                            <div class="mb-2 mt-3">
+                                <label for="" class="form-label">Series</label></label>
+                                <select name="series" id="seriesSelect" class="form-select">
+                                    <option value=""></option>
+                                    {% for s in series_list %}
+                                        <option value="{{ s.id }}">{{ s.name }}</option>
+                                    {% endfor %}
+                                    
+                                </select>
                             </div>
                         </form>
                     </div>
@@ -89,4 +139,8 @@
     </div>
 </div>
 
+{% endblock %}
+
+{% block extra_scripts %}
+    <script type="module" src="{% static 'products/js/products.js' %}" defer></script>
 {% endblock %}
