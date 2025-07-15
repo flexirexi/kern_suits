@@ -78,7 +78,7 @@
         <div class="col text-end">
             <p class="mb-1">Shipping: <strong>free</strong></p>
             <p class="h5 mb-3">Grand Total: <strong>{{ grand_total|floatformat:2 }}€</strong></p>
-            <a href="#" class="btn btn-dark btn-lg">Checkout</a>
+            <a href="{% url 'checkout' %}" class="btn btn-dark btn-lg">Checkout</a>
         </div>
     </div>
 </main>
