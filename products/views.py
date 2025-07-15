@@ -116,7 +116,7 @@ def product_details(request, product_id):
         else:
             raise Http404("No variants available for this product. Please choose another product.")
     
-    # creat a json so that the template can hand over the list to JS so that it can build new urls based on
+    # create a json so that the template can hand over the list to JS so that it can build new urls based on
     # the user's selection (e.g. change color -> create new url and reload, this view will then take the new variant id)
     variant_options = [
         {
@@ -130,8 +130,11 @@ def product_details(request, product_id):
     ]
     variant_options_json = json.dumps(variant_options)
     
+    max_qty = min(selected_variant.stock, 10)
+    
     context = {
-        'qty_range': range(1, 11),
+        "max_qty": max_qty,
+        'qty_range': range(1, max_qty+1),
         'product': product,
         'variants': variants,
         'selected_variant': selected_variant,

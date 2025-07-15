@@ -52,7 +52,7 @@
                     <div class="d-flex overflow-auto mt-2 gap-2">
                     {% for color in colors %}
                         <button type="button"
-                            class="btn color-option p-2  {% if color.color__name == selected_variant.color.name %}chosen disabled{% endif %}"
+                            class="btn color-option p-2  {% if color.color__name == selected_variant.color.name %}chosen {% endif %}"
                             style="background-color: {{ color.color__hex_code }}; height: 40px; width:40px;"
                             title="{{ color.color__name }}"
                             aria-label="{{ color.color__name }}"
@@ -68,13 +68,19 @@
                     <strong>Fit</strong>
                     <select class="form-select mt-2 fit-option">
                     {% for fit in fits %}
-                        <option value="{{ fit }}">{{ fit }}</option>
+                        <option 
+                            value="{{ fit }}"
+                            {% if fit == selected_variant.fit.name %}selected{% endif %}
+                            >{{ fit }}</option>
                     {% endfor %}
                     </select>
                 </div>
 
                 <!---------- 01.5 CTA Bereich --------->
-                <div class="d-flex align-items-center mt-4">
+                <div class="mt-4">
+                    <b><small class="mb-0 text-success">in stock: {{ max_qty }}</small></b>
+                </div>
+                <div class="d-flex align-items-center ">
 
                         <label class="form-label mb-0 me-2">QTY:</label>
                         <select class="form-select form-select-sm qty-select mt-1 me-2" style="width:80px;">
@@ -148,6 +154,10 @@
 {% block extra_scripts %}
     <!-- hand over variant data to the js so that the button-eventlistener can find the new variant and create new url -->
     <script id="variant-data" type="application/json"> {{ variant_options_json|safe }}</script>
+    <div id="product-data"
+        data-product-id="{{ product.id }}"
+        data-selected-variant-id="{{ selected_variant.id }}">
+    </div>
     <script src="{% static 'products/js/product_details.js' %}" defer></script>
 {% endblock %}
 
