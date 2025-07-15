@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    {% block meta %}
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no" >
+    {% endblock %}
+    {% block extra_meta %} {% endblock %}
+    {% block core_css %}
+    <link rel="stylesheet" href="{% static 'user/css/base.css' %}">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <!-- FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    {% endblock %}
+    {% block extra_css%}
+    {% endblock %}
+    <title>KERN SUITS</title>
+</head>
+<body>
+    <header class="fixed-top">
+        
+        <!-- Desktop Navbar -->
+        <div class="d-none d-md-block">
+            {% include "includes/shop_navbar_desktop.html" %}
+        </div>
+        
+        <!-- Mobile Navbar -->
+        <div class="d-md-none">
+            {% include "includes/shop_navbar_mobile.html" %}
+        </div>
+    </header>
+
+
+    {% if messages %}
+    <div class="toast-container position-fixed top-2 end-0 p-3" style="z-index: 1100;">
+        {% for message in messages %}
+            {% if message.level == 40 %}
+                {% include "includes/toasts/toast_error.html" %}
+            {% elif message.level == 25 %}
+                {% include "includes/toasts/toast_success.html" %}
+            {% elif message.level == 20 %}
+                {% include "includes/toasts/toast_info.html" %}
+            {% endif %}
+        {% endfor %}
+    </div>
+    {% endif %}
+
+
+    <div class="main d-flex justify-content-center">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <footer class="container-fluid py-4">
+        <div class="row text-center ">
+            <div class="col-12 mb-4">
+                <div class="d-flex justify-content-center flex-wrap gap-4">
+                    <a href="{% url 'privacy' %}">Privacy</a>
+                    <a href="{% url 'terms_conditions' %}">Terms & Conditions</a>
+                    <a href="{% url 'impressum' %}">Impressum</a>
+                </div>
+            </div>
+
+            <div class="col-12 mb-4">
+                <div class="d-flex justify-content-center flex-wrap gap-4 ">
+                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="fab fa-facebook fa-xl"></a>
+                    <a href="https://www.x.com" target="_blank" rel="noopener noreferrer" class="fab fa-x-twitter fa-xl"></a>
+                    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="fab fa-instagram fa-xl"></a>
+                    <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" class="fab fa-tiktok fa-xl"></a>
+                </div>
+            </div>
+
+            <div class="col-12 ">
+                <small class="text-center text-white">
+                    &copy; 2025 Kern Suites. All rights reserved.
+                </small>
+            </div>
+
+        </div>
+    </footer>
+    
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    {% block core_scripts %} 
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <script type="module" src="{% static 'js/toast.js' %}"></script>
+    {% endblock %}
+    <!-- Optional JavaScript -->
+    {% block extra_scripts %} {% endblock %}
+</body>
+</html>

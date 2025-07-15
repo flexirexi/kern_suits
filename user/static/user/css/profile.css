@@ -1,0 +1,17 @@
+@import url("/static/css/themes.css");
+@import url("/static/css/layout.css");
+
+[data-theme] main {
+    max-width: 900px;
+    margin-top: 0;
+}
+
+[data-theme] .personal-data-container {
+    border-radius: 0.5rem;
+    background-color: var(--bgDefault2); 
+    padding: 0 20px;
+}
+
+
+@media (min-width:768px) {
+}

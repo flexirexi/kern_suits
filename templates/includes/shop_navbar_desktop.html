@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-md px-4">
     <a class="navbar-brand fw-bold nav-link" href="{% url 'home' %}"> Kern Suits</a>
     <div class="collapse navbar-collapse justify-content-end">
-        <form method="GET" action="{% url 'home' %}">
+        <form method="GET" action="{% url 'products' %}">
             {% csrf_token %}
             <div class="input-group w-100">
                 <input class="form-control border border-black rounded-0" type="text" name="q"
@@ -39,7 +39,7 @@
                     {% if request.user.is_superuser %}
                     <a href="#" class="dropdown-item nav-link">Product Management</a>
                     {% endif %}
-                    <a href="#" class="dropdown-item nav-link">My Profile</a>
+                    <a href="{% url 'profile' %}" class="dropdown-item nav-link">My Profile</a>
                     <a href="{% url 'account_logout' %}" class="dropdown-item nav-link">Logout</a>
                     {% else %}
                     <a href="{% url 'account_signup' %}" class="dropdown-item nav-link">Register</a>
