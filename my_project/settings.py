@@ -53,6 +53,8 @@ INSTALLED_APPS = [
     'home',  # home-app    
     'products',  # products-app
     'bag',  # bag-app
+    'checkout',  # checkout-app
+    'user',  # user-app
 ]
 
 SITE_ID = 1
