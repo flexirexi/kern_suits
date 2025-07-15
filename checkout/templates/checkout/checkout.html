@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
 {% endblock %}
 
+{% block extra_js_header %}
+    <script src="https://js.stripe.com/v3/"></script>
+{% endblock %}
 {% block content %}
 <main class="">
     {% if bag_items %}
@@ -48,7 +51,7 @@
 
             <!-- Right column: Checkout Form -->
             <div class="col-12 col-lg-6 order-1 order-lg-2 pb-2 ps-md-5 pe-md-5">
-                <h2 class="h4 mb-2 mt-3">Your Details</h2>
+                <h2 class="h4 mb-3 mt-3">Your Details</h2>
                 <form method="POST" action="{% url 'checkout' %}" class="ps-3 pe-3" >
                     {% csrf_token %}
                     {% crispy form %}
@@ -62,7 +65,13 @@
                                 <a class="text-info" href="{% url 'account_login' %}"><small>login</small></a> <small>to save this information</small>
                             </label>
                         {% endif %}
-
+                    </div>
+                    <div class="form-group mt-4">
+                        <label for="card-element">Credit or Debit Card</label>
+                        <div id="card-element" class="form-control">
+                            <!-- Stripe Element wird hier eingefügt -->
+                        </div>
+                        <div id="card-errors" role="alert" class="text-danger mt-2"></div>
                     </div>
                     <div class="d-flex w-100">
                         <button type="submit" class="btn btn-dark btn-block mt-3 ms-auto">
@@ -78,4 +87,11 @@
         <a href="{% url 'products' %}" class="btn btn-secondary mt-3">Continue Shopping</a>
     {% endif %}
 </main>
+{% endblock %}
+
+{% block extra_scripts %}
+    {{ block.super }}
+    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
+    {{ client_secret|json_script:"id_client_secret" }}
+    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
 {% endblock %}

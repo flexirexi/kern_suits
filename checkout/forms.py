@@ -42,7 +42,15 @@ class OrderForm(forms.ModelForm):
                 Column('last_name', css_class='form-group col-md-6 mb-0'),
                 css_class='form-row'
             ),
-            *[f for f in self.fields if f not in ('first_name', 'last_name')]
+            'email',
+            'phone',
+            'address_line1',
+            Row(
+                Column('postal_code', css_class='form-group col-md-6 mb-0'),
+                Column('city', css_class='form-group col-md-6 mb-0'),
+                css_class='form-row'
+            ),
+            'country',
         )
 
         self.fields['first_name'].widget.attrs['autofocus'] = True
