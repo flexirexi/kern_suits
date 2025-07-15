@@ -6,7 +6,80 @@
 {% endblock %}
 
 {% block content %}
-<main>
-    
+<main class="container pb-4 ">
+    <a href="{% url 'products' %}" class="btn-white btn-outline-secondary mb-3 mt-4 ">
+        <div class="d-none d-sm-block">&lt; Back to the shop</div>
+        <div class="d-block d-sm-none">&lt;</div>
+    </a>
+    <h2 class="text-center mb-4 ">Shopping bag</h2>
+    <div class="row ms-auto me-auto">
+        <div class="col-12">
+            {% for item in bag_items %}
+            <div class="row py-3 border-bottom align-items-start bag-row">
+                <div class="col-4 col-md-2">
+                    <img src="{{ item.variant.product.image.url }}" alt="{{ item.variant.product.name }}" class="img-fluid">
+                </div>
+                <div class="col-8 col-md-4">
+                    <h5>{{ item.variant.product.name }}</h5>
+                    <p class="mb-1">Color: {{ item.variant.color }}</p>
+                    <p class="mb-1">Size: {{ item.variant.size }}</p>
+                    <p class="mb-1">Fit: {{ item.variant.fit }}</p>
+                    <p class="mb-1"><strong>{{ item.variant.price|floatformat:2 }}€</strong></p>
+                </div>
+                <div class="col-12 col-md-6 mt-3 mt-md-0 d-lg-flex bag-forms">
+                    <form method="POST" action="{% url 'update_bag' item.variant.id %}" class="d-flex align-items-center flex-wrap gap-2">
+                        {% csrf_token %}
+                        <label class="me-1 mb-0 ms-auto"><small>Quantity</small></label>
+                        <div class="input-group" style="max-width: 140px;">
+                            <button
+                                type="button"
+                                class="btn btn-outline-secondary"
+                                onclick="
+                                    const form = this.form;
+                                    form.quantity.stepDown();
+                                    form.requestSubmit();
+                                ">
+                                -
+                            </button>
+                            <input
+                                type="number"
+                                name="quantity"
+                                value="{{ item.quantity }}"
+                                min="0"
+                                class="form-control text-center"
+                            >
+                            <button
+                                type="button"
+                                class="btn btn-outline-secondary"
+                                onclick="
+                                const form = this.form;
+                                form.quantity.stepUp();
+                                form.requestSubmit();
+                                ">
+                                +
+                            </button>
+                        </div>
+                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                        <button class="btn btn-primary" type="submit" name="update">Update</button>
+                        
+                    </form>
+                    <form method="POST" action="{% url 'remove_from_bag' item.variant.id %}" class="d-flex" >
+                        {% csrf_token %}
+                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                        <button type="submit" class="btn btn-outline-danger text-end text-lg-start ms-auto mt-3 mt-lg-0 ms-lg-2">Remove</button>
+                    </form>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="row mt-4 ms-auto me-auto">
+        <div class="col text-end">
+            <p class="mb-1">Shipping: <strong>free</strong></p>
+            <p class="h5 mb-3">Grand Total: <strong>{{ grand_total|floatformat:2 }}€</strong></p>
+            <a href="#" class="btn btn-dark btn-lg">Checkout</a>
+        </div>
+    </div>
 </main>
 {% endblock %}

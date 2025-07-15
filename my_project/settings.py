@@ -100,6 +100,7 @@ TEMPLATES = [
                 "django.template.context_processors.request",  # allauth
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
+                "bag.contexts.bag_contents",  # bag app's context processor
             ],
         },
     },

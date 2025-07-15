@@ -9,6 +9,10 @@
 <div class="container">
 
     <main class="container pt-4">
+        <a href="{% url 'products' %}" class="btn-white btn-outline-secondary mb-3">
+            <div class="d-none d-sm-block">&lt; Back to the shop</div>
+            <div class="d-block d-sm-none">&lt;</div>
+        </a>
         <!------------------------- 01 VARIANT SECTION ------------------------->
         <div class="row mb-5">
             <div class="col-sm-6 mb-3">
@@ -80,19 +84,23 @@
                 <div class="mt-4">
                     <b><small class="mb-0 text-success">in stock: {{ max_qty }}</small></b>
                 </div>
-                <div class="d-flex align-items-center ">
-
-                        <label class="form-label mb-0 me-2">QTY:</label>
-                        <select class="form-select form-select-sm qty-select mt-1 me-2" style="width:80px;">
+                <form method="POST" action="{% url 'add_to_bag' %}">
+                    {% csrf_token %}
+                    <div class="d-flex align-items-center ">
+                        <label class="form-label mb-0 me-2" for="quantity" class="form-label">QTY:</label>
+                        <select class="form-select form-select-sm qty-select mt-1 me-2" style="width:80px;" id="quantity" name="quantity" >
                             {% for i in qty_range %}
                                 <option value="{{ i }}">{{ i }}</option>
                             {% endfor %}
                         </select>
 
-                    <button class="btn btn-primary ms-auto add-to-cart-btn">
-                        Add to Cart
-                    </button>
-                </div>
+                        <input type="hidden" name="variant_id" value="{{ selected_variant.id }}">
+                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                        <button type="submit" class="btn btn-dark">
+                            Add to Cart
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
         <hr>

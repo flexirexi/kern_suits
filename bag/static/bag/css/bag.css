@@ -1,0 +1,17 @@
+@import url("/static/css/themes.css");
+@import url("/static/css/layout.css");
+
+[data-theme] .bag-row {
+    height: fit-content;
+}
+
+[data-theme] main .row {
+    max-width: 1100px;
+    align-self: center;
+}
+/* MEDIA QUERIES ---------------------------------------------------------- */
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}

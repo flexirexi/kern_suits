@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-md px-4">
-    <a class="navbar-brand fw-bold nav-link" href="{% url 'home' %}"> Kern: Shop</a>
+    <a class="navbar-brand fw-bold nav-link" href="{% url 'products' %}"> Kern: Shop</a>
     <div class="collapse navbar-collapse justify-content-end">
         <form method="GET" action="{% url 'products' %}">
             {% csrf_token %}
@@ -17,7 +17,7 @@
         </form>
         <ul class="navbar-nav align-items-center">
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="{% url 'bag' %}">
                     <i class="fas fa-bag-shopping" style="color: var(--nav-icon);"></i>
                 </a>
             </li>

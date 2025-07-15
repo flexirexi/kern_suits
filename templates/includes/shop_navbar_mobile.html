@@ -2,10 +2,10 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand fw-bold nav-link" href="{% url 'home' %}">Kern</a>
+    <a class="navbar-brand fw-bold nav-link" href="{% url 'products' %}">Kern</a>
     <div class="d-flex align-items-center">
-        <a class="nav-link" href="#">
-            <i class="fas fa-bag-shopping" style="color: var(--nav-icon);""></i>
+        <a class="nav-link" href="{% url 'bag' %}">
+            <i class="fas fa-bag-shopping" style="color: var(--nav-icon);"></i>
         </a>
         <div class="nav-item dropdown">
             <a class="nav-link" 
