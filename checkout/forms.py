@@ -36,6 +36,7 @@ class OrderForm(forms.ModelForm):
 
         # make the form "nice"
         self.helper = FormHelper()
+        self.helper.form_tag = False  # added because crispy forms stops working without..
         self.helper.layout = Layout(
             Row(
                 Column('first_name', css_class='form-group col-md-6 mb-0'),

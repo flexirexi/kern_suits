@@ -52,7 +52,7 @@
             <!-- Right column: Checkout Form -->
             <div class="col-12 col-lg-6 order-1 order-lg-2 pb-2 ps-md-5 pe-md-5">
                 <h2 class="h4 mb-3 mt-3">Your Details</h2>
-                <form method="POST" action="{% url 'checkout' %}" class="ps-3 pe-3" >
+                <form method="POST" action="{% url 'checkout' %}" class="ps-3 pe-3" id="payment-form">
                     {% csrf_token %}
                     {% crispy form %}
                     <div class="d-flex align-items-center mb-0">
@@ -67,14 +67,14 @@
                         {% endif %}
                     </div>
                     <div class="form-group mt-4">
-                        <label for="card-element">Credit or Debit Card</label>
+                        <p>Credit or Debit Card</p>
                         <div id="card-element" class="form-control">
-                            <!-- Stripe Element wird hier eingefügt -->
+                            <!-- Stripe Element  -->
                         </div>
                         <div id="card-errors" role="alert" class="text-danger mt-2"></div>
                     </div>
                     <div class="d-flex w-100">
-                        <button type="submit" class="btn btn-dark btn-block mt-3 ms-auto">
+                        <button type="submit" class="btn btn-dark btn-block mt-3 ms-auto" id="submit-button">
                             Place Order
                         </button>
                     </div>
