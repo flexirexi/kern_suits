@@ -16,7 +16,11 @@
         <!------------------------- 01 VARIANT SECTION ------------------------->
         <div class="row mb-5">
             <div class="col-sm-6 mb-3">
-                <img src="{{ product.image.url }}" alt="{{ product.name }}" class="img-fluid w-100">
+                {% if product.image %}
+                    <img src="{{ product.image.url }}" alt="{{ product.name }}" class="img-fluid w-100">
+                {% else %}
+                    <img class="img-fluid w-100" src="{{ MEDIA_URL }} img/noimage.png" alt="No image for product: {{ product.name }}">
+                {% endif %}
             </div>
             <div class="col-sm-6 variant-section-details">
                 <h4>{{ product.name }}</h4>

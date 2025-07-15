@@ -181,7 +181,7 @@
                             {% if product.image %}
                                 <a href="{% url 'product_details' product.id %}"><img src="{{ product.image.url }}" alt="{{ product.name }}" class="card-img-top" height="100%"></a>
                             {% else %}
-                                <img src="https://via.placeholder.com/300x200?text=No+Image" alt="No image" class="card-img-top" height="100%">
+                                <a href="{% url 'product_details' product.id %}"><img class="card-img-top" src="{{ MEDIA_URL }} img/noimage.png" alt="No image for product: {{ product.name }}" height="100%"></a>
                             {% endif %}
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title">{{ product.name }}</h5>
