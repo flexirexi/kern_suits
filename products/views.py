@@ -121,7 +121,7 @@ def products(request):
 
 def product_details(request, product_id):
     """A view to show all products details necessary to decide whether to buy a product or not"""
-
+    messages.success(request, "funzt.")
     # first, load from the db..
     product = get_object_or_404(Product, pk=product_id)
     variants = ProductVariant.objects.filter(product=product)
@@ -171,7 +171,7 @@ def product_details(request, product_id):
     variant_options_json = json.dumps(variant_options)
     
     max_qty = min(selected_variant.stock, 10)
-    
+
     context = {
         "max_qty": max_qty,
         'qty_range': range(1, max_qty+1),

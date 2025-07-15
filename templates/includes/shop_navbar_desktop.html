@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-md px-4">
-    <a class="navbar-brand fw-bold nav-link" href="{% url 'products' %}"> Kern: Shop</a>
+    <a class="navbar-brand fw-bold nav-link" href="{% url 'home' %}"> Kern Suits</a>
     <div class="collapse navbar-collapse justify-content-end">
-        <form method="GET" action="{% url 'products' %}">
+        <form method="GET" action="{% url 'home' %}">
             {% csrf_token %}
             <div class="input-group w-100">
                 <input class="form-control border border-black rounded-0" type="text" name="q"
@@ -17,12 +17,12 @@
         </form>
         <ul class="navbar-nav align-items-center">
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'bag' %}">
+                <a class="nav-link hover" href="{% url 'bag' %}">
                     <i class="fas fa-bag-shopping" style="color: var(--nav-icon);"></i>
                 </a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link" 
+                <a class="nav-link hover" 
                     href="#" data-bs-toggle="dropdown" aria-haspopup="true" id="user-options" role="button">
                     {% if request.user.is_authenticated %}
                         {% if request.user.is_superuser %}
