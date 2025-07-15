@@ -23,7 +23,6 @@ def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
     
-    
     if not stripe_public_key:
         messages.warning(request, 'Stripe public key is missing.')
     
@@ -84,10 +83,10 @@ def checkout(request):
         }
         order_form = OrderForm(form_data)
         if order_form.is_valid():
-            # Hier der Checkout-Logikblock:
-            # - Bestellung speichern
-            # - PaymentIntent finalisieren
-            # - Success-Redirect
+            # checkou:
+            # save order
+            # finish payment intents
+            # Success-Redirect
             order = order_form.save(commit=False)
             print("POST DATA:", request.POST)
             pid = request.POST.get('client_secret').split('_secret')[0]
