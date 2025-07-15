@@ -2,6 +2,7 @@ from django.db import models
 from django.conf import settings
 from django_countries.fields import CountryField
 import uuid
+from decimal import Decimal
 
 from products.models import ProductVariant
 # from user.models import UserProfile  # not yet created but i had issue in the last project changing models, so I do it now
@@ -68,7 +69,7 @@ class Order(models.Model):
         self.total_amount = sum(
             item.price * item.quantity for item in self.items.all()
         )
-        self.grand_total = self.total_amount + self.delivery_costs
+        self.grand_total = Decimal(str(self.total_amount)) + Decimal(str(self.delivery_costs))
         self.save()
 
     def save(self, *args, **kwargs):

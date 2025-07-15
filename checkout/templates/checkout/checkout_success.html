@@ -1,0 +1,65 @@
+{% extends "checkout/base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'checkout/css/checkout_success.css' %}">
+{% endblock %}
+
+{% block content %}
+<main class="container pb-4 ">
+    <div class="d-flex">
+        <a href="{% url 'products' %}" class="btn-white btn-outline-secondary mb-3 mt-4 ">
+            <div class="d-none d-sm-block">&lt; Back to the shop</div>
+            <div class="d-block d-sm-none">&lt;</div>
+        </a>
+        <button onclick="window.print()" class="btn-white btn-outline-secondary ms-auto mb-3 mt-4">
+            <i class="fas fa-print me-2"></i> Save as PDF
+        </button>
+    </div>
+    <div class="a4-document">
+        <div class="d-flex">
+            <div>
+                <h1>Order Confirmation</h1>
+            </div>
+            <div class="logo ms-auto border m-3 d-flex justify-content-center align-items-center">
+                <div class="logo-text">Kern</div>
+            </div>
+        </div>
+        <p><strong>Order Number:</strong> {{ order.order_number }}</p>
+        <p><strong>Email:</strong> {{ order.email }}</p>
+        <p><strong>Phone:</strong> {{ order.phone }}</p>
+
+        <h4>Delivery Address</h4>
+        <p>
+            {{ order.address_line1 }}<br>
+            {% if order.address_line2 %}{{ order.address_line2 }}<br>{% endif %}
+            {{ order.postal_code }} {{ order.city }}<br>
+            {{ order.country }}
+        </p>
+        
+        <h4>Order Summary</h4>
+        <p>Subtotal: {{ order.total_amount }}</p>
+        <p>Delivery: {{ order.delivery_costs }}</p>
+        <p><strong>Grand Total:</strong> {{ order.grand_total }}</p>
+        <p><strong><small class="text-success">Fully paid: {{ order.created_at }}</small></strong></p>
+
+        <div class="footer">
+            <p>
+                <strong>Kern Anzüge</strong><br>
+                <strong>Owners:</strong> Mark Anton & Marcus Cicero<br>
+                Anubis Square 1<br>
+                34567 Atlantis<br>
+                Ocean<br>
+                Phone: +0123 4567 90<br>
+                E-mail: requests@kern.de
+            </p>
+            <p>
+                <strong>VAT ID:</strong><br>
+                VAT identification number in accordance with Section XX German VAT Act:<br>
+                DE1234567890
+            </p>
+        </div>
+    </div>
+
+</main>
+{% endblock %}
