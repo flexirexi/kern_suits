@@ -1,5 +1,6 @@
 {% extends "products/base.html" %}
 {% load static %}
+{% load querystring %}
 
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'products/css/products.css' %}">
@@ -19,6 +20,25 @@
             <i class="bi bi-funnel"></i> Filter
         </button>
         <h2 class="mb-2 flex-grow-1 text-center mt-3">SHOP</h2>
+        <div class="dropdown mb-3">
+            <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="sortDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                {% if sort == "name_asc" %}Name A-Z
+                {% elif sort == "name_desc" %}Name Z-A
+                {% elif sort == "series_asc" %}Series A-Z
+                {% elif sort == "series_desc" %}Series Z-A
+                {% elif sort == "price_asc" %}Price ↑
+                {% elif sort == "price_desc" %}Price ↓
+                {% else %}Sortieren nach{% endif %}
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="sortDropdown">
+                <li><a class="dropdown-item" href="?{% querystring request sort='name_asc' %}">Name A-Z</a></li>
+                <li><a class="dropdown-item" href="?{% querystring request sort='name_desc' %}">Name Z-A</a></li>
+                <li><a class="dropdown-item" href="?{% querystring request sort='series_asc' %}">Series A-Z</a></li>
+                <li><a class="dropdown-item" href="?{% querystring request sort='series_desc' %}">Series Z-A</a></li>
+                <li><a class="dropdown-item" href="?{% querystring request sort='price_asc' %}">Price ↑</a></li>
+                <li><a class="dropdown-item" href="?{% querystring request sort='price_desc' %}">Price ↓</a></li>
+            </ul>
+        </div>
     </div>
     <div class="row">
         <!--------------------  FILTERS ------------------->

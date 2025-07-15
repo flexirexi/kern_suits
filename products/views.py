@@ -21,6 +21,7 @@ def products(request):
     
     # read in the GET-method params
     query = request.GET.get("q")
+    sort = request.GET.get("sort")
     selected_categories = request.GET.getlist('category')
     selected_fits = request.GET.getlist('fit')
     selected_occasions = request.GET.getlist('occasion')
@@ -40,6 +41,18 @@ def products(request):
             Q(variants__size__name__icontains=query) |
             Q(variants__color__name__icontains=query)
         ).distinct()
+    
+    # handle sorting
+    sort_options = {
+        "name_asc": "name",
+        "name_desc": "-name",
+        "series_asc": "series__name",
+        "series_desc": "-series__name",
+        "price_asc": "price_"
+    }
+    
+    if sort in sort_options and sort not in ["price_asc", "price_desc"]:
+        products = products.order_by(sort_options[sort])  # sort of prices are below min price calculation
     
     # apply each filter
     if selected_categories:
@@ -71,6 +84,19 @@ def products(request):
         p.max_price = max([v.price for v in variants], default=None)
         print(f"MINIMUM PRICE {p.name}: {p.min_price}")
     
+    # continue to sort by price -> now, we have the min prices
+    if sort == "price_asc":
+        products = sorted(
+            products,
+            key=lambda p: p.min_price if p.min_price is not None else float('inf')
+        )
+    elif sort == "price_desc":
+        products = sorted(
+            products,
+            key=lambda p: p.min_price if p.min_price is not None else 0,
+            reverse=True
+        )
+    
     context = {
         'products': products,
         'search_term': query,
@@ -86,6 +112,7 @@ def products(request):
         'selected_fabrics': selected_fabrics, 
         'selected_colors': selected_colors, 
         'selected_series': selected_series, 
+        'sort': sort,
         
     }
     
