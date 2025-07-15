@@ -15,13 +15,12 @@
             <!-- left columns shopping bag list -->
             <div class="col-12 col-lg-6  order-2 order-lg-1 shopping-bag-container">
                 <div class="mt-3 text-end">
-                    <h5>Order Total: ${{ total|floatformat:2 }}</h5>
-                    {% if delivery_costs %}
-                    <p class="small text-muted">+ Delivery: ${{ delivery_costs|floatformat:2 }}</p>
-                    {% endif %}
-                    <h4><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
+                    <h5>Order Total: ${{ grand_total|floatformat:2 }}</h5>
+                    <p class="small text-muted">+ Delivery: ${{ delivery_cost|floatformat:2 }}</p>
+                    <h4 class="mb-3"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
+                    <hr>
                 </div>
-                <div class="cart-scroll-container p-3 border rounded">
+                <div class="cart-scroll-container p-3  rounded">
                     {% for item in bag_items %}
                     <div class="row mb-2 pb-2 border-bottom">
                         <div class="col-2 ps-4">
@@ -49,13 +48,27 @@
 
             <!-- Right column: Checkout Form -->
             <div class="col-12 col-lg-6 order-1 order-lg-2 pb-2 ps-md-5 pe-md-5">
-                <h2 class="h4 mb-3 mt-3">Your Details</h2>
+                <h2 class="h4 mb-2 mt-3">Your Details</h2>
                 <form method="POST" action="{% url 'checkout' %}" class="ps-3 pe-3" >
                     {% csrf_token %}
-                    {{ form|crispy }}
-                    <button type="submit" class="btn btn-dark btn-block mt-3">
-                        Place Order
-                    </button>
+                    {% crispy form %}
+                    <div class="d-flex align-items-center mb-0">
+                        {% if user.is_authenticated %}
+                            <label class="form-check-label me-2" for="id-save-info">Save this information to my profile</label>
+                            <input class="form-check-input ml-2 me-0" type="checkbox" id="id-save-info" name="save-info" checked>
+                        {% else %}
+                            <label class="form-check-label" for="id-save-info">
+                                <a class="text-info" href="{% url 'account_signup' %}"><small>Create an Account</small></a> <small>or</small> 
+                                <a class="text-info" href="{% url 'account_login' %}"><small>login</small></a> <small>to save this information</small>
+                            </label>
+                        {% endif %}
+
+                    </div>
+                    <div class="d-flex w-100">
+                        <button type="submit" class="btn btn-dark btn-block mt-3 ms-auto">
+                            Place Order
+                        </button>
+                    </div>
                 </form>
             </div>
         </div>

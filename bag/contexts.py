@@ -18,6 +18,7 @@ def bag_contents(request):
         subtotal = variant.price * quantity
         total += subtotal
         variant_count += quantity
+        delivery_cost = 0
         
         bag_items.append({
             "variant": variant,
@@ -29,6 +30,7 @@ def bag_contents(request):
         "bag_items": bag_items,
         "grand_total": total,
         "variant_count": variant_count,
+        "delivery_cost": delivery_cost,
     }
     
     return context

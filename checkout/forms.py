@@ -1,5 +1,7 @@
 from django import forms
 from .models import Order
+from crispy_forms.helper import FormHelper
+from crispy_forms.layout import Layout, Row, Column
 
 
 class OrderForm(forms.ModelForm):
@@ -31,6 +33,17 @@ class OrderForm(forms.ModelForm):
             'city': 'City',
             'country': 'Country',
         }
+
+        # make the form "nice"
+        self.helper = FormHelper()
+        self.helper.layout = Layout(
+            Row(
+                Column('first_name', css_class='form-group col-md-6 mb-0'),
+                Column('last_name', css_class='form-group col-md-6 mb-0'),
+                css_class='form-row'
+            ),
+            *[f for f in self.fields if f not in ('first_name', 'last_name')]
+        )
 
         self.fields['first_name'].widget.attrs['autofocus'] = True
 

@@ -47,4 +47,5 @@
     [data-theme] .shopping-bag-container {
         max-height: calc(100vh - var(--nav-height) - 120px); /* Reserve Platz für Footer & Padding */
     }
+
 }
