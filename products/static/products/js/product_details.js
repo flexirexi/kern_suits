@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 (newFit ? v.fit === newFit : true)
             );
             if (fallback) {
-                window.location.href = `/products/${productId}?variant=${fallback.id}`;
+                window.location.href = `/products/${productId}?variant=${fallback.id}&notice=adjusted`;
                 // remember to notify the buyer that the previous other options changed.
             } else {
                 alert("No combination available for this product. Please choose another one.");

@@ -30,6 +30,7 @@ def add_to_bag(request):
             bag[variant_id] = quantity
 
         request.session["bag"] = bag
+        messages.success(request, "Successfully added to the shopping bag.")
 
         return redirect(redirect_url)
 

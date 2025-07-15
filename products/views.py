@@ -121,7 +121,6 @@ def products(request):
 
 def product_details(request, product_id):
     """A view to show all products details necessary to decide whether to buy a product or not"""
-    messages.success(request, "funzt.")
     # first, load from the db..
     product = get_object_or_404(Product, pk=product_id)
     variants = ProductVariant.objects.filter(product=product)
@@ -140,7 +139,6 @@ def product_details(request, product_id):
     for p in more_from_series:
         p.min_price = min([v.price for v in p.variants.all()], default=None)
         p.max_price = max([v.price for v in p.variants.all()], default=None)
-        print(f"Rating: {p.name}: {p.rating}")
     
     # now, we have to choose a variant to load - it's better in the url than in JS
     variant_id = request.GET.get("variant")
@@ -148,7 +146,8 @@ def product_details(request, product_id):
         try:
             selected_variant = variants.get(id=variant_id)
         except ProductVariant.DoesNotExist:
-            selected_variant = variants.first()
+            selected_variant = variants.first(),
+            
     else:
         selected_variant = variants.first()
         if selected_variant:
@@ -172,6 +171,9 @@ def product_details(request, product_id):
     
     max_qty = min(selected_variant.stock, 10)
 
+    # before the end, load possible toasts coming from the frontend:
+    if request.GET.get("notice") == "adjusted":
+        messages.info(request, "NOTE: the combination you selected is not available. Another has been selected.")
     context = {
         "max_qty": max_qty,
         'qty_range': range(1, max_qty+1),
