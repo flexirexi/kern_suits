@@ -26,7 +26,17 @@
             <div class="collapse d-md-block" id="filtersCollapse">
                 <div class="card" id="filtersCard">
                     <div class="card-body">
-                        <h5 class="card-title filter">Filter</h5>
+                        <div class="d-flex mb-2">
+                            <div class="mt-2">
+                                <h5 class="card-title filter">Filter</h5>
+                            </div>
+                            <div class="ms-auto">
+                                <a href="{% url 'products' %}" class="btn-sm border btn-white" title="Filter zurücksetzen">
+                                    <i class="fas fa-undo"></i>
+                                </a>
+                            </div>
+
+                        </div>
                         <form id="filterForm" method="get">
                             <!------------ Occasion ------------>
                             <div class="mb-3">

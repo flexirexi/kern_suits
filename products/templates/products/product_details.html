@@ -129,7 +129,9 @@
             <div class="d-flex overflow-auto gap-3 mt-3 h-100 p-2">
                 {% for related in more_from_series %}
                     <div class="card series-section-card" >
-                        <img src="{{ related.image.url }}" class="card-img-top" alt="{{ related.name }}">
+                        <a href="{% url 'product_details' related.pk %}" >
+                            <img src="{{ related.image.url }}" class="card-img-top" alt="{{ related.name }}">
+                        </a>
                         <div class="card-body p-2">
                             <div class="fw-bold">{{ related.name }}</div>
                             <div class="small fw-bold">{{ related.min_price }}€</div>

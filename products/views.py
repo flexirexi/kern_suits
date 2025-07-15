@@ -28,6 +28,19 @@ def products(request):
     selected_colors = request.GET.getlist('colors')
     selected_series = [int(s) for s in request.GET.getlist('series') if s.strip() != '']
 
+    # handle query
+    if (query):
+        products = products.filter(
+            Q(name__icontains=query) |
+            Q(description__icontains=query) |
+            Q(series__name__icontains=query) |
+            Q(series__description__icontains=query) |
+            Q(category__name__icontains=query) |
+            Q(variants__fit__name__icontains=query) |
+            Q(variants__size__name__icontains=query) |
+            Q(variants__color__name__icontains=query)
+        ).distinct()
+    
     # apply each filter
     if selected_categories:
         products = products.filter(category__name__in=selected_categories)
