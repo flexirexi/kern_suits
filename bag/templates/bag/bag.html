@@ -17,7 +17,11 @@
             {% for item in bag_items %}
             <div class="row py-3 border-bottom align-items-start bag-row">
                 <div class="col-4 col-md-2">
-                    <img src="{{ item.variant.product.image.url }}" alt="{{ item.variant.product.name }}" class="img-fluid">
+                    {% if item.variant.product.image %}
+                        <img src="{{ item.variant.product.image.url }}" alt="{{ item.variant.product.name }}" class="img-fluid">
+                    {% else %}
+                        <img class="img-fluid" src="{{ MEDIA_URL }} img/noimage.png" alt="No image for product: {{ item.variant.product.name }}">
+                    {% endif %}
                 </div>
                 <div class="col-8 col-md-4">
                     <h5>{{ item.variant.product.name }}</h5>
