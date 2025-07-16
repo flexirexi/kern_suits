@@ -93,6 +93,7 @@ def checkout(request):
             order.stripe_pid = pid
             order.original_bag = json.dumps(bag)
             order.user = request.user
+            order.status = dict(settings.STATUS_CHOICES)["paid"]
             order.save()
             for item_id, item_data in bag.items():
                 try:

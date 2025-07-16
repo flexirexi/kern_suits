@@ -1,6 +1,10 @@
 @import url("/static/css/themes.css");
 @import url("/static/css/layout.css");
 
+[data-theme] body {
+    background-color: var(--bgDefault);
+}
+
 [data-theme] main {
     max-width: 900px;
     margin-top: 0;

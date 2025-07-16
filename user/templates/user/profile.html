@@ -65,7 +65,7 @@
         <!-- Price and Meta -->
         <div class="col-12 col-md-3 mt-3 mt-md-0 d-flex flex-column justify-content-between">
             <div>
-                <div class="fw-bold mb-1">€{{ item.price }}</div>
+                <div class="fw-bold mb-1">€{{ item.price }} <small>per item</small></div>
                 <small>Purchased: {{ item.created_at|date:"Y-m-d" }}</small><br>
                 <small>QTY: {{ item.quantity }}</small>
             </div>
@@ -74,7 +74,7 @@
         <!-- CTA Buttons -->
         <div class="col-12 col-md-2 mt-3 mt-md-0 text-md-end">
             <!-- 'order_detail' item.order.order_number -->
-            <a href="{% url 'order_details' order_id=item.id %}" class="btn btn-outline-primary btn-sm mb-2 w-100">View Order</a>
+            <a href="{% url 'order_details' order_id=item.order.id %}" class="btn btn-outline-primary btn-sm mb-2 w-100">View Order</a>
             <a href="#" class="btn btn-outline-secondary btn-sm w-100">Rate this Product</a>
         </div>
     </div>

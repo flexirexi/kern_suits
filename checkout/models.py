@@ -10,14 +10,6 @@ from products.models import ProductVariant
 
 # Create your models here.
 class Order(models.Model):
-    STATUS_CHOICES = [
-        ('created', 'Created'),
-        ('paid', 'Paid'),
-        ('shipped', 'Shipped'),
-        ('completed', 'Completed'),
-        ('cancelled', 'Cancelled'),
-    ]
-
     order_number = models.CharField(
         max_length=32,
         unique=True,
@@ -38,7 +30,7 @@ class Order(models.Model):
 
     status = models.CharField(
         max_length=20,
-        choices=STATUS_CHOICES,
+        choices=settings.STATUS_CHOICES,
         default='created'
     )
 

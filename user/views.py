@@ -42,6 +42,7 @@ def order_details(request, order_id):
         id=order_id,
         user=request.user
     )
+    print(f"ORDER: {order.user}")
     order_items = (
         OrderItem.objects.filter(order=order)
         .select_related(

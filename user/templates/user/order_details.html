@@ -3,13 +3,13 @@
 {% load crispy_forms_tags %}
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'user/css/profile.css' %}">
+    <link rel="stylesheet" href="{% static 'user/css/order_details.css' %}">
 {% endblock %}
 
 {% block content %}
 <main>
-<a href="{% url 'profile' %}" class="btn btn-outline-secondary back-button">
-    ← Back to Profile
+<a href="{% url 'profile' %}" class="btn btn-light back-button">
+    ←  Profile
 </a>
 
 <div class="order-card">
@@ -21,7 +21,7 @@
             Date: {{ order.created_at|date:"Y-m-d" }}
         </div>
         <div class="order-total">
-            Total Paid: €{{ order.grand_total }}
+            <small>Total Paid: </small> {{ order.grand_total }} € 
         </div>
     </div>
 
