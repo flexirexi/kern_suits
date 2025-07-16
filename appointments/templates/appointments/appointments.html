@@ -1,0 +1,64 @@
+{% extends "appointments/base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'appointments/css/appointments.css' %}" />
+{% endblock %}
+
+{% block content %}
+<div class="container p-4">
+    <div class="row">
+        <!-- Left Column -->
+        <div class="col-md-6 mb-4">
+            <h5 class="mb-3">When do you want to book?</h5>
+            <p>Usually, one hour is planned for an appointment slot. Please choose your block.</p>
+
+            <!-- Date picker -->
+            <div class="mb-3">
+                <label for="datePicker" class="form-label">Choose a date</label>
+                <input type="date" id="datePicker" class="form-control" min="{{ today }}" value="{{ tomorrow }}"
+                    required />
+            </div>
+
+            <!-- Time slot dropdown -->
+            <div class="mb-3">
+                <label for="timeSelect" class="form-label">Uhrzeit</label>
+                <select id="timeSelect" class="form-select" disabled required>
+                    <option value="">Bitte Datum wählen</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- right column -->
+        <div class="col-md-6">
+            <h5>Book an appointment</h5>
+            <form method="post">
+                
+                {% csrf_token %}
+                <!-- appointment type -->
+                <div class="mb-3">
+                    <label for="appointmentType" class="form-label">Appointment type</label>
+                    {{ form.appointment_type }}
+                </div>
+
+                <!-- comment -->
+                <div class="mb-3">
+                    <label for="comment" class="form-label">Any wishes?</label>
+                    <textarea name="comment" id="comment" class="form-control"></textarea>
+                </div>
+
+                <!-- Hidden inputs -->
+                <input type="hidden" name="start_datetime" id="startDatetimeInput" />
+
+                <button type="submit" class="btn btn-primary">Book</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block extra_scripts %}
+    {{ booked_slots|json_script:"booked-slots" }}
+    <script type="module" src="{% static 'appointments/js/appointments.js' %}"></script>
+{% endblock %}

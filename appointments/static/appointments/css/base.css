@@ -4,3 +4,9 @@
 [data-theme] body {
     background-color: var(--bgDefault);
 }
+
+
+
+@media (min-width: 992px) {
+
+}
