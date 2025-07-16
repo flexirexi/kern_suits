@@ -1,0 +1,77 @@
+@import url("/static/css/themes.css");
+@import url("/static/css/layout.css");
+
+/* in mobile mode: "nomal" scrolling down (d-block) */
+.a4-document {
+    max-width: 21cm;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+.a4-document h1, .a4-document h4, .a4-document h5 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+.a4-document p {
+    margin: 0.3rem 0;
+}
+[data-theme] .footer {
+    margin-top: 2rem;
+    border-top: 1px solid #ddd;
+    padding-top: 1rem;
+    font-size: 12px;
+    color: #555;
+}
+
+[data-theme] footer {
+    position: static;
+
+}
+
+.logo {
+    background-color: var(--nav-bg);
+    width: 100px;
+    height: 50px;
+}
+
+.logo-text {
+    font-size: 22px;
+    font-family: "Cinzel", serif;
+    color: var(--act2-text);
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    .a4-document, .a4-document * {
+        visibility: visible;
+    }
+    .a4-document {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .a4-document {
+        width: 21cm;
+        margin: 0 auto;
+        padding: 2cm;
+        border: none;
+        box-shadow: none;
+    }
+
+    body {
+        background: white !important;
+    }
+}
+
+
+/* in desktop mode: viewport-fitting layout */
+@media (min-width: 992px) {
+
+
+}

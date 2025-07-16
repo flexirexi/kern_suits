@@ -1,0 +1,27 @@
+@import url("/static/css/themes.css");
+@import url("/static/css/layout.css");
+
+h5.price,
+h5.filter {
+    font-weight: bold;
+}
+
+#filtersCard:hover {
+    transform: none;
+}
+
+[data-theme] .card img {
+    object-fit: cover;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+.star {
+    font-size: 1.2rem;
+    color: #ddd; /* grau */
+}
+
+.star.filled {
+    color: #ffc107; /* gelb */
+}
+

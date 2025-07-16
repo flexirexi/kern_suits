@@ -1,0 +1,34 @@
+@import url("/static/css/themes.css");
+@import url("/static/css/layout.css");
+
+[data-theme] body {
+    background-color: var(--bgDefault);
+}
+
+[data-theme] main {
+    padding-top: var(--nav-height);
+    width: 100%;
+    margin-top: 0;
+}
+
+[data-theme] main > div {
+    max-width: 900px;
+    padding-top: 
+}
+
+[data-theme] .personal-data-container {
+    border-radius: 0.5rem;
+    background-color: var(--bgDefault2); 
+    padding: 0 20px;
+}
+
+.star {
+    font-size: 1.2rem;
+  color: #ccc; /* grau */
+}
+.star.filled {
+    color: #ffc107; /* gelb */
+}
+
+@media (min-width:768px) {
+}

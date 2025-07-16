@@ -1,0 +1,86 @@
+@import url("/static/css/themes.css");
+@import url("/static/css/layout.css");
+
+[data-theme] body {
+    background-color: var(--bgDefault);
+}
+
+[data-theme] .hero-section {
+    width: 100%;
+    height: 80vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    overflow: hidden;
+}
+
+[data-theme] .hero-section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(80%);
+    z-index: -100;
+}
+
+[data-theme] .hero-overlay {
+    background-color: rgba(0,0,0,0.7); /* halbtransparenter dunkler Layer */
+    padding: 1.5rem;
+    border-radius: 0;
+    width: 100%;
+}
+
+.hero-section h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.3rem;
+    margin: 0;
+    color: var(--nav-title);
+}
+
+.hero-section h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.0rem;
+    font-weight: 400;
+    margin-top: 0.5rem;
+    color: var(--nav-title);
+}
+
+/* MEDIA QUERIES ---------------------------------------------------------- */
+@media (min-width: 768px) {
+    [data-theme] .hero-overlay {
+        padding: 4rem;
+    }
+
+    [data-theme] .hero-section h1 {
+        font-size: 2.0rem;
+    }
+
+    [data-theme] .hero-section h2 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 992px) {
+    [data-theme] .hero-section {
+        height: 93vh; /* oder 100vh für volle Höhe */
+    }
+    
+    [data-theme] .hero-overlay {
+        padding: 6rem;
+    }
+
+    [data-theme] .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    [data-theme] .hero-section h2 {
+        font-size: 1.5rem;
+    }
+}

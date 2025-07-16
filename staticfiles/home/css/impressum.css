@@ -1,0 +1,15 @@
+@import url("/static/css/themes.css");
+@import url("/static/css/layout.css");
+
+
+/* specific elements --------------------------------------------------- */
+.impressum-section p,
+.impressum-section li {
+    font-size: 0.8rem;
+}
+
+
+
+/* MEDIA QUERIES ---------------------------------------------------------- */
+@media (min-width: 768px) {
+}

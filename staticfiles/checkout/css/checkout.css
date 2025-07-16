@@ -1,0 +1,55 @@
+@import url("/static/css/themes.css");
+@import url("/static/css/layout.css");
+
+/* in mobile mode: "nomal" scrolling down (d-block) */
+[data-theme] html, 
+[data-theme] body {
+    height: 100%;
+    margin: 0;
+}
+
+[data-theme] body {
+    display: block;
+}
+
+[data-theme] nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--nav-height);
+    z-index: 999;
+}
+
+[data-theme] main {
+    padding-top: var(--nav-height);
+    overflow-y: visible;
+}
+
+/* in desktop mode: viewport-fitting layout */
+@media (min-width: 992px) {
+    [data-theme] body {
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        height: 100vh;
+    }
+
+    [data-theme] main {
+        padding-top: var(--nav-height);
+        overflow-y: auto;
+        margin-top: unset;
+    }
+
+    .cart-scroll-container {
+        overflow-y: auto;
+    }
+    
+    [data-theme] .shopping-bag-container {
+        max-height: calc(100vh - var(--nav-height) - 120px); /* Reserve Platz für Footer & Padding */
+    }
+
+    [data-theme] footer {
+        height: 70px;
+    }
+
+}

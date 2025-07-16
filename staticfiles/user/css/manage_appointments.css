@@ -1,0 +1,29 @@
+@import url("/static/css/themes.css");
+@import url("/static/css/layout.css");
+
+[data-theme] main {
+    min-height: 75vh;
+    width: 100%;
+    padding-top: 20px;
+
+}
+
+.list-group-item a.btn {
+    text-decoration: none;
+}
+
+.list-group-item a.btn:hover {
+    text-decoration: none;
+}
+
+@media (min-width:768px) {
+    [data-theme] main {
+        min-width: 700px;
+    }
+}
+
+@media (min-width:992px) {
+    [data-theme] main {
+        min-width: 900px;
+    }
+}

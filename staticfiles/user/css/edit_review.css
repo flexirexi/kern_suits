@@ -1,0 +1,106 @@
+@import url("/static/css/themes.css");
+@import url("/static/css/layout.css");
+
+[data-theme] body {
+    background-color: var(--bgDefault2);
+}
+
+[data-theme] .review-card {
+    max-width: 850px;
+    margin: 5rem 0.8rem 4rem 0.8rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+[data-theme] .review-header {
+    width: 70vw;
+    max-width: 800px;
+    min-width: 330px;
+    background-color: var(--nav-bg);
+    padding: 2rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+[data-theme] .review-header h3 {
+    font-family: 'Cinzel', serif;
+    color: var(--act2-text);
+    margin-bottom: 0.5rem;
+}
+
+[data-theme] .review-header-item {
+    font-size: 1.3rem;
+    color: #d5d5d5;
+    margin-bottom: 2px;
+    font-weight:400;
+}
+
+[data-theme] .review-header-item strong {
+    font-size: 1.2rem;
+    color: #d5d5d5;
+    margin-bottom: 2px;
+}
+
+[data-theme] .review-header-item small {
+    color: #d5d5d5;
+    margin-bottom: 2px;
+}
+
+[data-theme] .review-header-item img {
+    max-width: 180px;
+    border: 2px solid #bebebe;
+}
+
+[data-theme] .review-details {
+    background: white;
+    padding: 2rem;
+    width: 70vw;
+    max-width: 800px;
+    min-width: 330px;
+}
+
+[data-theme] .back-button {
+    position: fixed;
+    top: 70px; /* Adjust depending on your nav height */
+    left: 20px;
+    z-index: 1000;
+}
+
+[data-theme] a.btn {
+    text-decoration: none;
+}
+
+[data-theme]  a.btn:hover {
+    text-decoration: none;
+}
+
+/* the review stars styles */
+.rating {
+    direction: rtl;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    font-size: 2rem;
+    color: #ddd;
+    cursor: pointer;
+}
+
+.rating input:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+    color: var(--text-admin);
+}
+
+@media (min-width:768px) {
+    [data-theme] .review-card {
+        margin: 5rem auto 4rem auto;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+}

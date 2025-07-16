@@ -1,0 +1,22 @@
+/* 
+INFO: 
+Bootstrap is used here -> in order to overwrite, use: 
+    <selector>[data-theme]           for elements in all themes, 
+    <selector>[data-theme="dark"]    for elements only in dark mode,
+    <selector>[data-theme=light"]    for elements only in light mode
+*/
+
+@import url("/static/css/themes.css");
+@import url("/static/css/layout.css");
+
+
+/* specific elements --------------------------------------------------- */
+section {
+    min-height: 350px;
+}
+
+
+
+/* MEDIA QUERIES ---------------------------------------------------------- */
+@media (min-width: 768px) {
+}

@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&display=swap');
+
+:root {
+    --text1: #000000;
+    --text2: #0d1b2a;
+    --text3: #102841;
+    --text-admin: #e18616;
+
+    --title1: #0a2540;
+    --title2: #103760;
+
+    --link: #1573d7;
+    --link-hover: #298bf3;
+
+    --bgDefault: #ffffff;
+    --bgDefault2: #ededed;
+    --bgcontrast: #102841;
+
+    --act1-bg: #ffbe3b;
+    --act1-text: #0d1b2a;
+    --act1-border: #c89e2d;
+    --act1-bg-hover: #0d1b2a;
+    --act1-text-hover: #f3c83c;
+
+    --act2-bg: #0d1b2a;
+    --act2-text: #ffcd28;
+    --act2-bg-hover: #d4af37;
+    --act2-text-hover: #0d1b2a;
+
+    --color1: #102841;
+    --color3: #d4af37;
+    --color4: #c89e2d;
+    --color5: #f2f2f2;
+
+    --nav-bg: #102841;
+    --nav-title: #ffffff;
+    --nav-link: #ffcd28;
+    --nav-link-hover: #ffffff;
+    --nav-icon: rgb(136, 136, 136);
+}
+
+html[data-theme="dark"] {
+    --text1: #f0f7ff;
+    --text2: #cecece;
+    --text3: #d4af37;
+    --text-admin: #e18616;
+
+    --title1: #f0f7ff;
+    --title2: #597ca1;
+
+    --link: #ffcd28;
+    --link-hover: #ffffff;
+
+    --bgDefault: #ffffff;
+    --bgcontrast: #102841;
+
+    --act1-bg: #ffbe3b;
+    --act1-text: #0d1b2a;
+    --act1-border: #c89e2d;
+    --act1-bg-hover: #0d1b2a;
+    --act1-text-hover: #f3c83c;
+
+    --act2-bg: #0d1b2a;
+    --act2-text: #ffcd28;
+    --act2-bg-hover: #d4af37;
+    --act2-text-hover: #0d1b2a;
+
+    --color1: #102841;
+    --color3: #d4af37;
+    --color4: #c89e2d;
+    --color5: #f2f2f2;
+
+}
+
+* {
+    color: var(--text1);
+}
+
+[data-theme] .text-admin {
+    color: var(--text-admin);
+}
+
+[data-theme] .bg-light2 {
+    background-color: var(--bgDefault2); /* bootstrap is avoided here - gray was too light */
+}
+
+.bg-contrast {
+    background-color: var(--bgcontrast);
+}
+
+a {
+    color: var(--link);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
+    text-decoration-thickness: 1px; 
+
+}
+
+[data-theme] nav,
+[data-theme] header,
+[data-theme] .dropdown-menu {
+    background-color: var(--nav-bg);
+    box-sizing: border-box;
+    box-shadow: 0px 3px 4px #00000040;
+}
+
+[data-theme] header .nav-link,
+[data-theme] .dropdown-menu a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: var(--nav-link);
+    font-size: 1.1rem;
+}
+	
+[data-theme] .nav-link:hover,
+[data-theme] .dropdown-menu a:hover {
+    color: var(--nav-link-hover);
+    text-decoration: underline;
+    text-underline-offset: 4px; 
+    text-decoration-thickness: 1px; 
+    background-color: unset;
+}
+
+
+[data-theme] footer {
+    background-color: var(--nav-bg);
+    box-sizing: border-box;
+}
+
+[data-theme] footer * {
+    text-decoration: none;
+    color: #e1e1e1;
+}
+
+[data-theme] footer a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1px;
+}
+
+[data-theme] .card {
+    box-shadow: 0px 3px 5px #00000040;
+}
+
+footer .nav-link {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: var(--nav-link);
+    font-size: 1.1rem;
+}
+	
+footer .nav-link:hover {
+    color: var(--nav-link-hover);
+    text-decoration: underline;
+    text-underline-offset: 4px; 
+    text-decoration-thickness: 1px; 
+}
+
+.btn-white {
+    display: inline-block;
+    padding: 0.5rem 1.3rem;
+    background: var(--bgDefault);
+    color: var(--text3);
+    text-decoration: none;
+    border-radius: 4px;
+    border: 1px solid var(--bgDefault2);
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    font-family: "Cinzel", serif;
+}
+
+.btn-white:hover {
+    background-color: var(--bgDefault2);
+    color: var(--text1);
+    text-decoration: none;
+}
+
+.btn-light {
+    display: inline-block;
+    padding: 0.5rem 1.3rem;
+    background: var(--act1-bg);
+    color: var(--act1-text);
+    text-decoration: none;
+    border-radius: 4px;
+    border: 1px solid var(--act1-border);
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    font-family: "Cinzel", serif;
+}
+
+.btn-light:hover {
+    background-color: var(--act1-bg-hover);
+    color: var(--act1-text-hover);
+    text-decoration: none;
+}
+
+.btn-dark {
+    display: inline-block;
+    padding: 0.5rem 1.3rem;
+    background: var(--act2-bg);
+    color: var(--act2-text);
+    border: none;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    font-family: "Cinzel", serif;
+}
+
+.btn-dark:hover {
+    background: var(--act2-bg-hover);
+    color: var(--act2-text-hover);
+    text-decoration: none;
+}
+
+.btn-large {
+    padding: 0.75rem 1.5rem;
+}
+
+.hover {
+    transition: color 0.3s ease;
+}
+
+[data-theme] .hover:hover {
+    background-color: #00000040;
+}
+
+[data-theme] form input {
+    font-family: "Calibry", sans-serif;
+}
+
+[data-theme] .text-bg-success-custom {
+    
+}

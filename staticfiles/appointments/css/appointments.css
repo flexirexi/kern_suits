@@ -1,0 +1,46 @@
+@import url("/static/css/themes.css");
+@import url("/static/css/layout.css");
+
+[data-theme] main {
+    margin-top: var(--nav-height);
+
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: #eee;
+    padding: 1rem;
+}
+
+main {
+    flex: 1;
+    background: #f9f9f9;
+    padding: 1rem;
+}
+
+footer {
+    background: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+[data-theme] textarea {
+    min-height: 120px;
+}
+
+/* MEDIA QUERIES ---------------------------------------------------------- */
+@media (min-width: 992px) {
+ 
+}

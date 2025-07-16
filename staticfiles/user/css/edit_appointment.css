@@ -1,0 +1,73 @@
+@import url("/static/css/themes.css");
+@import url("/static/css/layout.css");
+
+[data-theme] body {
+    background-color: var(--bgDefault2);
+}
+
+[data-theme] .appt-card {
+    max-width: 850px;
+    margin: 5rem 0.8rem 4rem 0.8rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+[data-theme] .appt-header {
+    width: 50vw;
+    max-width: 500px;
+    min-width: 330px;
+    background-color: var(--nav-bg);
+    padding: 2rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+[data-theme] .appt-header h3 {
+    font-family: 'Cinzel', serif;
+    color: var(--act2-text);
+    margin-bottom: 0.5rem;
+}
+
+[data-theme] .appt-header-item {
+    font-size: 1.3rem;
+    color: #d5d5d5;
+    margin-bottom: 2px;
+    font-weight:400;
+}
+
+[data-theme] .appt-header-item small {
+    font-size: 1.1rem;
+    color: #d5d5d5;
+    margin-bottom: 2px;
+    font-weight: bold;
+}
+
+[data-theme] .appt-details {
+    background: white;
+    padding: 2rem;
+}
+
+[data-theme] .back-button {
+    position: fixed;
+    top: 70px; /* Adjust depending on your nav height */
+    left: 20px;
+    z-index: 1000;
+}
+
+.list-group-item a.btn {
+    text-decoration: none;
+}
+
+.list-group-item a.btn:hover {
+    text-decoration: none;
+}
+
+@media (min-width:768px) {
+    [data-theme] .appt-card {
+        margin: 5rem auto 4rem auto;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+}
