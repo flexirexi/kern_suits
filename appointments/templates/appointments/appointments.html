@@ -7,7 +7,7 @@
 
 {% block content %}
 <div class="container p-4">
-    <div class="row">
+    <div class="row pt-3">
         <!-- Left Column -->
         <div class="col-md-6 mb-4">
             <h5 class="mb-3">When do you want to book?</h5>
@@ -16,15 +16,15 @@
             <!-- Date picker -->
             <div class="mb-3">
                 <label for="datePicker" class="form-label">Choose a date</label>
-                <input type="date" id="datePicker" class="form-control" min="{{ today }}" value="{{ tomorrow }}"
+                <input type="date" id="datePicker" class="form-control" min="{{ today }}" 
                     required />
             </div>
 
             <!-- Time slot dropdown -->
             <div class="mb-3">
-                <label for="timeSelect" class="form-label">Uhrzeit</label>
+                <label for="timeSelect" class="form-label">Time</label>
                 <select id="timeSelect" class="form-select" disabled required>
-                    <option value="">Bitte Datum wählen</option>
+                    <option value="">Please choose a time slot</option>
                 </select>
             </div>
         </div>
@@ -33,7 +33,7 @@
         <div class="col-md-6">
             <h5>Book an appointment</h5>
             <form method="post">
-                
+
                 {% csrf_token %}
                 <!-- appointment type -->
                 <div class="mb-3">
@@ -49,8 +49,9 @@
 
                 <!-- Hidden inputs -->
                 <input type="hidden" name="start_datetime" id="startDatetimeInput" />
-
-                <button type="submit" class="btn btn-primary">Book</button>
+                <div class="d-flex justify-content-end pt-2">
+                    <button type="submit" class="btn btn-light">Book</button>
+                </div>
             </form>
         </div>
     </div>

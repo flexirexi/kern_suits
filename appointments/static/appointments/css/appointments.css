@@ -36,6 +36,10 @@ footer {
     text-align: center;
 }
 
+[data-theme] textarea {
+    min-height: 120px;
+}
+
 /* MEDIA QUERIES ---------------------------------------------------------- */
 @media (min-width: 992px) {
  

@@ -12,10 +12,8 @@ from .models import Appointment
 @login_required
 def appointments(request):
     today = date.today()
-    tomorrow = today + timedelta(days=1)
     
     all_appointments = Appointment.objects.all()
-    user_appointments = Appointment.objects.filter(user=request.user)
     
     booked_slots = {}
 
@@ -24,7 +22,6 @@ def appointments(request):
         hour = appt.start_datetime.hour
         booked_slots.setdefault(date_key, []).append(hour)
         
-    opening_hours = settings.OPENING_HOURS
     form = AppointmentForm()
     
     # take care of POST methods
@@ -53,11 +50,8 @@ def appointments(request):
     
     context = {
         "all_appointments": all_appointments,
-        "user_appointments": user_appointments,
-        "opening_hours": opening_hours,
         "booked_slots": booked_slots,
         "today": today.isoformat(),
-        "tomorrow": tomorrow.isoformat(),
         "form": form,
     }
     return render(request, "appointments/appointments.html", context)

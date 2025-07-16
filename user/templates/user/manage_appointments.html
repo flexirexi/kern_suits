@@ -1,0 +1,53 @@
+{% extends "user/base.html" %}
+{% load static %}
+
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'user/css/manage_appointments.css' %}">
+{% endblock %}
+
+{% block content %}
+<main>
+    <div class="container">
+        <h2>My Appointments</h2>
+        {% if user_appointments %}
+        <ul class="list-group mb-4">
+            {% for appt in user_appointments %}
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <div>
+                    <strong style="font-family: 'Cinzel', serif;">{{ appt.appointment_type }}</strong><br>
+                    <small>{{ appt.start_datetime|date:"D, d M Y" }} at {{ appt.start_datetime|time:"H:i" }}</small>
+                </div>
+                <div class="d-flex gap-2">
+                    <a href="#" class="btn btn-sm btn-outline-secondary">
+                        <small>Comment..</small>
+                    </a>
+                    {% if appt.start_datetime.date >= cancel_threshold %}
+                    <a href="#" class="btn  btn-outline-danger">
+                        <small>Cancel</small>
+                    </a>
+                    {% else %}
+                    <button class="btn btn-sm btn-outline-secondary" disabled>
+                        <small>Cancel not available</small>
+                    </button>
+                    {% endif %}
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>You have no appointments yet.</p>
+        {% endif %}
+
+        <div class="d-flex justify-content-center">
+            <a href="{% url 'appointments' %}" class="btn btn-light">
+                Book an appointment
+            </a>
+        </div>
+    </div>
+</main>
+{% endblock %}
+
+{% block extra_scripts %}
+
+{% endblock %}
