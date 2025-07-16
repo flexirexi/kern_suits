@@ -19,8 +19,8 @@
                     <small>{{ appt.start_datetime|date:"D, d M Y" }} at {{ appt.start_datetime|time:"H:i" }}</small>
                 </div>
                 <div class="d-flex gap-2">
-                    <a href="#" class="btn btn-sm btn-outline-secondary">
-                        <small>Comment..</small>
+                    <a href="{% url 'edit_appointment' appt.id %}" class="btn btn-sm btn-outline-secondary ps-3 pe-3">
+                        <small>edit</small>
                     </a>
                     {% if appt.start_datetime.date >= cancel_threshold %}
                     <a href="#" class="btn  btn-outline-danger">

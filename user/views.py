@@ -76,3 +76,12 @@ def manage_appointments(request):
         "cancel_threshold": cancel_threshold,
     }
     return render(request, "user/manage_appointments.html", context)
+
+
+@login_required
+def edit_appointment(request, appt_id):
+    appointment = get_object_or_404(Appointment, id=appt_id, user=request.user)
+    context = {
+        "appointment": appointment,
+    }
+    return render(request, "user/edit_appointment.html", context)

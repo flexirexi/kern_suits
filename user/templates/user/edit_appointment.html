@@ -1,0 +1,54 @@
+{% extends "user/base.html" %}
+{% load static %}
+
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'user/css/edit_appointment.css' %}">
+{% endblock %}
+
+
+
+{% block content %}
+<main>
+<div class="order-card">
+
+    <!-- Header -->
+    <div class="order-header">
+        <h3>Appointment </h3>
+        <div class="order-date">
+            Date: {{ appointment.start_datetime|date:"Y-m-d" }}
+        </div>
+        <div class="order-total">
+            <small>{{appointment.appointment_type}} </small>
+        </div>
+    </div>
+
+    <!-- Items -->
+    <div class="order-items">
+        {% for item in order_items %}
+        <div class="row py-3 align-items-center">
+
+
+            <!-- Price and Quantity -->
+            <div class="col-12 col-md-3 mt-3 mt-md-0 text-md-end">
+                <div class="fw-bold mb-1">€{{ item.price }}</div>
+                <small>QTY: {{ item.quantity }}</small><br>
+                <small>Purchased: {{ item.created_at|date:"Y-m-d" }}</small>
+            </div>
+        </div>
+
+        <p>No items found for this order.</p>
+        {% endfor %}
+    </div>
+</div>
+
+</main>
+{% endblock %}
+
+
+
+
+
+{% block extra_scripts %}
+
+{% endblock %}
