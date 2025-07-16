@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 from pathlib import Path
 import os
+import dj_database_url
+if os.path.isfile('env.py'):
+    import env
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -49,6 +52,8 @@ INSTALLED_APPS = [
     # crispy_forms",
     'crispy_forms',
     'crispy_bootstrap5',
+    
+    'storages',
     
     'home',  # home-app    
     'products',  # products-app
@@ -122,12 +127,23 @@ WSGI_APPLICATION = "my_project.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+DATABASE_URL = os.environ.get('DATABASE_URL')
+
+if DATABASE_URL:
+    try:
+        DATABASES = {
+            'default': dj_database_url.parse(DATABASE_URL)
+        }
+    except Exception as e:
+        raise Exception(f"Invalid DATABASE_URL: {DATABASE_URL}\n{e}")
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
     }
-}
+
 
 
 # Password validation
@@ -175,13 +191,27 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
 # Stripe
-if os.path.isfile('env.py'):
-    import env
-
 STRIPE_CURRENCY = 'usd'
 STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
 STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
+
+if 'USE_AWS' in os.environ:
+    AWS_STORAGE_BUCKET_NAME = 'kern-suits'
+    AWS_S3_REGION_NAME = 'eu-north-1'
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+    
+    # Static and media files
+    STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+    STATICFILES_LOCATION = 'static'
+    DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+    MEDIAFILES_LOCATION = 'media'
+    
+    # Override static and media URLs in production
+    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}'
 
 STATUS_CHOICES = [
     ('created', 'Created'),
@@ -192,12 +222,12 @@ STATUS_CHOICES = [
 ]
 
 # opening hours of the shop - important for appointments
-OPENING_HOURS = {
-    "monday": ("10:00", "21:00"),
-    "tuesday": ("10:00", "21:00"),
-    "wednesday": ("10:00", "21:00"),
-    "thursday": ("10:00", "21:00"),
-    "friday": ("10:00", "21:00"),
-    "saturday": ("09:00", "20:00"),
-    "sunday": ("09:00", "20:00"),
+# OPENING_HOURS = {
+#     "monday": ("10:00", "21:00"),
+#     "tuesday": ("10:00", "21:00"),
+#     "wednesday": ("10:00", "21:00"),
+#     "thursday": ("10:00", "21:00"),
+#     "friday": ("10:00", "21:00"),
+#     "saturday": ("09:00", "20:00"),
+#     "sunday": ("09:00", "20:00"),
 }
