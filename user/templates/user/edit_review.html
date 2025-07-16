@@ -66,6 +66,11 @@
     
                 <!-- Buttons -->
                 <div class="d-flex justify-content-end">
+                    {% if review %}
+                    <a href="{% url 'delete_review' review.id %}" class="btn  btn-danger me-auto">
+                        <small>Delete Review</small>
+                    </a>
+                    {% endif %}
                     <button type="submit" class="btn btn-dark">
                         {% if review %}Update Review{% else %}Save Review{% endif %}
                     </button>

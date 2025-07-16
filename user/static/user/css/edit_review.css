@@ -67,11 +67,11 @@
     z-index: 1000;
 }
 
-.list-group-item a.btn {
+[data-theme] a.btn {
     text-decoration: none;
 }
 
-.list-group-item a.btn:hover {
+[data-theme]  a.btn:hover {
     text-decoration: none;
 }
 

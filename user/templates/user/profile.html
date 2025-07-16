@@ -31,14 +31,22 @@
     {% for item in order_items %}
     <div class="row py-4 align-items-center">
         <!-- Image -->
-        <div class="col-3 col-md-2" id="image-container">
+        <div class="col-12 col-md-2 order-2 order-md-1" id="image-container">
             <a href="{% url 'product_details' item.variant.product.id %}">
                 <img src="{{ item.variant.product.image.url }}" alt="{{ item.variant.product.name }}" class="img-fluid rounded">
             </a>
+            <!-- CTA Buttons -->
+            <div class="mt-2">
+                <!-- 'order_detail' item.order.order_number -->
+                <a href="{% url 'order_details' order_id=item.order.id %}" class="btn btn-outline-primary btn-sm mb-2 w-100">View Order</a>
+                <a href="{% url 'edit_review' item.variant.product.id %}" class="btn btn-outline-secondary btn-sm w-100">Rate this Product</a>
+                {% if item.delivery_status == "Delivered" %}
+                {% endif %}
+            </div>
         </div>
 
         <!-- Product Info -->
-        <div class="col-9 col-md-7">
+        <div class="col-12 col-md-7 order-1 order-md-2">
             <h4 class="mb-1">{{ item.variant.product.name }}</h4>
             <small>
                 <strong>
@@ -62,10 +70,27 @@
                     <small class="text-danger">{{ item.delivery_status|capfirst }}</small>
                 {% endif %}
             </div>
+            <div class="d-flex mt-2 mb-3">
+                {% if item.rating %}
+                    {% for i in "12345" %}
+                        {% if item.rating.rating|floatformat:"0" >= i %}
+                            <span class="star filled">&#9733;</span>
+                        {% else %}
+                            <span class="star empty">&#9733;</span>
+                        {% endif %}
+                    {% endfor %}
+                    <small>(Your Rating)</small>
+                {% else %}
+                    {% for i in "12345" %}
+                        <span class="star empty">&#9733;</span>
+                    {% endfor %}
+                    <small>(You haven't rated this product)</small>
+                {% endif %}
+            </div>
         </div>
 
         <!-- Price and Meta -->
-        <div class="col-12 col-md-3 mt-3 mt-md-0 d-flex flex-column justify-content-between">
+        <div class="col-12 col-md-3 mt-3 mt-md-0 d-flex flex-column justify-content-between order-3">
             <div>
                 <div class="fw-bold mb-1">€{{ item.price }} <small>per item</small></div>
                 <small>Purchased: {{ item.created_at|date:"Y-m-d" }}</small><br>
@@ -73,14 +98,7 @@
             </div>
         </div>
 
-        <!-- CTA Buttons -->
-        <div class="col-12 col-md-2 mt-3 mt-md-0 text-md-end">
-            <!-- 'order_detail' item.order.order_number -->
-            <a href="{% url 'order_details' order_id=item.order.id %}" class="btn btn-outline-primary btn-sm mb-2 w-100">View Order</a>
-            <a href="{% url 'edit_review' item.variant.product.id %}" class="btn btn-outline-secondary btn-sm w-100">Rate this Product</a>
-            {% if item.delivery_status == "Delivered" %}
-            {% endif %}
-        </div>
+
     </div>
 
     <hr class="my-4">

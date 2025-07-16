@@ -60,6 +60,18 @@ def profile(request):
 
         order_items_with_status.append(item)
     
+    # add the user's own review to each product, if available - this method has a better performance
+    user_reviews = (
+        Review.objects
+        .filter(user=request.user)
+        .select_related("product")
+    )
+
+    review_map = {r.product_id: r for r in user_reviews}
+
+    for item in order_items:
+        item.rating = review_map.get(item.variant.product_id)
+
     context = {
         'form': form,
         'order_items': order_items_with_status,  # manually calculated status
@@ -168,3 +180,11 @@ def edit_review(request, product_id):
         "review": review,
     }
     return render(request, "user/edit_review.html", context)
+
+
+@login_required
+def delete_review(request, product_id):
+    review = get_object_or_404(Review, id=product_id, user=request.user)
+    review.delete()
+    messages.info(request, "Review deleted successfully.")
+    return redirect("profile")
