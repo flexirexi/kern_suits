@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from datetime import date, timedelta
+from datetime import date, timedelta, timezone
 
 from .models import UserProfile
 from .forms import UserProfileForm
@@ -14,7 +14,7 @@ from appointments.models import Appointment
 def profile(request):
     profile = get_object_or_404(UserProfile, user=request.user)
 
-    # Persönliche Daten bearbeiten
+    # personal data
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=profile)
         if form.is_valid():
@@ -23,16 +23,44 @@ def profile(request):
     else:
         form = UserProfileForm(instance=profile)
 
-    # Alle OrderItems des Users
+    # all orders of the user
     order_items = (
         OrderItem.objects.filter(order__user=request.user)
-        .select_related('order', 'variant__product', 'variant__size', 'variant__product__occasion', 'variant__color', 'variant__fit')
+        .select_related(
+            'order', 
+            'variant__product', 
+            'variant__size', 
+            'variant__product__occasion', 
+            'variant__color', 
+            'variant__fit'
+        )
         .order_by('-order__created_at')
     )
 
+    # calculate delivery status
+    # since there is no 'real' delivery, I have to pre-set delivery status:
+    today = date.today()
+    order_items_with_status = []
+
+    for item in order_items:
+        order_date = item.order.created_at.date() if item.order.created_at else today
+        days_since_order = (today - order_date).days
+
+        if days_since_order >= 3:
+            status = "Delivered"
+        elif days_since_order >= 1:
+            status = "Shipped"
+        else:
+            status = "In Progress"
+
+        # Custom Attribut anhängen
+        item.delivery_status = status
+
+        order_items_with_status.append(item)
+    
     context = {
         'form': form,
-        'order_items': order_items,
+        'order_items': order_items_with_status,  # manually calculated status
     }
     return render(request, 'user/profile.html', context)
 

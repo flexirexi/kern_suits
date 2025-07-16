@@ -6,8 +6,13 @@
 }
 
 [data-theme] main {
-    max-width: 900px;
+    width: 100%;
     margin-top: 0;
+    padding-top: 50px
+}
+
+[data-theme] main > div {
+    max-width: 900px;
 }
 
 [data-theme] .order-card {

@@ -6,8 +6,14 @@
 }
 
 [data-theme] main {
-    max-width: 900px;
+    padding-top: var(--nav-height);
+    width: 100%;
     margin-top: 0;
+}
+
+[data-theme] main > div {
+    max-width: 900px;
+    padding-top: 
 }
 
 [data-theme] .personal-data-container {

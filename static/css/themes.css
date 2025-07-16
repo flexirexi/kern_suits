@@ -76,6 +76,10 @@ html[data-theme="dark"] {
     color: var(--text1);
 }
 
+[data-theme] .text-admin {
+    color: var(--text-admin);
+}
+
 [data-theme] .bg-light2 {
     background-color: var(--bgDefault2); /* bootstrap is avoided here - gray was too light */
 }

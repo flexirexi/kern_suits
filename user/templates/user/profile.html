@@ -52,12 +52,14 @@
                 <small>Order: {{ item.order.order_number }}</small>
             </div>
             <div class="mt-1">
-                {% if item.status == "shipped" %}
-                    <small class="fw-bold text-warning">Shipped</small>
-                {% elif item.status == "delivered" %}
+                {% if item.delivery_status == "Shipped" %}
+                    <small class="fw-bold text-admin">Shipped</small>
+                {% elif item.delivery_status == "Delivered" %}
                     <small class="fw-bold text-success">Delivered</small>
+                {% elif item.delivery_status == "In Progress" %}
+                    <small class="fw-bold ">In Progress</small>
                 {% else %}
-                    <small class="text-danger">{{ item.status|capfirst }}</small>
+                    <small class="text-danger">{{ item.delivery_status|capfirst }}</small>
                 {% endif %}
             </div>
         </div>
