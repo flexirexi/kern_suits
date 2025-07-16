@@ -92,6 +92,7 @@ def checkout(request):
             pid = request.POST.get('client_secret').split('_secret')[0]
             order.stripe_pid = pid
             order.original_bag = json.dumps(bag)
+            order.user = request.user
             order.save()
             for item_id, item_data in bag.items():
                 try:

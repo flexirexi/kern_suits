@@ -1,11 +1,10 @@
-from django.shortcuts import render
-from django.contrib import messages
-
-from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, get_object_or_404
+from django.contrib import messages
+from django.contrib.auth.decorators import login_required
+
 from .models import UserProfile
 from .forms import UserProfileForm
-from checkout.models import OrderItem
+from checkout.models import Order, OrderItem
 
 
 # Create your views here.
@@ -34,3 +33,28 @@ def profile(request):
         'order_items': order_items,
     }
     return render(request, 'user/profile.html', context)
+
+
+@login_required
+def order_details(request, order_id):
+    order = get_object_or_404(
+        Order,
+        id=order_id,
+        user=request.user
+    )
+    order_items = (
+        OrderItem.objects.filter(order=order)
+        .select_related(
+            'variant__product',
+            'variant__size',
+            'variant__fit',
+            'variant__color'
+        )
+        .order_by('id')
+    )
+
+    context = {
+        'order': order,
+        'order_items': order_items,
+    }
+    return render(request, 'user/order_details.html', context)

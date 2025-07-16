@@ -1,0 +1,43 @@
+@import url("/static/css/themes.css");
+@import url("/static/css/layout.css");
+
+[data-theme] main {
+    max-width: 900px;
+    margin-top: 0;
+}
+
+    .order-card {
+        max-width: 900px;
+        margin: 2rem auto 4rem auto;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    .order-header {
+        background-color: var(--nav-bg);
+        color: var(--act2-bg);
+        padding: 2rem;
+    }
+    .order-header h3 {
+        font-family: 'Cinzel', serif;
+        margin-bottom: 0.5rem;
+    }
+    .order-header .order-date {
+        font-size: 0.9rem;
+        color: rgba(255,255,255,0.8);
+    }
+    .order-header .order-total {
+        font-size: 1.4rem;
+        font-weight: bold;
+        margin-top: 1rem;
+    }
+    .order-items {
+        background: white;
+        padding: 2rem;
+    }
+    .back-button {
+        position: fixed;
+        top: 70px; /* Adjust depending on your nav height */
+        left: 20px;
+        z-index: 1000;
+    }

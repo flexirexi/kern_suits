@@ -1,0 +1,80 @@
+{% extends "user/base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'user/css/profile.css' %}">
+{% endblock %}
+
+{% block content %}
+<main>
+<a href="{% url 'profile' %}" class="btn btn-outline-secondary back-button">
+    ← Back to Profile
+</a>
+
+<div class="order-card">
+
+    <!-- Header -->
+    <div class="order-header">
+        <h3>Order Summary</h3>
+        <div class="order-date">
+            Date: {{ order.created_at|date:"Y-m-d" }}
+        </div>
+        <div class="order-total">
+            Total Paid: €{{ order.grand_total }}
+        </div>
+    </div>
+
+    <!-- Items -->
+    <div class="order-items">
+        {% for item in order_items %}
+        <div class="row py-3 align-items-center">
+            <!-- Image -->
+            <div class="col-3 col-md-2">
+                <a href="{% url 'product_details' item.variant.product.id %}">
+                    <img src="{{ item.variant.product.image.url }}" alt="{{ item.variant.product.name }}" class="img-fluid rounded">
+                </a>
+            </div>
+
+            <!-- Info -->
+            <div class="col-9 col-md-7">
+                <h5 class="mb-1">{{ item.variant.product.name }}</h5>
+                <small>
+                    Size: {{ item.variant.size }} |
+                    Occasion: {{ item.variant.product.occasion }} |
+                    Color: {{ item.variant.color }} |
+                    Fit: {{ item.variant.fit }}
+                </small>
+                <div class="mt-1">
+                    {% if item.status == "shipped" %}
+                        <small class="fw-bold text-warning">Shipped</small>
+                    {% elif item.status == "delivered" %}
+                        <small class="fw-bold text-success">Delivered</small>
+                    {% else %}
+                        <small class="text-danger">{{ item.status|capfirst }}</small>
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- Price and Quantity -->
+            <div class="col-12 col-md-3 mt-3 mt-md-0 text-md-end">
+                <div class="fw-bold mb-1">€{{ item.price }}</div>
+                <small>QTY: {{ item.quantity }}</small><br>
+                <small>Purchased: {{ item.created_at|date:"Y-m-d" }}</small>
+            </div>
+        </div>
+        {% if not forloop.last %}
+        <hr>
+        {% endif %}
+        {% empty %}
+        <p>No items found for this order.</p>
+        {% endfor %}
+    </div>
+</div>
+
+</main>
+{% endblock %}
+
+{% block extra_scripts %} 
+
+{% endblock %}
