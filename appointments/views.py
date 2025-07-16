@@ -43,7 +43,7 @@ def appointments(request):
                     appointment.start_datetime = start_dt
                     appointment.save()
                     messages.success(request, "Booking successfully.")
-                    return redirect("appointments")
+                    return redirect("manage_appointments")
     
     else:
         form = AppointmentForm()

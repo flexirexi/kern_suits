@@ -9,39 +9,59 @@
 
 
 {% block content %}
-<main>
-<div class="order-card">
-
-    <!-- Header -->
-    <div class="order-header">
-        <h3>Appointment </h3>
-        <div class="order-date">
-            Date: {{ appointment.start_datetime|date:"Y-m-d" }}
-        </div>
-        <div class="order-total">
-            <small>{{appointment.appointment_type}} </small>
-        </div>
-    </div>
-
-    <!-- Items -->
-    <div class="order-items">
-        {% for item in order_items %}
-        <div class="row py-3 align-items-center">
-
-
-            <!-- Price and Quantity -->
-            <div class="col-12 col-md-3 mt-3 mt-md-0 text-md-end">
-                <div class="fw-bold mb-1">€{{ item.price }}</div>
-                <small>QTY: {{ item.quantity }}</small><br>
-                <small>Purchased: {{ item.created_at|date:"Y-m-d" }}</small>
+<main class="flex-fill d-flex justify-content-center w-100">
+    <a href="{% url 'manage_appointments' %}" class="btn btn-light back-button">
+    ←  Appointments
+    </a>
+    <div class="appt-card">
+        <!-- Header -->
+        <div class="appt-header">
+            <h3>Appointment</h3>
+            <div class="appt-header-item">
+                Date: {{ appointment.start_datetime|date:"Y-m-d" }}
+            </div>
+            <div class="appt-header-item">
+                <small>{{ appointment.appointment_type }}</small>
             </div>
         </div>
 
-        <p>No items found for this order.</p>
-        {% endfor %}
-    </div>
-</div>
+        <!-- Form Start -->
+        <form method="post">
+            {% csrf_token %}
+            <!-- Hidden Inputs -->
+            <input type="hidden" name="start_datetime" value="{{ appointment.start_datetime|date:'c' }}">
+            <input type="hidden" name="appointment_type" value="{{ appointment.appointment_type }}">
 
+            <!-- Appointment Details -->
+            <div class="appt-details">
+                <div class="row  align-items-center d-block">
+                    <div class="col-12 ">
+                        <div class="mb-3"><strong>Anything you would like us to know:</strong></div>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <textarea name="comment" class="form-control">{{ appointment.comment }}</textarea>
+                    </div >
+                    <small><strong>Note:</strong> You can cancel your appointment up to 7 days in advance.</small>
+                </div>
+            </div>
+
+            <!-- Buttons -->
+            <div class="pe-4 ps-4 pe-md-5 ps-md-5 pt-4 pb-3 d-flex align-items-center list-group-item ">
+                <button type="submit" class="btn btn-white me-auto">Save</button>
+                    {% if appointment.start_datetime.date >= cancel_threshold %}
+                    <a href="{% url 'delete_appointment' appointment.id %}" class="btn  btn-danger">
+                        <small>Cancel</small>
+                    </a>
+                    {% else %}
+                    <button class="btn btn-sm btn-outline-secondary" disabled>
+                        <small>Cancel not available</small>
+                    </button>
+                    {% endif %}
+            </div>
+        </form>
+        <!-- Form End -->
+
+    </div>
 </main>
 {% endblock %}
 

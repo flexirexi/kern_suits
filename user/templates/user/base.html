@@ -19,7 +19,7 @@
     {% endblock %}
     <title>KERN SUITS</title>
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
     <header class="fixed-top">
         
         <!-- Desktop Navbar -->
@@ -49,10 +49,9 @@
     {% endif %}
 
 
-    <div class="main d-flex justify-content-center">
-        {% block content %}
-        {% endblock %}
-    </div>
+    {% block content %}
+    {% endblock %}
+
 
     <footer class="container-fluid py-4">
         <div class="row text-center ">

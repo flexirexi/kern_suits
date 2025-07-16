@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from datetime import date, timedelta
@@ -81,7 +81,27 @@ def manage_appointments(request):
 @login_required
 def edit_appointment(request, appt_id):
     appointment = get_object_or_404(Appointment, id=appt_id, user=request.user)
+
+    today = date.today()
+    cancel_threshold = today + timedelta(days=7)
+
+    if request.method == "POST":
+        comment = request.POST.get("comment", "").strip()
+        appointment.comment = comment
+        appointment.save()
+        messages.success(request, "Appointment updated successfully.")
+        return redirect("manage_appointments")  
+        
     context = {
         "appointment": appointment,
+        "cancel_threshold": cancel_threshold,
     }
     return render(request, "user/edit_appointment.html", context)
+
+
+@login_required
+def delete_appointment(request, appt_id):
+    appointment = get_object_or_404(Appointment, id=appt_id, user=request.user)
+    appointment.delete()
+    messages.info(request, "Appointment deleted successfully.")
+    return redirect("manage_appointments")

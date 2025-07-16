@@ -5,12 +5,7 @@
     background-color: var(--bgDefault2);
 }
 
-[data-theme] main {
-    max-width: 900px;
-    margin-top: 0;
-}
-
-[data-theme] .order-card {
+[data-theme] .appt-card {
     max-width: 850px;
     margin: 5rem 0.8rem 4rem 0.8rem;
     border-radius: 0.5rem;
@@ -18,31 +13,37 @@
     box-shadow: 0 0 15px rgba(0,0,0,0.1);
 }
 
-[data-theme] .order-header {
+[data-theme] .appt-header {
+    width: 50vw;
+    max-width: 500px;
+    min-width: 330px;
     background-color: var(--nav-bg);
     padding: 2rem;
+    font-size: 1.4rem;
+    font-weight: bold;
 }
 
-[data-theme] .order-header h3 {
+[data-theme] .appt-header h3 {
     font-family: 'Cinzel', serif;
     color: var(--act2-text);
     margin-bottom: 0.5rem;
 }
 
-[data-theme] .order-date,
-[data-theme] .order-total,
-[data-theme] .order-total small {
-    font-size: 0.9rem;
-    color: rgba(255,255,255,0.8);
+[data-theme] .appt-header-item {
+    font-size: 1.3rem;
+    color: #d5d5d5;
+    margin-bottom: 2px;
+    font-weight:400;
 }
 
-[data-theme] .order-header .order-total {
-    font-size: 1.4rem;
+[data-theme] .appt-header-item small {
+    font-size: 1.1rem;
+    color: #d5d5d5;
+    margin-bottom: 2px;
     font-weight: bold;
-    margin-top: 1rem;
 }
 
-[data-theme] .order-items {
+[data-theme] .appt-details {
     background: white;
     padding: 2rem;
 }
@@ -54,9 +55,16 @@
     z-index: 1000;
 }
 
+.list-group-item a.btn {
+    text-decoration: none;
+}
+
+.list-group-item a.btn:hover {
+    text-decoration: none;
+}
+
 @media (min-width:768px) {
-    [data-theme] .order-card {
-        max-width: 900px;
+    [data-theme] .appt-card {
         margin: 5rem auto 4rem auto;
         border-radius: 0.5rem;
         overflow: hidden;

@@ -3,6 +3,8 @@
 
 [data-theme] main {
     min-height: 75vh;
+    width: 100%;
+    padding-top: 20px;
 
 }
 
