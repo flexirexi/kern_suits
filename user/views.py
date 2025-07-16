@@ -7,6 +7,8 @@ from .models import UserProfile
 from .forms import UserProfileForm
 from checkout.models import Order, OrderItem
 from appointments.models import Appointment
+from products.models import Product
+from reviews.models import Review
 
 
 # Create your views here.
@@ -133,3 +135,36 @@ def delete_appointment(request, appt_id):
     appointment.delete()
     messages.info(request, "Appointment deleted successfully.")
     return redirect("manage_appointments")
+
+
+@login_required
+def edit_review(request, product_id):
+    product = get_object_or_404(Product, id=product_id)
+    
+    review = Review.objects.filter(user=request.user, product=product).first()
+    
+    if request.method == "POST":
+        rating = request.POST.get("rating")
+        comment = request.POST.get("comment", "").strip()
+        
+        if review:
+            review.rating = rating
+            review.comment = comment
+            review.save()
+            messages.success(request, "Review updated successfully.")
+        else:
+            Review.objects.create(
+                user=request.user,
+                product=product,
+                rating=rating,
+                comment=comment
+            )
+            messages.success(request, "Review created successfully.")
+        
+        return redirect("profile")
+
+    context = {
+        "product": product,
+        "review": review,
+    }
+    return render(request, "user/edit_review.html", context)

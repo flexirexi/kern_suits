@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'checkout',  # checkout-app
     'user',  # user-app
     'appointments',  # appointment-app
+    'reviews',  # reviews-app, mainly for models. other apps will handle them
 ]
 
 SITE_ID = 1
