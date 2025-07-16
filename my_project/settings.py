@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'bag',  # bag-app
     'checkout',  # checkout-app
     'user',  # user-app
+    'appointments',  # appointment-app
 ]
 
 SITE_ID = 1
@@ -188,3 +189,14 @@ STATUS_CHOICES = [
     ('completed', 'Completed'),
     ('cancelled', 'Cancelled'),
 ]
+
+# opening hours of the shop - important for appointments
+OPENING_HOURS = {
+    "monday": ("10:00", "21:00"),
+    "tuesday": ("10:00", "21:00"),
+    "wednesday": ("10:00", "21:00"),
+    "thursday": ("10:00", "21:00"),
+    "friday": ("10:00", "21:00"),
+    "saturday": ("09:00", "20:00"),
+    "sunday": ("09:00", "20:00"),
+}
