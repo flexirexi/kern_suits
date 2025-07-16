@@ -185,9 +185,19 @@
                             {% endif %}
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title">{{ product.name }}</h5>
-                                <p class="card-text mb-1">{{ product.series.name }}</p>
-                                <p class="card-text mb-1">{{ product.category.name }}</p>
-                                <p class="card-text mb-1">{{ product.occasion.name }}</p>
+                                <div class="d-flex mb-3">
+                                    {% for i in "12345" %}
+                                        {% if product.avg_rating and product.avg_rating|floatformat:0 >= i %}
+                                            <span class="star filled">&#9733;</span>
+                                        {% else %}
+                                            <span class="star empty">&#9733;</span>
+                                        {% endif %}
+                                    {% endfor %}
+                                    <small>({{ product.review_count }})</small>
+                                </div>
+                                <p class="card-text mb-2"><strong>Series:</strong><br>{{ product.series.name }}</p>
+                                <p class="card-text mb-2">{{ product.category.name }}</p>
+                                <p class="card-text mb-2">{{ product.occasion.name }}</p>
                                 <p class="text-end mt-auto"><small>from:</small></p>
                                 <h5 class="mt-auto text-end price">
                                     {% if product.min_price %}

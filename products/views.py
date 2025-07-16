@@ -1,9 +1,12 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q, Count
-from .models import Product, Series, Fit, Occasion, Color, Category, ProductVariant
 from django.http import Http404
 import json
+
+from .models import Product, Series, Fit, Occasion, Color, Category, ProductVariant
+from reviews.models import Review
+from products.services.reviews import attach_review_data
 
 
 # Create your views here.
@@ -96,6 +99,9 @@ def products(request):
             key=lambda p: p.min_price if p.min_price is not None else 0,
             reverse=True
         )
+        
+    # add average ratings and ratings count to each product in products
+    products = attach_review_data(products)
     
     context = {
         'products': products,
