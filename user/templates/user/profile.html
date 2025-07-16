@@ -78,6 +78,8 @@
             <!-- 'order_detail' item.order.order_number -->
             <a href="{% url 'order_details' order_id=item.order.id %}" class="btn btn-outline-primary btn-sm mb-2 w-100">View Order</a>
             <a href="{% url 'edit_review' item.variant.product.id %}" class="btn btn-outline-secondary btn-sm w-100">Rate this Product</a>
+            {% if item.delivery_status == "Delivered" %}
+            {% endif %}
         </div>
     </div>
 

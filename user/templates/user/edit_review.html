@@ -51,7 +51,7 @@
                                 id="star{{ i }}"
                                 name="rating"
                                 value="{{ i }}"
-                                {% if review and review.rating|stringformat:"s" == i %}checked{% endif %}
+                                {% if review and review.rating|floatformat:0|stringformat:"s" == i %}checked{% endif %}
                             />
                             <label for="star{{ i }}">&#9733;</label>
                         {% endfor %}
