@@ -4,6 +4,7 @@ from django.conf import settings
 from django.views.decorators.http import require_POST
 from django.http import JsonResponse
 from decimal import Decimal
+from django.contrib.auth.decorators import login_required
 
 from .forms import OrderForm
 from bag.contexts import bag_contents
@@ -18,6 +19,7 @@ import json
 
 
 # Create your views here.
+@login_required
 def checkout(request):
     # get stripe keys
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
