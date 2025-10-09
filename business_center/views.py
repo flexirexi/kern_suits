@@ -75,8 +75,24 @@ def dashboard(request):
     sales_count = sent_orders.count()
 
     # collect data for the graph -------------------------------
+    series_qs = (
+        sent_orders.annotate(period=TruncMonth("created_at"))
+        .values("period")
+        .annotate(total=Coalesce(Sum("grand_total"), zero_dec))
+        .order_by("period")
+    )
+    series_list = list(series_qs)
+    max_series_total = max([row["total"] for row in series_list], default=Decimal("1.00"))
+    sales_series = [{
+            "label": row["period"].strftime("%b %Y"),
+            "total": row["total"],
+            "pct": float((row["total"] / max_series_total) * 100) if max_series_total > 0 else 0.0,
+        }
+        for row in series_list
+    ]
 
     # collect data for the top10 sales (by variant) -----------------
+    
 
     # collect data for the users' card ---------------------------
 
