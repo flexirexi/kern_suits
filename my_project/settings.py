@@ -246,8 +246,8 @@ if USE_AWS:
 
 STATUS_CHOICES = [
     ('created', 'Created'),
-    ('paid', 'Paid'),
-    ('shipped', 'Shipped'),
-    ('completed', 'Completed'),
-    ('cancelled', 'Cancelled'),
+    ('confirmed', 'Confirmed'),
+    ('denied', 'Denied'),
+    ('sent', 'Sent'),
+    ('returned', 'Returned'),
 ]

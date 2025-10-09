@@ -23,7 +23,7 @@
                 <a class="nav-link hover" 
                     href="#" data-bs-toggle="dropdown" aria-haspopup="true" id="user-options" role="button">
                     {% if request.user.is_authenticated %}
-                        {% if request.user.is_superuser %}
+                        {% if request.user.is_staff %}
                             <i class="fas fa-user-cog" style="color: var(--text-admin);"></i>
                         {% else %}
                             <i class="fas fa-user-circle" style="color: var(--nav-icon);"></i>
@@ -34,8 +34,8 @@
                 </a>
                 <div class="dropdown-menu border-0 dropdown-menu-end" aria-labelledby="user-options">
                     {% if request.user.is_authenticated %}
-                    {% if request.user.is_superuser %}
-                    <a href="#" class="dropdown-item nav-link">Product Management</a>
+                    {% if request.user.is_staff %}
+                    <a href="#" class="dropdown-item nav-link">Business Center</a>
                     {% endif %}
                     <a href="{% url 'profile' %}" class="dropdown-item nav-link">My Profile</a>
                     <a href="{% url 'manage_appointments' %}" class="dropdown-item nav-link">Manage Appointments</a>
