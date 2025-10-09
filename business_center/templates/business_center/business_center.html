@@ -8,6 +8,33 @@
 {% endblock %}
 
 {% block content %}
+<div class="container-fluid py-3">
+    <div class="row g-3">
 
+        <!-- PRODUCTS CARD -->
+        <div class="col-12 col-md-6 col-xl-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title mb-3">Products</h5>
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="badge text-bg-secondary">Total: <strong>{{ total_products|intcomma }}</strong></span>
+                        <span class="badge text-bg-secondary">Variants: <strong>{{ total_variants|intcomma }}</strong></span>
+                        <span class="badge text-bg-secondary">Series in stock: <strong>{{ series_in_stock|intcomma }}</strong></span>
+                    </div>
+                </div>
+                <div class="card-footer d-flex justify-content-between small">
+                    <span class="text-muted">Inventory overview</span>
+                    <div class="text-nowrap">
+                        <a href="" class="link-primary">Products</a>
+                        .
+                        <a href="" class="link-primary">Variants</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ORDERS CARD -->
+    </div>
+</div>
 
 {% endblock %}
