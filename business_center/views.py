@@ -83,6 +83,14 @@ def dashboard(request):
     )
     series_list = list(series_qs)
     max_series_total = max([row["total"] for row in series_list], default=Decimal("1.00"))
+
+    def to_decile(total):
+        if max_series_total <= 0 or total <= 0:
+            return 0
+        pct = float((total / max-series_total) * 100.0)
+        dec = int(round(pct /10.0)) * 10
+        return max(0, min(100, dec))
+
     sales_series = [{
             "label": row["period"].strftime("%b %Y"),
             "total": row["total"],
