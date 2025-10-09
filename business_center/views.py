@@ -11,6 +11,7 @@ from django.db.models.functions import Coalesce, TruncMonth
 from django.utils import timezone
 
 from checkout.models import Order, OrderItem
+from products.models import Product, ProductVariant, Series
 
 STATUS_CREATED = "created"
 STATUS_CONFIRMED = "confirmed"
@@ -26,9 +27,20 @@ def dashboard(request):
     three_days_ago = now - timedelta(days=3)
     start_of_month = now.replace(day=1, hour=0, minute=0, second=0, microsecond=0)
 
-    # collect data for the products card..
+    # collect data for the products card ----------------------
+    total_products = Product.objects.count()
+    total_variants = ProductVariant.objects.count()
+    series_in_stock = (
+        Series.objects.filter(
+            is_active=True,
+            products__is_active=True,
+            products__variants__stock__gt=0,
+        )
+        .distinct()
+        .count()
+    )
 
-    # collect data for the orders card..
+    # collect data for the orders card ---------------------------
     unconfirmed_total = Order.objects.filter(status=STATUS_CREATED).count()
     unconfirmed_gt2 = Order.objects.filter(
         status=STATUS_CREATED,
@@ -53,16 +65,19 @@ def dashboard(request):
         created_at__gte=start_of_month
     ).count()
 
-    # collect data for the sales card
+    # collect data for the sales card ---------------------------
 
-    # collect data for the graph
+    # collect data for the graph -------------------------------
 
-    # collect data for the top10 sales (by variant)
+    # collect data for the top10 sales (by variant) -----------------
 
-    # collect data for the users' card
+    # collect data for the users' card ---------------------------
 
     context = {
         # products
+        "total_products": total_products,
+        "total_variants": total_variants,
+        "series_in_stock": series_in_stock,
 
         # orders
         "unconfirmed_total": unconfirmed_total,
