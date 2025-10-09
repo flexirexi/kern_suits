@@ -29,6 +29,7 @@ urlpatterns = [
     path('checkout/', include('checkout.urls')),
     path('user/', include('user.urls')),
     path('appointments/', include('appointments.urls')),
+    path('business-center/', include('business_center.urls')),
 ]  # + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:

@@ -111,6 +111,10 @@ def dashboard(request):
     )
 
     # collect data for the users' card ---------------------------
+    User = get_user_model()
+    users_total = User.objects.count()
+    users_staff = User.objects.filter(is_staff=True).count()
+    users_admin = User.objects.filter(is_superuser=True).count()
 
     context = {
         # products
@@ -138,6 +142,9 @@ def dashboard(request):
         "top_variants": top_variants,
 
         # users
+        "users_total": users_total,
+        "users_staff": users_staff,
+        "users_admin": users_admin,
     }
 
     return render(request, "business_center/business_center.html", context)
