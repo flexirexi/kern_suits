@@ -101,14 +101,14 @@ def dashboard(request):
 
     # collect data for the top10 sales (by variant) -----------------
     revenue_expr = F("quantity") * F("price")
-    zero_dec_big = Value(Decimal("0.00"), output_field=DecimalField(max_digits(14, decimal_places=2)))
+    zero_dec_big = Value(Decimal("0.00"), output_field=DecimalField(max_digits=14, decimal_places=2))
     top_variants = (
         OrderItem.objects.filter(order__status=STATUS_SENT)
         .values(
             "variant__sku",
             "variant__product__name",
             "variant__size__name",
-            "variant__fit_name",
+            "variant__fit__name",
             "variant__color__name",
         )
         .annotate(

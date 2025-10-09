@@ -27,7 +27,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, "templates")
 SECRET_KEY = os.getenv("DJANGO_SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     '.onrender.com',
@@ -66,8 +66,10 @@ INSTALLED_APPS = [
     'user',  # user-app
     'appointments',  # appointment-app
     'reviews',  # reviews-app, mainly for models. other apps will handle them
+    'business_center',  # business_center-app for product, order and user rights management
 
     'storages',
+    'django.contrib.humanize',
 ]
 
 SITE_ID = 1
