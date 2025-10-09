@@ -238,7 +238,7 @@ DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
 MEDIAFILES_LOCATION = 'media'
 
 # Override static and media URLs in production
-USE_AWS = os.environ.get("USE_AWS")
+USE_AWS = os.getenv('USE_AWS') == 'True'
 if USE_AWS:
     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
