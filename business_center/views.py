@@ -145,6 +145,7 @@ def dashboard(request):
         "sales_avg": sales_avg,
         "sales_max": sales_max,
         "sales_count": sales_count,
+        "sales_series": sales_series,
 
         # top 10
         "top_variants": top_variants,
