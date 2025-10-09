@@ -66,6 +66,13 @@ def dashboard(request):
     ).count()
 
     # collect data for the sales card ---------------------------
+    sent_orders = Order.objects.filter(status=STATUS_SENT)
+
+    zero_dec = Value(Decimal("0.00"), output_field=DecimalField(max_digits=12, decimal_places=2))
+    sales_total = sent_orders.aggregate(total=Coalesce(Sum("grand_total"), zero_dec))["total"]
+    sales_avg = sent_orders.aggregate(avg=Coalesce(Avg("grand_total"), zero_dec))["avg"]
+    sales_max = sent_orders.aggregate(max=Coalesce(Max("grand_total"), zero_dec))["max"]
+    sales_count = sent_orders.count()
 
     # collect data for the graph -------------------------------
 
@@ -90,6 +97,10 @@ def dashboard(request):
         "sent_month": sent_month,
 
         # sales
+        "sales_total": sales_total,
+        "sales_avg": sales_avg,
+        "sales_max": sales_max,
+        "sales_count": sales_count,
 
         # top 10
 
