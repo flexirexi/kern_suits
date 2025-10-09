@@ -1,0 +1,9 @@
+{% extends "account/base.html" %}
+{% block content %}
+<div class="container text-center py-5">
+    <h1 class="display-4">Oops! Page not found (404)</h1>
+    <p class="lead mt-3">The page you tried to access doesn't exist or was moved.</p>
+    <a href="{% url 'home' %}" class="btn btn-primary mt-4">Back to Home</a>
+</div>
+
+{% endblock %}

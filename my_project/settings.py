@@ -46,19 +46,19 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    
+
     # allauth
     'django.contrib.sites',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
     'django_summernote',
-    
+
     # crispy_forms",
     'crispy_forms',
     'crispy_bootstrap5',
-    
-    
+
+
     'home',  # home-app    
     'products',  # products-app
     'bag',  # bag-app
@@ -66,7 +66,7 @@ INSTALLED_APPS = [
     'user',  # user-app
     'appointments',  # appointment-app
     'reviews',  # reviews-app, mainly for models. other apps will handle them
-    
+
     'storages',
 ]
 
@@ -251,5 +251,3 @@ STATUS_CHOICES = [
     ('completed', 'Completed'),
     ('cancelled', 'Cancelled'),
 ]
-
-
