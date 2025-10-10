@@ -8,8 +8,8 @@
 {% endblock %}
 
 {% block content %}
-<div class="container-fluid py-3">
-    <div class="row g-3">
+<div class="container py-3">
+    <div class="row g-3 d-flex ">
 
         <!-- PRODUCTS CARD -->
         <div class="col-12 col-md-6 col-xl-2 mt-4 d-block text-center m-1">
@@ -102,19 +102,19 @@
                 <h5 class="card-title mb-3">Sales (sent orders)</h5>
 
                 <div class="d-flex flex-column align-items-center gap-2 mb-3">
-                    <span class="badge bg-act1 w-100px d-flex justify-content-between align-items-center px-3 py-1 mb-2">
+                    <span class="badge bg-act1 w-150px d-flex justify-content-between align-items-center px-3 py-1 mb-1">
                         <span>Total: </span>
-                        <span class="badge-number-size fw-bold">{% localize on %}{{ sales_total }}{% endlocalize %}</span>
+                        <span class="badge-number-size fw-bold">{% localize on %}{{ sales_total|floatformat:2 }}{% endlocalize %}</span>
                     </span>
-                    <span class="badge bg-act1 w-100px d-flex justify-content-between align-items-center px-3 py-1 mb-2">
+                    <span class="badge bg-act1 w-150px d-flex justify-content-between align-items-center px-3 py-1 mb-1">
                         <span>Average: </span>
-                        <span class="badge-number-size fw-bold">{% localize on %}{{ sales_avg }}{% endlocalize %}</span>
+                        <span class="badge-number-size fw-bold">{% localize on %}{{ sales_avg|floatformat:2 }}{% endlocalize %}</span>
                     </span>
-                    <span class="badge bg-act1 w-100px d-flex justify-content-between align-items-center px-3 py-1 mb-2">
+                    <span class="badge bg-act1 w-150px d-flex justify-content-between align-items-center px-3 py-1 mb-1">
                         <span>Max: </span>
-                        <span class="badge-number-size fw-bold">{% localize on %}{{ sales_max }}{% endlocalize %}</span>
+                        <span class="badge-number-size fw-bold">{% localize on %}{{ sales_max|floatformat:2 }}{% endlocalize %}</span>
                     </span>
-                    <span class="badge bg-act1 w-100px d-flex justify-content-between align-items-center px-3 py-1 mb-2">
+                    <span class="badge bg-act1 w-150px d-flex justify-content-between align-items-center px-3 py-1 mb-1">
                         <span>Orders: </span>
                         <span class="badge-number-size fw-bold">{{ sales_count|intcomma }}</span>
                     </span>
@@ -122,13 +122,13 @@
                 {% if sales_series %}
                     <div class="bc-bars">
                     {% for row in sales_series %}
-                        <div class="bc-bar-row">
+                        <div class="fs-7">
                             <div class="bc-bar-label">{{ row.label }}</div>
                             <div class="bc-bar">
                                 <div class="bc-bar-fill w-{{ row.pct10 }}"></div>
                             </div>
-                            <div class="bc-bar-value">
-                                {% localize on %}{{ row.total }}{% endlocalize %}
+                            <div>
+                                {{ row.total }}
                             </div>
                         </div>
                     {% endfor %}
@@ -139,6 +139,62 @@
                 </div>
             </div>
         </div>
+
+        <!-- TOP 10 PRODUCT SALES -->
+        <div class="col-12 col-md-6 col-xl-4 mt-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                <h5 class="card-title mb-3">Top 10 Products (by variant)</h5>
+                {% if top_variants %}
+                    <div class="table-responsive">
+                    <table class="table table-hover table-sm align-middle">
+                        <thead class="table-light">
+                        <tr>
+                            <th class="w-70 fs-7">Variant</th>
+                            <th class="w-10 fs-7">Units</th>
+                            <th class="text-end w-20 fs-7" >Revenue</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for v in top_variants %}
+                            <tr>
+                            <td class="fs-7 w-70">
+                                {{ v.variant__product__name }}
+                                — {{ v.variant__size__name }}/{{ v.variant__fit__name }}/{{ v.variant__color__name }}
+                                
+                            </td>
+                            <td class="w-10 text-end">{{ v.units|intcomma }}</td>
+                            <td class="text-end w-20">{% localize on %}{{ v.revenue }}{% endlocalize %}</td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                    </div>
+                {% else %}
+                    <p class="text-muted mb-0">No sold variants yet.</p>
+                {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Users Card -->
+        <div class="col-12 col-md-6 col-xl-4 mt-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title mb-3">Users</h5>
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="badge bg-act1 w-150px d-flex justify-content-between align-items-center px-3 py-2 text2 ">Registered: <strong>{{ users_total|intcomma }}</strong></span>
+                        <span class="badge bg-act1 w-150px d-flex justify-content-between align-items-center px-3 py-2 text2 ">Staff: <strong>{{ users_staff|intcomma }}</strong></span>
+                        <span class="badge bg-act1 w-150px d-flex justify-content-between align-items-center px-3 py-2 text2 ">Admins: <strong>{{ users_admin|intcomma }}</strong></span>
+                    </div>
+                </div>
+                <div class="card-footer d-flex justify-content-between small">
+                    <span class="text-muted">User management</span>
+                    <a class="link-primary" href="{% url 'admin:auth_user_changelist' %}">Users admin</a>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
 

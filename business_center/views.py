@@ -99,7 +99,7 @@ def dashboard(request):
         for row in series_list
     ]
 
-    # collect data for the top10 sales (by variant) -----------------
+    # collect data for the top10 product variant sales (by variant) -----------------
     revenue_expr = F("quantity") * F("price")
     zero_dec_big = Value(Decimal("0.00"), output_field=DecimalField(max_digits=14, decimal_places=2))
     top_variants = (

@@ -7,6 +7,11 @@
 
 [data-theme] .card {
     box-shadow: 3px 3px 3px #00000090;
+    min-height: 50px;
+    max-height: 310px;
+    overflow-x: auto;
+    scrollbar-width:thin;
+    scrollbar-color: #00000020 transparent;
 }
 
 [data-theme] .badge-number-size {

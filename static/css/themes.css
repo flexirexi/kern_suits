@@ -84,6 +84,10 @@ html[data-theme="dark"] {
     color: var(--text1);
 }
 
+[data-theme] .text2 {
+    color: var(--text2);
+}
+
 [data-theme] .text-act2 {
     color: var(--act2-text);
 }

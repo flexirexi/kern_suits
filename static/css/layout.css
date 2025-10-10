@@ -71,6 +71,10 @@ main,
     cursor: pointer;
 }
 
+[data-theme] .fs-7 {
+    font-size: 0.875rem;
+}
+
 @media (min-width:768px) {
     [data-theme] .card {
         transition: transform 0.3s ease;
