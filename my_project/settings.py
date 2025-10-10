@@ -28,6 +28,19 @@ SECRET_KEY = os.getenv("DJANGO_SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
+LOGGING = {
+    "version": 1,
+    "disable_existing_loggers": False,
+    "handlers": {
+        "console": {"class": "logging.StreamHandler"},
+    },
+    "loggers": {
+        "django": {"handlers": ["console"], "level": "INFO"},
+        "django.request": {"handlers": ["console"], "level": "ERROR", "propagate": False},
+        "django.server": {"handlers": ["console"], "level": "ERROR", "propagate": False},
+    },
+}
+
 
 ALLOWED_HOSTS = [
     '.onrender.com',
