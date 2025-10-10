@@ -1,0 +1,12 @@
+@import url("/static/css/themes.70031d5feffe.css");
+@import url("/static/css/layout.1fd7f7f08c7a.css");
+
+[data-theme] body {
+    background-color: var(--bgDefault);
+}
+
+
+
+@media (min-width: 992px) {
+
+}
