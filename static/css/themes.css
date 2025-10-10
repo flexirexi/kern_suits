@@ -80,12 +80,24 @@ html[data-theme="dark"] {
     color: var(--text-admin);
 }
 
+[data-theme] .text1 {
+    color: var(--text1);
+}
+
+[data-theme] .text-act2 {
+    color: var(--act2-text);
+}
+
 [data-theme] .bg-light2 {
     background-color: var(--bgDefault2); /* bootstrap is avoided here - gray was too light */
 }
 
 .bg-contrast {
     background-color: var(--bgcontrast);
+}
+
+.bg-act1 {
+    background-color: var(--act1-bg);
 }
 
 a {
@@ -235,6 +247,3 @@ footer .nav-link:hover {
     font-family: "Calibry", sans-serif;
 }
 
-[data-theme] .text-bg-success-custom {
-    
-}

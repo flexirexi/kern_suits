@@ -54,3 +54,7 @@
 [data-theme] .w-80  { width: 80%; }
 [data-theme] .w-90  { width: 90%; }
 [data-theme] .w-100 { width: 100%; }
+
+[data-theme] .w-50px { width: 50px; }
+[data-theme] .w-100px { width: 130px; }
+[data-theme] .w-150px { width: 170px; }

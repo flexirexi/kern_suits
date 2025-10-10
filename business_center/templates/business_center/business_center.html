@@ -12,18 +12,27 @@
     <div class="row g-3">
 
         <!-- PRODUCTS CARD -->
-        <div class="col-12 col-md-6 col-xl-4 mt-4">
-            <div class="card h-100 shadow-sm">
+        <div class="col-12 col-md-6 col-xl-2 mt-4 d-block text-center m-1">
+            <div class="card h-100 ">
                 <div class="card-body">
-                    <h5 class="card-title mb-3">Products</h5>
-                    <div class="d-flex flex-wrap gap-2">
-                        <span class="badge text-bg-secondary">Total: <strong>{{ total_products|intcomma }}</strong></span>
-                        <span class="badge text-bg-secondary">Variants: <strong>{{ total_variants|intcomma }}</strong></span>
-                        <span class="badge text-bg-secondary">Series in stock: <strong>{{ series_in_stock|intcomma }}</strong></span>
+                    <h5 class="card-title mb-4">Products in stock</h5>
+                    <div class="d-flex flex-column align-items-center gap-2">
+                        <span class="badge bg-act1 w-100px d-flex justify-content-between align-items-center px-3 py-1 mb-2">
+                            <span>Products:</span>
+                            <span class="badge-number-size fw-bold">{{ total_products|intcomma }}</span>
+                        </span>
+                        <span class="badge bg-act1 w-100px d-flex justify-content-between align-items-center px-3 py-1 mb-2">
+                            <span>Variants: </span>
+                            <span class="badge-number-size fw-bold">{{ total_variants|intcomma }}</span>
+                        </span>
+                        <span class="badge bg-act1 w-100px d-flex justify-content-between align-items-center px-3 py-1 mb-2">
+                            <span>Series: </span>
+                            <span class="badge-number-size fw-bold">{{ series_in_stock|intcomma }}</span>
+                        </span>
                     </div>
                 </div>
                 <div class="card-footer d-flex justify-content-between small">
-                    <span class="text-muted">Inventory overview</span>
+                    <span class="text-muted">Overview</span>
                     <div class="text-nowrap">
                         <a href="" class="link-primary">Products</a>
                         .
@@ -34,6 +43,102 @@
         </div>
 
         <!-- ORDERS CARD -->
+        <div class="col-12 col-md-6 col-xl-3 mt-4">
+            <div class="card h-100 mb-3">
+                <div class="card-body">
+                    <h5 class="card-title mb-3">Orders</h5>
+                    <table class="table table-sm align-middle mb-0 table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="w-150px">Created</td>
+                                <td class="text-end">
+                                    <strong>{{ unconfirmed_total|intcomma }}</strong>
+                                </td>
+                                <td class="text-end">
+                                    <span class="badge rounded-pill text-bg-light ms-2 px-2 py-1">&gt;2days: {{ unconfirmed_gt2|intcomma }}</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="w-150px">Confirmed (to ship)</td>
+                                <td class="text-end w-50px">
+                                    <strong>{{ confirmed_total|intcomma }}</strong>
+                                </td>
+                                <td class="text-end">
+                                    <span class="badge rounded-pill text-bg-light ms-2">&gt;3 days: {{ confirmed_gt3|intcomma }}</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="w-150px">Denied</td>
+                                <td class="text-end w-50px">
+                                    <strong>{{ denied_total|intcomma }}</strong>
+                                </td>
+                                <td class="text-end">
+                                    <span class="badge rounded-pill text-bg-light ms-2">this month: {{ denied_month|intcomma }}</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="w-150px">Sent</td>
+                                <td class="text-end w-50px">
+                                    <strong>{{ sent_total|intcomma }}</strong>
+                                </td>
+                                <td class="text-end">
+                                    <span class="badge rounded-pill text-bg-light ms-2">this month: {{ sent_month|intcomma }}</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="card-footer d-flex justify-content-between small">
+                    <span class="text-muted">Order pipeline</span>
+                    <a href="#" class="link-primary">Orders</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sales Card -->
+        <div class="col-12 col-md-6 col-xl-2 mt-4">
+            <div class="card h-100">
+                <div class="card-body">
+                <h5 class="card-title mb-3">Sales (sent orders)</h5>
+
+                <div class="d-flex flex-column align-items-center gap-2 mb-3">
+                    <span class="badge bg-act1 w-100px d-flex justify-content-between align-items-center px-3 py-1 mb-2">
+                        <span>Total: </span>
+                        <span class="badge-number-size fw-bold">{% localize on %}{{ sales_total }}{% endlocalize %}</span>
+                    </span>
+                    <span class="badge bg-act1 w-100px d-flex justify-content-between align-items-center px-3 py-1 mb-2">
+                        <span>Average: </span>
+                        <span class="badge-number-size fw-bold">{% localize on %}{{ sales_avg }}{% endlocalize %}</span>
+                    </span>
+                    <span class="badge bg-act1 w-100px d-flex justify-content-between align-items-center px-3 py-1 mb-2">
+                        <span>Max: </span>
+                        <span class="badge-number-size fw-bold">{% localize on %}{{ sales_max }}{% endlocalize %}</span>
+                    </span>
+                    <span class="badge bg-act1 w-100px d-flex justify-content-between align-items-center px-3 py-1 mb-2">
+                        <span>Orders: </span>
+                        <span class="badge-number-size fw-bold">{{ sales_count|intcomma }}</span>
+                    </span>
+                </div>
+                {% if sales_series %}
+                    <div class="bc-bars">
+                    {% for row in sales_series %}
+                        <div class="bc-bar-row">
+                            <div class="bc-bar-label">{{ row.label }}</div>
+                            <div class="bc-bar">
+                                <div class="bc-bar-fill w-{{ row.pct10 }}"></div>
+                            </div>
+                            <div class="bc-bar-value">
+                                {% localize on %}{{ row.total }}{% endlocalize %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                    </div>
+                {% else %}
+                    <p class="text-muted mb-0">No sales yet.</p>
+                {% endif %}
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
