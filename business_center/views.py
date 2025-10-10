@@ -15,7 +15,8 @@ from checkout.models import Order, OrderItem
 from products.models import Product, ProductVariant, Series, Category
 
 from django.http import JsonResponse, HttpResponseBadRequest, HttpResponseForbidden
-
+from django.contrib import messages
+from .forms import ProductVariantForm
 
 STATUS_CREATED = "created"
 STATUS_CONFIRMED = "confirmed"
@@ -29,7 +30,8 @@ def dashboard(request):
     now = timezone.now()
     two_days_ago = now - timedelta(days=2)
     three_days_ago = now - timedelta(days=3)
-    start_of_month = now.replace(day=1, hour=0, minute=0, second=0, microsecond=0)
+    start_of_month = now.replace(
+        day=1, hour=0, minute=0, second=0, microsecond=0)
 
     # collect data for the products card ----------------------
     total_products = Product.objects.count()
@@ -72,10 +74,14 @@ def dashboard(request):
     # collect data for the sales card ---------------------------
     sent_orders = Order.objects.filter(status=STATUS_SENT)
 
-    zero_dec = Value(Decimal("0.00"), output_field=DecimalField(max_digits=12, decimal_places=2))
-    sales_total = sent_orders.aggregate(total=Coalesce(Sum("grand_total"), zero_dec))["total"]
-    sales_avg = sent_orders.aggregate(avg=Coalesce(Avg("grand_total"), zero_dec))["avg"]
-    sales_max = sent_orders.aggregate(max=Coalesce(Max("grand_total"), zero_dec))["max"]
+    zero_dec = Value(Decimal("0.00"), output_field=DecimalField(
+        max_digits=12, decimal_places=2))
+    sales_total = sent_orders.aggregate(
+        total=Coalesce(Sum("grand_total"), zero_dec))["total"]
+    sales_avg = sent_orders.aggregate(
+        avg=Coalesce(Avg("grand_total"), zero_dec))["avg"]
+    sales_max = sent_orders.aggregate(
+        max=Coalesce(Max("grand_total"), zero_dec))["max"]
     sales_count = sent_orders.count()
 
     # collect data for the graph -------------------------------
@@ -86,26 +92,28 @@ def dashboard(request):
         .order_by("period")
     )
     series_list = list(series_qs)
-    max_series_total = max([row["total"] for row in series_list], default=Decimal("1.00"))
+    max_series_total = max([row["total"]
+                           for row in series_list], default=Decimal("1.00"))
 
     def to_decile(total):
         if max_series_total <= 0 or total <= 0:
             return 0
         pct = float((total / max-series_total) * 100.0)
-        dec = int(round(pct /10.0)) * 10
+        dec = int(round(pct / 10.0)) * 10
         return max(0, min(100, dec))
 
     sales_series = [{
-            "label": row["period"].strftime("%b %Y"),
-            "total": row["total"],
-            "pct": float((row["total"] / max_series_total) * 100) if max_series_total > 0 else 0.0,
-        }
+        "label": row["period"].strftime("%b %Y"),
+        "total": row["total"],
+        "pct": float((row["total"] / max_series_total) * 100) if max_series_total > 0 else 0.0,
+    }
         for row in series_list
     ]
 
     # collect data for the top10 product variant sales (by variant) -----------------
     revenue_expr = F("quantity") * F("price")
-    zero_dec_big = Value(Decimal("0.00"), output_field=DecimalField(max_digits=14, decimal_places=2))
+    zero_dec_big = Value(Decimal("0.00"), output_field=DecimalField(
+        max_digits=14, decimal_places=2))
     top_variants = (
         OrderItem.objects.filter(order__status=STATUS_SENT)
         .values(
@@ -117,7 +125,8 @@ def dashboard(request):
         )
         .annotate(
             units=Coalesce(Sum("quantity"), Value(0)),
-            revenue=Coalesce(Sum(revenue_expr, output_field=DecimalField(max_digits=14, decimal_places=2)), zero_dec_big),
+            revenue=Coalesce(Sum(revenue_expr, output_field=DecimalField(
+                max_digits=14, decimal_places=2)), zero_dec_big),
         )
         .order_by("-revenue")[:10]
     )
@@ -180,17 +189,20 @@ def product_management(request):
             Q(product__fabric__icontains=q)
         )
 
-    sel_series = request.GET.getlist("series") or [request.GET.get("series","")]
+    sel_series = request.GET.getlist(
+        "series") or [request.GET.get("series", "")]
     sel_series = [int(s) for s in sel_series if s]
     if sel_series:
         qs = qs.filter(product__series__id__in=sel_series)
 
-    sel_cat = request.GET.getlist("category") or [request.GET.get("category","")]
+    sel_cat = request.GET.getlist("category") or [
+        request.GET.get("category", "")]
     sel_cat = [c for c in sel_cat if c]
     if sel_cat:
         qs = qs.filter(product__category__name__in=sel_cat)
 
-    sel_fabric = request.GET.getlist("fabric") or [request.GET.get("fabric","")]
+    sel_fabric = request.GET.getlist(
+        "fabric") or [request.GET.get("fabric", "")]
     sel_fabric = [f for f in sel_fabric if f]
     if sel_fabric:
         qs = qs.filter(product__fabric__in=sel_fabric)
@@ -246,6 +258,17 @@ def variant_edit(request, pk):
 
 
 def variant_create(request):
-    return redirect("admin:app_productvariant_add")
+    if request.method == "POST":
+        form = ProductVariantForm(request.POST, request.FILES)
+        if form.is_valid():
+            try:
+                form.save()
+            except Exception as e:
+                form.add_error(None, str(e))
+            else:
+                messages.success(request, "Variant erstellt.")
+                return redirect("bc_product_management")
+    else:
+        form = ProductVariantForm()
 
-
+    return render(request, "business_center/variant_form.html", {"form": form})
