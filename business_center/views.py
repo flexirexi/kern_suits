@@ -164,8 +164,46 @@ def dashboard(request):
 
 
 def product_management(request):
+    qs = ProductVariant.objects.select_related(
+        "product", "product__series", "fit", "size", "color"
+    )
+
+    # Filters/search
+    q = request.GET.get("q", "")
+    if q:
+        qs = qs.filter(
+            Q(product__name__icontains=q) |
+            Q(product__series__name__icontains=q) |
+            Q(size__name__icontains=q) |
+            Q(fit__name__icontains=q) |
+            Q(color__name__icontains=q) |
+            Q(product__fabric__icontains=q)
+        )
+
+    sel_series = request.GET.getlist("series") or [request.GET.get("series","")]
+    sel_series = [int(s) for s in sel_series if s]
+    if sel_series:
+        qs = qs.filter(product__series__id__in=sel_series)
+
+    sel_cat = request.GET.getlist("category") or [request.GET.get("category","")]
+    sel_cat = [c for c in sel_cat if c]
+    if sel_cat:
+        qs = qs.filter(product__category__name__in=sel_cat)
+
+    sel_fabric = request.GET.getlist("fabric") or [request.GET.get("fabric","")]
+    sel_fabric = [f for f in sel_fabric if f]
+    if sel_fabric:
+        qs = qs.filter(product__fabric__in=sel_fabric)
 
     context = {
+        "variants": qs.order_by("product__name", "size__name"),
+        "series_list": Series.objects.all(),
+        "categories_list": Category.objects.all(),
+        "fabrics_list": Product.objects.values_list("fabric", flat=True).distinct(),
+        "search_term": q,
+        "selected_series": sel_series,
+        "selected_categories": sel_cat,
+        "selected_fabrics": sel_fabric,
     }
 
     return render(request, "business_center/product_management.html", context)
@@ -173,29 +211,41 @@ def product_management(request):
 
 @require_POST
 def variant_plus(request, pk):
-    return JsonResponse()
+    v = get_object_or_404(ProductVariant, pk=pk)
+    v.stock = (v.stock or 0) + 1
+    v.save(update_fields=["stock"])
+    return JsonResponse({"stock": v.stock, "message": "Quantity increased."})
 
 
 @require_POST
 def variant_minus(request, pk):
-    return JsonResponse()
+    v = get_object_or_404(ProductVariant, pk=pk)
+    v.stock = max(0, (v.stock or 0) - 1)
+    v.save(update_fields=["stock"])
+    return JsonResponse({"stock": v.stock, "message": "Quantity reduced."})
 
 
 @require_POST
 def variant_duplicate(request, pk):
-    return JsonResponse()
+    v = get_object_or_404(ProductVariant, pk=pk)
+    v.pk = None
+    v.stock = 0
+    v.save()
+    return JsonResponse({"message": "Variant duplicated."})
 
 
 @require_POST
 def variant_remove(request, pk):
-    return JsonResponse()
+    v = get_object_or_404(ProductVariant, pk=pk)
+    v.delete()
+    return JsonResponse({"message": "Variant deleted."})
 
 
 def variant_edit(request, pk):
-    return redirect()
+    return redirect("admin:app_productvariant_change", pk)
 
 
 def variant_create(request):
-    return redirect()
+    return redirect("admin:app_productvariant_add")
 
 

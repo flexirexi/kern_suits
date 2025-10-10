@@ -1,45 +1,187 @@
-{% extends "base.html" %}
+{% extends "business_center/base.html" %}
 {% load static %}
 {% load humanize %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'business_center/css/business_center.css' %}">
+<link rel="stylesheet" href="{% static 'business_center/css/product_management.css' %}">
 {% endblock %}
 
 {% block content %}
 <div class="container-fluid pm-wrapper">
     <div class="pm-toolbar border-bottom py-3">
         <div class="d-flex flex-wrap gap-2 align-items-center pm-action">
-            <button id="btn-create" class="btn btn-success">
-                <i class="bi bi-plus-circle me-1"></i>Create
+            <button id="btn-create" class="btn btn-success" aria-label="hahaha">
+                <i class="fa-solid fa-circle-plus me-1"></i>Create
             </button>
             <button id="btn-edit" class="btn btn-outline-primary">
-                <i class="bi bi-pencil-square me-1"></i>Edit
+                <i class="fa-solid fa-pen-to-square me-1"></i>Edit
             </button>
             <button id="btn-duplicate" class="btn btn-outline-secondary">
-                <i class="bi bi-files me-1"></i>Duplicate
+                <i class="fa-solid fa-copy me-1"></i>Duplicate
             </button>
             <button id="btn-plus" class="btn btn-outline-success">
-                <i class="bi bi-plus-lg me-1"></i>Plus
+                <i class="fa-solid fa-plus me-1"></i>Plus
             </button>
             <button id="btn-minus" class="btn btn-outline-warning">
-                <i class="bi bi-dash-lg me-1"></i>Minus
+                <i class="fa-solid fa-minus me-1"></i>Minus
             </button>
             <button id="btn-remove" class="btn btn-outline-danger">
-                <i class="bi bi-trash me-1"></i>Remove
+                <i class="fa-solid fa-trash me-1"></i>Remove
             </button>
 
             <form action="" class="ms-auto pm-search">
                 <div class="input-group">
-                    <input type="search" name="q" value="{{ search_term|default:'' }}" class="form-control" placeholder="Search variants (title, series, size, fit, color, fabric)">
+                    <input type="search" name="q" value="{{ search_term|default:'' }}" class="form-control"
+                        placeholder="Search variants (title, series, size, fit, color, fabric)">
                     <button class="btn btn-outline-secondary" type="submit">
-                        <i class="bi bi-search"></i>
+                        <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
                 </div>
             </form>
         </div>
     </div>
 
+    <div class="row g-3 mt-2">
+        <!-- Aside filters -->
+        <div class="col-12 col-lg-3 aside-container ">
+            <aside class="pm-aside">
+                <form method="get" class="cards ">
+                    <div class="card-header fw-semibold">Filters</div>
+                    <div class="card-body d-grid gap-3">
 
+                        <!-- Series -->
+                        <div>
+                            <label class="form-label">Series</label>
+                            <select class="form-select" name="series" onchange="this.form.submit()">
+                                <option value="">All</option>
+                                {% for s in series_list %}
+                                <option value="{{ s.id }}" {% if s.id in selected_series %}selected{% endif %}>{{ s.name
+                                    }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <!-- Part / Category -->
+                        <div>
+                            <label class="form-label">Part</label>
+                            <select class="form-select" name="category" onchange="this.form.submit()">
+                                <option value="">All</option>
+                                {% for c in categories_list %}
+                                <option value="{{ c.name }}" {% if c.name in selected_categories %}selected{% endif %}>
+                                    {{ c.name }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <!-- Fabric -->
+                        <div>
+                            <label class="form-label">Fabric</label>
+                            <select class="form-select" name="fabric" onchange="this.form.submit()">
+                                <option value="">All</option>
+                                {% for f in fabrics_list %}
+                                <option value="{{ f }}" {% if f in selected_fabrics %}selected{% endif %}>{{ f }}
+                                </option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <!-- Reset -->
+                        <a class="btn btn-sm btn-outline-secondary" href="{% url 'bc_product_management' %}">Reset
+                            filters</a>
+                    </div>
+                </form>
+            </aside>
+        </div>
+
+        <!-- Scrollable variant list -->
+        <div class="col-12 col-lg-9 pm-col-right">
+            <div class="pm-list pe-1">
+                {% if variants %}
+                <div class="d-grid gap-2">
+                    {% for v in variants %}
+                    <div class="pm-row d-flex flex-column flex-md-row align-items-center justify-content-between gap-2 bg-light2 px-3 py-2 rounded-3"
+                        tabindex="0" role="button" data-variant-id="{{ v.id }}"
+                        data-endpoint-plus="{% url 'bc_variant_plus' v.id %}"
+                        data-endpoint-minus="{% url 'bc_variant_minus' v.id %}"
+                        data-endpoint-duplicate="{% url 'bc_variant_duplicate' v.id %}"
+                        data-endpoint-remove="{% url 'bc_variant_remove' v.id %}"
+                        data-endpoint-edit="{% url 'bc_variant_edit' v.id %}">
+
+                        <!-- Bild (linke Spalte) -->
+                        <div class="col-auto text-center me-3">
+                            {% if v.product.image %}
+                            <img src="{{ v.product.image.url }}" alt="{{ v.name }}" class="pm-thumb">
+                            {% else %}
+                            <img src="{% static 'img/noimage.png' %}" alt="No image" class="pm-thumb">
+                            {% endif %}
+                        </div>
+
+                        <!-- Mittlerer Bereich: Titel / Untertitel / Fit / Size / Color -->
+                        <div class="flex-grow-1 w-100">
+                            <div class="row gx-2 align-items-center">
+                                <!-- Titel & Serie -->
+                                <div class="col-12 col-md-4">
+                                    <div class="fw-semibold small">{{ v.product.name }}</div>
+                                    <div class="text-muted small">Series: {{ v.product.series.name }}</div>
+                                </div>
+
+                                <!-- Fit + Farbbox -->
+                                <div class="col-6 col-md-3 d-flex align-items-center gap-2">
+                                    <span class="chip chip-fit">{{ v.fit.name }}</span>
+                                    <span class="chip-color" style="background: {{ v.color.hex_code }};"></span>
+                                </div>
+
+                                <!-- Size + Farbname -->
+                                <div class="col-6 col-md-3 d-flex align-items-center gap-2">
+                                    <span class="chip chip-size">{{ v.size.name }}</span>
+                                    <span class="pm-subtle small">{{ v.color.name }}</span>
+                                </div>
+
+                                <!-- QTY -->
+                                <div class="col-3 col-md-1 text-center">
+                                    <div class="pm-qty" data-field="qty">{{ v.stock }}</div>
+                                </div>
+
+                                <!-- Preis -->
+                                <div class="col-3 col-md-1 text-end">
+                                    <div class="pm-price">{{ v.price|floatformat:2 }} €</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {% endfor %}
+                </div>
+                {% else %}
+                <div class="alert alert-info">No variants found for the current filter/search.</div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
 </div>
+
+
+<!-- Remove confirm modal -->
+<div class="modal fade" id="removeModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Delete variant?</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                This will permanently remove the selected variant. Proceed?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-danger" id="confirmRemove">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block extra_scripts %}
+<script src="{% static 'business_center/js/product_management.js' %}" defer></script>
 {% endblock %}

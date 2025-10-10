@@ -3,22 +3,18 @@
     <div class="collapse navbar-collapse justify-content-end">
         <ul class="navbar-nav align-items-center">
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'home' %}">Home</a>
+                <a class="nav-link" href="{% url 'business_center' %}">Business Center</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'products' %}">Shop</a>
+                <a class="nav-link" href="{% url 'bc_product_management' %}">Product Management</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'appointments' %}">Consultations</a>
+                <a class="nav-link" href="{% url 'appointments' %}">Orders</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'about' %}">About</a>
+                <a class="nav-link" href="{% url 'about' %}">User rights</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link hover" href="{% url 'bag' %}">
-                    <i class="fas fa-bag-shopping" style="color: var(--nav-icon);"></i>
-                </a>
-            </li>
+
             <li class="nav-item dropdown">
                 <a class="nav-link hover" 
                     href="#" data-bs-toggle="dropdown" aria-haspopup="true" id="user-options" role="button">
