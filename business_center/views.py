@@ -1,17 +1,21 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404, redirect
 
 from datetime import timedelta
 from decimal import Decimal
 
 from django.conf import settings
 from django.contrib.admin.views.decorators import staff_member_required
+from django.views.decorators.http import require_POST
 from django.contrib.auth import get_user_model
 from django.db.models import Sum, Avg, Max, F, Q, Value, DecimalField
 from django.db.models.functions import Coalesce, TruncMonth
 from django.utils import timezone
 
 from checkout.models import Order, OrderItem
-from products.models import Product, ProductVariant, Series
+from products.models import Product, ProductVariant, Series, Category
+
+from django.http import JsonResponse, HttpResponseBadRequest, HttpResponseForbidden
+
 
 STATUS_CREATED = "created"
 STATUS_CONFIRMED = "confirmed"
@@ -157,3 +161,41 @@ def dashboard(request):
     }
 
     return render(request, "business_center/business_center.html", context)
+
+
+def product_management(request):
+
+    context = {
+    }
+
+    return render(request, "business_center/product_management.html", context)
+
+
+@require_POST
+def variant_plus(request, pk):
+    return JsonResponse()
+
+
+@require_POST
+def variant_minus(request, pk):
+    return JsonResponse()
+
+
+@require_POST
+def variant_duplicate(request, pk):
+    return JsonResponse()
+
+
+@require_POST
+def variant_remove(request, pk):
+    return JsonResponse()
+
+
+def variant_edit(request, pk):
+    return redirect()
+
+
+def variant_create(request):
+    return redirect()
+
+
