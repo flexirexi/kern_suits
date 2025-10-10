@@ -7,5 +7,39 @@
 {% endblock %}
 
 {% block content %}
+<div class="container-fluid pm-wrapper">
+    <div class="pm-toolbar border-bottom py-3">
+        <div class="d-flex flex-wrap gap-2 align-items-center pm-action">
+            <button id="btn-create" class="btn btn-success">
+                <i class="bi bi-plus-circle me-1"></i>Create
+            </button>
+            <button id="btn-edit" class="btn btn-outline-primary">
+                <i class="bi bi-pencil-square me-1"></i>Edit
+            </button>
+            <button id="btn-duplicate" class="btn btn-outline-secondary">
+                <i class="bi bi-files me-1"></i>Duplicate
+            </button>
+            <button id="btn-plus" class="btn btn-outline-success">
+                <i class="bi bi-plus-lg me-1"></i>Plus
+            </button>
+            <button id="btn-minus" class="btn btn-outline-warning">
+                <i class="bi bi-dash-lg me-1"></i>Minus
+            </button>
+            <button id="btn-remove" class="btn btn-outline-danger">
+                <i class="bi bi-trash me-1"></i>Remove
+            </button>
 
+            <form action="" class="ms-auto pm-search">
+                <div class="input-group">
+                    <input type="search" name="q" value="{{ search_term|default:'' }}" class="form-control" placeholder="Search variants (title, series, size, fit, color, fabric)">
+                    <button class="btn btn-outline-secondary" type="submit">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+</div>
 {% endblock %}
