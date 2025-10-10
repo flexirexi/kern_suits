@@ -12,4 +12,6 @@ urlpatterns = [
          views.variant_remove, name="bc_variant_remove"),
     path("variant/<int:pk>/edit/", views.variant_edit, name="bc_variant_edit"),
     path("variant/create/", views.variant_create, name="bc_variant_create"),
+    path("user-rights/", views.user_rights, name="user_rights"),
+    path("user-rights/<int:pk>/toggle/", views.user_rights_toggle, name="user_rights_toggle"),
 ]

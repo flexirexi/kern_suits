@@ -1,0 +1,96 @@
+{% extends "business_center/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container-fluid py-3">
+
+  <div class="d-flex align-items-center gap-2 mb-3">
+    <h1 class="h5 mb-0">User rights</h1>
+    <form class="ms-auto" method="get" role="search" aria-label="Role filter">
+      <div class="input-group input-group-sm" style="max-width:280px">
+        <label class="input-group-text" for="roleSel">Filter</label>
+        <select id="roleSel" class="form-select" name="role" onchange="this.form.submit()">
+          <option value="" {% if not role %}selected{% endif %}>All</option>
+          <option value="admin" {% if role == 'admin' %}selected{% endif %}>Admin</option>
+          <option value="staff" {% if role == 'staff' %}selected{% endif %}>Staff</option>
+          <option value="customer" {% if role == 'customer' %}selected{% endif %}>Customer</option>
+        </select>
+      </div>
+    </form>
+  </div>
+
+  <div class="card">
+    <div class="card-header py-2">
+      <div class="row g-2 align-items-center">
+        <div class="col-12 col-lg-5 fw-semibold">User</div>
+        <div class="col fw-semibold text-center">Active</div>
+        <div class="col fw-semibold text-center">Staff</div>
+        <div class="col fw-semibold text-center">Superuser</div>
+        <div class="col fw-semibold text-end">Category</div>
+      </div>
+    </div>
+
+    <div class="list-group list-group-flush">
+      {% for u in users %}
+      <div class="list-group-item">
+        <div class="row g-2 align-items-center pm-row" data-user-id="{{ u.id }}" data-endpoint="{% url 'user_rights_toggle' u.id %}">
+          <!-- user block -->
+          <div class="col-12 col-lg-5">
+            <div class="d-flex align-items-start gap-2">
+              <div class="me-2 fw-semibold">{{ u.username }}</div>
+              <div class="flex-grow-1 small">
+                <div>{{ u.first_name }} {{ u.last_name }}</div>
+                <div class="text-muted">{{ u.email }}</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- checkboxes -->
+
+        <div class="col text-center">
+        <input type="checkbox" class="form-check-input rights-toggle" data-field="is_active"
+                {% if u.is_active %}checked{% endif %}
+                {% if not can_edit %}disabled{% endif %} aria-label="Active for {{ u.username }}">
+        </div>
+        <div class="col text-center">
+        <input type="checkbox" class="form-check-input rights-toggle" data-field="is_staff"
+                {% if u.is_staff %}checked{% endif %}
+                {% if not can_edit %}disabled{% endif %} aria-label="Staff for {{ u.username }}">
+        </div>
+        <div class="col text-center">
+        <input type="checkbox" class="form-check-input rights-toggle" data-field="is_superuser"
+                {% if u.is_superuser %}checked{% endif %}
+                {% if not can_edit %}disabled{% endif %} aria-label="Superuser for {{ u.username }}">
+        </div>
+
+
+          <!-- category -->
+          <div class="col text-end">
+            <span class="user-cat" data-active="{{ u.is_active|yesno:'1,0' }}"
+                  data-staff="{{ u.is_staff|yesno:'1,0' }}"
+                  data-super="{{ u.is_superuser|yesno:'1,0' }}"></span>
+          </div>
+        </div>
+      </div>
+      {% empty %}
+      <div class="list-group-item text-muted">No users.</div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="position-fixed top-0 end-0 p-3" style="z-index:1080">
+    <div id="rightsToast" class="toast text-bg-dark" role="status" aria-live="polite" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body" id="rightsToastBody">Saved.</div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script src="{% static 'business_center/js/user_rights.js' %}" defer></script>
+{% endblock %}

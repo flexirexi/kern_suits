@@ -1,9 +1,12 @@
 from django.shortcuts import render, get_object_or_404, redirect
+from django.contrib.auth.decorators import login_required, user_passes_test
+from django.contrib.auth.models import User
+from django.http import JsonResponse, HttpResponseForbidden, HttpResponseBadRequest, JsonResponse
 
 from datetime import timedelta
 from decimal import Decimal
 
-from django.conf import settings
+
 from django.contrib.admin.views.decorators import staff_member_required
 from django.views.decorators.http import require_POST
 from django.contrib.auth import get_user_model
@@ -14,7 +17,6 @@ from django.utils import timezone
 from checkout.models import Order, OrderItem
 from products.models import Product, ProductVariant, Series, Category
 
-from django.http import JsonResponse, HttpResponseBadRequest, HttpResponseForbidden
 from django.contrib import messages
 from .forms import ProductVariantForm
 
@@ -272,3 +274,67 @@ def variant_create(request):
         form = ProductVariantForm()
 
     return render(request, "business_center/variant_form.html", {"form": form})
+
+
+@login_required
+# staff may view; superuser can modify (see toggle view)
+@user_passes_test(lambda u: u.is_staff)
+def user_rights(request):
+    role = request.GET.get("role", "").strip().lower()
+    qs = User.objects.all().order_by("username")
+
+    if role == "admin":
+        qs = qs.filter(is_superuser=True)
+    elif role == "staff":
+        # as requested: only filter by is_staff
+        qs = qs.filter(is_staff=True)
+    elif role == "customer":
+        qs = qs.filter(is_staff=False, is_superuser=False)
+
+    context = {
+        "users": qs,
+        "role": role,
+        "can_edit": request.user.is_superuser,  # superuser only
+    }
+    return render(request, "business_center/user_rights.html", context)
+
+
+@login_required
+@require_POST
+def user_rights_toggle(request, pk):
+    if not request.user.is_superuser:
+        return HttpResponseForbidden("Only superusers may change rights.")
+
+    target = get_object_or_404(User, pk=pk)
+    field = request.POST.get("field")
+    value = request.POST.get("value")
+
+    if field not in {"is_active", "is_staff", "is_superuser"}:
+        return HttpResponseBadRequest("Invalid field.")
+    val = value in ("1", "true", "True", "on")
+
+    # Safety: don’t let a user remove their own superuser/active status
+    if target.id == request.user.id and (field in {"is_superuser", "is_active"} and not val):
+        return HttpResponseBadRequest("You cannot change this status on yourself.")
+
+    # Apply change
+    setattr(target, field, val)
+
+    # Invariant: superuser implies staff
+    if field == "is_superuser" and val is True:
+        target.is_staff = True
+    # Optional: prevent 'superuser but not staff'
+    if field == "is_staff" and val is False and target.is_superuser:
+        # either force superuser off, or reject — here we reject:
+        return HttpResponseBadRequest("Superuser must also be staff. Uncheck superuser first.")
+
+    target.save(update_fields=["is_active", "is_staff", "is_superuser"] if field == "is_superuser"
+                else [field])
+
+    return JsonResponse({
+        "ok": True,
+        "user_id": target.id,
+        "is_active": target.is_active,
+        "is_staff": target.is_staff,
+        "is_superuser": target.is_superuser,
+    })
