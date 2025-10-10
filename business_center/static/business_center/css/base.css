@@ -1,6 +1,8 @@
 @import url("/static/css/themes.css");
 @import url("/static/css/layout.css");
 
+body { outline: 3px dashed; }
+
 [data-theme] body {
     background-color: var(--bgDefault2);
 }

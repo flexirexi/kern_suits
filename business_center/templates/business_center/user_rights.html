@@ -92,5 +92,6 @@
 {% endblock %}
 
 {% block extra_scripts %}
+{{ block.super }}
 <script src="{% static 'business_center/js/user_rights.js' %}" defer></script>
 {% endblock %}

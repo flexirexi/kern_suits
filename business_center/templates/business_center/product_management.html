@@ -3,6 +3,7 @@
 {% load humanize %}
 
 {% block extra_css %}
+{{ block.super }}
 <link rel="stylesheet" href="{% static 'business_center/css/product_management.css' %}">
 {% endblock %}
 
@@ -182,5 +183,6 @@
 {% endblock %}
 
 {% block extra_scripts %}
+{{ block.super }}
 <script src="{% static 'business_center/js/product_management.js' %}" defer></script>
 {% endblock %}
