@@ -24,16 +24,17 @@ def checkout(request):
     # get stripe keys
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
-    
+
     if not stripe_public_key:
         messages.warning(request, 'Stripe public key is missing.')
-    
+
     if request.method == "GET":
         bag = request.session.get("bag", {})
         if not bag:
-            messages.error(request, "There's nothing in your bag at the moment.")
+            messages.error(
+                request, "There's nothing in your bag at the moment.")
             return redirect(reverse("products"))
-        
+
         # getting stripe done
         current_bag = bag_contents(request)
         total = current_bag['grand_total']
@@ -43,7 +44,7 @@ def checkout(request):
             amount=stripe_total,
             currency=settings.STRIPE_CURRENCY,
         )
-        
+
         if request.user.is_authenticated:
             try:
                 profile = UserProfile.objects.get(user=request.user)
@@ -61,7 +62,7 @@ def checkout(request):
                 form = OrderForm()
         else:
             form = OrderForm()
-            
+
         template = "checkout/checkout.html"
         context = {
             'form': form,
@@ -69,10 +70,10 @@ def checkout(request):
             'client_secret': intent.client_secret,
         }
         return render(request, template, context)
-        
+
     elif request.method == "POST":
         bag = request.session.get("bag", {})
-        
+
         form_data = {
             'first_name': request.POST['first_name'],
             'last_name': request.POST['last_name'],
@@ -95,7 +96,7 @@ def checkout(request):
             order.stripe_pid = pid
             order.original_bag = json.dumps(bag)
             order.user = request.user
-            order.status = dict(settings.STATUS_CHOICES)["paid"]
+            order.status = dict(settings.STATUS_CHOICES)["created"]  # was paid
             order.save()
             for item_id, item_data in bag.items():
                 try:
