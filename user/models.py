@@ -43,24 +43,95 @@ class StyleProfile(models.Model):
     )
 
     # Sizes (optional)
-    jacket_size = models.ForeignKey(Size, on_delete=models.SET_NULL, null=True, blank=True, related_name='jacket_size_profiles')
-    shirt_size = models.ForeignKey(Size, on_delete=models.SET_NULL, null=True, blank=True, related_name='shirt_size_profiles')
-    trousers_size = models.ForeignKey(Size, on_delete=models.SET_NULL, null=True, blank=True, related_name='trousers_size_profiles')
-    waistcoat_size = models.ForeignKey(Size, on_delete=models.SET_NULL, null=True, blank=True, related_name='waistcoat_size_profiles')
-    belt_size = models.ForeignKey(Size, on_delete=models.SET_NULL, null=True, blank=True, related_name='belt_size_profiles')
+    jacket_size = models.ForeignKey(
+        Size,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='jacket_size_profiles'
+    )
+    shirt_size = models.ForeignKey(
+        Size,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='shirt_size_profiles'
+    )
+    trousers_size = models.ForeignKey(
+        Size,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='trousers_size_profiles'
+    )
+    waistcoat_size = models.ForeignKey(
+        Size,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='waistcoat_size_profiles'
+    )
+    belt_size = models.ForeignKey(
+        Size,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='belt_size_profiles'
+    )
 
     # Preferred colors
-    preferred_color_1 = models.ForeignKey(Color, on_delete=models.SET_NULL, null=True, blank=True, related_name='preferred_color1_profiles')
-    preferred_color_2 = models.ForeignKey(Color, on_delete=models.SET_NULL, null=True, blank=True, related_name='preferred_color2_profiles')
-    preferred_color_3 = models.ForeignKey(Color, on_delete=models.SET_NULL, null=True, blank=True, related_name='preferred_color3_profiles')
+    preferred_color_1 = models.ForeignKey(
+        Color,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='preferred_color1_profiles'
+    )
+    preferred_color_2 = models.ForeignKey(
+        Color,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='preferred_color2_profiles'
+    )
+    preferred_color_3 = models.ForeignKey(
+        Color,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='preferred_color3_profiles'
+    )
 
     # Fit preference
-    fit_preference = models.ForeignKey(Fit, on_delete=models.SET_NULL, null=True, blank=True)
+    fit_preference = models.ForeignKey(
+        Fit,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True
+    )
 
     # Occasions
-    occasion_1 = models.ForeignKey(Occasion, on_delete=models.SET_NULL, null=True, blank=True, related_name='occasion1_profiles')
-    occasion_2 = models.ForeignKey(Occasion, on_delete=models.SET_NULL, null=True, blank=True, related_name='occasion2_profiles')
-    occasion_3 = models.ForeignKey(Occasion, on_delete=models.SET_NULL, null=True, blank=True, related_name='occasion3_profiles')
+    occasion_1 = models.ForeignKey(
+        Occasion,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='occasion1_profiles'
+    )
+    occasion_2 = models.ForeignKey(
+        Occasion,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='occasion2_profiles'
+    )
+    occasion_3 = models.ForeignKey(
+        Occasion,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='occasion3_profiles'
+    )
 
     def __str__(self):
         return f"Style Profile for {self.user_profile.user.get_username()}"

@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from datetime import date, timedelta, timezone
+from datetime import date, timedelta
 
 from .models import UserProfile
 from .forms import UserProfileForm
@@ -29,11 +29,11 @@ def profile(request):
     order_items = (
         OrderItem.objects.filter(order__user=request.user)
         .select_related(
-            'order', 
-            'variant__product', 
-            'variant__size', 
-            'variant__product__occasion', 
-            'variant__color', 
+            'order',
+            'variant__product',
+            'variant__size',
+            'variant__product__occasion',
+            'variant__color',
             'variant__fit'
         )
         .order_by('-order__created_at')
@@ -45,7 +45,11 @@ def profile(request):
     order_items_with_status = []
 
     for item in order_items:
-        order_date = item.order.created_at.date() if item.order.created_at else today
+        order_date = (
+            item.order.created_at.date()
+            if item.order.created_at
+            else today
+        )
         days_since_order = (today - order_date).days
 
         if days_since_order >= 3:
@@ -59,8 +63,9 @@ def profile(request):
         item.delivery_status = status
 
         order_items_with_status.append(item)
-    
-    # add the user's own review to each product, if available - this method has a better performance
+
+    # add the user's own review to each product, if available - this
+    # method has a better performance
     user_reviews = (
         Review.objects
         .filter(user=request.user)
@@ -107,11 +112,15 @@ def order_details(request, order_id):
 
 @login_required
 def manage_appointments(request):
-    user_appointments = Appointment.objects.filter(user=request.user).order_by("start_datetime")
+    user_appointments = Appointment.objects.filter(
+        user=request.user
+    ).order_by(
+        "start_datetime"
+    )
 
     today = date.today()
     cancel_threshold = today + timedelta(days=7)
-    
+
     context = {
         "user_appointments": user_appointments,
         "today": today,
@@ -132,8 +141,8 @@ def edit_appointment(request, appt_id):
         appointment.comment = comment
         appointment.save()
         messages.success(request, "Appointment updated successfully.")
-        return redirect("manage_appointments")  
-        
+        return redirect("manage_appointments")
+
     context = {
         "appointment": appointment,
         "cancel_threshold": cancel_threshold,
@@ -152,13 +161,13 @@ def delete_appointment(request, appt_id):
 @login_required
 def edit_review(request, product_id):
     product = get_object_or_404(Product, id=product_id)
-    
+
     review = Review.objects.filter(user=request.user, product=product).first()
-    
+
     if request.method == "POST":
         rating = request.POST.get("rating")
         comment = request.POST.get("comment", "").strip()
-        
+
         if review:
             review.rating = rating
             review.comment = comment
@@ -172,7 +181,7 @@ def edit_review(request, product_id):
                 comment=comment
             )
             messages.success(request, "Review created successfully.")
-        
+
         return redirect("profile")
 
     context = {
