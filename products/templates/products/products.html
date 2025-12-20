@@ -151,7 +151,7 @@
                                             class="form-check-input me-2 pointer"
                                             {% if c.name in selected_colors %}checked{% endif %}
                                             >
-                                        <div class="d-flex me-2" style="width:13px; height:13px; background-color: {{c.hex_code}};"></div>
+                                        <div class="d-flex me-2" style="width:13px; height:13px; background-color: {{ c.hex_code }};"></div>
                                         <label for="fit{{c.name}}" class="form-check-label pointer">{{ c.name }}</label>
                                         <div class="ms-2">
                                             <p style="align-self: center; font-size: 12px;"><small>({{ c.variant_count }})</small></p>
