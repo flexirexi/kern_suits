@@ -10,7 +10,7 @@ class TestBagContextProcessor(BaseFixtureTestCase):
 
     def test_total_from_existing_variant(self):
         variant = ProductVariant.objects.first()
-    
+
         self.assertIsNotNone(variant, "No variant in DB.. test setup required")
 
         request = self.factory.get("/")

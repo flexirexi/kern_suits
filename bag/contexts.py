@@ -9,16 +9,16 @@ def bag_contents(request):
     total = 0
     variant_count = 0
     delivery_cost = 0
-    
+
     for variant_id_str, quantity in bag.items():
         variant_id = int(variant_id_str)
         variant = get_object_or_404(ProductVariant, pk=variant_id)
-        
+
         subtotal = variant.price * quantity
         total += subtotal
         variant_count += quantity
         delivery_cost = 0
-        
+
         bag_items.append({
             "variant": variant,
             "quantity": quantity,
@@ -31,5 +31,5 @@ def bag_contents(request):
         "variant_count": variant_count,
         "delivery_cost": delivery_cost,
     }
-    
+
     return context
