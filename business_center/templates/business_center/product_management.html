@@ -128,7 +128,10 @@
                                 <!-- Fit + Farbbox -->
                                 <div class="col-6 col-md-3 d-flex align-items-center gap-2">
                                     <span class="chip chip-fit">{{ v.fit.name }}</span>
-                                    <span class="chip-color" style="background: {{ v.color.hex_code }};"></span>
+                                    <span class="chip-color"
+                                        style="--chip-color: {{ v.color.hex_code|default:'#999' }};">
+                                    </span>
+
                                 </div>
 
                                 <!-- Size + Farbname -->

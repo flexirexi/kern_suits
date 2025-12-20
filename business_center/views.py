@@ -27,8 +27,10 @@ STATUS_SENT = "sent"
 STATUS_RETURNED = "returned"
 
 
-@staff_member_required
+@login_required
 def dashboard(request):
+    if not request.user.is_staff and not request.user.is_superuser:
+        return HttpResponseForbidden("Only staff members/superuser may be able to enter the business center.")
     now = timezone.now()
     two_days_ago = now - timedelta(days=2)
     three_days_ago = now - timedelta(days=3)
@@ -100,7 +102,7 @@ def dashboard(request):
     def to_decile(total):
         if max_series_total <= 0 or total <= 0:
             return 0
-        pct = float((total / max-series_total) * 100.0)
+        pct = float((total / max_series_total) * 100.0)
         dec = int(round(pct / 10.0)) * 10
         return max(0, min(100, dec))
 
@@ -174,10 +176,14 @@ def dashboard(request):
     return render(request, "business_center/business_center.html", context)
 
 
+@login_required
 def product_management(request):
     qs = ProductVariant.objects.select_related(
         "product", "product__series", "fit", "size", "color"
     )
+
+    if not request.user.is_superuser:
+        return HttpResponseForbidden("Only superusers may change rights.")
 
     # Filters/search
     q = request.GET.get("q", "")
@@ -314,8 +320,11 @@ def user_rights_toggle(request, pk):
     val = value in ("1", "true", "True", "on")
 
     # Safety: don’t let a user remove their own superuser/active status
-    if target.id == request.user.id and (field in {"is_superuser", "is_active"} and not val):
-        return HttpResponseBadRequest("You cannot change this status on yourself.")
+    if target.id == request.user.id and (field in {"is_superuser", "is_active"} 
+                                         and not val):
+        return HttpResponseBadRequest(
+            "You cannot change this status on yourself."
+        )
 
     # Apply change
     setattr(target, field, val)
