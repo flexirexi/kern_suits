@@ -1,19 +1,28 @@
 from django import forms
 from django.core.exceptions import ValidationError
 from django.utils.text import slugify
-from products.models import ProductVariant, Product, Series, Category, Occasion, Fit, Size, Color
+from products.models import (
+    ProductVariant,
+    Product,
+    Series,
+    Category,
+    Occasion,
+    Fit,
+    Size,
+    Color
+)
 
 NEW_SENTINEL = "NEW"
 
 
 class ProductVariantForm(forms.ModelForm):
     """
-    A single form that creates a new product variant. Since a variant is always bound to a product, 
-    the user should be able to create a product or a series, too.
-    This class will also handle that.
+    A single form that creates a new product variant. Since a variant is
+    always bound to a product, the user should be able to create a
+    product or a series, too. This class will also handle that.
     """
 
- # --- Choice fields with a "NEW" option ---
+# --- Choice fields with a "NEW" option ---
     series_choice = forms.ChoiceField(
         label="Select series",
         required=True,
@@ -126,17 +135,20 @@ class ProductVariantForm(forms.ModelForm):
 
         # Series choices: empty → NEW → existing
         series_choices = [("", "— Select —"), (NEW_SENTINEL, "➕ New series …")]
-        series_choices += [(str(s.id), s.name)
-                           for s in Series.objects.order_by("name")]
+        series_choices += [
+            (str(s.id), s.name) for s in Series.objects.order_by("name")
+        ]
         self.fields["series_choice"].choices = series_choices
         self.fields["series_choice"].widget.attrs.update(
             {"class": "form-select"})
 
         # Product choices: empty → NEW → existing
-        product_choices = [("", "— Select —"),
-                           (NEW_SENTINEL, "➕ New product …")]
-        product_choices += [(str(p.id), p.name)
-                            for p in Product.objects.order_by("name")]
+        product_choices = [
+            ("", "— Select —"), (NEW_SENTINEL, "+ New product …")
+        ]
+        product_choices += [
+            (str(p.id), p.name) for p in Product.objects.order_by("name")
+        ]
         self.fields["product_choice"].choices = product_choices
         self.fields["product_choice"].widget.attrs.update(
             {"class": "form-select"})
@@ -147,7 +159,11 @@ class ProductVariantForm(forms.ModelForm):
         self.fields["new_series_description"].widget.attrs.update(
             {"class": "form-control"})
 
-        for f in ["new_product_name", "new_product_slug", "new_product_fabric"]:
+        for f in [
+            "new_product_name",
+            "new_product_slug",
+            "new_product_fabric"
+        ]:
             self.fields[f].widget.attrs.update({"class": "form-control"})
         self.fields["new_product_description"].widget.attrs.update(
             {"class": "form-control"})
@@ -156,8 +172,9 @@ class ProductVariantForm(forms.ModelForm):
 
     def clean(self):
         """
-        Validate the intent (existing vs NEW), auto-generate slugs when omitted,
-        ensure required fields for NEW branches, and pre-check SKU uniqueness.
+        Validate the intent (existing vs NEW), auto-generate slugs when
+        omitted, ensure required fields for NEW branches, and pre-check
+        SKU uniqueness.
         """
         cleaned = super().clean()
         series_choice = cleaned.get("series_choice")
@@ -166,9 +183,13 @@ class ProductVariantForm(forms.ModelForm):
         # NEW Series branch: require name; auto-slug if omitted
         if series_choice == NEW_SENTINEL:
             if not cleaned.get("new_series_name"):
-                self.add_error("new_series_name",
-                               "Please provide a series name.")
-            if not cleaned.get("new_series_slug") and cleaned.get("new_series_name"):
+                self.add_error(
+                    "new_series_name",
+                    "Please provide a series name."
+                )
+            if not cleaned.get("new_series_slug") and cleaned.get(
+                "new_series_name"
+            ):
                 cleaned["new_series_slug"] = slugify(
                     cleaned["new_series_name"])
 
@@ -181,18 +202,29 @@ class ProductVariantForm(forms.ModelForm):
             for f in required_new_product_fields:
                 if not cleaned.get(f):
                     self.add_error(f, "This field is required.")
-            if not cleaned.get("new_product_slug") and cleaned.get("new_product_name"):
+            if not cleaned.get("new_product_slug") and cleaned.get(
+                "new_product_name"
+            ):
                 cleaned["new_product_slug"] = slugify(
                     cleaned["new_product_name"])
 
-        # If both IDs chosen (existing series & product): ensure product belongs to series
-        if series_choice not in ("", NEW_SENTINEL) and product_choice not in ("", NEW_SENTINEL):
+        # If both IDs chosen (existing series & product): ensure product
+        # belongs to series
+        if series_choice not in (
+            "",
+            NEW_SENTINEL
+        ) and product_choice not in (
+            "",
+            NEW_SENTINEL
+        ):
             try:
                 s = Series.objects.get(id=int(series_choice))
                 p = Product.objects.get(id=int(product_choice))
                 if p.series_id != s.id:
                     self.add_error(
-                        "product_choice", "Selected product does not belong to the selected series.")
+                        "product_choice",
+                        "The product doesn't belong to the selected series."
+                    )
             except (Series.DoesNotExist, Product.DoesNotExist, ValueError):
                 # Let default errors surface elsewhere if needed
                 pass
@@ -202,7 +234,8 @@ class ProductVariantForm(forms.ModelForm):
         if sku and ProductVariant.objects.filter(sku=sku).exists():
             self.add_error("sku", "This SKU already exists.")
 
-        # Variant duplication check will run in save(), once the final Product is known.
+        # Variant duplication check will run in save(), once the final
+        # Product is known.
         return cleaned
 
     # ----------------------- Save ------------------------
@@ -210,8 +243,8 @@ class ProductVariantForm(forms.ModelForm):
     def save(self, commit=True):
         """
         Resolve or create Series/Product based on choices,
-        then create the ProductVariant. If product is NEW and an image is provided,
-        store it in Product.image.
+        then create the ProductVariant. If product is NEW and an
+        image is provided, store it in Product.image.
         """
         cleaned = self.cleaned_data
 
@@ -249,7 +282,6 @@ class ProductVariantForm(forms.ModelForm):
                 product.save()
         else:
             product = Product.objects.get(id=int(product_choice))
-            
 
         # 3) Create the variant for the resolved product
         instance = ProductVariant(
@@ -265,12 +297,15 @@ class ProductVariantForm(forms.ModelForm):
 
         # Final check for (product, fit, size, color)
         if ProductVariant.objects.filter(
-            product=product, fit=instance.fit, size=instance.size, color=instance.color
+            product=product,
+            fit=instance.fit,
+            size=instance.size,
+            color=instance.color
         ).exists():
             raise ValidationError(
-                "This variant combination already exists for the selected product.")
+                "The variant combination already exists for "
+                "the selected product.")
 
         if commit:
             instance.save()
         return instance
-

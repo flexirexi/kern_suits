@@ -1,4 +1,10 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
+from django.shortcuts import (
+    render,
+    redirect,
+    reverse,
+    get_object_or_404,
+    HttpResponse
+)
 from django.contrib import messages
 from django.conf import settings
 from django.views.decorators.http import require_POST
@@ -9,10 +15,9 @@ from django.contrib.auth.decorators import login_required
 from .forms import OrderForm
 from bag.contexts import bag_contents
 from .models import Order, OrderItem
-from products.models import Product, ProductVariant
+from products.models import ProductVariant
 from user.forms import UserProfileForm
 from user.models import UserProfile
-from bag.contexts import bag_contents
 
 import stripe
 import json
@@ -110,7 +115,9 @@ def checkout(request):
                         )
                         order_line_item.save()
                     else:
-                        for size, quantity in item_data['items_by_size'].items():
+                        for size, quantity in (
+                            item_data['items_by_size'].items()
+                        ):
                             order_line_item = OrderItem(
                                 order=order,
                                 product=product,
@@ -126,7 +133,9 @@ def checkout(request):
                     return redirect(reverse('view_bag'))
 
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('checkout_success', args=[order.order_number]))
+            return redirect(
+                reverse('checkout_success', args=[order.order_number])
+            )
         else:
             messages.error(request, 'There was an error with your form. \
                 Please double check your information.')

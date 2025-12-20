@@ -4,16 +4,27 @@ from django.db.models import Q, Count
 from django.http import Http404
 import json
 
-from .models import Product, Series, Fit, Occasion, Color, Category, ProductVariant
-from reviews.models import Review
+from .models import (
+    Product,
+    Series,
+    Fit,
+    Occasion,
+    Color,
+    Category,
+    ProductVariant
+)
 from products.services.reviews import attach_review_data
 
 
 # Create your views here.
 def products(request):
-    """A view to return products page which filters/sorts the products from the products list"""
+    """
+    A view to return products page which filters/sorts the
+    products from the products list
+    """
     # read in the models
-    products = Product.objects.filter(is_active=True).prefetch_related('variants')
+    products = Product.objects.filter(
+        is_active=True).prefetch_related('variants')
     series_list = Series.objects.all()
     fit_list = Fit.objects.all()
     occasion_list = Occasion.objects.all()
@@ -21,7 +32,7 @@ def products(request):
     colors_list = Color.objects.annotate(variant_count=Count('productvariant'))
     categories_list = Category.objects.all()
     fabrics_list = Product.objects.values_list('fabric', flat=True).distinct()
-    
+
     # read in the GET-method params
     query = request.GET.get("q")
     sort = request.GET.get("sort")
@@ -30,7 +41,9 @@ def products(request):
     selected_occasions = request.GET.getlist('occasion')
     selected_fabrics = request.GET.getlist('fabric')
     selected_colors = request.GET.getlist('colors')
-    selected_series = [int(s) for s in request.GET.getlist('series') if s.strip() != '']
+    selected_series = [
+        int(s) for s in request.GET.getlist('series') if s.strip() != ''
+    ]
 
     # handle query
     if (query):
@@ -44,7 +57,7 @@ def products(request):
             Q(variants__size__name__icontains=query) |
             Q(variants__color__name__icontains=query)
         ).distinct()
-    
+
     # handle sorting
     sort_options = {
         "name_asc": "name",
@@ -53,29 +66,31 @@ def products(request):
         "series_desc": "-series__name",
         "price_asc": "price_"
     }
-    
+
     if sort in sort_options and sort not in ["price_asc", "price_desc"]:
-        products = products.order_by(sort_options[sort])  # sort of prices are below min price calculation
-    
+        products = products.order_by(sort_options[sort])  # sort of prices are
+        # below min price calculation
+
     # apply each filter
     if selected_categories:
         products = products.filter(category__name__in=selected_categories)
-        
+
     if selected_occasions:
         products = products.filter(occasion__name__in=selected_occasions)
-    
+
     if selected_series:
         products = products.filter(series__id__in=selected_series)
-    
+
     if selected_colors:
         products = products.filter(variants__color__name__in=selected_colors)
-        
+
     if selected_fits:
         products = products.filter(variants__fit__name__in=selected_fits)
-    
+
     if selected_fabrics:
-        products = products.filter(fabric__in=selected_fabrics)  # no foreignkey -> Charfield only
-    
+        products = products.filter(fabric__in=selected_fabrics)
+        # no foreignkey -> Charfield only
+
     products = products.distinct()
 
     # set min/max prices for each product (my model doesn't have prices for
@@ -86,12 +101,17 @@ def products(request):
         p.min_price = min([v.price for v in variants], default=None)
         p.max_price = max([v.price for v in variants], default=None)
         print(f"MINIMUM PRICE {p.name}: {p.min_price}")
-    
+
     # continue to sort by price -> now, we have the min prices
     if sort == "price_asc":
         products = sorted(
             products,
-            key=lambda p: p.min_price if p.min_price is not None else float('inf')
+
+            key=(
+                lambda p: p.min_price
+                if p.min_price is not None
+                else float("inf")
+            )
         )
     elif sort == "price_desc":
         products = sorted(
@@ -99,10 +119,10 @@ def products(request):
             key=lambda p: p.min_price if p.min_price is not None else 0,
             reverse=True
         )
-        
+
     # add average ratings and ratings count to each product in products
     products = attach_review_data(products)
-    
+
     context = {
         'products': products,
         'search_term': query,
@@ -112,57 +132,69 @@ def products(request):
         'colors_list': colors_list,
         'categories_list': categories_list,
         'fabrics_list': fabrics_list,
-        'selected_categories': selected_categories, 
-        'selected_fits': selected_fits, 
-        'selected_occasions': selected_occasions, 
-        'selected_fabrics': selected_fabrics, 
-        'selected_colors': selected_colors, 
-        'selected_series': selected_series, 
+        'selected_categories': selected_categories,
+        'selected_fits': selected_fits,
+        'selected_occasions': selected_occasions,
+        'selected_fabrics': selected_fabrics,
+        'selected_colors': selected_colors,
+        'selected_series': selected_series,
         'sort': sort,
-        
+
     }
-    
     return render(request, 'products/products.html', context)
 
 
 def product_details(request, product_id):
-    """A view to show all products details necessary to decide whether to buy a product or not"""
+    """
+    A view to show all products details necessary to
+    decide whether to buy a product or not
+    """
     # first, load from the db..
     product = get_object_or_404(Product, pk=product_id)
     variants = ProductVariant.objects.filter(product=product)
 
     # get distinct variant's options so that the user can select options
-    # important: not all combinations can be selected - later in the 
+    # important: not all combinations can be selected - later in the
     # template/js, this must be managed with the help of variants list
     sizes = variants.values_list("size__name", flat=True).distinct()
-    colors = variants.values("color__name", "color__hex_code").distinct()  # --------------------incorrect
+    colors = variants.values("color__name", "color__hex_code").distinct()
+    # --------------------incorrect
     fits = variants.values_list("fit__name", flat=True).distinct()
-    
-    # nice feature: the customer will be offered other products of the same series
-    more_from_series = Product.objects.filter(series=product.series).exclude(id=product.id)
-    
-    # retrieve the min-price for a product (because the prices are stored in ProductVariant)
+
+    # nice feature: the customer will be offered other
+    # products of the same series
+    more_from_series = Product.objects.filter(
+        series=product.series).exclude(id=product.id)
+
+    # retrieve the min-price for a product (because the prices
+    # are stored in ProductVariant)
     for p in more_from_series:
         p.min_price = min([v.price for v in p.variants.all()], default=None)
         p.max_price = max([v.price for v in p.variants.all()], default=None)
-    
-    # now, we have to choose a variant to load - it's better in the url than in JS
+
+    # now, we have to choose a variant to load - it's better
+    # in the url than in JS
     variant_id = request.GET.get("variant")
     if variant_id:
         try:
             selected_variant = variants.get(id=variant_id)
         except ProductVariant.DoesNotExist:
             selected_variant = variants.first(),
-            
+
     else:
         selected_variant = variants.first()
         if selected_variant:
             return redirect(f"{request.path}?variant={selected_variant.id}")
         else:
-            raise Http404("No variants available for this product. Please choose another product.")
-    
-    # create a json so that the template can hand over the list to JS so that it can build new urls based on
-    # the user's selection (e.g. change color -> create new url and reload, this view will then take the new variant id)
+            raise Http404(
+                "No variants available for this product. "
+                "Please choose another product."
+            )
+
+    # create a json so that the template can hand over the list to JS so
+    # that it can build new urls based on
+    # the user's selection (e.g. change color -> create new url and
+    # reload, this view will then take the new variant id)
     variant_options = [
         {
             "id": v.id,
@@ -174,12 +206,16 @@ def product_details(request, product_id):
         for v in variants
     ]
     variant_options_json = json.dumps(variant_options)
-    
+
     max_qty = min(selected_variant.stock, 10)
 
     # before the end, load possible toasts coming from the frontend:
     if request.GET.get("notice") == "adjusted":
-        messages.info(request, "NOTE: the combination you selected is not available. Another has been selected.")
+        messages.info(
+            request,
+            "NOTE: the combination you selected is "
+            "not available. Another has been selected."
+        )
     context = {
         "max_qty": max_qty,
         'qty_range': range(1, max_qty+1),

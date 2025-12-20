@@ -1,5 +1,14 @@
 from django.contrib import admin
-from .models import Product, Category, Occasion, Series, Size, Fit, Color, ProductVariant
+from .models import (
+    Product,
+    Category,
+    Occasion,
+    Series,
+    Size,
+    Fit,
+    Color,
+    ProductVariant
+)
 
 
 class ProductAdmin(admin.ModelAdmin):

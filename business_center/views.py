@@ -1,13 +1,16 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required, user_passes_test
 from django.contrib.auth.models import User
-from django.http import JsonResponse, HttpResponseForbidden, HttpResponseBadRequest, JsonResponse
+from django.http import (
+    JsonResponse,
+    HttpResponseForbidden,
+    HttpResponseBadRequest
+)
 
 from datetime import timedelta
 from decimal import Decimal
 
 
-from django.contrib.admin.views.decorators import staff_member_required
 from django.views.decorators.http import require_POST
 from django.contrib.auth import get_user_model
 from django.db.models import Sum, Avg, Max, F, Q, Value, DecimalField
@@ -30,7 +33,9 @@ STATUS_RETURNED = "returned"
 @login_required
 def dashboard(request):
     if not request.user.is_staff and not request.user.is_superuser:
-        return HttpResponseForbidden("Only staff members/superuser may be able to enter the business center.")
+        return HttpResponseForbidden(
+            "Only staff/superuser may be able to enter the business center."
+        )
     now = timezone.now()
     two_days_ago = now - timedelta(days=2)
     three_days_ago = now - timedelta(days=3)
@@ -96,8 +101,9 @@ def dashboard(request):
         .order_by("period")
     )
     series_list = list(series_qs)
-    max_series_total = max([row["total"]
-                           for row in series_list], default=Decimal("1.00"))
+    max_series_total = max(
+        [row["total"] for row in series_list], default=Decimal("1.00")
+    )
 
     def to_decile(total):
         if max_series_total <= 0 or total <= 0:
@@ -109,12 +115,16 @@ def dashboard(request):
     sales_series = [{
         "label": row["period"].strftime("%b %Y"),
         "total": row["total"],
-        "pct": float((row["total"] / max_series_total) * 100) if max_series_total > 0 else 0.0,
+        "pct": (
+            float((row["total"] / max_series_total) * 100)
+            if max_series_total > 0
+            else 0.0
+        ),
     }
         for row in series_list
     ]
 
-    # collect data for the top10 product variant sales (by variant) -----------------
+    # collect data for the top10 product variant sales (by variant) ----------
     revenue_expr = F("quantity") * F("price")
     zero_dec_big = Value(Decimal("0.00"), output_field=DecimalField(
         max_digits=14, decimal_places=2))
@@ -219,7 +229,9 @@ def product_management(request):
         "variants": qs.order_by("product__name", "size__name"),
         "series_list": Series.objects.all(),
         "categories_list": Category.objects.all(),
-        "fabrics_list": Product.objects.values_list("fabric", flat=True).distinct(),
+        "fabrics_list": Product.objects.values_list(
+            "fabric", flat=True
+        ).distinct(),
         "search_term": q,
         "selected_series": sel_series,
         "selected_categories": sel_cat,
@@ -320,8 +332,9 @@ def user_rights_toggle(request, pk):
     val = value in ("1", "true", "True", "on")
 
     # Safety: don’t let a user remove their own superuser/active status
-    if target.id == request.user.id and (field in {"is_superuser", "is_active"} 
-                                         and not val):
+    if target.id == request.user.id and (
+        field in {"is_superuser", "is_active"} and not val
+    ):
         return HttpResponseBadRequest(
             "You cannot change this status on yourself."
         )
@@ -335,10 +348,14 @@ def user_rights_toggle(request, pk):
     # Optional: prevent 'superuser but not staff'
     if field == "is_staff" and val is False and target.is_superuser:
         # either force superuser off, or reject — here we reject:
-        return HttpResponseBadRequest("Superuser must also be staff. Uncheck superuser first.")
+        return HttpResponseBadRequest(
+            "Superuser must also be staff. Uncheck superuser first."
+        )
 
-    target.save(update_fields=["is_active", "is_staff", "is_superuser"] if field == "is_superuser"
-                else [field])
+    target.save(
+        update_fields=[
+            "is_active", "is_staff", "is_superuser"
+        ] if field == "is_superuser" else [field])
 
     return JsonResponse({
         "ok": True,

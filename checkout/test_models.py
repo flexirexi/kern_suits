@@ -1,6 +1,5 @@
 
 from decimal import Decimal
-from django.test import override_settings
 from django_countries.fields import Country
 from checkout.models import Order, OrderItem
 from products.models import ProductVariant
@@ -23,7 +22,10 @@ class TestOrderModel(BaseFixtureTestCase):
         )
 
     def test_update_total_adds_delivery(self):
-        """actually a simple test that update_total correctly adds item total + delivery"""
+        """
+        actually a simple test that update_total correctly adds item
+        total + delivery
+        """
         OrderItem.objects.create(
             order=self.order,
             variant=self.variant,
@@ -32,7 +34,7 @@ class TestOrderModel(BaseFixtureTestCase):
         )
         self.order.delivery_costs = Decimal("9.99")
         self.order.update_total()
-        
+
         expected_total = self.variant.price * 2
         expected_grand = expected_total + Decimal("9.99")
         self.order.refresh_from_db()
@@ -41,7 +43,7 @@ class TestOrderModel(BaseFixtureTestCase):
 
     def test_save_calculates_grand_total(self):
         """Test that .save() also sets grand_total as total + delivery"""
-        
+
         self.order.total_amount = Decimal("100.00")
         self.order.delivery_costs = Decimal("15.00")
         self.order.save()

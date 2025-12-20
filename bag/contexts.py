@@ -1,5 +1,3 @@
-from decimal import Decimal
-from django.conf import settings
 from products.models import ProductVariant
 from django.shortcuts import get_object_or_404
 

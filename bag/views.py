@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect
 from django.contrib import messages
 # from .models import Variant
 
@@ -14,7 +14,7 @@ def view_bag(request):
 
 def add_to_bag(request):
     """Add the selected variant to the shopping bag"""
-    
+
     if request.method == "POST":
         variant_id = request.POST.get("variant_id")
         quantity = int(request.POST.get("quantity", 1))
@@ -51,7 +51,7 @@ def update_bag(request, variant_id):
             messages.success(request, "Item removed from bag.")
 
         request.session["bag"] = bag
-        
+
         return redirect(redirect_url)
 
 

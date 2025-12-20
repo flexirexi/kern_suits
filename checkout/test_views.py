@@ -1,7 +1,7 @@
 from django.urls import reverse
 from django.contrib.auth import get_user_model
 from django.test import Client
-from checkout.models import Order, OrderItem
+from checkout.models import Order
 from products.models import ProductVariant
 from bag.contexts import bag_contents
 from products.fixtures.fixture_list_for_tests import BaseFixtureTestCase
@@ -35,6 +35,7 @@ class TestCheckoutPost(BaseFixtureTestCase):
             "country": "DE",
             "client_secret": "pi_test_123_secret_xyz"
         })
+        response
 
         order = Order.objects.last()
         self.assertIsNotNone(order)
@@ -47,8 +48,10 @@ class TestCheckoutPost(BaseFixtureTestCase):
 
     def test_order_total_matches_bag(self):
         """Checks that order total equals expected bag total"""
-        total_from_context = bag_contents(self.client.request().wsgi_request)["grand_total"]
-        
+        total_from_context = bag_contents(
+            self.client.request().wsgi_request
+        )["grand_total"]
+
         self.client.post(reverse("checkout"), {
             "first_name": "Max",
             "last_name": "Mustermann",

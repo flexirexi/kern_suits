@@ -1,6 +1,5 @@
 # tests/test_reviews_service.py
 
-from django.test import TestCase
 from django.contrib.auth import get_user_model
 from products.models import Product, ProductVariant, Category, Occasion, Series
 from reviews.models import Review
@@ -18,15 +17,31 @@ class TestAttachReviewData(BaseFixtureTestCase):
 
         # Zwei Testnutzer für die Reviews
         User = get_user_model()
-        self.user_1 = User.objects.create_user(username="user1", email="user1@example.com", password="testpass")
-        self.user_2 = User.objects.create_user(username="user2", email="user2@example.com", password="testpass")
+        self.user_1 = User.objects.create_user(
+            username="user1",
+            email="user1@example.com",
+            password="testpass"
+        )
+        self.user_2 = User.objects.create_user(
+            username="user2",
+            email="user2@example.com",
+            password="testpass"
+        )
 
     def test_product_with_multiple_reviews(self):
         """
         a product has multiple ratings
         """
-        Review.objects.create(product=self.product_with_reviews, user=self.user_1, rating=5)
-        Review.objects.create(product=self.product_with_reviews, user=self.user_2, rating=3)
+        Review.objects.create(
+            product=self.product_with_reviews,
+            user=self.user_1,
+            rating=5
+        )
+        Review.objects.create(
+            product=self.product_with_reviews,
+            user=self.user_2,
+            rating=3
+        )
 
         result = attach_review_data([self.product_with_reviews])
         product = result[0]
@@ -51,9 +66,12 @@ class TestProductMinPriceCalculation(BaseFixtureTestCase):
         self.products = [Product.objects.get(id=i) for i in range(1, 4)]
 
         # Set up variants with different prices
-        ProductVariant.objects.filter(product=self.products[0]).update(price=150)
-        ProductVariant.objects.filter(product=self.products[1]).update(price=220)
-        ProductVariant.objects.filter(product=self.products[2]).update(price=90)
+        ProductVariant.objects.filter(
+            product=self.products[0]).update(price=150)
+        ProductVariant.objects.filter(
+            product=self.products[1]).update(price=220)
+        ProductVariant.objects.filter(
+            product=self.products[2]).update(price=90)
 
     def test_min_price_is_correctly_set(self):
         for p in self.products:
@@ -89,13 +107,17 @@ class TestProductMinPriceCalculation(BaseFixtureTestCase):
         self.occasion = Occasion.objects.get(id=1)
         self.series = Series.objects.get(id=1)
         product = Product.objects.create(
-            name="NoVariantProduct", 
-            is_active=True, 
+            name="NoVariantProduct",
+            is_active=True,
             category=self.category,
             series=self.series,
             occasion=self.occasion)
-        product.min_price = min([v.price for v in product.variants.all()], default=None)
-        product.max_price = max([v.price for v in product.variants.all()], default=None)
+        product.min_price = min(
+            [v.price for v in product.variants.all()], default=None
+        )
+        product.max_price = max(
+            [v.price for v in product.variants.all()], default=None
+        )
 
         self.assertIsNone(product.min_price)
         self.assertIsNone(product.max_price)

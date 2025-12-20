@@ -1,6 +1,7 @@
 from django.test import TestCase
 from django.urls import reverse
 
+
 class TestBagViews(TestCase):
     def test_add_to_bag_adds_correct_quantity(self):
         """Adds item to session bag and checks quantity"""
@@ -26,7 +27,7 @@ class TestBagViews(TestCase):
 
         bag = self.client.session["bag"]
         self.assertEqual(bag["123"], 5)
-        
+
     def test_remove_from_bag_deletes_item(self):
         """Removes item from session bag"""
         session = self.client.session

@@ -5,7 +5,8 @@ import uuid
 from decimal import Decimal
 
 from products.models import ProductVariant
-# from user.models import UserProfile  # not yet created but i had issue in the last project changing models, so I do it now
+# from user.models import UserProfile  # not yet created but i had issue
+# in the last project changing models, so I do it now
 
 
 # Create your models here.
@@ -23,7 +24,8 @@ class Order(models.Model):
         blank=True,
         related_name='orders'
     )
-    # profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL, null=True, blank=True, related_name='orders')
+    # profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL,
+    # null=True, blank=True, related_name='orders')
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -46,9 +48,21 @@ class Order(models.Model):
     country = CountryField(blank_label='Country *', null=False, blank=False)
 
     # Financial fields
-    total_amount = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)
-    delivery_costs = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)
-    grand_total = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)
+    total_amount = models.DecimalField(
+        max_digits=10,
+        decimal_places=2,
+        default=0.00
+    )
+    delivery_costs = models.DecimalField(
+        max_digits=10,
+        decimal_places=2,
+        default=0.00
+    )
+    grand_total = models.DecimalField(
+        max_digits=10,
+        decimal_places=2,
+        default=0.00
+    )
 
     # Stripe PaymentIntent ID
     stripe_pid = models.CharField(max_length=255, blank=True, null=True)
@@ -61,7 +75,9 @@ class Order(models.Model):
         self.total_amount = sum(
             item.price * item.quantity for item in self.items.all()
         )
-        self.grand_total = Decimal(str(self.total_amount)) + Decimal(str(self.delivery_costs))
+        self.grand_total = Decimal(
+            str(self.total_amount)
+        ) + Decimal(str(self.delivery_costs))
         self.save()
 
     def save(self, *args, **kwargs):
@@ -70,7 +86,11 @@ class Order(models.Model):
         if not self.order_number:
             self.order_number = uuid.uuid4().hex.upper()
         # Ensure grand total is always up to date
-        self.grand_total = (self.total_amount or 0) + (self.delivery_costs or 0)
+        self.grand_total = (
+            self.total_amount or 0
+        ) + (
+            self.delivery_costs or 0
+        )
         super().save(*args, **kwargs)
 
     def __str__(self):
@@ -92,4 +112,3 @@ class OrderItem(models.Model):
 
     def __str__(self):
         return f"{self.quantity} * {self.variant}"
-    
