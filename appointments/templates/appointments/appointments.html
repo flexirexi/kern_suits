@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block content %}
-<div class="container p-4">
+<div class=" p-4 ms-auto me-auto">
     <div class="row pt-3">
         <!-- Left Column -->
         <div class="col-md-6 mb-4">
@@ -32,6 +32,13 @@
         <!-- right column -->
         <div class="col-md-6">
             <h5>Book an appointment</h5>
+            <span class="small">
+                Ready for a better fit? Book a consultation for custom suits in our boutique based in Frankfurt. 
+                We help with fitting advice, alterations, and styling for business and weddings. Add any wishes 
+                below (occasion, colors, timeline, fit concerns, made-to-measure etc.).
+            </span>
+            <br><br>
+
             <form method="post">
 
                 {% csrf_token %}
