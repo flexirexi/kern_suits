@@ -1,6 +1,7 @@
 // CSRF
 function getCookie(name) { const m = document.cookie.match(new RegExp('(?:^|; )' + name + '=([^;]*)')); return m ? decodeURIComponent(m[1]) : null; }
 const csrftoken = getCookie('csrftoken');
+let firstLoad = true;
 
 // Category render helper
 function renderCategory(el) {
@@ -59,12 +60,14 @@ document.querySelectorAll('.rights-toggle').forEach(function (cb) {
                 cat.setAttribute('data-super', data.is_superuser ? '1' : '0');
                 renderCategory(cat);
             }
-            showToast('Saved.');
+            showToast('Saved.');  
         }).catch(function (err) {
             // revert UI on error
             e.target.checked = !e.target.checked;
             showToast('Error saving.');
             console.error(err);
+            firstLoad = false;
         });
     });
 });
+    
