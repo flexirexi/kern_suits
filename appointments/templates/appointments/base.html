@@ -12,6 +12,7 @@
     <meta name="keywords" content="appointment tailor Frankfurt, suit fitting Frankfurt, suit alterations Frankfurt, 
         made-to-measure suit Frankfurt, custom suits Frankfurt, wedding suit Frankfurt appointment, business suit fitting, 
         English-speaking tailor Frankfurt, Rhein-Main tailor, Wiesbaden Mainz Darmstadt tailor">
+    <link rel="icon" type="image/png" href="/static/img/logo_K.png" />
     {% endblock %}
     {% block extra_meta %} {% endblock %}
     {% block core_css %}
@@ -66,17 +67,20 @@
             <div class="col-12 mb-4">
                 <div class="d-flex justify-content-center flex-wrap gap-4">
                     <a href="{% url 'privacy' %}">Privacy</a>
-                    <a href="{% url 'terms_conditions' %}">Terms & Conditions</a>
+                    <a href="{% url 'terms_conditions' %}" class="d-none d-md-inline">Terms & Conditions</a>
+                    <a href="{% url 'terms_conditions' %}" class="d-inline d-md-none">Terms</a>
                     <a href="{% url 'impressum' %}">Impressum</a>
+                    <a href="#">Newsletter</a>
                 </div>
             </div>
 
             <div class="col-12 mb-4">
                 <div class="d-flex justify-content-center flex-wrap gap-4 ">
-                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="fab fa-facebook fa-xl"></a>
-                    <a href="https://www.x.com" target="_blank" rel="noopener noreferrer" class="fab fa-x-twitter fa-xl"></a>
-                    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="fab fa-instagram fa-xl"></a>
-                    <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" class="fab fa-tiktok fa-xl"></a>
+                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" 
+                        aria-label="Visit our Kern Suits Facebook page in a new tab.">
+                        <i class="fab fa-facebook fa-xl me-2"></i> 
+                        <span >Follow us on Facebook</span>
+                    </a>
                 </div>
             </div>
 

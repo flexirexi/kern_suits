@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no" >
+    <link rel="icon" type="image/png" href="/static/img/logo.png" />
     {% endblock %}
     {% block extra_meta %} {% endblock %}
     {% block core_css %}
@@ -61,21 +62,20 @@
             <div class="col-12 mb-4">
                 <div class="d-flex justify-content-center flex-wrap gap-4">
                     <a href="{% url 'privacy' %}">Privacy</a>
-                    <a href="{% url 'terms_conditions' %}">Terms & Conditions</a>
+                    <a href="{% url 'terms_conditions' %}" class="d-none d-md-inline">Terms & Conditions</a>
+                    <a href="{% url 'terms_conditions' %}" class="d-inline d-md-none">Terms</a>
                     <a href="{% url 'impressum' %}">Impressum</a>
+                    <a href="#">Newsletter</a>
                 </div>
             </div>
 
             <div class="col-12 mb-4">
                 <div class="d-flex justify-content-center flex-wrap gap-4 ">
-                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="fab fa-facebook fa-xl"
-                        aria-label="Visit our Kern Suits Facebook page in a new tab."></a>
-                    <a href="https://www.x.com" target="_blank" rel="noopener noreferrer" class="fab fa-x-twitter fa-xl"
-                        aria-label="Visit our X-page in a new tab (dummy link)."></a>
-                    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="fab fa-instagram fa-xl"
-                        aria-label="Visit our Instagram Feed in a new tab (dummy link)."></a>
-                    <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" class="fab fa-tiktok fa-xl"
-                        aria-label="Visit us on TikTok in a new tab (dummy link)"></a>
+                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" 
+                        aria-label="Visit our Kern Suits Facebook page in a new tab.">
+                        <i class="fab fa-facebook fa-xl me-2"></i> 
+                        <span >Follow us on Facebook</span>
+                    </a>
                 </div>
             </div>
 
