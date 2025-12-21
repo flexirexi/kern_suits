@@ -23,4 +23,14 @@ urlpatterns = [
      path("user-rights/<int:pk>/toggle/",
           views.user_rights_toggle,
           name="user_rights_toggle"),
+     path(
+          "orders/",
+          views.bc_orders_management,
+          name="bc_orders_management"
+     ),
+     path(
+          "orders/bulk-action/",
+          views.bc_orders_bulk_action,
+          name="bc_orders_bulk_action"
+     ),
 ]

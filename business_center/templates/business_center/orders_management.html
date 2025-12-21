@@ -1,0 +1,38 @@
+{% extends "business_center/base.html" %}
+{% load static %}
+{% load humanize %}
+
+{% block extra_css %}
+{{ block.super }}
+<link rel="stylesheet" href="{% static 'business_center/css/orders_management.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid om-wrapper">
+
+    <!-- Toolbar -->
+    <div class="om-toolbar border-bottom py-3">
+
+    </div>
+
+    <div class="row g-3 mt-2">
+
+        <!-- Aside filters -->
+        <div class="col-12 col-lg-3 aside-container">
+            <aside class="om-aside">
+            </aside>
+        </div>
+
+        <!-- Order list -->
+        <div class="col-12 col-lg-9 om-col-right">
+            
+        </div>
+
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+{{ block.super }}
+<script src="{% static 'business_center/js/orders_management.js' %}" defer></script>
+{% endblock %}

@@ -4,7 +4,8 @@ from django.contrib.auth.models import User
 from django.http import (
     JsonResponse,
     HttpResponseForbidden,
-    HttpResponseBadRequest
+    HttpResponseBadRequest,
+    HttpRequest
 )
 
 from datetime import timedelta
@@ -23,11 +24,132 @@ from products.models import Product, ProductVariant, Series, Category
 from django.contrib import messages
 from .forms import ProductVariantForm
 
+from dataclasses import dataclass
+
 STATUS_CREATED = "created"
 STATUS_CONFIRMED = "confirmed"
 STATUS_DENIED = "denied"
 STATUS_SENT = "sent"
 STATUS_RETURNED = "returned"
+
+# new:
+STATUS_DELIVERED = "delivered"
+STATUS_LOST = "lost"
+
+
+@dataclass(frozen=True)
+class DateRangeOption:
+    key: str
+    label: str
+
+
+RANGE_OPTIONS = [
+    DateRangeOption("3", "≤ 3 days (last 3 days)"),
+    DateRangeOption("7", "≤ 7 days (last week)"),
+    DateRangeOption("30", "≤ 30 days (last 30 days)"),
+    DateRangeOption("gt30", "> 30 days"),
+]
+
+
+def _apply_day_range_filter(qs, field_name: str, range_key: str):
+    """
+    Filters by date() only (no time) - for orders.html
+    range_key in {"3","7","30","gt30",""}.
+    """
+    if not range_key:
+        return qs
+
+    today = timezone.localdate()
+    if range_key == "gt30":
+        cutoff = today - timedelta(days=30)
+        return qs.filter(**{f"{field_name}__date__lt": cutoff})
+
+    try:
+        days = int(range_key)
+    except ValueError:
+        return qs
+
+    cutoff = today - timedelta(days=days)
+    return qs.filter(**{f"{field_name}__date__gte": cutoff})
+
+
+def _decorate_orders_for_ui(orders):
+    """
+    Adds computed UI-only attributes (for orders.html):
+    - items_count
+    - updated_days_ago
+    - effective_status ("delivered" if sent and updated >= 3 days)
+    - dot_color ("green/yellow/orange/red")
+    """
+    today = timezone.localdate()
+
+    for o in orders:
+        o.items_count = sum(i.quantity for i in o.items.all())
+        updated_date = o.updated_at.date() if o.updated_at else today
+        o.updated_days_ago = (today - updated_date).days
+
+        if o.status == "sent" and o.updated_days_ago >= 3:
+            o.effective_status = "delivered"
+        else:
+            o.effective_status = o.status
+
+        # Dot logic
+        if o.effective_status == "delivered":
+            o.dot_color = "green"
+        else:
+            if o.updated_days_ago > 7:
+                o.dot_color = "red"
+            elif o.updated_days_ago > 3:
+                o.dot_color = "orange"
+            else:
+                o.dot_color = "yellow"
+
+    return orders
+
+
+@login_required
+def bc_orders_management(request: HttpRequest):
+    if not request.user.is_staff and not request.user.is_superuser:
+        return HttpResponseForbidden(
+            "Only staff/superuser may be able to enter the business center."
+        )
+
+    qs = (
+        Order.objects
+        .prefetch_related("items__variant", "items__variant__product")
+        .order_by("-created_at")
+    )
+
+    status = request.GET.get("status", "").strip()
+    created_range = request.GET.get("created", "").strip()
+    updated_range = request.GET.get("updated", "").strip()
+
+    if status:
+        qs = qs.filter(status=status)
+
+    qs = _apply_day_range_filter(qs, "created_at", created_range)
+    qs = _apply_day_range_filter(qs, "updated_at", updated_range)
+
+    orders = list(qs[:800])  # hard cap: keeps page snappy
+    orders = _decorate_orders_for_ui(orders)
+
+    context = {
+        "orders": orders,
+        "status": status,
+        "created_range": created_range,
+        "updated_range": updated_range,
+        "range_options": RANGE_OPTIONS,
+        "status_choices": [
+            ("", "All"),
+            ("created", "Created"),
+            ("confirmed", "Confirmed"),
+            ("denied", "Denied"),
+            ("sent", "Sent"),
+            ("delivered", "Delivered"),
+            ("returned", "Returned"),
+        ],
+    }
+    return render(request, "business_center/orders_management.html", context)
 
 
 @login_required

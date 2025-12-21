@@ -276,5 +276,7 @@ STATUS_CHOICES = [
     ('confirmed', 'Confirmed'),
     ('denied', 'Denied'),
     ('sent', 'Sent'),
+    ('delivered', 'Delivered'),
     ('returned', 'Returned'),
+    ('lost', 'Lost'),
 ]
