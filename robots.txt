@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /user/
+Disallow: /bag/
+Disallow: /checkout/
+Disallow: /business-center/
+Disallow: https://kern-suits.onrender.com/sitemap.xml
