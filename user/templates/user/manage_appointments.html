@@ -23,9 +23,15 @@
                         <small>edit</small>
                     </a>
                     {% if appt.start_datetime.date >= cancel_threshold %}
-                    <a href="#" class="btn  btn-outline-danger">
-                        <small>Cancel</small>
-                    </a>
+                        <form method="post"
+                            action="{% url 'cancel_appointment' appt.id %}"
+                            class="d-inline"
+                            onsubmit="return confirm('Cancel this appointment? This cannot be undone.');">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-outline-danger">
+                            <small>Cancel</small>
+                        </button>
+                        </form>
                     {% else %}
                     <button class="btn btn-sm btn-outline-secondary" disabled>
                         <small>Cancel not available</small>

@@ -10,7 +10,7 @@
     margin: 5rem 0.8rem 4rem 0.8rem;
     border-radius: 0.5rem;
     overflow: hidden;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
 [data-theme] .appt-header {
@@ -33,7 +33,7 @@
     font-size: 1.3rem;
     color: #d5d5d5;
     margin-bottom: 2px;
-    font-weight:400;
+    font-weight: 400;
 }
 
 [data-theme] .appt-header-item small {
@@ -50,7 +50,8 @@
 
 [data-theme] .back-button {
     position: fixed;
-    top: 70px; /* Adjust depending on your nav height */
+    top: 70px;
+    /* Adjust depending on your nav height */
     left: 20px;
     z-index: 1000;
 }
@@ -63,11 +64,16 @@
     text-decoration: none;
 }
 
+.appt-header-item .form-label {
+    font-size: 0.85rem;
+    opacity: 0.85;
+}
+
 @media (min-width:768px) {
     [data-theme] .appt-card {
         margin: 5rem auto 4rem auto;
         border-radius: 0.5rem;
         overflow: hidden;
-        box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     }
 }

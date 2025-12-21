@@ -34,4 +34,9 @@ urlpatterns = [
         views.delete_review,
         name="delete_review"
     ),
+    path(
+        "appointments/<int:appt_id>/cancel/", 
+        views.cancel_appointment, 
+        name="cancel_appointment"
+    ),
 ]

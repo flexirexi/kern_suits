@@ -22,4 +22,6 @@ class Appointment(models.Model):
     comment = models.TextField(blank=True, null=True)
 
     def __str__(self):
-        return f"{self.user} - {self.get_appointment_type_display()} am {self.start_datetime.strftime('%d.%m.%Y %H:%M')}"
+        app_type = self.get_appointment_type_display()
+        app_datetime = self.start_datetime.strftime('%d.%m.%Y %H:%M')
+        return f"{self.user} - {app_type} am {app_datetime}"

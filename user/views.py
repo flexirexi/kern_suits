@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from datetime import date, timedelta
+from datetime import date, timedelta, datetime
 
 from .models import UserProfile
 from .forms import UserProfileForm
@@ -138,20 +138,100 @@ def edit_appointment(request, appt_id):
 
     if request.method == "POST":
         comment = request.POST.get("comment", "").strip()
+        appointment_type = request.POST.get("appointment_type", "").strip()
+        start_dt_str = request.POST.get("start_datetime", "").strip()
+
+        # If JS didn't set it for some reason, keep current start_datetime
+        if not start_dt_str:
+            start_dt = appointment.start_datetime
+        else:
+            try:
+                # matches existing format: "YYYY-MM-DDTHH:00:00" (no timezone)
+                start_dt = datetime.fromisoformat(start_dt_str)
+            except ValueError:
+                messages.error(request, "Invalid date/time format.")
+                return redirect("edit_appointment", appt_id=appointment.id)
+
+        # Validate appointment_type
+        valid_types = {k for k, _ in Appointment.APPOINTMENT_TYPES}
+        if appointment_type not in valid_types:
+            messages.error(request, "Invalid appointment type.")
+            return redirect("edit_appointment", appt_id=appointment.id)
+
+        # Availability check -> prevents forced booking
+        conflict_exists = (
+            Appointment.objects
+            .filter(start_datetime=start_dt)
+            .exclude(id=appointment.id)
+            .exists()
+        )
+        if conflict_exists:
+            messages.error(
+                request,
+                "This slot is no longer available. Please choose another one."
+            )
+            return redirect("edit_appointment", appt_id=appointment.id)
+
+        # Apply updates
         appointment.comment = comment
+        appointment.appointment_type = appointment_type
+        appointment.start_datetime = start_dt
+        appointment.end_datetime = start_dt + timedelta(hours=1)
+
         appointment.save()
+
         messages.success(request, "Appointment updated successfully.")
         return redirect("manage_appointments")
+
+    booked_slots = {}
+    qs = Appointment.objects.exclude(id=appointment.id)
+
+    for appt in qs:
+        date_key = appt.start_datetime.date().isoformat()  # "YYYY-MM-DD"
+        hour = appt.start_datetime.hour                    # int
+        booked_slots.setdefault(date_key, []).append(hour)
 
     context = {
         "appointment": appointment,
         "cancel_threshold": cancel_threshold,
+        "today": today.isoformat(),
+        "booked_slots": booked_slots,
+        "appt_types": Appointment.APPOINTMENT_TYPES,
     }
     return render(request, "user/edit_appointment.html", context)
 
 
 @login_required
+def cancel_appointment(request, appt_id):
+    appointment = get_object_or_404(Appointment, id=appt_id, user=request.user)
+
+    today = date.today()
+    cancel_threshold = today + timedelta(days=7)
+
+    if appointment.start_datetime.date() < cancel_threshold:
+        messages.error(
+            request,
+            "Cancel not available (less than 7 days in advance)."
+        )
+        return redirect("manage_appointments")
+
+    if request.method != "POST":
+        # Hard-stop: no cancel via GET
+        return redirect("manage_appointments")
+
+    appointment.delete()
+    messages.success(request, "Appointment cancelled successfully.")
+    return redirect("manage_appointments")
+
+
+@login_required
 def delete_appointment(request, appt_id):
+    """
+    this function belongs to 'edit_appointments'
+    it cancels the appointment while editing it
+    the cancellation function within the manage_appointments is
+    in the function above
+    """
     appointment = get_object_or_404(Appointment, id=appt_id, user=request.user)
     appointment.delete()
     messages.info(request, "Appointment deleted successfully.")

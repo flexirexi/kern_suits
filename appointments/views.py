@@ -1,8 +1,7 @@
 from django.contrib.auth.decorators import login_required
-from django.conf import settings
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from datetime import date, timedelta, datetime
+from datetime import date, datetime
 
 from .forms import AppointmentForm
 from .models import Appointment
@@ -12,24 +11,24 @@ from .models import Appointment
 @login_required
 def appointments(request):
     today = date.today()
-    
+
     all_appointments = Appointment.objects.all()
-    
+
     booked_slots = {}
 
     for appt in all_appointments:
         date_key = appt.start_datetime.date().isoformat()
         hour = appt.start_datetime.hour
         booked_slots.setdefault(date_key, []).append(hour)
-        
+
     form = AppointmentForm()
-    
+
     # take care of POST methods
     if request.method == "POST":
         form = AppointmentForm(request.POST)
         if form.is_valid():
             start_dt_str = request.POST.get("start_datetime")
-            
+
             if not start_dt_str:
                 messages.error(request, "No date/ time selected.")
             else:
@@ -44,10 +43,10 @@ def appointments(request):
                     appointment.save()
                     messages.success(request, "Booking successfully.")
                     return redirect("manage_appointments")
-    
+
     else:
         form = AppointmentForm()
-    
+
     context = {
         "all_appointments": all_appointments,
         "booked_slots": booked_slots,

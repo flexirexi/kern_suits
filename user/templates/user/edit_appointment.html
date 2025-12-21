@@ -9,59 +9,85 @@
 
 
 {% block content %}
+<div
+    id="editApptMeta"
+    data-current-date="{{ appointment.start_datetime|date:'Y-m-d' }}"
+    data-current-hour="{{ appointment.start_datetime|date:'H' }}"
+></div>
+
 <main class="flex-fill d-flex justify-content-center w-100">
     <a href="{% url 'manage_appointments' %}" class="btn btn-light back-button">
-    ←  Appointments
-    </a>
-    <div class="appt-card">
-        <!-- Header -->
-        <div class="appt-header">
-            <h3>Appointment</h3>
-            <div class="appt-header-item">
-                Date: {{ appointment.start_datetime|date:"Y-m-d" }}
-            </div>
-            <div class="appt-header-item">
-                <small>{{ appointment.appointment_type }}</small>
-            </div>
-        </div>
+        <- Appointments </a>
+            <div class="appt-card">
+                <!-- Header -->
+                <div class="appt-header">
+                    <h3>Appointment</h3>
 
-        <!-- Form Start -->
-        <form method="post">
-            {% csrf_token %}
-            <!-- Hidden Inputs -->
-            <input type="hidden" name="start_datetime" value="{{ appointment.start_datetime|date:'c' }}">
-            <input type="hidden" name="appointment_type" value="{{ appointment.appointment_type }}">
-
-            <!-- Appointment Details -->
-            <div class="appt-details">
-                <div class="row  align-items-center d-block">
-                    <div class="col-12 ">
-                        <div class="mb-3"><strong>Anything you would like us to know:</strong></div>
+                    <!-- Date + Time -->
+                    <div class="appt-header-item">
+                        <label class="form-label mb-1">Date</label>
+                        <input type="date" id="datePicker" class="form-control form-control-sm" min="{{ today }}"
+                            value="{{ appointment.start_datetime|date:'Y-m-d' }}" required>
                     </div>
-                    <div class="col-12 mb-3">
-                        <textarea name="comment" class="form-control">{{ appointment.comment }}</textarea>
-                    </div >
-                    <small><strong>Note:</strong> You can cancel your appointment up to 7 days in advance.</small>
+
+                    <div class="appt-header-item">
+                        <label class="form-label mb-1">Time</label>
+                        <select id="timeSelect" class="form-select form-select-sm" required>
+                            <option value="">Please choose a time slot</option>
+                        </select>
+                    </div>
+
+                    <!-- Type -->
+                    <div class="appt-header-item">
+                        <label class="form-label mb-1">Type</label>
+                        <select name="appointment_type" class="form-select form-select-sm" form="editApptForm" required>
+                            {% for key,label in appt_types %}
+                            <option value="{{ key }}" {% if key == appointment.appointment_type %}selected{% endif %}>
+                                {{ label }}
+                            </option>
+                            {% endfor %}
+                        </select>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Buttons -->
-            <div class="pe-4 ps-4 pe-md-5 ps-md-5 pt-4 pb-3 d-flex align-items-center list-group-item ">
-                {% if appointment.start_datetime.date >= cancel_threshold %}
-                <a href="{% url 'delete_appointment' appointment.id %}" class="btn  btn-danger me-auto">
-                    <small>Cancel</small>
-                </a>
-                {% else %}
-                <button class="btn btn-sm btn-outline-secondary me-auto" disabled>
-                    <small>Cancel not available</small>
-                </button>
-                {% endif %}
-                <button type="submit" class="btn btn-dark ">Save</button>
-            </div>
-        </form>
-        <!-- Form End -->
+                <!-- Form Start -->
+                <form method="post" id="editApptForm">
+                    {% csrf_token %}
 
-    </div>
+                    <!-- Hidden input (JS writes ISO datetime here) -->
+                    <input type="hidden" name="start_datetime" id="startDatetimeInput">
+
+                    <!-- Appointment Details -->
+                    <div class="appt-details">
+                        <div class="row align-items-center d-block">
+                            <div class="col-12">
+                                <div class="mb-3"><strong>Anything you would like us to know:</strong></div>
+                            </div>
+                            <div class="col-12 mb-3">
+                                <textarea name="comment" class="form-control">{{ appointment.comment }}</textarea>
+                            </div>
+                            <small><strong>Note:</strong> You can cancel your appointment up to 7 days in
+                                advance.</small>
+                        </div>
+                    </div>
+
+                    <!-- Buttons -->
+                    <div class="pe-4 ps-4 pe-md-5 ps-md-5 pt-4 pb-3 d-flex align-items-center list-group-item">
+                        {% if appointment.start_datetime.date >= cancel_threshold %}
+                        <a href="{% url 'delete_appointment' appointment.id %}" class="btn btn-danger me-auto">
+                            <small>Cancel</small>
+                        </a>
+                        {% else %}
+                        <button class="btn btn-sm btn-outline-secondary me-auto" disabled>
+                            <small>Cancel not available</small>
+                        </button>
+                        {% endif %}
+                        <button type="submit" class="btn btn-dark">Save</button>
+                    </div>
+                </form>
+                <!-- Form End -->
+
+            </div>
 </main>
 {% endblock %}
 
@@ -70,5 +96,6 @@
 
 
 {% block extra_scripts %}
-
+    {{ booked_slots|json_script:"booked-slots" }}
+    <script type="module" src="{% static 'user/js/edit_appointment.js' %}"></script>
 {% endblock %}
