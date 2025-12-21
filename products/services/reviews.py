@@ -5,7 +5,8 @@ from reviews.models import Review
 # outsource ratings logic as views.py becomes too large..
 def attach_review_data(products):
     """
-    Adds avg_rating and review_count attributes to each product of the product model
+    Adds avg_rating and review_count attributes to each product of the
+    product model
     """
     product_ids = [p.id for p in products]
     review_stats = (

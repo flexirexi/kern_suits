@@ -1,6 +1,17 @@
 {% extends "products/base.html" %}
 {% load static %}
 
+{% block extra_meta %} 
+    <meta 
+        name="description" 
+        content="{{ product.name }}: premium ready-to-wear menswear Frankfurt. 
+            Explore fit, materials, sizes, and EU shipping, then checkout online.">
+    <meta 
+        name="keywords" 
+        content="Kern Suits, {{ product.name }}, {{ product.category }}, ready-to-wear, men's suit, 
+            suit details, fit and sizing, EU shipping, German menswear, Frankfurt menswear, premium suit">
+{% endblock %}
+
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'products/css/product_details.css' %}">
 {% endblock %}

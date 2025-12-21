@@ -1,5 +1,6 @@
 from django.test import TestCase
 
+
 class BaseFixtureTestCase(TestCase):
     """
     all test from all apps need to create test DBs 
