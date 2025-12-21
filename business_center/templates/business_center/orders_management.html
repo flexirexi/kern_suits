@@ -12,7 +12,29 @@
 
     <!-- Toolbar -->
     <div class="om-toolbar border-bottom py-3">
+        <div class="d-flex flex-wrap gap-2 align-items-center om-action">
 
+            <button id="btn-confirm" class="btn btn-outline-success" disabled>
+                <i class="fa-solid fa-check me-1"></i>Confirm
+            </button>
+
+            <button id="btn-deny" class="btn btn-outline-danger" disabled>
+                <i class="fa-solid fa-ban me-1"></i>Deny
+            </button>
+
+            <button id="btn-sent" class="btn btn-outline-primary" disabled>
+                <i class="fa-solid fa-truck me-1"></i>Sent
+            </button>
+
+            <button id="btn-returned" class="btn btn-outline-warning" disabled>
+                <i class="fa-solid fa-rotate-left me-1"></i>Returned
+            </button>
+
+            <button id="btn-lost" class="btn btn-dark ms-auto" disabled>
+                <i class="fa-solid fa-triangle-exclamation me-1"></i>Mark as lost
+            </button>
+
+        </div>
     </div>
 
     <div class="row g-3 mt-2">
@@ -20,12 +42,55 @@
         <!-- Aside filters -->
         <div class="col-12 col-lg-3 aside-container">
             <aside class="om-aside">
+                <form method="get" class="cards">
+                    <div class="card-header fw-semibold">Filters</div>
+                    <div class="card-body d-grid gap-3">
+
+                        <!-- Status -->
+                        <div>
+                            <label class="form-label">Status</label>
+                            <select class="form-select" name="status" onchange="this.form.submit()">
+                                {% for key,label in status_choices %}
+                                <option value="{{ key }}" {% if key==status %}selected{% endif %}>{{ label }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <!-- Created -->
+                        <div>
+                            <label class="form-label">Created at</label>
+                            <select class="form-select" name="created" onchange="this.form.submit()">
+                                <option value="" {% if not created_range %}selected{% endif %}>All</option>
+                                {% for opt in range_options %}
+                                <option value="{{ opt.key }}" {% if opt.key==created_range %}selected{% endif %}>{{
+                                    opt.label }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <!-- Updated -->
+                        <div>
+                            <label class="form-label">Updated at</label>
+                            <select class="form-select" name="updated" onchange="this.form.submit()">
+                                <option value="" {% if not updated_range %}selected{% endif %}>All</option>
+                                {% for opt in range_options %}
+                                <option value="{{ opt.key }}" {% if opt.key==updated_range %}selected{% endif %}>{{
+                                    opt.label }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <a class="btn btn-sm btn-outline-secondary" href="{% url 'bc_orders_management' %}">
+                            Reset filters
+                        </a>
+
+                    </div>
+                </form>
             </aside>
         </div>
 
         <!-- Order list -->
         <div class="col-12 col-lg-9 om-col-right">
-            
         </div>
 
     </div>

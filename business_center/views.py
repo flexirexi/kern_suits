@@ -130,7 +130,8 @@ def bc_orders_management(request: HttpRequest):
     qs = _apply_day_range_filter(qs, "created_at", created_range)
     qs = _apply_day_range_filter(qs, "updated_at", updated_range)
 
-    orders = list(qs[:800])  # hard cap: keeps page snappy
+    orders = list(qs[:500])  # hard cap: keeps page snappy
+
     orders = _decorate_orders_for_ui(orders)
 
     context = {
