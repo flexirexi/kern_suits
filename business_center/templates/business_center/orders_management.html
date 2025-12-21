@@ -97,7 +97,7 @@
                 {% if orders %}
                 <div class="d-grid gap-2">
                     {% for o in orders %}
-                    <div class="om-row bg-light2 px-3 py-2 rounded-3" tabindex="0" role="button"
+                    <div class="om-row bg-light2 px-3 py-2 rounded-3 bg-light" tabindex="0" role="button"
                         data-order-id="{{ o.id }}" data-status="{{ o.status }}"
                         data-effective-status="{{ o.effective_status }}" data-updated-days="{{ o.updated_days_ago }}">
 
@@ -152,9 +152,9 @@
 
                         <!-- Details -->
                         <div class="collapse mt-2" id="o{{ o.id }}details">
-                            <div class="om-details rounded-3 p-3">
+                            <div class="om-details rounded-3 p-3 bg-light2">
 
-                                <div class="row g-2">
+                                <div class="row g-2 ">
                                     <div class="col-12 col-md-6">
                                         <div class="fw-semibold small mb-1">Customer</div>
                                         <div class="small">{{ o.first_name }} {{ o.last_name }}</div>
