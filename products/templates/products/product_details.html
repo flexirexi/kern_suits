@@ -93,11 +93,18 @@
                             >{{ fit }}</option>
                     {% endfor %}
                     </select>
+                    <span class="small">
+                        <br>
+                        Not the perfect fit? The wanted size isn't available? 
+                        <a href="{% url 'appointments' %}">Book an appointment</a>
+                        .
+                    </span>
                 </div>
 
                 <!---------- 01.5 CTA Bereich --------->
                 <div class="mt-4">
                     <b><small class="mb-0 text-success">in stock: {{ max_qty }}</small></b>
+
                 </div>
                 <form method="POST" action="{% url 'add_to_bag' %}">
                     {% csrf_token %}
@@ -116,6 +123,8 @@
                         </button>
                     </div>
                 </form>
+                <br>
+                <small><span>Shipping: <strong>3-5 business days</strong></span></small>
             </div>
         </div>
         <hr>
