@@ -14,6 +14,7 @@ from decimal import Decimal
 
 from django.views.decorators.http import require_POST
 from django.contrib.auth import get_user_model
+from django.db import transaction
 from django.db.models import Sum, Avg, Max, F, Q, Value, DecimalField
 from django.db.models.functions import Coalesce, TruncMonth
 from django.utils import timezone
@@ -151,6 +152,132 @@ def bc_orders_management(request: HttpRequest):
         ],
     }
     return render(request, "business_center/orders_management.html", context)
+
+
+@require_POST
+@login_required
+def bc_orders_bulk_action(request: HttpRequest):
+    """
+    POST JSON or form-encoded:
+    - action: "confirm" | "deny" | "sent" | "returned" | "mark_lost"
+    - order_ids[]: list of ids
+    """
+    if not request.user.is_staff and not request.user.is_superuser:
+        return HttpResponseForbidden(
+            "Only staff/superuser may be able to enter the business center."
+        )
+
+    action = request.POST.get("action", "").strip()
+    order_ids = request.POST.getlist("order_ids[]") or request.POST.getlist(
+        "order_ids"
+    )
+
+    if not action or not order_ids:
+        return JsonResponse(
+            {
+                "ok": False,
+                "error": "Missing action or order_ids."
+            }, status=400)
+
+    qs = Order.objects.filter(id__in=order_ids)
+
+    # Load orders to validate action rules
+    orders = list(qs)
+    if not orders:
+        return JsonResponse(
+            {
+                "ok": False,
+                "error": "No matching orders."
+            }, status=404)
+
+    # Determine effective_status same as UI (for rule checks)
+    today = timezone.localdate()
+
+    def effective_status(order: Order) -> str:
+        updated_date = order.updated_at.date() if order.updated_at else today
+        days_ago = (today - updated_date).days
+        if order.status == "sent" and days_ago >= 3:
+            return "delivered"
+        return order.status
+
+    # Action rules:
+    # - confirm: only if status in {"created", "denied"}
+    # - deny: only if effective_status is NOT "sent" or "delivered"
+    #   when the package is on the way, it cant be denied
+    # - sent: only if status == "confirmed" (reasonable default)
+    # - returned: always allowed
+    # - mark_lost: enabled for sent/delivered
+    def all_in_allowed(allowed: set[str]) -> bool:
+        return all(o.status in allowed for o in orders)
+
+    if action == "confirm":
+        if not all_in_allowed({"created", "denied"}):
+            return JsonResponse(
+                {
+                    "ok": False,
+                    "error": "Confirm allowed only for Created/Denied."
+                }, status=400)
+        new_status = "confirmed"
+
+    elif action == "deny":
+        if any(effective_status(o) in {"sent", "delivered"} for o in orders):
+            return JsonResponse(
+                {
+                    "ok": False,
+                    "error": "Cannot deny orders already sent."
+                }, status=400)
+        new_status = "denied"
+
+    elif action == "sent":
+        if not all_in_allowed({"confirmed"}):
+            return JsonResponse(
+                {
+                    "ok": False,
+                    "error": "Sent allowed only for Confirmed orders."
+                }, status=400)
+        new_status = "sent"
+
+    elif action == "returned":
+        new_status = "returned"
+
+    elif action == "mark_lost":
+        # better term than "report as loss"
+        if any(
+            effective_status(o) not in {"sent", "delivered"} for o in orders
+        ):
+            return JsonResponse(
+                {
+                    "ok": False,
+                    "error": "Mark as lost only for sent/delivered orders."
+                }, status=400)
+
+        # For now: reuse 'returned' would be misleading, so we store 'denied'
+        # is also misleading.
+        # Best minimal option: add "lost" status (no DB migration needed).
+        new_status = "lost"
+
+    else:
+        return JsonResponse(
+            {
+                "ok": False,
+                "error": "Unknown action."
+            }, status=400)
+
+    with transaction.atomic():
+        qs.update(status=new_status)
+
+    # Emails later (Mailchimp) — intentionally not implemented now.
+    messages.success(
+        request,
+        f"Updated {len(orders)} order(s) -> {new_status}."
+    )
+    return JsonResponse(
+        {
+            "ok": True,
+            "updated": len(orders),
+            "new_status": new_status
+        }
+    )
 
 
 @login_required

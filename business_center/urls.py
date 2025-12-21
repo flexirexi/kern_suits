@@ -28,9 +28,9 @@ urlpatterns = [
           views.bc_orders_management,
           name="bc_orders_management",
      ),
-     # path(
-     #      "orders/bulk-action/",
-     #      views.bc_orders_bulk_action,
-     #      name="bc_orders_bulk_action"
-     # ),
+     path(
+          "orders/bulk-action/",
+          views.bc_orders_bulk_action,
+          name="bc_orders_bulk_action"
+     ),
 ]

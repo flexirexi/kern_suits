@@ -51,7 +51,7 @@
                             <label class="form-label">Status</label>
                             <select class="form-select" name="status" onchange="this.form.submit()">
                                 {% for key,label in status_choices %}
-                                <option value="{{ key }}" {% if key==status %}selected{% endif %}>{{ label }}</option>
+                                <option value="{{ key }}" {% if key == status %} selected {% endif %}>{{ label }}</option>
                                 {% endfor %}
                             </select>
                         </div>
@@ -62,8 +62,8 @@
                             <select class="form-select" name="created" onchange="this.form.submit()">
                                 <option value="" {% if not created_range %}selected{% endif %}>All</option>
                                 {% for opt in range_options %}
-                                <option value="{{ opt.key }}" {% if opt.key==created_range %}selected{% endif %}>{{
-                                    opt.label }}</option>
+                                <option value="{{ opt.key }}" {% if opt.key == created_range %} selected {% endif %}>
+                                    {{ opt.label }}</option>
                                 {% endfor %}
                             </select>
                         </div>
@@ -74,7 +74,7 @@
                             <select class="form-select" name="updated" onchange="this.form.submit()">
                                 <option value="" {% if not updated_range %}selected{% endif %}>All</option>
                                 {% for opt in range_options %}
-                                <option value="{{ opt.key }}" {% if opt.key==updated_range %}selected{% endif %}>{{
+                                <option value="{{ opt.key }}" {% if opt.key == updated_range %} selected {% endif %}>{{
                                     opt.label }}</option>
                                 {% endfor %}
                             </select>
@@ -91,6 +91,124 @@
 
         <!-- Order list -->
         <div class="col-12 col-lg-9 om-col-right">
+            <div class="om-list pe-1" data-endpoint-bulk="{% url 'bc_orders_bulk_action' %}">
+                {% csrf_token %}
+
+                {% if orders %}
+                <div class="d-grid gap-2">
+                    {% for o in orders %}
+                    <div class="om-row bg-light2 px-3 py-2 rounded-3" tabindex="0" role="button"
+                        data-order-id="{{ o.id }}" data-status="{{ o.status }}"
+                        data-effective-status="{{ o.effective_status }}" data-updated-days="{{ o.updated_days_ago }}">
+
+                        <div class="d-flex align-items-center gap-3">
+
+                            <!-- Dot -->
+                            <div class="om-dot om-dot-{{ o.dot_color }}" aria-hidden="true"></div>
+
+                            <!-- Main line -->
+                            <div class="flex-grow-1">
+                                <div class="row gx-2 align-items-center">
+
+                                    <div class="col-12 col-md-4">
+                                        <div class="fw-semibold small">Order {{ o.order_number }}</div>
+                                        <div class="text-muted small">
+                                            {{ o.city }}, {{ o.country.name }}
+                                        </div>
+                                    </div>
+
+                                    <div class="col-6 col-md-2">
+                                        <div class="text-muted small">Items</div>
+                                        <div class="fw-semibold small">{{ o.items_count }}</div>
+                                    </div>
+
+                                    <div class="col-6 col-md-3">
+                                        <div class="text-muted small">Created</div>
+                                        <div class="small">{{ o.created_at|date:"Y-m-d" }}</div>
+                                    </div>
+
+                                    <div class="col-6 col-md-2">
+                                        <div class="text-muted small">Updated</div>
+                                        <div class="small">{{ o.updated_at|date:"Y-m-d" }}</div>
+                                    </div>
+
+                                    <div class="col-6 col-md-1 text-end">
+                                        <div class="om-total">
+                                            {{ o.grand_total|floatformat:2 }} €
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- Expand button -->
+                            <button class="btn btn-sm btn-outline-secondary om-toggle" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#o{{ o.id }}details" aria-expanded="false"
+                                aria-controls="o{{ o.id }}details">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+
+                        </div>
+
+                        <!-- Details -->
+                        <div class="collapse mt-2" id="o{{ o.id }}details">
+                            <div class="om-details rounded-3 p-3">
+
+                                <div class="row g-2">
+                                    <div class="col-12 col-md-6">
+                                        <div class="fw-semibold small mb-1">Customer</div>
+                                        <div class="small">{{ o.first_name }} {{ o.last_name }}</div>
+                                        <div class="small text-muted">{{ o.email }}</div>
+                                        {% if o.phone %}<div class="small text-muted">{{ o.phone }}</div>{% endif %}
+                                    </div>
+
+                                    <div class="col-12 col-md-6">
+                                        <div class="fw-semibold small mb-1">Address</div>
+                                        <div class="small">
+                                            {{ o.address_line1 }}{% if o.address_line2 %}, {{ o.address_line2 }}{% endif %}
+                                            <br>
+                                            {{ o.postal_code }} {{ o.city }}<br>
+                                            {{ o.country.name }}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <hr class="my-3">
+
+                                <div class="fw-semibold small mb-2">Items</div>
+                                <div class="d-grid gap-1">
+                                    {% for it in o.items.all %}
+                                    <div class="d-flex justify-content-between small">
+                                        <div>
+                                            <span class="fw-semibold">{{ it.quantity }}×</span>
+                                            {{ it.variant }}
+                                        </div>
+                                        <div class="text-muted">
+                                            {{ it.price|floatformat:2 }} €
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+
+                                <div class="d-flex justify-content-end mt-3 small">
+                                    <div class="text-end">
+                                        <div class="text-muted">Subtotal: {{ o.total_amount|floatformat:2 }} €</div>
+                                        <div class="text-muted">Delivery: {{ o.delivery_costs|floatformat:2 }} €</div>
+                                        <div class="fw-semibold">Grand total: {{ o.grand_total|floatformat:2 }} €</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    {% endfor %}
+                </div>
+                {% else %}
+                <div class="alert alert-info">No orders found for the current filter.</div>
+                {% endif %}
+
+            </div>
         </div>
 
     </div>
