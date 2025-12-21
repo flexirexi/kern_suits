@@ -74,8 +74,8 @@
                             <select class="form-select" name="updated" onchange="this.form.submit()">
                                 <option value="" {% if not updated_range %}selected{% endif %}>All</option>
                                 {% for opt in range_options %}
-                                <option value="{{ opt.key }}" {% if opt.key == updated_range %} selected {% endif %}>{{
-                                    opt.label }}</option>
+                                <option value="{{ opt.key }}" {% if opt.key == updated_range %} selected {% endif %}>
+                                    {{ opt.label }}</option>
                                 {% endfor %}
                             </select>
                         </div>
@@ -91,7 +91,7 @@
 
         <!-- Order list -->
         <div class="col-12 col-lg-9 om-col-right">
-            <div class="om-list pe-1" data-endpoint-bulk="{% url 'bc_orders_bulk_action' %}">
+            <div class="om-list pe-1 pt-1" data-endpoint-bulk="{% url 'bc_orders_bulk_action' %}">
                 {% csrf_token %}
 
                 {% if orders %}
@@ -111,15 +111,15 @@
                                 <div class="row gx-2 align-items-center">
 
                                     <div class="col-12 col-md-4">
-                                        <div class="fw-semibold small">Order {{ o.order_number }}</div>
-                                        <div class="text-muted small">
-                                            {{ o.city }}, {{ o.country.name }}
+                                        <div class="fw-semibold small">
+                                            {{ o.status }}
                                         </div>
+                                        <div class="small">{{ o.order_number }}</div>
                                     </div>
 
                                     <div class="col-6 col-md-2">
-                                        <div class="text-muted small">Items</div>
-                                        <div class="fw-semibold small">{{ o.items_count }}</div>
+                                        <div class="text-muted small">Items: {{ o.items_count }}</div>
+                                        <div class="text-muted small">{{ o.city }}, {{ o.country.name }}</div>
                                     </div>
 
                                     <div class="col-6 col-md-3">

@@ -97,6 +97,8 @@ def _decorate_orders_for_ui(orders):
         # Dot logic
         if o.effective_status == "delivered":
             o.dot_color = "green"
+        elif o.effective_status == "denied":
+            o.dot_color = "grey"
         else:
             if o.updated_days_ago > 7:
                 o.dot_color = "red"
@@ -134,6 +136,14 @@ def bc_orders_management(request: HttpRequest):
     orders = list(qs[:500])  # hard cap: keeps page snappy
 
     orders = _decorate_orders_for_ui(orders)
+
+    for o in orders:
+        print("------------ ORDER ------------")
+        print("Number: ", o.order_number)
+        print("Amount: ", o.total_amount)
+        print("Purchased: ", o.created_at)
+        print("Status: ", o.status)
+        print("     updated: ", o.updated_at)
 
     context = {
         "orders": orders,
@@ -264,9 +274,9 @@ def bc_orders_bulk_action(request: HttpRequest):
             }, status=400)
 
     with transaction.atomic():
-        qs.update(status=new_status)
+        qs.update(status=new_status, updated_at=timezone.now())
 
-    # Emails later (Mailchimp) — intentionally not implemented now.
+    # Emails later (Mailchimp)
     messages.success(
         request,
         f"Updated {len(orders)} order(s) -> {new_status}."
@@ -275,7 +285,8 @@ def bc_orders_bulk_action(request: HttpRequest):
         {
             "ok": True,
             "updated": len(orders),
-            "new_status": new_status
+            "new_status": new_status,
+            "updated_at": timezone.now()
         }
     )
 

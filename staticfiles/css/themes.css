@@ -14,6 +14,7 @@
 
     --bgDefault: #ffffff;
     --bgDefault2: #e9e9e9;
+    --bgDefault3: #d0d0d0;
     --bgcontrast: #102841;
 
     --act1-bg: #ffbe3b;
@@ -90,6 +91,10 @@ html[data-theme="dark"] {
 
 [data-theme] .text-act2 {
     color: var(--act2-text);
+}
+
+[data-theme] .bg-light {
+    background-color: var(--bgDefault);
 }
 
 [data-theme] .bg-light2 {

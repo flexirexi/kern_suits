@@ -32,9 +32,10 @@
     transform: translateY(-1px);
 }
 
-.om-row.om-selected {
-    border-color: rgba(13, 110, 253, .35);
+[data-theme] .om-row.om-selected {
+    border-color: rgba(82, 82, 82, 0.477);
     box-shadow: 0 0 0 3px rgba(13, 110, 253, .15);
+    background-color: var(--bgDefault3) !important;
 }
 
 .om-dot {
@@ -59,6 +60,10 @@
 
 .om-dot-green {
     background: #2ecc71;
+}
+
+.om-dot-grey {
+    background: darkgrey;
 }
 
 .om-total {
