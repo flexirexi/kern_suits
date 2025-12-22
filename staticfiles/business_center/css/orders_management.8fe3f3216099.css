@@ -1,0 +1,85 @@
+@import url("/static/css/themes.b78f24cda760.css");
+@import url("/static/css/layout.1fd7f7f08c7a.css");
+
+.om-wrapper {
+    padding-bottom: 2rem;
+}
+
+.om-toolbar {
+    background: transparent;
+}
+
+.om-aside .cards {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, .08);
+}
+
+.om-col-right .om-list {
+    max-height: calc(100vh - 220px);
+    overflow: auto;
+}
+
+.om-row {
+    cursor: pointer;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, .06);
+    transition: transform 80ms ease, box-shadow 80ms ease;
+}
+
+.om-row:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .08);
+    transform: translateY(-1px);
+}
+
+[data-theme] .om-row.om-selected {
+    border-color: rgba(82, 82, 82, 0.477);
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, .15);
+    background-color: var(--bgDefault3) !important;
+}
+
+.om-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 999px;
+    flex: 0 0 16px;
+    border: 2px solid rgba(0, 0, 0, .15);
+}
+
+.om-dot-yellow {
+    background: #f1c40f;
+}
+
+.om-dot-orange {
+    background: #f39c12;
+}
+
+.om-dot-red {
+    background: #e74c3c;
+}
+
+.om-dot-green {
+    background: #2ecc71;
+}
+
+.om-dot-grey {
+    background: darkgrey;
+}
+
+.om-total {
+    font-weight: 700;
+    font-size: 1.05rem;
+}
+
+.om-details {
+    background: rgba(255, 255, 255, .75);
+    border: 1px solid rgba(0, 0, 0, .06);
+}
+
+.om-toggle i {
+    transition: transform 120ms ease;
+}
+
+.om-toggle[aria-expanded="true"] i {
+    transform: rotate(180deg);
+}

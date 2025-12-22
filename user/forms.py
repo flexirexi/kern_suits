@@ -1,5 +1,7 @@
 from django import forms
 from .models import UserProfile
+from django.core.exceptions import ValidationError
+import re
 
 
 class UserProfileForm(forms.ModelForm):
@@ -46,6 +48,38 @@ class UserProfileForm(forms.ModelForm):
                 {'class': 'border-black rounded-0 profile-form-input'}
             )
             self.fields[field].label = False
+
+        if "postcode" in self.fields:
+            self.fields["postcode"].widget.attrs.update({
+                "inputmode": "numeric",
+                "pattern": r"\d{5}",
+                "maxlength": "5",
+                "title": "5 digits (e.g. 60311)",
+            })
+
+        if "phone_number" in self.fields:
+            self.fields["phone_number"].widget.attrs.update({
+                "inputmode": "tel",
+                "pattern": r"[0-9+()\-\s]{7,20}",
+                "maxlength": "20",
+                "title": "Digits, +, spaces, () and - only",
+            })
+
+    def clean_postcode(self):
+        val = (self.cleaned_data.get("postcode") or "").strip()
+        # DE: 5 digits (anpassen falls EU/International)
+        if val and not re.fullmatch(r"\d{5}", val):
+            raise ValidationError(
+                "Please enter a valid postal code (5 digits)."
+            )
+        return val
+
+    def clean_phone_number(self):
+        val = (self.cleaned_data.get("phone_number") or "").strip()
+        # Simple: digits, spaces, +, (), -, 7–20 chars
+        if val and not re.fullmatch(r"[+0-9() \-]{7,20}", val):
+            raise ValidationError("Please enter a valid phone number.")
+        return val
 
     def save(self, commit=True):
         """Save profile + update linked user's first/last name"""

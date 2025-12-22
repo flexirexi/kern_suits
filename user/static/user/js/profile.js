@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
 
     const form = document.getElementById("profile-form");
     const inputs = form.querySelectorAll("input, select, textarea");
@@ -16,4 +16,21 @@ document.addEventListener("DOMContentLoaded", function() {
         editButton.style.display = "none";
         saveButton.style.display = "inline-block";
     });
+
+    const postal = document.querySelector("#id_postcode");
+    const phone = document.querySelector("#id_phone_number");
+    console.log("funzt");
+
+    if (postal) {
+        postal.addEventListener("input", () => {
+            postal.value = postal.value.replace(/\D/g, "").slice(0, 5);
+        });
+    }
+
+    if (phone) {
+        phone.addEventListener("input", () => {
+            // erlaubt: + 0-9 space () -
+            phone.value = phone.value.replace(/[^0-9+()\-\s]/g, "").slice(0, 20);
+        });
+    }
 });
