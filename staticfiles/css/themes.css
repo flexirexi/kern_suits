@@ -102,6 +102,10 @@ html[data-theme="dark"] {
     background-color: var(--bgDefault2); /* bootstrap is avoided here - gray was too light */
 }
 
+[data-theme] .transparent {
+    color: transparent !important;
+}
+
 .bg-contrast {
     background-color: var(--bgcontrast);
 }
