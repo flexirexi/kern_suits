@@ -197,7 +197,7 @@ function handleCreate() {
 document.getElementById('btn-plus').addEventListener('click', handlePlus);
 document.getElementById('btn-minus').addEventListener('click', handleMinus);
 document.getElementById('btn-duplicate').addEventListener('click', handleDuplicate);
-document.getElementById('btn-edit').addEventListener('click', handleEdit);
+// document.getElementById('btn-edit').addEventListener('click', handleEdit);
 document.getElementById('btn-remove').addEventListener('click', handleRemoveAsk);
 document.getElementById('btn-create').addEventListener('click', handleCreate);
 document.getElementById('confirmRemove').addEventListener('click', handleRemoveDo);

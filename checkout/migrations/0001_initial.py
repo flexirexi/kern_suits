@@ -13,7 +13,8 @@ class Migration(migrations.Migration):
     dependencies = [
         (
             "products",
-            "0002_alter_color_hex_code_alter_color_slug_alter_fit_name_and_more",
+            "0002_alter_color_hex_code_alter_color_"
+            "slug_alter_fit_name_and_more",
         ),
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
     ]
@@ -33,7 +34,11 @@ class Migration(migrations.Migration):
                 ),
                 (
                     "order_number",
-                    models.CharField(editable=False, max_length=32, unique=True),
+                    models.CharField(
+                        editable=False,
+                        max_length=32,
+                        unique=True
+                    ),
                 ),
                 ("created_at", models.DateTimeField(auto_now_add=True)),
                 ("updated_at", models.DateTimeField(auto_now=True)),
@@ -56,23 +61,40 @@ class Migration(migrations.Migration):
                 ("email", models.EmailField(max_length=254)),
                 ("phone", models.CharField(blank=True, max_length=20)),
                 ("address_line1", models.CharField(max_length=255)),
-                ("address_line2", models.CharField(blank=True, max_length=255)),
+                ("address_line2", models.CharField(
+                    blank=True, max_length=255)),
                 ("postal_code", models.CharField(max_length=20)),
                 ("city", models.CharField(max_length=100)),
-                ("country", django_countries.fields.CountryField(max_length=2)),
+                ("country", django_countries.fields.CountryField(
+                    max_length=2)),
                 (
                     "total_amount",
-                    models.DecimalField(decimal_places=2, default=0.0, max_digits=10),
+                    models.DecimalField(
+                        decimal_places=2,
+                        default=0.0,
+                        max_digits=10
+                    ),
                 ),
                 (
                     "delivery_costs",
-                    models.DecimalField(decimal_places=2, default=0.0, max_digits=10),
+                    models.DecimalField(
+                        decimal_places=2,
+                        default=0.0,
+                        max_digits=10
+                    ),
                 ),
                 (
                     "grand_total",
-                    models.DecimalField(decimal_places=2, default=0.0, max_digits=10),
+                    models.DecimalField(
+                        decimal_places=2,
+                        default=0.0,
+                        max_digits=10
+                    ),
                 ),
-                ("stripe_pid", models.CharField(blank=True, max_length=255, null=True)),
+                ("stripe_pid", models.CharField(
+                    blank=True,
+                    max_length=255,
+                    null=True)),
                 ("original_bag", models.TextField(blank=True, null=True)),
                 (
                     "user",
@@ -99,7 +121,8 @@ class Migration(migrations.Migration):
                     ),
                 ),
                 ("quantity", models.PositiveIntegerField(default=1)),
-                ("price", models.DecimalField(decimal_places=2, max_digits=10)),
+                ("price", models.DecimalField(
+                    decimal_places=2, max_digits=10)),
                 (
                     "order",
                     models.ForeignKey(

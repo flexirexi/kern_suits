@@ -127,10 +127,13 @@ class Migration(migrations.Migration):
                 ("description", models.TextField(blank=True)),
                 ("fabric", models.CharField(max_length=100)),
                 ("is_active", models.BooleanField(default=True)),
-                ("image_url", models.URLField(blank=True, max_length=1024, null=True)),
+                ("image_url", models.URLField(
+                    blank=True, max_length=1024,
+                    null=True)),
                 (
                     "image",
-                    models.ImageField(blank=True, null=True, upload_to="products/"),
+                    models.ImageField(
+                        blank=True, null=True, upload_to="products/"),
                 ),
                 (
                     "rating",
@@ -188,13 +191,15 @@ class Migration(migrations.Migration):
                 (
                     "color",
                     models.ForeignKey(
-                        on_delete=django.db.models.deletion.PROTECT, to="products.color"
+                        on_delete=django.db.models.deletion.PROTECT,
+                        to="products.color"
                     ),
                 ),
                 (
                     "fit",
                     models.ForeignKey(
-                        on_delete=django.db.models.deletion.PROTECT, to="products.fit"
+                        on_delete=django.db.models.deletion.PROTECT,
+                        to="products.fit"
                     ),
                 ),
                 (
@@ -208,7 +213,8 @@ class Migration(migrations.Migration):
                 (
                     "size",
                     models.ForeignKey(
-                        on_delete=django.db.models.deletion.PROTECT, to="products.size"
+                        on_delete=django.db.models.deletion.PROTECT,
+                        to="products.size"
                     ),
                 ),
             ],

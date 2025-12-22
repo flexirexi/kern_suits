@@ -58,3 +58,63 @@
         });
     }
 })();
+
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("pvForm");
+    if (!form) return;
+
+    const price = document.getElementById("id_price");
+    const stock = document.getElementById("id_stock");
+
+    const priceFb = document.getElementById("priceFeedback");
+    const stockFb = document.getElementById("stockFeedback");
+
+    function setInvalid(input, fbEl, msg) {
+        if (!input || !fbEl) return;
+        input.classList.add("is-invalid");
+        fbEl.textContent = msg || "Invalid value.";
+        fbEl.style.display = "block";
+    }
+
+    function clearInvalid(input, fbEl) {
+        if (!input || !fbEl) return;
+        input.classList.remove("is-invalid");
+        fbEl.textContent = "";
+        fbEl.style.display = "";
+    }
+
+    function validate() {
+        let ok = true;
+
+        if (price) {
+            const v = price.value.trim() === "" ? null : Number(price.value);
+            if (v !== null && !Number.isNaN(v) && v < 0) {
+                setInvalid(price, priceFb, "Price cannot be negative.");
+                ok = false;
+            } else {
+                clearInvalid(price, priceFb);
+            }
+        }
+
+        if (stock) {
+            const v = stock.value.trim() === "" ? null : Number(stock.value);
+            if (v !== null && !Number.isNaN(v) && v < 0) {
+                setInvalid(stock, stockFb, "Stock cannot be negative.");
+                ok = false;
+            } else {
+                clearInvalid(stock, stockFb);
+            }
+        }
+
+        return ok;
+    }
+
+    // live feedback
+    price?.addEventListener("input", validate);
+    stock?.addEventListener("input", validate);
+
+    // block submit if invalid
+    form.addEventListener("submit", (e) => {
+        if (!validate()) e.preventDefault();
+    });
+});

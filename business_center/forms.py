@@ -1,6 +1,7 @@
 from django import forms
 from django.core.exceptions import ValidationError
 from django.utils.text import slugify
+from decimal import Decimal
 from products.models import (
     ProductVariant,
     Product,
@@ -168,8 +169,27 @@ class ProductVariantForm(forms.ModelForm):
         self.fields["new_product_description"].widget.attrs.update(
             {"class": "form-control"})
 
-    # --------------------- Validation ---------------------
+        # UI-Hints (nicht ausreichend alleine, aber hilfreich)
+        if "price" in self.fields:
+            self.fields["price"].widget.attrs.update(
+                {"min": "0", "step": "0.01"}
+            )
+        if "stock" in self.fields:
+            self.fields["stock"].widget.attrs.update({"min": "0", "step": "1"})
 
+    def clean_price(self):
+        val = self.cleaned_data.get("price")
+        if val is not None and val < Decimal("0"):
+            raise ValidationError("Price cannot be negative.")
+        return val
+
+    def clean_stock(self):
+        val = self.cleaned_data.get("stock")
+        if val is not None and val < 0:
+            raise ValidationError("Stock cannot be negative.")
+        return val
+
+    # --------------------- Validation ---------------------
     def clean(self):
         """
         Validate the intent (existing vs NEW), auto-generate slugs when

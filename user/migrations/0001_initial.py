@@ -13,7 +13,8 @@ class Migration(migrations.Migration):
     dependencies = [
         (
             "products",
-            "0002_alter_color_hex_code_alter_color_slug_alter_fit_name_and_more",
+            "0002_alter_color_hex_code_alter"
+            "_color_slug_alter_fit_name_and_more",
         ),
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
     ]
@@ -47,8 +48,10 @@ class Migration(migrations.Migration):
                     "town_or_city",
                     models.CharField(blank=True, max_length=40, null=True),
                 ),
-                ("county", models.CharField(blank=True, max_length=80, null=True)),
-                ("postcode", models.CharField(blank=True, max_length=20, null=True)),
+                ("county", models.CharField(
+                    blank=True, max_length=80, null=True)),
+                ("postcode", models.CharField(
+                    blank=True, max_length=20, null=True)),
                 (
                     "country",
                     django_countries.fields.CountryField(
