@@ -1,0 +1,81 @@
+#mc_embed_signup {
+    background: transparent !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    width: min(520px, 100%) !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    font-family: inherit !important;
+}
+
+/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+/* Footer Mailchimp – scoped overrides */
+
+footer .mc-footer-wrap {
+    width: 100%;
+}
+
+footer #mc_embed_signup h2 {
+    text-align: center;
+    font-weight: 600;
+    margin: 0 !important;
+}
+
+footer #mc_embed_signup .indicates-required {
+    color: rgba(255, 255, 255, 0.65) !important;
+    text-align: center;
+    margin-bottom: 0.75rem !important;
+}
+
+footer #mc_embed_signup .mc-field-group label {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+footer #mc_embed_signup input[type="email"],
+footer #mc_embed_signup input[type="text"],
+footer #mc_embed_signup input[type="tel"],
+footer #mc_embed_signup select {
+    background: transparent !important;
+    color: rgba(255, 255, 255, 0.95) !important;
+    border: 1px solid rgba(255, 255, 255, 0.35) !important;
+    border-radius: 0 !important;
+    height: 44px;
+}
+
+footer #mc_embed_signup input::placeholder {
+    color: rgba(255, 255, 255, 0.55);
+}
+
+footer #mc_embed_signup input:focus,
+footer #mc_embed_signup select:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: rgba(255, 255, 255, 0.7) !important;
+}
+
+footer #mc_embed_signup .button,
+footer #mc_embed_signup input[type="submit"] {
+    background: transparent !important;
+    color: rgba(255, 255, 255, 0.95) !important;
+    border: 1px solid rgba(255, 255, 255, 0.6) !important;
+    border-radius: 0 !important;
+    height: 44px;
+    padding: 0 18px !important;
+    display: block;
+    width: 100%;
+    margin-top: 0.75rem;
+}
+
+footer #mc_embed_signup .button:hover,
+footer #mc_embed_signup input[type="submit"]:hover {
+    border-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+footer #mc_embed_signup .response {
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* Falls Mailchimp irgendeinen white background wrapper setzt */
+footer #mc_embed_signup_scroll {
+    background: transparent !important;
+}

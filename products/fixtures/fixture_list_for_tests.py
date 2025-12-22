@@ -3,8 +3,8 @@ from django.test import TestCase
 
 class BaseFixtureTestCase(TestCase):
     """
-    all test from all apps need to create test DBs 
-    otherwise tests rarely make sense and django 
+    all test from all apps need to create test DBs
+    otherwise tests rarely make sense and django
     cant test real DBs, so, we fill the test DBs (again)
     """
     fixtures = [
