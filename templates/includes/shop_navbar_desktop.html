@@ -20,12 +20,12 @@
         {% endif %}
         <ul class="navbar-nav align-items-center">
             <li class="nav-item">
-                <a class="nav-link hover " href="{% url 'bag' %}">.
+                <a class="nav-link hover transparent" href="{% url 'bag' %}">.
                     <i class="fas fa-bag-shopping" style="color: var(--nav-icon);"></i>
                 </a>
             </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link hover " 
+            <li class="nav-item dropdown ">
+                <a class="nav-link hover transparent" 
                     href="#" data-bs-toggle="dropdown" aria-haspopup="true" id="user-options" role="button">.
                     {% if request.user.is_authenticated %}
                         {% if request.user.is_superuser %}
